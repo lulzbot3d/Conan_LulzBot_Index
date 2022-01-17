@@ -1,0 +1,12 @@
+venv/
+.idea/
+/recipes/arcus/tmp/
+/recipes/charon/tmp/
+/recipes/cura/tmp/
+/recipes/curaengine/tmp/
+/recipes/libnest2d/tmp/
+/recipes/pynest2d/tmp/
+/recipes/savitar/tmp/
+/recipes/sip/tmp/
+/recipes/uranium/tmp/
+build/
