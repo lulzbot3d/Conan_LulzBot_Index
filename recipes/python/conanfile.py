@@ -11,7 +11,7 @@ required_conan_version = ">=1.44.1"
 
 class PythonConan(ConanFile):
     name = "python"
-    version = "3.10.0"
+    version = "3.10.2"
     description = "The Python programming language"
     topics = ("conan", "python", "interpreter")
     license = "PSF 2.0"
@@ -37,14 +37,14 @@ class PythonConan(ConanFile):
     }
 
     def requirements(self):
-        self.requires("openssl/1.1.1l")
-        self.requires("sqlite3/3.36.0")
+        self.requires("openssl/1.1.1m")
+        self.requires("sqlite3/3.37.2")
         self.requires("libffi/3.4.2")
         self.requires("xz_utils/5.2.5")
         self.requires("zlib/1.2.11")
         if self.settings.os != "Windows":
-            self.requires("openblas/0.3.15")
-            self.requires("geos/3.9.1")
+            self.requires("openblas/0.3.17")
+            self.requires("geos/3.10.1")
 
     def configure(self):
         self.options["openssl"].shared = self.options.shared
