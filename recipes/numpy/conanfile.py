@@ -22,10 +22,15 @@ class NumpyConan(ConanFile):
     default_user = "python"
     default_channel = "stable"
     python_requires = "PipBuildTool/0.1@ultimaker/testing"
-    build_requires = "python/3.10.2@python/stable"
     requires = "python/3.10.2@python/stable"
-    
-    hashes = []
+    hashes = [
+        "sha256:301e408a052fdcda5cdcf03021ebafc3c6ea093021bf9d1aa47c54d48bdad166",
+        "sha256:a7e8f6216f180f3fd4efb73de5d1eaefb5f5a1ee5b645c67333033e39440e63a",
+        "sha256:fc7a7d7b0ed72589fd8b8486b9b42a564f10b8762be8bd4d9df94b807af4a089",
+        "sha256:58ca1d7c8aef6e996112d0ce873ac9dfa1eaf4a1196b4ff7ff73880a09923ba7",
+        "sha256:dc4b2fb01f1b4ddbe2453468ea0719f4dbb1f5caa712c8b21bb3dd1480cd30d9",
+        "sha256:6a5928bc6241264dce5ed509e66f33676fc97f464e7a919edc672fb5532221ee"
+    ]  # NOTE: these are only the hashes for Windows
 
     def layout(self):
         self.folders.build = "build"
@@ -51,8 +56,7 @@ class NumpyConan(ConanFile):
 
     def package_info(self):
         v = tools.Version(self.dependencies['python'].ref.version)
-        self.runenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}"))
+        self.runenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
         self.runenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
-
-        self.buildenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}"))
+        self.buildenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
         self.buildenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
