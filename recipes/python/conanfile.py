@@ -73,7 +73,7 @@ class PythonConan(ConanFile):
             else:  # MacOS
                 tc.ldflags.append("-Wl")
                 tc.configure_args.append("--enable-universalsdk")
-                tc.configure_args.append("--with-universal-archs=x86_64")
+                tc.configure_args.append("--with-universal-archs=universal2")
             tc.configure_args.append("--enable-ipv6")
             tc.configure_args.append("--with-doc-strings")
             tc.configure_args.append("--with-ensurepip")
