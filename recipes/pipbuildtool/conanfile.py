@@ -28,3 +28,5 @@ class PipBuildTool(object):
 class Pkg(ConanFile):
     name = "PipBuildTool"
     version = "0.1"
+    default_user = "ultimaker"
+    default_channel = "testing"
