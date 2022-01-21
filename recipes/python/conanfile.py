@@ -70,8 +70,10 @@ class PythonConan(ConanFile):
             tc.default_configure_install_args = True
             if self.settings.os == "Linux":
                 tc.ldflags.append(f"-Wl,-rpath={os.path.join(self.package_folder, 'lib')}")
-            else:
+            else:  # MacOS
                 tc.ldflags.append("-Wl")
+                tc.configure_args.append("--enable-universalsdk")
+                tc.configure_args.append("--with-universal-archs=x86_64")
             tc.configure_args.append("--enable-ipv6")
             tc.configure_args.append("--with-doc-strings")
             tc.configure_args.append("--with-ensurepip")
