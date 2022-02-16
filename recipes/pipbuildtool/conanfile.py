@@ -21,12 +21,12 @@ class PipBuildTool(object):
         if not self._conanfile.should_build:
             return
 
-        cmd = f"{self._interp} -m pip install --no-deps --prefix {self._conanfile.package_folder} {self._conanfile.name}=={self._conanfile.version}"
+        cmd = f"{self._interp} -m pip install --no-deps --prefix {self._conanfile.package_folder} --force-reinstall {self._conanfile.name}=={self._conanfile.version}"
         self._conanfile.run(cmd)
 
 
 class Pkg(ConanFile):
     name = "PipBuildTool"
-    version = "0.1"
+    version = "0.2"
     default_user = "ultimaker"
     default_channel = "testing"
