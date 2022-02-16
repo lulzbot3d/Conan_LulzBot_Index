@@ -1,114 +1,145 @@
 import os
+from pathlib import Path
 
 from jinja2 import Template
 
-from conans import ConanFile, tools
-from conan.tools.gnu import AutotoolsDeps, AutotoolsToolchain, Autotools
-from conan.tools.env.virtualbuildenv import VirtualBuildEnv
-from conan.tools.microsoft.subsystems import subsystem_path, deduce_subsystem
-from conan.tools.files.packager import AutoPackager
+from conans import tools
+from conans.model import Generator
 
+from conan import ConanFile
+from conan.tools.env.virtualrunenv import VirtualRunEnv
+from conan.tools.env.virtualbuildenv import VirtualBuildEnv
+from conan.tools.files.packager import AutoPackager
 
 required_conan_version = ">=1.44.1"
 
+class sip(Generator):
 
-class AutoSIPtools(Autotools):
-    # TODO: Check if there isn't an native solution for this, if not make FR at Conan
-    def configure(self, buildTool = "", build_script_folder = None):
-        if not self._conanfile.should_configure:
-            return
+    @property
+    def filename(self):
+        return "pyproject.toml.pre"
 
-        source = self._conanfile.source_folder
-        if build_script_folder:
-            source = os.path.join(self._conanfile.source_folder, build_script_folder)
+    @property
+    def content(self):
+        ext_deps = []
+        deps_libs = []
+        deps_lib_dirs = []
+        deps_inc_dirs = []
+        deps_compile_args = []
+        deps_link_args = []
+        deps_defines = []
 
-        configure_cmd = f"{buildTool} {source}/configure.py"
-        subsystem = deduce_subsystem(self._conanfile, scope="build")
-        configure_cmd = subsystem_path(subsystem, configure_cmd)
-        cmd = "{} {}".format(configure_cmd, self._configure_args)
-        self._conanfile.output.info(f"Calling:\n > {cmd}")
-        self._conanfile.run(cmd)
+        # Loop through all dependencies and collect needed necessary compile and link information
+        for dep_name, dep_cpp_info in self.deps_build_info.dependencies:
+            ext_deps.append(f'"{dep_name}"')
+
+            for dep in dep_cpp_info.libs:  # The libs to link against
+                deps_libs.append(f'"{dep}"')
+            for dep in dep_cpp_info.system_libs:  # System libs to link against
+                deps_libs.append(f'"{dep}"')
+
+            for dep in dep_cpp_info.lib_paths:  # Directories where libraries can be found
+                deps_lib_dirs.append(f'"{dep}"'.replace("\\", "/"))
+
+            for dep in dep_cpp_info.include_paths:  # Directories where headers can be found
+                deps_inc_dirs.append(f'"{dep}"'.replace("\\", "/"))
+
+            for dep in dep_cpp_info.cppflags:  # C++ compilation flags
+                deps_compile_args.append(f'"{dep}"')
+            for dep in dep_cpp_info.cflags:  # pure C flags
+                deps_compile_args.append(f'"{dep}"')
+
+            for dep in dep_cpp_info.sharedlinkflags:  # linker flags
+                deps_link_args.append(f'"{dep}"')
+            for dep in dep_cpp_info.exelinkflags:  # linker flags
+                deps_link_args.append(f'"{dep}"')
+
+            for dep in dep_cpp_info.defines:  # preprocessor definitions
+                deps_defines.append(f'"{dep}"')
+
+        # Python version binary compatible (major.minor)
+        python_version = tools.Version(self.conanfile.dependencies['python'].ref.version)
+
+        with open(os.path.join(Path(__file__).parent, "pyproject.toml.pre.jinja"), "r") as f:
+            tm = Template(f.read())
+            result = tm.render(
+                module_version = self.conanfile.version,
+                module_homepage = self.conanfile.url if self.conanfile.url else "",
+                module_author = self.conanfile.author if self.conanfile.author else "",
+                module_license = self.conanfile.license if self.conanfile.license else "",
+                python_version = f"{python_version.major}.{python_version.minor}",
+                external_deps = ",".join(ext_deps) if len(ext_deps) > 0 else "",
+                deps_include_dirs = ",".join(deps_inc_dirs) if len(deps_inc_dirs) > 0 else "",
+                deps_libraries = ",".join(deps_libs) if len(deps_libs) > 0 else "",
+                deps_library_dirs = ",".join(deps_lib_dirs) if len(deps_lib_dirs) > 0 else "",
+                deps_compile_args = ",".join(deps_compile_args) if len(deps_lib_dirs) > 0 else "",
+                deps_link_args = ",".join(deps_link_args) if len(deps_link_args) > 0 else "",
+                deps_define_macros = ",".join(deps_defines) if len(deps_lib_dirs) > 0 else "",
+                build_type = "false" if self.settings.build_type == "Release" else "Debug")
+            return result
 
 
-class SipConan(ConanFile):
+class Pyqt6SipConan(ConanFile):
     name = "sip"
-    version = "4.19.25"
-    description = "SIP Python binding for C/C++ (Used by PyQt)"
-    topics = ("conan", "python", "binding", "sip")
-    license = "GPL-3.0-only"
+    version = "6.5.0"
+    description = "The sip module support for PyQt5"
+    topics = ("conan", "python", "pypi", "pip")
+    license = "GPL v3"
     homepage = "https://www.riverbankcomputing.com/software/sip/"
-    url = f"https://www.riverbankcomputing.com/static/Downloads/sip"
+    url = "https://www.riverbankcomputing.com/software/sip/"
     settings = "os", "compiler", "build_type", "arch"
-    exports = ["LICENSE*", "cmake/SIPMacros.cmake.jinja"]
-    exports_sources = ["SIPMacros.cmake.jinja"]
     build_policy = "missing"
-    default_user = "riverbankcomputing"
+    default_user = "python"
     default_channel = "stable"
-    build_requires = "python/[>=3.8.10]@python/stable"
+    python_requires = "PipBuildTool/0.2@ultimaker/testing"
     requires = "python/3.10.2@python/stable"
-    options = {
-        "shared": [True, False],
-    }
-    default_options = {
-        "shared": True,
-    }
+    exports = ["sip.cmake.jinja", "pyproject.toml.pre.jinja"]
+    exports_sources = ["sip.cmake.jinja", "pyproject.toml.pre.jinja"]
+    hashes = []
 
-    def source(self):
-        tools.get(**self.conan_data["sources"][self.version], strip_root = True)
+    def layout(self):
+        self.folders.build = "build"
+        self.folders.package = "package"
+        self.folders.generators = os.path.join("build", "conan")
+
+    def generate(self):
+        rv = VirtualRunEnv(self)
+        rv.generate()
+
+        bv = VirtualBuildEnv(self)
+        bv.generate()
+
+    def build(self):
+        pb = self.python_requires["PipBuildTool"].module.PipBuildTool(self)
+        pb.configure()
+        pb.build()
+
+    def package(self):
+        with open(os.path.join(self.source_folder, "sip.cmake.jinja"), "r") as f:
+            tm = Template(f.read())
+            sip_executable = str(os.path.join(self.package_folder, "bin", "sip-build"))
+            sip_build_env = ". ${CMAKE_BINARY_DIR}/conan/conanbuild.sh && "  # TODO make this more generic and also for Windows
+            if self.settings.os == "Windows":
+                sip_executable += ".exe"
+            result = tm.render(sip_build_executable = sip_executable, sip_build_env = sip_build_env)
+            tools.save(os.path.join(self.package_folder, self._cmake_install_base_path, "sip.cmake"), result)
+        packager = AutoPackager(self)
+        packager.patterns.lib = ["*.so", "*.so.*", "*.a", "*.lib", "*.dylib", "*.py*"]
+        packager.run()
+
+    def package_info(self):
+        v = tools.Version(self.dependencies['python'].ref.version)
+        self.runenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
+        self.buildenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
+        self.cpp_info.set_property("cmake_file_name", "sip")
+        self.cpp_info.set_property("cmake_target_name", "sip::sip")
+        self.cpp_info.set_property("cmake_build_modules", [os.path.join(self._cmake_install_base_path, "sip.cmake")])
+        sip_v = tools.Version(self.version)
+        self.cpp_info.set_property("defines", f"-DSIP_VERSION=0x{int(sip_v.major):02d}{int(sip_v.minor):02d}{int(sip_v.patch):02d}")
+
+    def package_id(self):
+        self.info.settings.build_type = "Release"
 
     @property
     def _cmake_install_base_path(self):
         return os.path.join("lib", "cmake", "sip")
-
-    def generate(self):
-        bv = VirtualBuildEnv(self)  # Ensures that we use the Python executable from our own package
-        bv.generate()
-
-        deps = AutotoolsDeps(self)
-        deps.generate()
-
-        tc = AutotoolsToolchain(self)
-        if not self.options.shared:
-            tc.configure_args.append("--static")
-        if self.settings.build_type == "Debug":
-            tc.configure_args.append("--debug")
-        tc.configure_args.append(f"--bindir={os.path.join(self.package_folder, 'bin')}")
-        tc.configure_args.append(f"--incdir={os.path.join(self.package_folder, 'include')}")
-        tc.configure_args.append(f"--destdir={os.path.join(self.package_folder, 'site-packages')}")
-        tc.configure_args.append(f"--pyidir={os.path.join(self.package_folder, 'site-packages')}")
-        v = tools.Version(self.dependencies['python'].ref.version)
-        tc.configure_args.append(f"--target-py-version={v.major}.{v.minor}")
-        tc.generate()
-
-    def build(self):
-        at = AutoSIPtools(self)
-        at.configure("python3")
-        at.make()
-        at.install()
-
-    def package(self):
-        with open(os.path.join(self.source_folder, "SIPMacros.cmake.jinja"), "r") as f:
-            tm = Template(f.read())
-            sip_executable = str(os.path.join(self.package_folder, "bin", "sip"))
-            if self.settings.os == "Windows":
-                sip_executable += ".exe"
-            result = tm.render(sip_path = sip_executable)
-            tools.save(os.path.join(self.package_folder, self._cmake_install_base_path, "SIPMacros.cmake"), result)
-        packager = AutoPackager(self)
-        packager.run()
-
-    def package_info(self):
-        self.runenv_info.append("PYTHONPATH", os.path.join(self.package_folder, "site-packages"))
-        self.runenv_info.append("PATH", os.path.join(self.package_folder, "bin"))
-
-        self.buildenv_info.append("PYTHONPATH", os.path.join(self.package_folder, "site-packages"))
-        self.buildenv_info.append("PATH", os.path.join(self.package_folder, "bin"))
-
-        self.cpp_info.set_property("cmake_file_name", "sip")
-        self.cpp_info.set_property("cmake_target_name", "sip::sip")
-
-        build_modules = [
-            os.path.join(os.path.join(self._cmake_install_base_path, "SIPMacros.cmake"))
-        ]
-        self.cpp_info.builddirs.append(self._cmake_install_base_path)
-        self.cpp_info.set_property("cmake_build_modules", build_modules)

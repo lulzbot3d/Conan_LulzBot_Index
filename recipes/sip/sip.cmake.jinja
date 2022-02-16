@@ -1,0 +1,110 @@
+set(SIP_BUILD_EXECUTABLE {{ sip_build_executable }})
+set(PRE_BUILD_CMD "{{ sip_build_env }}")
+
+macro(sanitize_list var_list)
+    if(${var_list})
+        list(REMOVE_DUPLICATES ${var_list})
+        list(REMOVE_ITEM ${var_list} "")
+        list(TRANSFORM ${var_list} PREPEND "\"")
+        list(TRANSFORM ${var_list} APPEND "\"")
+        list(JOIN ${var_list} ", " ${var_list})
+        set(${var_list} "${${var_list}}, ")
+    else()
+        set(${var_list} "")
+    endif()
+endmacro()
+
+function(add_sip_module MODULE_TARGET MODULE_SIP SIP_FILES HDR_FILES SRC_FILES)
+    message(STATUS "SIP: Generating files")
+    string(TOUPPER ${CMAKE_BUILD_TYPE} _upper_case_build_type)
+
+    cmake_path(GET MODULE_SIP STEM sip_module_name)
+    cmake_path(GET MODULE_SIP FILENAME sip_module_filename)
+    cmake_path(GET MODULE_SIP PARENT_PATH sip_module_path)
+    cmake_path(SET _module_sip_path NORMALIZE "${sip_module_path}/")
+
+    set(sip_extra_include_dirs)
+    foreach (_sip_include ${SIP_FILES})
+        cmake_path(GET _sip_include PARENT_PATH _sip_include_path)
+        cmake_path(SET _sip_include_path NORMALIZE "${_sip_include_path}/")
+        list(APPEND sip_extra_include_dirs ${_sip_include_path})
+    endforeach ()
+
+    message(STATUS "SIP: Collecting locations, compiler flags for the sip module")
+    # Get the module specified include locations
+    get_target_property(sip_include_dirs ${MODULE_TARGET} INTERFACE_INCLUDE_DIRECTORIES)
+
+    # Get the module compiler options
+    set(_compile_options)
+    get_target_property(_own_compile_options ${MODULE_TARGET} INTERFACE_COMPILE_OPTIONS)
+    if(_own_compile_options)
+        list(APPEND _compile_options "${_own_compile_options}")
+    endif()
+
+    set(_compile_features)
+    get_target_property(_own_compile_features ${MODULE_TARGET} INTERFACE_COMPILE_FEATURES)
+    if(_own_compile_features)
+        foreach(feature ${_own_compile_features})
+            if(feature STREQUAL "cxx_std_17")
+                list(APPEND _compile_features "-std=c++17")
+            elseif(feature STREQUAL "cxx_std_20")
+                list(APPEND _compile_features "-std=c++20")
+            elseif(feature STREQUAL "cxx_std_23")
+                list(APPEND _compile_features "-std=c++23")
+            endif()
+        endforeach()
+    endif()
+    set(sip_compile_args)
+    list(APPEND sip_compile_args ${_compile_features} ${_compile_options})
+
+    # Get the module define
+    get_target_property(sip_define_macros ${MODULE_TARGET} INTERFACE_COMPILE_DEFINITIONS)
+
+    # Sanitize the lists
+    sanitize_list(sip_compile_args)
+    sanitize_list(sip_extra_include_dirs)
+    sanitize_list(sip_define_macros)
+    sanitize_list(sip_include_dirs)
+
+    set(sip_sources "${SRC_FILES}")
+    sanitize_list(sip_sources)
+    set(sip_header_files "${HDR_FILES}")
+    sanitize_list(sip_header_files)
+
+    message(STATUS "SIP: Generating pyproject.toml")
+    # Need to use this two step process to generate the actual pyproject.toml, because variables can contain
+    # generator expressions (https://cmake.org/cmake/help/latest/manual/cmake-generator-expressions.7.html) these
+    # need to be expanded in th final pyproject toml file. Which happens during the second step `file(GENERATE ...`
+    # unfortunately that command doesn't fill the cmake variables gather above. Here is were the `configure_file(...`
+    # comes into play
+    configure_file(${CMAKE_CURRENT_BINARY_DIR}/pyproject.toml.pre ${CMAKE_CURRENT_BINARY_DIR}/pyproject.toml.in)
+
+    file(GENERATE
+         OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/pyproject.toml
+         INPUT ${CMAKE_CURRENT_BINARY_DIR}/pyproject.toml.in)
+
+    # Touch the generated files (8 in total) to make them dirty and force them to rebuild
+    set(_sip_output_files)
+    foreach(_concat_file_nr RANGE 0 8)
+        if(${_concat_file_nr} LESS 8)
+            list(APPEND _sip_output_files "${CMAKE_CURRENT_BINARY_DIR}/${sip_module_name}/sip${sip_module_name}part${_concat_file_nr}.cpp")
+        endif()
+    endforeach()
+
+    set(SIPCMD ${PRE_BUILD_CMD} cd ${CMAKE_BINARY_DIR} && ${SIP_BUILD_EXECUTABLE} --no-protected-is-public --pep484-pyi)
+
+    add_custom_command(
+            OUTPUT ${_sip_output_files}
+            COMMAND ${SIPCMD}
+            COMMAND ${CMAKE_COMMAND} -E touch "${_sip_output_files}"
+            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/
+            MAIN_DEPENDENCY ${MODULE_SIP}
+            DEPENDS ${SIP_FILES}
+            VERBATIM
+    )
+
+    add_custom_target("sip_${MODULE_TARGET}" ALL DEPENDS ${_sip_output_files})
+
+
+    # TODO: Installer, for the Python module don't forget about the pyi file for code completion
+endfunction()
