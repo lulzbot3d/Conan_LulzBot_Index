@@ -97,7 +97,7 @@ function(add_sip_module MODULE_TARGET MODULE_SIP SIP_FILES HDR_FILES SRC_FILES)
     add_custom_command(
             OUTPUT ${_sip_output_files}
             COMMAND ${SIPCMD}
-            COMMAND ${CMAKE_COMMAND} -E touch "${_sip_output_files}"
+            COMMAND ${CMAKE_COMMAND} -E touch ${_sip_output_files}
             WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/
             MAIN_DEPENDENCY ${MODULE_SIP}
             DEPENDS ${SIP_FILES}
