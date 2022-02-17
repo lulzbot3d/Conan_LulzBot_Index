@@ -1,5 +1,5 @@
 set(SIP_BUILD_EXECUTABLE {{ sip_build_executable }})
-set(PRE_BUILD_CMD "{{ sip_build_env }}")
+set(PRE_BUILD_CMD {{ sip_build_env }})
 
 macro(sanitize_list var_list)
     if(${var_list})
