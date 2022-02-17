@@ -85,9 +85,10 @@ function(add_sip_module MODULE_TARGET MODULE_SIP SIP_FILES HDR_FILES SRC_FILES)
 
     # Touch the generated files (8 in total) to make them dirty and force them to rebuild
     set(_sip_output_files)
-    foreach(_concat_file_nr RANGE 0 8)
+    list(LENGTH SIP_FILES _no_outputfiles)
+    foreach(_concat_file_nr RANGE 0 ${_no_outputfiles})
         if(${_concat_file_nr} LESS 8)
-            list(APPEND _sip_output_files "${CMAKE_CURRENT_BINARY_DIR}/${sip_module_name}/sip${sip_module_name}part${_concat_file_nr}.cpp")
+            list(APPEND _sip_output_files "${CMAKE_CURRENT_BINARY_DIR}/${sip_module_name}/${sip_module_name}/sip${sip_module_name}part${_concat_file_nr}.cpp")
         endif()
     endforeach()
 
