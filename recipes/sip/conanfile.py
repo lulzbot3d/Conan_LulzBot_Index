@@ -75,7 +75,7 @@ class sip(Generator):
                 deps_compile_args = ",".join(deps_compile_args) if len(deps_lib_dirs) > 0 else "",
                 deps_link_args = ",".join(deps_link_args) if len(deps_link_args) > 0 else "",
                 deps_define_macros = ",".join(deps_defines) if len(deps_lib_dirs) > 0 else "",
-                build_type = "false" if self.settings.build_type == "Release" else "Debug")
+                build_type = "false" if self.settings.build_type == "Release" else "true")
             return result
 
 
