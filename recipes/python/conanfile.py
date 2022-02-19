@@ -117,3 +117,5 @@ class PythonConan(ConanFile):
         build_type = "d" if self.settings.build_type == "Debug" else ""
         self.cpp_info.includedirs = [f"include/python{v.major}.{v.minor}{build_type}"]
         self.cpp_info.set_property("cmake_target_name", "Python::Python")
+
+        self.cpp_info.libs = tools.collect_libs(self)
