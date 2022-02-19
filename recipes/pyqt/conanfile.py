@@ -9,12 +9,12 @@ from conan.tools.files.packager import AutoPackager
 required_conan_version = ">=1.44.1"
 
 
-class Pyqt5Qt5Conan(ConanFile):
-    name = "pyqt5-qt5"
-    version = "5.15.2"
-    description = "The subset of a Qt installation needed by PyQt5."
+class Pyqt6Conan(ConanFile):
+    name = "pyqt6"
+    version = "6.2.2"
+    description = "Python bindings for the Qt cross platform application toolkit"
     topics = ("conan", "python", "pypi", "pip")
-    license = "LGPL v3"
+    license = "GPL v3"
     homepage = "https://www.riverbankcomputing.com/software/pyqt/"
     url = "https://www.riverbankcomputing.com/software/pyqt/"
     settings = "os", "compiler", "build_type", "arch"
@@ -22,9 +22,11 @@ class Pyqt5Qt5Conan(ConanFile):
     default_user = "python"
     default_channel = "stable"
     python_requires = "PipBuildTool/0.1@ultimaker/testing"
-    requires = "python/3.10.2@python/stable"
+    requires = "python/3.10.2@python/stable",\
+                "pyqt6-sip/13.2.0@python/stable",\
+                "pyqt6-qt6/6.2.2@python/stable"
     hashes = [
-        "sha256:750b78e4dba6bdf1607febedc08738e318ea09e9b10aea9ff0d73073f11f6962"
+
     ]
 
     def layout(self):
@@ -52,4 +54,9 @@ class Pyqt5Qt5Conan(ConanFile):
     def package_info(self):
         v = tools.Version(self.dependencies['python'].ref.version)
         self.runenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
+        self.runenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
         self.buildenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
+        self.buildenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
+
+    def package_id(self):
+        self.info.settings.build_type = "Release"

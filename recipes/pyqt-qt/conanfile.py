@@ -9,21 +9,21 @@ from conan.tools.files.packager import AutoPackager
 required_conan_version = ">=1.44.1"
 
 
-class Pyqt5SipConan(ConanFile):
-    name = "pyqt5-sip"
-    version = "12.9.0"
-    description = "The sip module support for PyQt5"
+class Pyqt6Qt5Conan(ConanFile):
+    name = "pyqt6-qt6"
+    version = "6.2.2"
+    description = "The subset of a Qt installation needed by PyQt6."
     topics = ("conan", "python", "pypi", "pip")
-    license = "SIP"
-    homepage = "https://www.riverbankcomputing.com/software/sip/"
-    url = "https://www.riverbankcomputing.com/software/sip/"
+    license = "LGPL v3"
+    homepage = "https://www.riverbankcomputing.com/software/pyqt/"
+    url = "https://www.riverbankcomputing.com/software/pyqt/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
     default_user = "python"
     default_channel = "stable"
     python_requires = "PipBuildTool/0.1@ultimaker/testing"
     requires = "python/3.10.2@python/stable"
-    hashes = []
+    hashes = [ ]
 
     def layout(self):
         self.folders.build = "build"
@@ -51,3 +51,6 @@ class Pyqt5SipConan(ConanFile):
         v = tools.Version(self.dependencies['python'].ref.version)
         self.runenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
         self.buildenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
+
+    def package_id(self):
+        self.info.settings.build_type = "Release"
