@@ -1,4 +1,5 @@
 import os
+import stat
 from pathlib import Path
 
 from jinja2 import Template
@@ -99,8 +100,8 @@ class Pyqt6SipConan(ConanFile):
     default_channel = "stable"
     python_requires = "PipBuildTool/0.2@ultimaker/testing"
     requires = "python/3.10.2@python/stable"
-    exports = ["sip.cmake.jinja", "pyproject.toml.pre.jinja", "project.py", "ConanBuilder.py"]
-    exports_sources = ["sip.cmake.jinja", "pyproject.toml.pre.jinja", "project.py", "ConanBuilder.py"]
+    exports = ["sip.cmake.jinja", "pyproject.toml.pre.jinja", "sip_buildscript.jinja", "ConanBuilder.py"]
+    exports_sources = ["sip.cmake.jinja", "pyproject.toml.pre.jinja", "sip_buildscript.jinja", "ConanBuilder.py"]
     hashes = []
 
     def layout(self):
@@ -121,22 +122,41 @@ class Pyqt6SipConan(ConanFile):
         pb.build()
 
     def package(self):
+        # Add the sip CMake build module
         with open(os.path.join(self.source_folder, "sip.cmake.jinja"), "r") as f:
             tm = Template(f.read())
+            result = tm.render(sip_build_script = self._sip_buildscript_path)
+            tools.save(os.path.join(self.package_folder, self._cmake_install_base_path, "sip.cmake"), result)
+
+        # Add the sip buildscript
+        with open(os.path.join(self.source_folder, "sip_buildscript.jinja"), "r") as f:
+            tm = Template(f.read())
             sip_executable = str(os.path.join(self.package_folder, "bin", "sip-build"))
-            sip_build_env = ". ${CMAKE_BINARY_DIR}/conan/conanbuild.sh && "  # TODO make this more generic and also for Windows
+
+            sip_build_env = ""
+            pre_script = ""
             if self.settings.os == "Windows":
                 sip_executable += ".exe"
-            result = tm.render(sip_build_executable = sip_executable, sip_build_env = sip_build_env)
-            tools.save(os.path.join(self.package_folder, self._cmake_install_base_path, "sip.cmake"), result)
+                sip_build_env = f"env: PYTHONPATH+=;{self._pythonpath}"  # TODO: check on Windows
+            else:
+                pre_script = "#!/bin/bash"
+                sip_build_env = f"export PYTHONPATH={self._pythonpath}:$PYTHONPATH"
+
+            result = tm.render(pre_script = pre_script, sip_build_executable = sip_executable, sip_build_env = sip_build_env)
+            tools.save(self._sip_buildscript_path, result)
+
+        # set the executable bit TODO: check on Windows
+        st = os.stat(self._sip_buildscript_path)
+        os.chmod(self._sip_buildscript_path, st.st_mode | stat.S_IEXEC)
+
+        # Add the rest of the sip files
         packager = AutoPackager(self)
         packager.patterns.lib = ["*.so", "*.so.*", "*.a", "*.lib", "*.dylib", "*.py*"]
         packager.run()
 
     def package_info(self):
-        v = tools.Version(self.dependencies['python'].ref.version)
-        self.runenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
-        self.buildenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
+        self.runenv_info.prepend_path("PYTHONPATH", self._pythonpath)
+        self.buildenv_info.prepend_path("PYTHONPATH", self._pythonpath)
         self.cpp_info.set_property("cmake_file_name", "sip")
         self.cpp_info.set_property("cmake_target_name", "sip::sip")
         self.cpp_info.set_property("cmake_build_modules", [os.path.join(self._cmake_install_base_path, "sip.cmake")])
@@ -149,3 +169,17 @@ class Pyqt6SipConan(ConanFile):
     @property
     def _cmake_install_base_path(self):
         return os.path.join("lib", "cmake", "sip")
+
+    @property
+    def _pythonpath(self):
+        v = tools.Version(self.dependencies['python'].ref.version)
+        return os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages")
+
+    @property
+    def _sip_buildscript_path(self):
+        sipbuild_script = "sip_buildscript"
+        if self.settings.os == "Windows":
+            sipbuild_script += ".ps1"
+        else:
+            sipbuild_script += ".sh"
+        return os.path.join(self.package_folder, self._cmake_install_base_path, sipbuild_script)

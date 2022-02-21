@@ -1,5 +1,4 @@
-set(SIP_BUILD_EXECUTABLE {{ sip_build_executable }})
-set(PRE_BUILD_CMD {{ sip_build_env }})
+set(SIPCMD {{ sip_build_script }})
 
 macro(sanitize_list var_list)
     if(${var_list})
@@ -72,16 +71,8 @@ function(add_sip_module MODULE_TARGET MODULE_SIP SIP_FILES HDR_FILES SRC_FILES)
     sanitize_list(sip_header_files)
 
     message(STATUS "SIP: Generating pyproject.toml")
-    # Need to use this two step process to generate the actual pyproject.toml, because variables can contain
-    # generator expressions (https://cmake.org/cmake/help/latest/manual/cmake-generator-expressions.7.html) these
-    # need to be expanded in th final pyproject toml file. Which happens during the second step `file(GENERATE ...`
-    # unfortunately that command doesn't fill the cmake variables gather above. Here is were the `configure_file(...`
-    # comes into play
-    configure_file(${CMAKE_CURRENT_BINARY_DIR}/pyproject.toml.pre ${CMAKE_CURRENT_BINARY_DIR}/pyproject.toml.in)
-
-    file(GENERATE
-         OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/pyproject.toml
-         INPUT ${CMAKE_CURRENT_BINARY_DIR}/pyproject.toml.in)
+    # FIXME: for generator expressions
+    configure_file(${CMAKE_CURRENT_BINARY_DIR}/pyproject.toml.pre ${CMAKE_CURRENT_BINARY_DIR}/pyproject.toml)
 
     # Touch the generated files (8 in total) to make them dirty and force them to rebuild
     set(_sip_output_files)
@@ -92,10 +83,30 @@ function(add_sip_module MODULE_TARGET MODULE_SIP SIP_FILES HDR_FILES SRC_FILES)
         endif()
     endforeach()
 
-    set(SIPCMD ${PRE_BUILD_CMD} cd ${CMAKE_BINARY_DIR} && ${SIP_BUILD_EXECUTABLE} --no-protected-is-public --pep484-pyi)
+    execute_process(
+            COMMAND ${SIPCMD}
+            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/
+            )  # This will generate the source-files during the configuration step in CMake
 
+    # Find the generated source files
+    file(GLOB sip_c "${CMAKE_CURRENT_BINARY_DIR}/${sip_module_name}/${sip_module_name}/*.c")
+    file(GLOB sip_cpp "${CMAKE_CURRENT_BINARY_DIR}/${sip_module_name}/${sip_module_name}/*.cpp")
+    file(GLOB sip_hdr "${CMAKE_CURRENT_BINARY_DIR}/${sip_module_name}/${sip_module_name}/*.h")
+
+    # create the target library and link all the files (generated and user specified
+    add_library("sip_${MODULE_TARGET}" SHARED ${sip_c} ${sip_cpp} ${sip_hdr} ${SRC_FILES})
+
+    # Make sure that the library name of the target is the same as the MODULE_TARGET with the appropriate extension
+    target_link_libraries("sip_${MODULE_TARGET}" PRIVATE "${MODULE_TARGET}")
+    set_target_properties("sip_${MODULE_TARGET}" PROPERTIES PREFIX "")
+    set_target_properties("sip_${MODULE_TARGET}" PROPERTIES OUTPUT_NAME "${MODULE_TARGET}")
+
+    # Add the custom command to (re-)generate the files and mark them as dirty. This allows the user to actually work
+    # on the sip definition files without having to reconfigure the complete project.
+    # TODO: check if this will also work when the _sip_output_files in-/decrease or that such a scenario requires a
+    # full regeneration.
     add_custom_command(
-            OUTPUT ${_sip_output_files}
+            TARGET "sip_${MODULE_TARGET}"
             COMMAND ${SIPCMD}
             COMMAND ${CMAKE_COMMAND} -E touch ${_sip_output_files}
             WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/
@@ -103,9 +114,6 @@ function(add_sip_module MODULE_TARGET MODULE_SIP SIP_FILES HDR_FILES SRC_FILES)
             DEPENDS ${SIP_FILES}
             VERBATIM
     )
-
-    add_custom_target("sip_${MODULE_TARGET}" ALL DEPENDS ${_sip_output_files})
-
 
     # TODO: Installer, for the Python module don't forget about the pyi file for code completion
 endfunction()
