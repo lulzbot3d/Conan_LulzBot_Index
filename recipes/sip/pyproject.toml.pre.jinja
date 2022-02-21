@@ -12,6 +12,7 @@ requires-python =  "{{ python_version }}"
 requires-external = [{{ external_deps }}]
 
 [tool.sip.project]
+builder-factory = "ConanBuilder"
 sip-files-dir = "${sip_module_path}"
 sip-include-dirs = [${sip_extra_include_dirs}]
 build-dir = "${CMAKE_CURRENT_BINARY_DIR}/${sip_module_name}/"

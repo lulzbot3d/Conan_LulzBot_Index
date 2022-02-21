@@ -17,7 +17,7 @@ class sip(Generator):
 
     @property
     def filename(self):
-        return "pyproject.toml.pre"
+        pass
 
     @property
     def content(self):
@@ -60,9 +60,12 @@ class sip(Generator):
         # Python version binary compatible (major.minor)
         python_version = tools.Version(self.conanfile.dependencies['python'].ref.version)
 
+        with open(os.path.join(Path(__file__).parent, "ConanBuilder.py"), "r") as f:
+            conan_builder_content = f.read()
+
         with open(os.path.join(Path(__file__).parent, "pyproject.toml.pre.jinja"), "r") as f:
             tm = Template(f.read())
-            result = tm.render(
+            pyproject_toml_content = tm.render(
                 module_version = self.conanfile.version,
                 module_homepage = self.conanfile.url if self.conanfile.url else "",
                 module_author = self.conanfile.author if self.conanfile.author else "",
@@ -76,7 +79,10 @@ class sip(Generator):
                 deps_link_args = ",".join(deps_link_args) if len(deps_link_args) > 0 else "",
                 deps_define_macros = ",".join(deps_defines) if len(deps_lib_dirs) > 0 else "",
                 build_type = "false" if self.settings.build_type == "Release" else "true")
-            return result
+            return {
+                "pyproject.toml.pre": pyproject_toml_content,
+                "ConanBuilder.py": conan_builder_content
+            }
 
 
 class Pyqt6SipConan(ConanFile):
@@ -93,8 +99,8 @@ class Pyqt6SipConan(ConanFile):
     default_channel = "stable"
     python_requires = "PipBuildTool/0.2@ultimaker/testing"
     requires = "python/3.10.2@python/stable"
-    exports = ["sip.cmake.jinja", "pyproject.toml.pre.jinja"]
-    exports_sources = ["sip.cmake.jinja", "pyproject.toml.pre.jinja"]
+    exports = ["sip.cmake.jinja", "pyproject.toml.pre.jinja", "project.py", "ConanBuilder.py"]
+    exports_sources = ["sip.cmake.jinja", "pyproject.toml.pre.jinja", "project.py", "ConanBuilder.py"]
     hashes = []
 
     def layout(self):
