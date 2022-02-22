@@ -99,7 +99,7 @@ class Pyqt6SipConan(ConanFile):
     default_user = "python"
     default_channel = "stable"
     python_requires = "PipBuildTool/0.2@ultimaker/testing"
-    requires = "python/3.10.2@python/stable"
+    requires = "python/3.10.2@python/stable", "toml/0.10.2@python/stable", "packaging/21.3@python/stable"
     exports = ["sip.cmake.jinja", "pyproject.toml.pre.jinja", "sip_buildscript.jinja", "ConanBuilder.py"]
     exports_sources = ["sip.cmake.jinja", "pyproject.toml.pre.jinja", "sip_buildscript.jinja", "ConanBuilder.py"]
     hashes = []
