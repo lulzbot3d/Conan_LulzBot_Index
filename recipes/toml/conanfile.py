@@ -51,6 +51,7 @@ class TomlConan(ConanFile):
         v = tools.Version(self.dependencies['python'].ref.version)
         self.runenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
         self.buildenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
+        self.user_info.pythonpath = os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages")
 
     def package_id(self):
         self.info.settings.build_type = "Release"
