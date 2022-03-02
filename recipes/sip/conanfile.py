@@ -101,4 +101,4 @@ class Pyqt6SipConan(ConanFile):
         sipbuild_script = "sip-build"
         if self.settings.os == "Windows":
             sipbuild_script += ".exe"
-        return os.path.join(self.package_folder, self._cmake_install_base_path, sipbuild_script)
+        return os.path.join(self.package_folder, "bin", sipbuild_script)
