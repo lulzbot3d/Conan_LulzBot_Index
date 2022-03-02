@@ -55,8 +55,12 @@ class Pyqt6SipConan(ConanFile):
             for dep in self.deps_user_info.values():
                 if hasattr(dep, "pythonpath"):
                     python_path += path_sep + dep.pythonpath
-            result = tm.render(sip_build_script = self._sip_buildscript_path, conan_python_path = python_path, site_packages = self._base_pythonpath)
+            result = tm.render(sip_build_script = self._sip_buildscript_path,
+                               conan_python_path = python_path,
+                               site_packages = self._base_pythonpath,
+                               sip_cmake_module_path = os.path.join(self.package_folder, self._cmake_install_base_path))
             tools.save(os.path.join(self.package_folder, self._cmake_install_base_path, "sip.cmake"), result)
+        self.copy("CMakeBuilder.py", dst=os.path.join(self.package_folder, self._cmake_install_base_path), keep_path = False)
 
         # Add the rest of the sip files
         packager = AutoPackager(self)
@@ -70,6 +74,8 @@ class Pyqt6SipConan(ConanFile):
 
         self.cpp_info.set_property("cmake_file_name", "sip")
         self.cpp_info.set_property("cmake_target_name", "sip::sip")
+        self.cpp_info.set_property("cmake_target_aliases", ["SIP::SIP"])
+
         self.cpp_info.set_property("cmake_build_modules", [os.path.join(self._cmake_install_base_path, "sip.cmake")])
         sip_v = tools.Version(self.version)
         self.cpp_info.set_property("defines", f"-DSIP_VERSION=0x{int(sip_v.major):02d}{int(sip_v.minor):02d}{int(sip_v.patch):02d}")
