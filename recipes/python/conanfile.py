@@ -45,6 +45,11 @@ class PythonConan(ConanFile):
         if self.settings.os != "Windows":
             self.requires("openblas/0.3.17")
             self.requires("geos/3.10.1")
+        if self.settings.os == "Macos":
+            self.requires("gdbm/1.19")
+            self.requires("tk/8.6.10")
+            self.requires("ncurses/6.3")
+            self.requires("pkgconf/1.7.4")
 
     def configure(self):
         self.options["openssl"].shared = self.options.shared
@@ -70,9 +75,6 @@ class PythonConan(ConanFile):
             tc.default_configure_install_args = True
             if self.settings.os == "Linux":
                 tc.ldflags.append(f"-Wl,-rpath={os.path.join(self.package_folder, 'lib')}")
-            else:  # MacOS
-                tc.configure_args.append("--enable-universalsdk")
-                tc.configure_args.append("--with-universal-archs=universal2")
             tc.configure_args.append("--enable-ipv6")
             tc.configure_args.append("--with-doc-strings")
             tc.configure_args.append("--with-ensurepip")
@@ -113,7 +115,8 @@ class PythonConan(ConanFile):
         self.buildenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
 
         self.user_info.pythonpath = self._base_pythonpath
-        self.user_info.interp_path = os.path.join(self.package_folder, "bin")
+        ext = ".exe" if self.settings.os == "Windows" else ""
+        self.user_info.interp_path = os.path.join(self.package_folder, "bin", f"{self._python_path}{ext}")
 
         self.cpp_info.includedirs = [f"include/{self._python_path}"]
         self.cpp_info.set_property("cmake_target_name", "Python::Python")
