@@ -71,7 +71,6 @@ class PythonConan(ConanFile):
             if self.settings.os == "Linux":
                 tc.ldflags.append(f"-Wl,-rpath={os.path.join(self.package_folder, 'lib')}")
             else:  # MacOS
-                tc.ldflags.append("-Wl")
                 tc.configure_args.append("--enable-universalsdk")
                 tc.configure_args.append("--with-universal-archs=universal2")
             tc.configure_args.append("--enable-ipv6")
@@ -107,15 +106,26 @@ class PythonConan(ConanFile):
         packager.run()
 
     def package_info(self):
-        v = tools.Version(self.version)
-        self.runenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}"))
+        self.runenv_info.prepend_path("PYTHONPATH", self._base_pythonpath)
         self.runenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
 
-        self.buildenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}"))
+        self.buildenv_info.prepend_path("PYTHONPATH", self._base_pythonpath)
         self.buildenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
 
-        build_type = "d" if self.settings.build_type == "Debug" else ""
-        self.cpp_info.includedirs = [f"include/python{v.major}.{v.minor}{build_type}"]
+        self.user_info.pythonpath = self._base_pythonpath
+        self.user_info.interp_path = os.path.join(self.package_folder, "bin")
+
+        self.cpp_info.includedirs = [f"include/{self._python_path}"]
         self.cpp_info.set_property("cmake_target_name", "Python::Python")
 
         self.cpp_info.libs = tools.collect_libs(self)
+
+    @property
+    def _python_path(self):
+        v = tools.Version(self.version)
+        build_type = "d" if self.settings.build_type == "Debug" else ""
+        return f"python{v.major}.{v.minor}{build_type}"
+
+    @property
+    def _base_pythonpath(self):
+        return os.path.join(self.package_folder, "lib", self._python_path)
