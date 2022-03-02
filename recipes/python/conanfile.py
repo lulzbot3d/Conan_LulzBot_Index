@@ -117,6 +117,7 @@ class PythonConan(ConanFile):
 
         self.cpp_info.includedirs = [f"include/{self._python_path}"]
         self.cpp_info.set_property("cmake_target_name", "Python::Python")
+        self.cpp_info.set_property("cmake_target_aliases", ["python::python"])
 
         self.cpp_info.libs = tools.collect_libs(self)
 
