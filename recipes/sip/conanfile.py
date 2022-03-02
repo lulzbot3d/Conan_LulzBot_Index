@@ -55,7 +55,7 @@ class Pyqt6SipConan(ConanFile):
             for dep in self.deps_user_info.values():
                 if hasattr(dep, "pythonpath"):
                     python_path += path_sep + dep.pythonpath
-            result = tm.render(sip_build_script = self._sip_buildscript_path, conan_python_path = python_path)
+            result = tm.render(sip_build_script = self._sip_buildscript_path, conan_python_path = python_path, site_packages = self._base_pythonpath)
             tools.save(os.path.join(self.package_folder, self._cmake_install_base_path, "sip.cmake"), result)
 
         # Add the rest of the sip files
@@ -82,9 +82,13 @@ class Pyqt6SipConan(ConanFile):
         return os.path.join("lib", "cmake", "sip")
 
     @property
-    def _pythonpath(self):
+    def _base_pythonpath(self):
         v = tools.Version(self.dependencies['python'].ref.version)
-        return os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages")
+        return os.path.join("lib", f"python{v.major}.{v.minor}", "site-packages")
+
+    @property
+    def _pythonpath(self):
+        return os.path.join(self.package_folder, self._base_pythonpath)
 
     @property
     def _sip_buildscript_path(self):
