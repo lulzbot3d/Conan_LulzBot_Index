@@ -57,7 +57,7 @@ class Pyqt6SipConan(ConanFile):
                     python_path += path_sep + dep.pythonpath
             result = tm.render(sip_build_script = self._sip_buildscript_path,
                                conan_python_path = python_path,
-                               site_packages = self._base_pythonpath,
+                               site_packages = os.path.join("..", self._base_pythonpath),
                                sip_cmake_module_path = os.path.join(self.package_folder, self._cmake_install_base_path))
             tools.save(os.path.join(self.package_folder, self._cmake_install_base_path, "sip.cmake"), result)
         self.copy("CMakeBuilder.py", dst=os.path.join(self.package_folder, self._cmake_install_base_path), keep_path = False)
