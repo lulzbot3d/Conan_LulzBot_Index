@@ -15,7 +15,7 @@ class SentrySDKConan(ConanFile):
     url = "https://github.com/getsentry/sentry-python"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "python"
+    default_user = "pypi"
     default_channel = "stable"
     python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
     python_requires_extend = "UltimakerBase.UltimakerBase"

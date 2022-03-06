@@ -15,12 +15,12 @@ class CryptographyConan(ConanFile):
     url = "https://github.com/pyca/cryptography"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "python"
+    default_user = "pypi"
     default_channel = "stable"
     python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
     python_requires_extend = "UltimakerBase.UltimakerBase"
     requires = "python/3.10.2@python/stable",\
-                "cffi/1.14.1@python/stable"
+                "cffi/1.14.1@pypi/stable"
     hashes = [
         "sha256:a00cf305f07b26c351d8d4e1af84ad7501eca8a342dedf24a7acb0e7b7406e14",
         "sha256:3520667fda779eb788ea00080124875be18f2d8f0848ec00733c0ec3bb8219fc",

@@ -17,12 +17,12 @@ class NumpySTLConan(ConanFile):
     url = "https://github.com/WoLpH/numpy-stl/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "python"
+    default_user = "pypi"
     default_channel = "stable"
     python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
     python_requires_extend = "UltimakerBase.UltimakerBase"
     requires = "python/3.10.2@python/stable", \
-               "numpy/1.21.5@python/stable"
+               "numpy/1.21.5@pypi/stable"
     hashes = ["sha256:f6b529b8a8112dfe456d4f7697c7aee0aca62be5a873879306afe4b26fca963c"]
 
     def generate(self):

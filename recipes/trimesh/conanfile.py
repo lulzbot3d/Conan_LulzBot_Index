@@ -17,12 +17,12 @@ class TrimeshConan(ConanFile):
     url = "https://github.com/mikedh/trimesh"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "python"
+    default_user = "pypi"
     default_channel = "stable"
     python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
     python_requires_extend = "UltimakerBase.UltimakerBase"
     requires = "python/3.10.2@python/stable",\
-               "numpy/1.21.5@python/stable"
+               "numpy/1.21.5@pypi/stable"
     hashes = [
         "sha256:f01e8edab14d1999700c980c21a1546f37417216ad915a53be649d263130181e",
         "sha256:8ac8bea693b3ee119f11b022fc9b9481c9f1af06cb38bc859bf5d16bbbe49b23"

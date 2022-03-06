@@ -37,28 +37,23 @@ class UltimakerBase(object):
 
     @property
     def _python_name(self):
-        if "python" in self.dependencies:
-            v = tools.Version(self.dependencies["python"].ref.version)
-            debug = "d" if self.info.settings.build_type == "Debug" else ""
-            return f"python{v.major}.{v.minor}{debug}"
-        return None
+        v = tools.Version(self.dependencies["python"].ref.version)
+        debug = "d" if self.info.settings.build_type == "Debug" else ""
+        return f"python{v.major}.{v.minor}{debug}"
 
     @property
     def _python_site_packages_path(self):
-        if "python" in self.dependencies:
-            return os.path.join("lib", self._python_name, "site-packages")
-        return None
+        return os.path.join("lib", self._python_name, "site-packages")
 
     def _set_python_site_packages(self):
-        if "python" in self.dependencies:
-            site_package_path = os.path.join(self.package_folder, self._python_site_packages_path)
-            self.runenv_info.prepend_path("PYTHONPATH", site_package_path)
-            self.buildenv_info.prepend_path("PYTHONPATH", site_package_path)
-            self.user_info.pythonpath = site_package_path
+        site_package_path = os.path.join(self.folders.package_folder, self.self._python_site_packages_path)
+        self.runenv_info.prepend_path("PYTHONPATH", site_package_path)
+        self.buildenv_info.prepend_path("PYTHONPATH", site_package_path)
+        self.user_info.pythonpath = site_package_path
 
     @property
     def _python_interp(self):
-        if "python" in self.dependencies:
+        if "python" in self.dependencies.items():
             return self.deps_user_info["python"].interp_path
         return None
 

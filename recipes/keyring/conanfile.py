@@ -16,9 +16,10 @@ class KeyringConan(ConanFile):
     url = "https://github.com/jaraco/keyring"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "python"
+    default_user = "pypi"
     default_channel = "stable"
-    python_requires = "PipBuildTool/0.1@ultimaker/testing"
+    python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
+    python_requires_extend = "UltimakerBase.UltimakerBase"
     hashes = [
         "sha256:045703609dd3fccfcdb27da201684278823b72af515aedec1a8515719a038cb8",
         "sha256:8f607d7d1cc502c43a932a275a56fe47db50271904513a379d39df1af277ac48"

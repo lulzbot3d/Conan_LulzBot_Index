@@ -15,12 +15,12 @@ class ScipyConan(ConanFile):
     url = "https://www.scipy.org"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "python"
+    default_user = "pypi"
     default_channel = "stable"
     python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
     python_requires_extend = "UltimakerBase.UltimakerBase"
     requires = "python/3.10.2@python/stable",\
-               "numpy/1.21.5@python/stable"
+               "numpy/1.21.5@pypi/stable"
     hashes = [
         "sha256:d73b13eb0452c178f946b4db60b27e400225df02e926609652ed67798054e77d",
         "sha256:8db99b6c017ab971b04a0781103a31ce745d4f0ac2b7db999523d4a94549ae15",

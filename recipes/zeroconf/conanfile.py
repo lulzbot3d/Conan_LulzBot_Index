@@ -15,12 +15,12 @@ class ZeroconfConan(ConanFile):
     url = "https://github.com/jstasiak/python-zeroconf"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "python"
+    default_user = "pypi"
     default_channel = "stable"
     python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
     python_requires_extend = "UltimakerBase.UltimakerBase"
     requires = "python/3.10.2@python/stable",\
-                "ifaddr/0.1.7@python/stable"
+                "ifaddr/0.1.7@pypi/stable"
     hashes = [
         "sha256:53a180248471c6f81bd1fffcbce03ed93d7d8eaf10905c9121ac1ea996d19844",
         "sha256:5a468da018bc3f04bbce77ae247924d802df7aeb4c291bbbb5a9616d128800b0"

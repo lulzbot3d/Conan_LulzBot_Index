@@ -17,17 +17,17 @@ class TwistedConan(ConanFile):
     url = "https://twistedmatrix.com/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "python"
+    default_user = "pypi"
     default_channel = "stable"
     python_requires = "PipBuildTool/0.1@ultimaker/testing"
     requires = "python/3.10.2@python/stable", \
-               "constantly/15.1.0@python/stable", \
-               "hyperlink/21.0.0@python/stable", \
-               "incremental/21.3.0@python/stable", \
-               "zope_interface/5.4.0@python/stable", \
-               "twisted-iocpsupport/1.0.2@python/stable", \
-               "Automat/20.2.0@python/stable", \
-               "attrs/21.2.0@python/stable"
+               "constantly/15.1.0@pypi/stable", \
+               "hyperlink/21.0.0@pypi/stable", \
+               "incremental/21.3.0@pypi/stable", \
+               "zope_interface/5.4.0@pypi/stable", \
+               "twisted-iocpsupport/1.0.2@pypi/stable", \
+               "Automat/20.2.0@pypi/stable", \
+               "attrs/21.2.0@pypi/stable"
     hashes = [
         "sha256:77544a8945cf69b98d2946689bbe0c75de7d145cdf11f391dd487eae8fc95a12",
         "sha256:aab38085ea6cda5b378b519a0ec99986874921ee8881318626b0a3414bb2631e"

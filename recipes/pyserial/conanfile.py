@@ -17,7 +17,7 @@ class PyserialConan(ConanFile):
     url = "https://github.com/pyserial/pyserial"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "python"
+    default_user = "pypi"
     default_channel = "stable"
     python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
     python_requires_extend = "UltimakerBase.UltimakerBase"
@@ -26,11 +26,6 @@ class PyserialConan(ConanFile):
         "sha256:6e2d401fdee0eab996cf734e67773a0143b932772ca8b42451440cfed942c627",
         "sha256:e0770fadba80c31013896c7e6ef703f72e7834965954a78e71a3049488d4d7d8"
     ]
-
-    def layout(self):
-        self.folders.build = "build"
-        self.folders.package = "package"
-        self.folders.generators = os.path.join("build", "conan")
 
     def generate(self):
         rv = VirtualRunEnv(self)

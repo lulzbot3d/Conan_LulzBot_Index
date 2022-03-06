@@ -15,12 +15,12 @@ class ImportlibMetadataConan(ConanFile):
     url = "https://github.com/python/importlib_metadata"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "python"
+    default_user = "pypi"
     default_channel = "stable"
     python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
     python_requires_extend = "UltimakerBase.UltimakerBase"
     requires = "python/3.10.2@python/stable",\
-               "zipp/3.7.0@python/stable"
+               "zipp/3.7.0@pypi/stable"
     hashes = []
 
     def generate(self):

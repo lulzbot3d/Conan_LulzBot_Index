@@ -18,11 +18,11 @@ class PackagingConan(ConanFile):
     url = "https://github.com/pypa/packaging"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "python"
+    default_user = "pypi"
     default_channel = "stable"
     python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
     python_requires_extend = "UltimakerBase.UltimakerBase"
-    requires = "python/3.10.2@python/stable", "pyparsing/3.0.7@python/stable"
+    requires = "python/3.10.2@python/stable", "pyparsing/3.0.7@pypi/stable"
     hashes = []
 
     def generate(self):
