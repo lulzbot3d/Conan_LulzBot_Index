@@ -1,7 +1,7 @@
 import os
 
 from conans import ConanFile, tools
-from conan.tools.gnu import AutotoolsDeps, Autotools, AutotoolsToolchain, PkgConfigDeps
+from conan.tools.gnu import AutotoolsDeps, Autotools, AutotoolsToolchain
 from conan.tools.microsoft import MSBuildDeps, MSBuildToolchain, MSBuild
 from conan.tools.files.packager import AutoPackager
 
@@ -120,7 +120,6 @@ class PythonConan(ConanFile):
 
         self.cpp_info.includedirs = [f"include/{self._python_path}"]
         self.cpp_info.set_property("cmake_target_name", "Python::Python")
-        self.cpp_info.set_property("cmake_target_aliases", ["python::python"])
 
         self.cpp_info.libs = tools.collect_libs(self)
 

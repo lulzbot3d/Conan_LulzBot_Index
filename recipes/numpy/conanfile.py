@@ -1,10 +1,8 @@
 import os
 
-from conans import tools
 from conan import ConanFile
 from conan.tools.env.virtualrunenv import VirtualRunEnv
 from conan.tools.env.virtualbuildenv import VirtualBuildEnv
-from conan.tools.files.packager import AutoPackager
 
 required_conan_version = ">=1.44.1"
 
@@ -21,7 +19,8 @@ class NumpyConan(ConanFile):
     build_policy = "missing"
     default_user = "python"
     default_channel = "stable"
-    python_requires = "PipBuildTool/0.1@ultimaker/testing"
+    python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
+    python_requires_extend = "UltimakerBase.UltimakerBase"
     requires = "python/3.10.2@python/stable"
     hashes = [
         "sha256:301e408a052fdcda5cdcf03021ebafc3c6ea093021bf9d1aa47c54d48bdad166",
@@ -31,11 +30,6 @@ class NumpyConan(ConanFile):
         "sha256:dc4b2fb01f1b4ddbe2453468ea0719f4dbb1f5caa712c8b21bb3dd1480cd30d9",
         "sha256:6a5928bc6241264dce5ed509e66f33676fc97f464e7a919edc672fb5532221ee"
     ]  # NOTE: these are only the hashes for Windows
-
-    def layout(self):
-        self.folders.build = "build"
-        self.folders.package = "package"
-        self.folders.generators = os.path.join("build", "conan")
 
     def generate(self):
         rv = VirtualRunEnv(self)
@@ -50,13 +44,12 @@ class NumpyConan(ConanFile):
         pb.build()
 
     def package(self):
-        packager = AutoPackager(self)
-        packager.patterns.lib = ["*.so", "*.so.*", "*.a", "*.lib", "*.dylib", "*.py*"]
-        packager.run()
+        self.copy("*")
 
     def package_info(self):
-        v = tools.Version(self.dependencies['python'].ref.version)
-        self.runenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
+        self._set_python_site_packages()
         self.runenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
-        self.buildenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
         self.buildenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
+
+    def package_id(self):
+        self.info.settings.build_type = "Release"

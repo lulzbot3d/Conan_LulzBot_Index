@@ -1,10 +1,6 @@
-import os
-
-from conans import tools
 from conan import ConanFile
 from conan.tools.env.virtualrunenv import VirtualRunEnv
 from conan.tools.env.virtualbuildenv import VirtualBuildEnv
-from conan.tools.files.packager import AutoPackager
 
 required_conan_version = ">=1.44.1"
 
@@ -22,7 +18,8 @@ class PyclipperConan(ConanFile):
     build_policy = "missing"
     default_user = "python"
     default_channel = "stable"
-    python_requires = "PipBuildTool/0.1@ultimaker/testing"
+    python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
+    python_requires_extend = "UltimakerBase.UltimakerBase"
     requires = "python/3.10.2@python/stable"
     hashes = [
         "sha256:c096703dc32f2e4700a1f7054e8b58c29fe86212fa7a2c2adecb0102cb639fb2",
@@ -33,11 +30,6 @@ class PyclipperConan(ConanFile):
         "sha256:19a6809d9cbd535d0fe922e9315babb8d70b5c7dcd43e0f89740d09c406b40f8",
         "sha256:5c5d50498e335d7f969ca5ad5886e77c40088521dcabab4feb2f93727140251e"
     ]
-
-    def layout(self):
-        self.folders.build = "build"
-        self.folders.package = "package"
-        self.folders.generators = os.path.join("build", "conan")
 
     def generate(self):
         rv = VirtualRunEnv(self)
@@ -52,11 +44,10 @@ class PyclipperConan(ConanFile):
         pb.build()
 
     def package(self):
-        packager = AutoPackager(self)
-        packager.patterns.lib = ["*.so", "*.so.*", "*.a", "*.lib", "*.dylib", "*.py*"]
-        packager.run()
+        self.copy("*")
 
     def package_info(self):
-        v = tools.Version(self.dependencies['python'].ref.version)
-        self.runenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
-        self.buildenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
+        self._set_python_site_packages()
+
+    def package_id(self):
+        self.info.settings.build_type = "Release"

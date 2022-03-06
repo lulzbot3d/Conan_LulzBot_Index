@@ -1,15 +1,11 @@
-import os
-
-from conans import tools
 from conan import ConanFile
 from conan.tools.env.virtualrunenv import VirtualRunEnv
 from conan.tools.env.virtualbuildenv import VirtualBuildEnv
-from conan.tools.files.packager import AutoPackager
 
 required_conan_version = ">=1.44.1"
 
-
 # TODO: Compile from source using libffi
+
 
 class CffiConan(ConanFile):
     name = "cffi"
@@ -23,7 +19,8 @@ class CffiConan(ConanFile):
     build_policy = "missing"
     default_user = "python"
     default_channel = "stable"
-    python_requires = "PipBuildTool/0.1@ultimaker/testing"
+    python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
+    python_requires_extend = "UltimakerBase.UltimakerBase"
     requires = "python/3.10.2@python/stable",\
                "pycparser/2.20@python/stable"
     hashes = [
@@ -34,11 +31,6 @@ class CffiConan(ConanFile):
         "sha256:b2a2b0d276a136146e012154baefaea2758ef1f56ae9f4e01c612b0831e0bd2f",
         "sha256:d3148b6ba3923c5850ea197a91a42683f946dba7e8eb82dfa211ab7e708de939"
     ]
-
-    def layout(self):
-        self.folders.build = "build"
-        self.folders.package = "package"
-        self.folders.generators = os.path.join("build", "conan")
 
     def generate(self):
         rv = VirtualRunEnv(self)
@@ -53,11 +45,10 @@ class CffiConan(ConanFile):
         pb.build()
 
     def package(self):
-        packager = AutoPackager(self)
-        packager.patterns.lib = ["*.so", "*.so.*", "*.a", "*.lib", "*.dylib", "*.py*"]
-        packager.run()
+        self.copy("*")
 
     def package_info(self):
-        v = tools.Version(self.dependencies['python'].ref.version)
-        self.runenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
-        self.buildenv_info.prepend_path("PYTHONPATH", os.path.join(self.package_folder, "lib", f"python{v.major}.{v.minor}", "site-packages"))
+        self._set_python_site_packages()
+
+    def package_id(self):
+        self.info.settings.build_type = "Release"

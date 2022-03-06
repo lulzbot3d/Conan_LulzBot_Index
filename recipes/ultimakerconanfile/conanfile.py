@@ -29,9 +29,42 @@ class UltimakerBase(object):
             self.cpp.build.libdirs = ["."]
             self.cpp.build.bindirs = ["."]
 
+    @property
+    def _executable_ext(self):
+        if self.settings.os == "Windows":
+            return ".exe"
+        return ""
+
+    @property
+    def _python_name(self):
+        if "python" in self.dependencies:
+            v = tools.Version(self.dependencies["python"].ref.version)
+            debug = "d" if self.info.settings.build_type == "Debug" else ""
+            return f"python{v.major}.{v.minor}{debug}"
+        return None
+
+    @property
+    def _python_site_packages_path(self):
+        if "python" in self.dependencies:
+            return os.path.join("lib", self._python_name, "site-packages")
+        return None
+
+    def _set_python_site_packages(self):
+        if "python" in self.dependencies:
+            site_package_path = os.path.join(self.package_folder, self._python_site_packages_path)
+            self.runenv_info.prepend_path("PYTHONPATH", site_package_path)
+            self.buildenv_info.prepend_path("PYTHONPATH", site_package_path)
+            self.user_info.pythonpath = site_package_path
+
+    @property
+    def _python_interp(self):
+        if "python" in self.dependencies:
+            return self.deps_user_info["python"].interp_path
+        return None
+
 
 class Pkg(ConanFile):
     name = "UltimakerBase"
-    version = "0.3"
+    version = "0.4"
     default_user = "ultimaker"
     default_channel = "testing"
