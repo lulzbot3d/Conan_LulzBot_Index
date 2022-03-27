@@ -1,84 +1,68 @@
-import os
-
-from jinja2 import Template
-
-from conans import tools
+from pathlib import Path
 
 from conan import ConanFile
-from conan.tools.env.virtualrunenv import VirtualRunEnv
-from conan.tools.env.virtualbuildenv import VirtualBuildEnv
 
-required_conan_version = ">=1.44.1"
+from conans.errors import ConanInvalidConfiguration
+from conans.tools import Version
+from conan.tools.files import files
+
+required_conan_version = ">=1.33.0"
+
 
 class Pyqt6SipConan(ConanFile):
     name = "sip"
-    version = "6.5.0"
-    description = "The sip module support for PyQt5"
+    description = "The sip module support for PyQt6"
     topics = ("conan", "python", "pypi", "pip")
     license = "GPL v3"
     homepage = "https://www.riverbankcomputing.com/software/sip/"
     url = "https://www.riverbankcomputing.com/software/sip/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "pypi"
-    default_channel = "stable"
-    python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
-    python_requires_extend = "UltimakerBase.UltimakerBase"
-    requires = "python/3.10.2@python/stable", "toml/0.10.2@pypi/stable", "packaging/21.3@pypi/stable"
-    exports = ["sip.cmake.jinja", "CMakeBuilder.py"]
-    exports_sources = ["sip.cmake.jinja", "CMakeBuilder.py"]
-    hashes = []
+    requires = ["cpython/[>=3.6.0]@python/stable",
+                "toml/0.10.2@pypi/stable",
+                "packaging/21.3@pypi/stable"]
+    exports_sources = "cmake/**"
+    no_copy_source = True
 
-    def generate(self):
-        rv = VirtualRunEnv(self)
-        rv.generate()
+    @property
+    def _site_packages(self):
+        return "site-packages"
 
-        bv = VirtualBuildEnv(self)
-        bv.generate()
+    def source(self):
+        sources = self.conan_data["sources"][self.version]
+        if self.settings.get_safe("os") in sources:
+            os_bin = self.settings.get_safe("os")
+        elif "Any" in sources:
+            os_bin = "Any"
+        else:
+            raise ConanInvalidConfiguration("Invalid version for Operating System")
 
-    def build(self):
-        pb = self.python_requires["PipBuildTool"].module.PipBuildTool(self)
-        pb.configure()
-        pb.build()
+        actual_python_version = Version(self.deps_cpp_info['cpython'].version)
+
+        python_version = Version("1.0")
+        python_version_key = "1.0"
+
+        for py_version in sources[os_bin].keys():
+            available_python_version = Version(py_version)
+            if python_version < available_python_version <= actual_python_version:
+                python_version = available_python_version
+                python_version_key = py_version
+
+        if python_version is Version("1.0"):
+            raise ConanInvalidConfiguration("No compatible Python Version")
+
+        self.output.info(f"Using wheel = {sources[os_bin][python_version_key]['url']}")
+        files.get(self, **sources[os_bin][python_version_key], destination = self._site_packages)
 
     def package(self):
-        # Add the sip CMake build module
-        with open(os.path.join(self.source_folder, "sip.cmake.jinja"), "r") as f:
-            tm = Template(f.read())
-            path_sep = ";" if self.settings.os == "Windows" else ":"
-            python_path = self._python_site_packages_path
-            for dep in self.deps_user_info.values():
-                if hasattr(dep, "pythonpath"):
-                    python_path += path_sep + dep.pythonpath
-            result = tm.render(sip_build_script = self._sip_buildscript_path,
-                               conan_python_path = python_path,
-                               site_packages = os.path.join("..", self._python_site_packages_path),
-                               sip_cmake_module_path = os.path.join(self.package_folder, self._cmake_install_base_path))
-            tools.save(os.path.join(self.package_folder, self._cmake_install_base_path, "sip.cmake"), result)
-        self.copy("CMakeBuilder.py", dst=os.path.join(self.package_folder, self._cmake_install_base_path), keep_path = False)
-        self.copy("*")
+        self.copy("*", src = self._site_packages, dst = self._site_packages)
 
     def package_info(self):
-        self._set_python_site_packages()
-        self.runenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
-        self.buildenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
-
-        self.cpp_info.set_property("cmake_file_name", "sip")
-        self.cpp_info.set_property("cmake_target_name", "sip::sip")
-        self.cpp_info.set_property("cmake_target_aliases", ["SIP::SIP"])
-
-        self.cpp_info.set_property("cmake_build_modules", [os.path.join(self._cmake_install_base_path, "sip.cmake")])
-        sip_v = tools.Version(self.version)
-        self.cpp_info.set_property("defines", f"-DSIP_VERSION=0x{int(sip_v.major):02d}{int(sip_v.minor):02d}{int(sip_v.patch):02d}")
+        self.env_info.PYTHONPATH = Path(self.package_folder, self._site_packages)
+        self.user_info.pythonpath = Path(self.package_folder, self._site_packages)
 
     def package_id(self):
-        self.info.settings.build_type = "Release"
-
-    @property
-    def _cmake_install_base_path(self):
-        return os.path.join("lib", "cmake", "sip")
-
-    @property
-    def _sip_buildscript_path(self):
-        sipbuild_script = f"sip-build{self._executable_ext}"
-        return os.path.join(self.package_folder, "bin", sipbuild_script)
+        if len(self.conan_data["sources"][self.version]) >= 1 or "Any" not in self.conan_data["sources"][self.version]:
+            self.info.settings.build_type = "Release"
+        else:
+            self.info.header_only()

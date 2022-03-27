@@ -6,7 +6,7 @@ from conan.tools.microsoft import MSBuildDeps, MSBuildToolchain, MSBuild
 from conan.tools.files.packager import AutoPackager
 
 
-required_conan_version = ">=1.44.1"
+required_conan_version = ">=1.46"
 
 
 class PythonConan(ConanFile):

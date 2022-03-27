@@ -9,16 +9,16 @@ from conan.tools.files import files
 required_conan_version = ">=1.33.0"
 
 
-class Pywin32CtypesConan(ConanFile):
-    name = "pywin32-ctypes"
-    description = ""
+class Pyqt6SipConan(ConanFile):
+    name = "pyqt6-sip"
+    description = "The sip module support for PyQt6"
     topics = ("conan", "python", "pypi", "pip")
-    license = "BSD"
-    homepage = "https://github.com/enthought/pywin32-ctypes"
-    url = "https://github.com/enthought/pywin32-ctypes"
+    license = "SIP"
+    homepage = "https://www.riverbankcomputing.com/software/sip/"
+    url = "https://www.riverbankcomputing.com/software/sip/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = "cpython/[>=3.0]@python/stable"
+    requires = "cpython/[>=3.6]@python/stable"
     no_copy_source = True
 
     @property

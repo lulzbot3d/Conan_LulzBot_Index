@@ -1,0 +1,716 @@
+"sources":
+  "0.1.0":
+    "Any":
+      "3.0":
+        "sha256": "62aee599a893a4836a52c12a5804dae7313e0482ab625127343109dcf3a4c183"
+        "url": "https://files.pythonhosted.org/packages/04/44/b3367ff94cf04e321e3259ca40bc17c2f810d944fdec79450df04a972d32/sentry_sdk-0.1.0-py2.py3-none-any.whl"
+  "0.1.0rc1":
+    "Any":
+      "3.0":
+        "sha256": "98266b763323a685413ab4d6ccc05fc34bf38e21ba362db9a0a3d8f4461a22c1"
+        "url": "https://files.pythonhosted.org/packages/df/5d/49e1876fd22351f707696268ac5cdcf19b7497cd0987f134b1a008eed7fb/sentry_sdk-0.1.0rc1-py2.py3-none-any.whl"
+  "0.1.0rc10":
+    "Any":
+      "3.0":
+        "sha256": "40fd311636f92a85b258782f4d1e716d88bb62124f721fffc829208dc393e01d"
+        "url": "https://files.pythonhosted.org/packages/62/49/ba57d869a2cc39fc48c09cded10271af935b64b5ee62870567d131190088/sentry_sdk-0.1.0rc10-py2.py3-none-any.whl"
+  "0.1.0rc11":
+    "Any":
+      "3.0":
+        "sha256": "0f238ab9af0a74d71abb6ff6a7a2b804e495d59aa3a66e49648c81abbe806eca"
+        "url": "https://files.pythonhosted.org/packages/25/3c/170df667b580f262d20f1f34cc4fdbb00958205df22d48183b9c8df3842a/sentry_sdk-0.1.0rc11-py2.py3-none-any.whl"
+  "0.1.0rc12":
+    "Any":
+      "3.0":
+        "sha256": "6fa1899dac39930d809a890dbe490e4331f8f9709a285bcf8d66a7b6ba6530d5"
+        "url": "https://files.pythonhosted.org/packages/58/ad/47cdca9647706902e71c4a39e049ebd2fc88e3e2261362a50f5382209ca3/sentry_sdk-0.1.0rc12-py2.py3-none-any.whl"
+  "0.1.0rc13":
+    "Any":
+      "3.0":
+        "sha256": "59704c10699816de463e5aad684714f74e4b7b1ef42a614d6c4ce12d012df474"
+        "url": "https://files.pythonhosted.org/packages/ef/a7/6df8208e736ee98b5706d298be585835914d3bf754a1ba215edc2d6e077f/sentry_sdk-0.1.0rc13-py2.py3-none-any.whl"
+  "0.1.0rc14":
+    "Any":
+      "3.0":
+        "sha256": "86f07b1b7bf6dd3910e9d90d762798b082e68aca378a84d3f317ca1e04379e3c"
+        "url": "https://files.pythonhosted.org/packages/20/27/460bffc81c2e05dc54203abe7fe39fb6c87d7ac56dba072674b3e73d0aa3/sentry_sdk-0.1.0rc14-py2.py3-none-any.whl"
+  "0.1.0rc15":
+    "Any":
+      "3.0":
+        "sha256": "a48a7f9005a4525a575c3f40862772f97391aa9e2cb2fc6f957ac41698b77825"
+        "url": "https://files.pythonhosted.org/packages/ff/6c/6692c9b69a7ec71df80a544be26b61dbd30bc83484b27fddee9b5c4a0b2b/sentry_sdk-0.1.0rc15-py2.py3-none-any.whl"
+  "0.1.0rc16":
+    "Any":
+      "3.0":
+        "sha256": "a007aeabc28e8d096600188ddd143e5a4dfca04d7ca796be21458f259cdc1455"
+        "url": "https://files.pythonhosted.org/packages/47/07/0ab30315cd2a674a3c41594e4a49e7706ae702ec76ebf03b18618ca1e179/sentry_sdk-0.1.0rc16-py2.py3-none-any.whl"
+  "0.1.0rc2":
+    "Any":
+      "3.0":
+        "sha256": "872f6a8981e46ec5e6ffee8f5ad2ea3874698fb1efd04a513062b99b0839631c"
+        "url": "https://files.pythonhosted.org/packages/bc/bd/4c60809a2b9a5811c3b2992c8985ec54a5cdd46c043045cd68978881d253/sentry_sdk-0.1.0rc2-py2.py3-none-any.whl"
+  "0.1.0rc3":
+    "Any":
+      "3.0":
+        "sha256": "716e362f4fb7aecf2ef08bef04991306e229b423ecf12fa36c2a96e48fa6f39f"
+        "url": "https://files.pythonhosted.org/packages/b4/9c/8b7df44482ebcf9c680af0b80e91fb169cf833991d5ebc990ab921679324/sentry_sdk-0.1.0rc3-py2.py3-none-any.whl"
+  "0.1.0rc4":
+    "Any":
+      "3.0":
+        "sha256": "4de162be8863ac7fc72cce6897f96b649f74dcc0182444446010e3edb22be0f4"
+        "url": "https://files.pythonhosted.org/packages/ba/b1/2cc64e9eb13940c3c95d175f2c62051b29ef47eec071ad2682e99eb37d36/sentry_sdk-0.1.0rc4-py2.py3-none-any.whl"
+  "0.1.0rc5":
+    "Any":
+      "3.0":
+        "sha256": "d9a4a7dac627eaee60b1129e699ac51eba5892d9d0dfc749d382d04b3973ac38"
+        "url": "https://files.pythonhosted.org/packages/ef/18/643a6dc084ca64eaf2f7118a483168d2447bfd711a3b1a5f16da1697d42e/sentry_sdk-0.1.0rc5-py2.py3-none-any.whl"
+  "0.1.0rc6":
+    "Any":
+      "3.0":
+        "sha256": "7ba33d4b4d029536a7b07505bebd2ba15bb1d4e24ca9474e63c6e0fc28180eb0"
+        "url": "https://files.pythonhosted.org/packages/38/87/db0cd2417a5aee468e39f31aa8d7bf8bc74d98117c6d26751ffd8563a778/sentry_sdk-0.1.0rc6-py2.py3-none-any.whl"
+  "0.1.0rc7":
+    "Any":
+      "3.0":
+        "sha256": "ef90490df1a03a5e236bd0b18d3255a4194722ba6f1ae49744f1f60f47ae00b5"
+        "url": "https://files.pythonhosted.org/packages/0f/06/ee19d3da894fc5cbe8abf3824ea4c2fe420e168ee5fe4eaee288e4a41c09/sentry_sdk-0.1.0rc7-py2.py3-none-any.whl"
+  "0.1.0rc8":
+    "Any":
+      "3.0":
+        "sha256": "44d4ec62238c5d5397f49649bc7d51b9cf698b82ebfa9b60aadc4c27bbbc3244"
+        "url": "https://files.pythonhosted.org/packages/2c/0a/af8187d53f5a5f3d9218a87d1b0ce9187a1f24c5711792e37fd530c02eb7/sentry_sdk-0.1.0rc8-py2.py3-none-any.whl"
+  "0.1.0rc9":
+    "Any":
+      "3.0":
+        "sha256": "087dc75b6d2c7a641ba104c35833957719844cd4140b110c1e7b6117535c04da"
+        "url": "https://files.pythonhosted.org/packages/4f/81/eb5a6b617eea12bed756d5cdb3fa83352e9dcf6e10f9a551acfe43f861d7/sentry_sdk-0.1.0rc9-py2.py3-none-any.whl"
+  "0.1.1":
+    "Any":
+      "3.0":
+        "sha256": "06f6e9826a0d068260dba6dd160ecbb9623cfd1e46e5a84f88a3ff0160154802"
+        "url": "https://files.pythonhosted.org/packages/7a/c7/0b35b23494e1bed86cf5bcd621c6639d0c83594e9ac21a86647a520a9ccc/sentry_sdk-0.1.1-py2.py3-none-any.whl"
+  "0.1.2":
+    "Any":
+      "3.0":
+        "sha256": "6c559b80c140c8a039f1f60eda2b1d78e40b3d74640597de2d44c615c1e9bb6f"
+        "url": "https://files.pythonhosted.org/packages/50/97/791fe40e2ba868f82e250fac3f411a7e8ac0fdc75cb9623909e7746b0339/sentry_sdk-0.1.2-py2.py3-none-any.whl"
+  "0.1.3":
+    "Any":
+      "3.0":
+        "sha256": "2212624c671ac6ec8338270ddb167032fbe5dec90e55743bab0d93141f8a7c0c"
+        "url": "https://files.pythonhosted.org/packages/97/07/f67b41bb6131d208061aafeb331d6d0231209d6745542968da8f739aca3b/sentry_sdk-0.1.3-py2.py3-none-any.whl"
+  "0.10.0":
+    "Any":
+      "3.0":
+        "sha256": "ff50be281cebb77525f0a7ad43aabaf04ee61131ba09885be2544acf959e0451"
+        "url": "https://files.pythonhosted.org/packages/e1/eb/a738ab2e06d10f457a239091bd7119880080bd256f1f56a97b180bd7ee95/sentry_sdk-0.10.0-py2.py3-none-any.whl"
+  "0.10.1":
+    "Any":
+      "3.0":
+        "sha256": "1db9c4653e71d39ff3557c0981d5fb5f43a43e3a830fcf5e21a37c97f7bce6bb"
+        "url": "https://files.pythonhosted.org/packages/a0/5c/29023977025e4a46f3a7eb3022f23cac305f3c44e1f602467d125c2d4965/sentry_sdk-0.10.1-py2.py3-none-any.whl"
+  "0.10.2":
+    "Any":
+      "3.0":
+        "sha256": "d68003cdffbbfcadaa2c445b72e1050b0a44406f94199866f192986c016b23f5"
+        "url": "https://files.pythonhosted.org/packages/95/38/7f691570ed9e85479dbe4e0959ae223d364693708ba6d293d850b657f1a0/sentry_sdk-0.10.2-py2.py3-none-any.whl"
+  "0.11.0":
+    "Any":
+      "3.0":
+        "sha256": "2a80ff5e2d1bb2e8c745876015fe0c9f2e19c5c6a9da4c28ec06251f1e5f9f9c"
+        "url": "https://files.pythonhosted.org/packages/7c/9f/f48f27eef9172e46f612a9d61572b2e10f37812bed025b1ede01e55415fb/sentry_sdk-0.11.0-py2.py3-none-any.whl"
+  "0.11.1":
+    "Any":
+      "3.0":
+        "sha256": "aeaaf6ae7cc4030d390e5c95797ac1a2a79ac2c8b687709293975ee808c68784"
+        "url": "https://files.pythonhosted.org/packages/d8/aa/fc22098ed3bf7649beb8bbb4863d8a1fe2c1f9c33e5edfb853318025e9d9/sentry_sdk-0.11.1-py2.py3-none-any.whl"
+  "0.11.2":
+    "Any":
+      "3.0":
+        "sha256": "528f936118679e9a52dacb96bfefe20acb5d63e0797856c64a582cc3c2bc1f9e"
+        "url": "https://files.pythonhosted.org/packages/2c/02/313e94836ff56e4bec0e7343a1fcff6f3aa2d4a61b703d641e61bb0f306a/sentry_sdk-0.11.2-py2.py3-none-any.whl"
+  "0.12.0":
+    "Any":
+      "3.0":
+        "sha256": "01c8b27233c792d7d957cefd0e261d7913e1633a7d8a67ad1df742cb9f2b50a5"
+        "url": "https://files.pythonhosted.org/packages/e9/ea/9076b56eb511a099da2b759d3c869ecbf86144fc90b8cf0ed3a8f8a0c1b1/sentry_sdk-0.12.0-py2.py3-none-any.whl"
+  "0.12.1":
+    "Any":
+      "3.0":
+        "sha256": "61ac4fe28f8c67f0adf8740da77c84bf787034f9d32c60a77adac4d899a48a50"
+        "url": "https://files.pythonhosted.org/packages/fc/56/e5f27e697c6a0698938ed0d50f18be30c95bb2430f916995b57227f4faf2/sentry_sdk-0.12.1-py2.py3-none-any.whl"
+  "0.12.2":
+    "Any":
+      "3.0":
+        "sha256": "ab16b539c40cc18e3dcfec99d0d3fff16337a050eaf79d4503ef2b73af9a7d9e"
+        "url": "https://files.pythonhosted.org/packages/cf/c2/845d503adb168fcd276a54ac7e5a4fab18d8ed83cf8ad8fba6599eb6ca9c/sentry_sdk-0.12.2-py2.py3-none-any.whl"
+  "0.12.3":
+    "Any":
+      "3.0":
+        "sha256": "1d6a2ee908ec6d8f96c27d78bc39e203df4d586d287c233140af7d8d1aca108a"
+        "url": "https://files.pythonhosted.org/packages/20/bb/376c2aa4d7dc03d878efa46d3e43de123c06c6050a500e9596463e65bfad/sentry_sdk-0.12.3-py2.py3-none-any.whl"
+  "0.13.0":
+    "Any":
+      "3.0":
+        "sha256": "7d8668f082cb1eb9bf1e0d3f8f9bd5796d05d927c1197af226d044ed32b9815f"
+        "url": "https://files.pythonhosted.org/packages/38/de/7962040f29846dba1e148fd81aa46094d4f2bef242c0ad14702b2ebd7d6e/sentry_sdk-0.13.0-py2.py3-none-any.whl"
+  "0.13.1":
+    "Any":
+      "3.0":
+        "sha256": "cf4b0f8401f4d146e6b8c5579b24397273126c9a0576fa7eb9581ad27b330f13"
+        "url": "https://files.pythonhosted.org/packages/d0/18/689665903308543fe92c9b02d6dd91e88de16a44fbd353f13b353d714fb6/sentry_sdk-0.13.1-py2.py3-none-any.whl"
+  "0.13.2":
+    "Any":
+      "3.0":
+        "sha256": "09e1e8f00f22ea580348f83bbbd880adf40b29f1dec494a8e4b33e22f77184fb"
+        "url": "https://files.pythonhosted.org/packages/b6/d7/89536db7654f2636549a10d85a918feefd9aa2cac0929dd6796c8e945e78/sentry_sdk-0.13.2-py2.py3-none-any.whl"
+  "0.13.3":
+    "Any":
+      "3.0":
+        "sha256": "e795f1744066493f9e1eb3d17e0ee19a042a45789b9edd9f553b8b61bc8d399e"
+        "url": "https://files.pythonhosted.org/packages/65/d5/b298e45bd32f02016a6e2ce74c5e781a768b713f1c2d025b5b8ac881e646/sentry_sdk-0.13.3-py2.py3-none-any.whl"
+  "0.13.4":
+    "Any":
+      "3.0":
+        "sha256": "a7c2c8d3f53b6b57454830cd6a4b73d272f1ba91952f59e6545b3cf885f3c22f"
+        "url": "https://files.pythonhosted.org/packages/1f/1c/4522e58cbd96e176e697dcc2fdaaf2ceac3412ca4e402f85acb265c9c385/sentry_sdk-0.13.4-py2.py3-none-any.whl"
+  "0.13.5":
+    "Any":
+      "3.0":
+        "sha256": "05285942901d38c7ce2498aba50d8e87b361fc603281a5902dda98f3f8c5e145"
+        "url": "https://files.pythonhosted.org/packages/b4/48/a38ff26af174ef2d03c5754c93b7a18818951734fdaa53bf3c2b80e497e7/sentry_sdk-0.13.5-py2.py3-none-any.whl"
+  "0.14.0":
+    "Any":
+      "3.0":
+        "sha256": "9b59e155229ea7d46a52b5c025d8c3c6d591e9dd9bb5f5f47310b2bb430038a8"
+        "url": "https://files.pythonhosted.org/packages/ba/0b/ba1655f0e9c248538b02322a979b5cd485156f5cc16ea34a3cff563527ee/sentry_sdk-0.14.0-py2.py3-none-any.whl"
+  "0.14.1":
+    "Any":
+      "3.0":
+        "sha256": "b06dd27391fd11fb32f84fe054e6a64736c469514a718a99fb5ce1dff95d6b28"
+        "url": "https://files.pythonhosted.org/packages/23/5a/f1b0c63e40517b06bc21744a94013ca05de21de2687a59de889ea20a9ebd/sentry_sdk-0.14.1-py2.py3-none-any.whl"
+  "0.14.2":
+    "Any":
+      "3.0":
+        "sha256": "a920387dc3ee252a66679d0afecd34479fb6fc52c2bc20763793ed69e5b0dcc0"
+        "url": "https://files.pythonhosted.org/packages/8e/e6/058c2dc4723b3647a8cf61385c61f284bfbd0d0657bc5623c22e9ef45a3c/sentry_sdk-0.14.2-py2.py3-none-any.whl"
+  "0.14.3":
+    "Any":
+      "3.0":
+        "sha256": "23808d571d2461a4ce3784ec12bbee5bdb8c026c143fe79d36cef8a6d653e71f"
+        "url": "https://files.pythonhosted.org/packages/20/7e/19545324e83db4522b885808cd913c3b93ecc0c88b03e037b78c6a417fa8/sentry_sdk-0.14.3-py2.py3-none-any.whl"
+  "0.14.4":
+    "Any":
+      "3.0":
+        "sha256": "799a8bf76b012e3030a881be00e97bc0b922ce35dde699c6537122b751d80e2c"
+        "url": "https://files.pythonhosted.org/packages/1b/95/9a20eebcedab2c1c63fad59fe19a0469edfc2a25b8576497e8084629c2ff/sentry_sdk-0.14.4-py2.py3-none-any.whl"
+  "0.15.0":
+    "Any":
+      "3.0":
+        "sha256": "ce5493d5ce4f0760661381c156a93667003c97c92ce04282d399d19fa79c8941"
+        "url": "https://files.pythonhosted.org/packages/8d/7d/5b7f8490de937e3901812a40d44e013ded55fbadf630a2d1d4cc0531fbf9/sentry_sdk-0.15.0-py2.py3-none-any.whl"
+  "0.15.1":
+    "Any":
+      "3.0":
+        "sha256": "06825c15a78934e78941ea25910db71314c891608a46492fc32c15902c6b2119"
+        "url": "https://files.pythonhosted.org/packages/2f/6b/939519d77c95a9b2c85b771e9dccbf9e69cb90016c7cd63887c26400dd7a/sentry_sdk-0.15.1-py2.py3-none-any.whl"
+  "0.16.0":
+    "Any":
+      "3.0":
+        "sha256": "e80d61af85d99a1222c1a3e2a24023618374cd50a99673aa7fa3cf920e7d813b"
+        "url": "https://files.pythonhosted.org/packages/a9/84/b4cfabda293bdf40742510c1145534e063f8e629446e619b9d8b2d549390/sentry_sdk-0.16.0-py2.py3-none-any.whl"
+  "0.16.1":
+    "Any":
+      "3.0":
+        "sha256": "2f023ff348359ec5f0b73a840e8b08e6a8d3b2613a98c57d11c222ef43879237"
+        "url": "https://files.pythonhosted.org/packages/fb/52/e2604ee8f48219ddb177fffd222f9ed54e684621922ed2f9be85a7481929/sentry_sdk-0.16.1-py2.py3-none-any.whl"
+  "0.16.2":
+    "Any":
+      "3.0":
+        "sha256": "2de15b13836fa3522815a933bd9c887c77f4868071043349f94f1b896c1bcfb8"
+        "url": "https://files.pythonhosted.org/packages/19/2a/5461e1fe0026d6eab10571f81d052894328e97f15614abb6a576c65bc82d/sentry_sdk-0.16.2-py2.py3-none-any.whl"
+  "0.16.3":
+    "Any":
+      "3.0":
+        "sha256": "4fc97114c77d005467b9b1a29f042e2bc01923cb683b0ef0bbda46e79fa12532"
+        "url": "https://files.pythonhosted.org/packages/4b/23/811fcdfc9d67fea7e47c91dd553081218d53dda744c28384f4d2f69206c9/sentry_sdk-0.16.3-py2.py3-none-any.whl"
+  "0.16.4":
+    "Any":
+      "3.0":
+        "sha256": "ec255a60d58a8ba35439491d2daaf4b3d03283d0dbdec84a6e359a77fc36961a"
+        "url": "https://files.pythonhosted.org/packages/2b/8a/9225408d3bb51e823f3f134e48b22d70ee5e222ca60c0f336aa955b947b1/sentry_sdk-0.16.4-py2.py3-none-any.whl"
+  "0.16.5":
+    "Any":
+      "3.0":
+        "sha256": "d359609e23ec9360b61e5ffdfa417e2f6bca281bfb869608c98c169c7e64acd5"
+        "url": "https://files.pythonhosted.org/packages/f4/4c/49f899856e3a83e02bc88f2c4945aa0bda4f56b804baa9f71e6664a574a2/sentry_sdk-0.16.5-py2.py3-none-any.whl"
+  "0.17.0":
+    "Any":
+      "3.0":
+        "sha256": "1d654ac57be9967dae67545fb759f6e7594de07f487c21a276e6466dd52e83f1"
+        "url": "https://files.pythonhosted.org/packages/8f/0f/e6ae366e926589878f2b1e41485473ee0368e5b1b62fd0f8c0bc8311eb75/sentry_sdk-0.17.0-py2.py3-none-any.whl"
+  "0.17.1":
+    "Any":
+      "3.0":
+        "sha256": "ad2c514aab9ed40d3f9f3245675727f672ea3d85b3b7a5956af93f405ba7aee0"
+        "url": "https://files.pythonhosted.org/packages/32/fe/2adad7f79e6fb48382775e59063d40ae9cb19bf64fb67e38ab91f16a9892/sentry_sdk-0.17.1-py2.py3-none-any.whl"
+  "0.17.2":
+    "Any":
+      "3.0":
+        "sha256": "5b884a391da04696c1d81d636d2ad728fd838370db1acdfda3acbad1fe5be830"
+        "url": "https://files.pythonhosted.org/packages/48/4b/317ff319141f105e43705e5883b7a8c61c8eeedcf01c53deca9182d44ee8/sentry_sdk-0.17.2-py2.py3-none-any.whl"
+  "0.17.3":
+    "Any":
+      "3.0":
+        "sha256": "a088a1054673c6a19ea590045c871c38da029ef743b61a07bfee95e9f3c060f7"
+        "url": "https://files.pythonhosted.org/packages/74/21/f40591e2e3135cc89ae447d00685ec6ec4e745986b6011a8220103e9df65/sentry_sdk-0.17.3-py2.py3-none-any.whl"
+  "0.17.4":
+    "Any":
+      "3.0":
+        "sha256": "97bff68e57402ad39674e6fe2545df0d5eea41c3d51e280c170761705c8c20ff"
+        "url": "https://files.pythonhosted.org/packages/0e/60/29048f4341088a505062f2ca267b56bde8a07fa74952ee1b23a0e63626b7/sentry_sdk-0.17.4-py2.py3-none-any.whl"
+  "0.17.5":
+    "Any":
+      "3.0":
+        "sha256": "02400b4aeb3db676611ff05442d4421766f18512509255590fa60acee5cb4c5c"
+        "url": "https://files.pythonhosted.org/packages/20/e9/6e7447ad44ef8d62ba21d3528f7d240f0ec1354de58e3d86b525a298ca7d/sentry_sdk-0.17.5-py2.py3-none-any.whl"
+  "0.17.6":
+    "Any":
+      "3.0":
+        "sha256": "45486deb031cea6bbb25a540d7adb4dd48cd8a1cc31e6a5ce9fb4f792a572e9a"
+        "url": "https://files.pythonhosted.org/packages/c8/6c/6dcf4f21bec0b0d0685b4992ee414506342b09267e4a2ab24472625f9d8d/sentry_sdk-0.17.6-py2.py3-none-any.whl"
+  "0.17.7":
+    "Any":
+      "3.0":
+        "sha256": "96a0e494b243a81065ec7ab73457d16719fb955ed9e469c8e4577ba737bc836e"
+        "url": "https://files.pythonhosted.org/packages/8d/20/bd03c159b642b2c75efd2d20bc9a9916c4d4cf42d96f7ddabcdd7bca0473/sentry_sdk-0.17.7-py2.py3-none-any.whl"
+  "0.17.8":
+    "Any":
+      "3.0":
+        "sha256": "c9c0fa1412bad87104c4eee8dd36c7bbf60b0d92ae917ab519094779b22e6d9a"
+        "url": "https://files.pythonhosted.org/packages/6f/0f/fabe13834484d499064198f8ecf6904a4ce569246ce41d2d747432a8f3c8/sentry_sdk-0.17.8-py2.py3-none-any.whl"
+  "0.18.0":
+    "Any":
+      "3.0":
+        "sha256": "6222cf623e404c3e62b8e0e81c6db866ac2d12a663b7c1f7963350e3f397522a"
+        "url": "https://files.pythonhosted.org/packages/cd/df/1145dc9389138eb47649806b42aaad5b0ecdfd3e93c7c51c1fffd80a8f90/sentry_sdk-0.18.0-py2.py3-none-any.whl"
+  "0.19.0":
+    "Any":
+      "3.0":
+        "sha256": "0fc1d3d74f6262ab47c0debb52145c41b95d120917d4149d6d7c6357b37e2587"
+        "url": "https://files.pythonhosted.org/packages/1f/08/5eb320799e3085ccc66ec0fc3360421302803f3b784f74959564dbc6cdc9/sentry_sdk-0.19.0-py2.py3-none-any.whl"
+  "0.19.1":
+    "Any":
+      "3.0":
+        "sha256": "0eea248408d36e8e7037c7b73827bea20b13a4375bf1719c406cae6fcbc094e3"
+        "url": "https://files.pythonhosted.org/packages/fc/f0/188b8321988c739ab79577269c169d0d5f36aeb7172c17cd45eb0917823d/sentry_sdk-0.19.1-py2.py3-none-any.whl"
+  "0.19.2":
+    "Any":
+      "3.0":
+        "sha256": "9040539485226708b5cad0401d76628fba4eed9154bf301c50579767afe344fd"
+        "url": "https://files.pythonhosted.org/packages/86/36/afa3c32f61cb62bef0da7200651d41f36b8b069d9f6254d8df8a20b224b8/sentry_sdk-0.19.2-py2.py3-none-any.whl"
+  "0.19.3":
+    "Any":
+      "3.0":
+        "sha256": "81d7a5d8ca0b13a16666e8280127b004565aa988bfeec6481e98a8601804b215"
+        "url": "https://files.pythonhosted.org/packages/27/d7/2bff714d237740df2176abe82d999c80b578fb4eab22b8157013065210c5/sentry_sdk-0.19.3-py2.py3-none-any.whl"
+  "0.19.4":
+    "Any":
+      "3.0":
+        "sha256": "4c42910a55a6b1fe694d5e4790d5188d105d77b5a6346c1c64cbea8c06c0e8b7"
+        "url": "https://files.pythonhosted.org/packages/61/e1/3a9f8ca1009fc6a1e850801f2386e9d88b95147218cbe8c33bc4d60b3695/sentry_sdk-0.19.4-py2.py3-none-any.whl"
+  "0.19.5":
+    "Any":
+      "3.0":
+        "sha256": "0a711ec952441c2ec89b8f5d226c33bc697914f46e876b44a4edd3e7864cf4d0"
+        "url": "https://files.pythonhosted.org/packages/b1/5c/018bf9a5c24343a664deaea70e61f33f53bb1bd3caf193110f827bfd07e2/sentry_sdk-0.19.5-py2.py3-none-any.whl"
+  "0.2.1":
+    "Any":
+      "3.0":
+        "sha256": "fcd631cd42f83a121c7d86f990f3c2431651512b83cdd272aeddf89e955e0bf3"
+        "url": "https://files.pythonhosted.org/packages/55/cc/84a062d02121477ce35da692431f1acc1a2909524c6e03252c23565a1050/sentry_sdk-0.2.1-py2.py3-none-any.whl"
+  "0.2.2":
+    "Any":
+      "3.0":
+        "sha256": "d03e8d977c6b72733503c2f367aeb0c33b282282743a29d5233156992efbcc76"
+        "url": "https://files.pythonhosted.org/packages/b1/7f/5f112adaba71c23229c4d714debfe063910bf59809ca5d6dbc8b1d1f25dc/sentry_sdk-0.2.2-py2.py3-none-any.whl"
+  "0.20.0":
+    "Any":
+      "3.0":
+        "sha256": "012f2c8f40a504e2d68d045f72a2fd63814acb61ea6db5014df75573077b5ceb"
+        "url": "https://files.pythonhosted.org/packages/2b/9d/ac6f28011bd8b8c2d78e2697e4ce7c01a4e83bdf5efd5112400835e0f318/sentry_sdk-0.20.0-py2.py3-none-any.whl"
+  "0.20.2":
+    "Any":
+      "3.0":
+        "sha256": "efc65e5ffd38324797a7e1dfc8a4e74b62ea6f56a59df5bb03217b84d58dff6a"
+        "url": "https://files.pythonhosted.org/packages/5a/57/fe9bec0a5e13d68db04dda6083fc4b559204fb4f925ef58ddce9f9b58435/sentry_sdk-0.20.2-py2.py3-none-any.whl"
+  "0.20.3":
+    "Any":
+      "3.0":
+        "sha256": "e75c8c58932bda8cd293ea8e4b242527129e1caaec91433d21b8b2f20fee030b"
+        "url": "https://files.pythonhosted.org/packages/15/74/59016eecaefa52443cd69cbb50e01851fa8bf3d9526771e2fae60ac6270c/sentry_sdk-0.20.3-py2.py3-none-any.whl"
+  "0.3.0":
+    "Any":
+      "3.0":
+        "sha256": "af64c09d2078c503bed50ec7f48034a8ad6cb73c63adb99309d7682ebb45ec97"
+        "url": "https://files.pythonhosted.org/packages/0e/2c/2b7287c0ad907a9597cab7a8ebc69770f34930acbcad09a264251a7b8546/sentry_sdk-0.3.0-py2.py3-none-any.whl"
+  "0.3.1":
+    "Any":
+      "3.0":
+        "sha256": "3238ecc9f27915b01686783dd6a6f17372186e13ce65add12bbad78b92448fbe"
+        "url": "https://files.pythonhosted.org/packages/b4/8a/5bcd7583230a6dcaeb438b030e4130c55167456527d78dac698018fce30c/sentry_sdk-0.3.1-py2.py3-none-any.whl"
+  "0.3.10":
+    "Any":
+      "3.0":
+        "sha256": "e1ef310ba2ad4d4523b72aef7c42bf1e6dea74e9eeae93c20a6c7abcb7c1a47a"
+        "url": "https://files.pythonhosted.org/packages/e4/63/fe03dd7ca5e35ec4712086c6af1bff83bee04256320df17f9d037e079f10/sentry_sdk-0.3.10-py2.py3-none-any.whl"
+  "0.3.11":
+    "Any":
+      "3.0":
+        "sha256": "593c81517e98ab67edc8def34fe3afacde83eb899da31cd069b448a0ac122a83"
+        "url": "https://files.pythonhosted.org/packages/8e/ac/703402e7d7f03d4b02e101b7db1c20a000cb8d53ba18079c24efd3b59569/sentry_sdk-0.3.11-py2.py3-none-any.whl"
+  "0.3.2":
+    "Any":
+      "3.0":
+        "sha256": "34d4cb27ffef825193c86aeea9d64b5d956add6ddff425144c9f9475d7372a40"
+        "url": "https://files.pythonhosted.org/packages/4e/0d/2029a1df398fb13825a57c84a2936d092f5b6c9cff028bc1f73e313f2597/sentry_sdk-0.3.2-py2.py3-none-any.whl"
+  "0.3.3":
+    "Any":
+      "3.0":
+        "sha256": "99ff9d107322f87c84569ca220b95a880f0c7a3022136724081c9c8513fc8ab5"
+        "url": "https://files.pythonhosted.org/packages/ea/a6/e0f2ad1ab683c3572d17d2fed1ad92b4294a75eca0a65a9d51a4ed98b7a2/sentry_sdk-0.3.3-py2.py3-none-any.whl"
+  "0.3.4":
+    "Any":
+      "3.0":
+        "sha256": "6bf33e780d0f25aceda1f7a700baec8efdefc34d1f956d44f9ddd0d3074326ce"
+        "url": "https://files.pythonhosted.org/packages/3c/b5/4696b201bd40b70c52a545cfc3e93c17c9f09f648063d2884ed3ebb8f55f/sentry_sdk-0.3.4-py2.py3-none-any.whl"
+  "0.3.5":
+    "Any":
+      "3.0":
+        "sha256": "a4aa43344bf7bb20ec2d63a1776de1bbd3648e314b581b5b619dae803706eaa1"
+        "url": "https://files.pythonhosted.org/packages/d7/5d/7ba7aec904c94df439abaa06be1a8ad4a211313590790a9890c907b08123/sentry_sdk-0.3.5-py2.py3-none-any.whl"
+  "0.3.6":
+    "Any":
+      "3.0":
+        "sha256": "4cf67f901fd39041cd58fe8ce5e11336c71cb3dece3cea8bc081fc2f9c1ba57a"
+        "url": "https://files.pythonhosted.org/packages/87/01/94ea06e1b4b48d73c309c0fe893db3394de2dbf59f6415b4f158233e8c6c/sentry_sdk-0.3.6-py2.py3-none-any.whl"
+  "0.3.7":
+    "Any":
+      "3.0":
+        "sha256": "7f70435200da7c6fdefc367637c2d6e052df49e276a55fbb90cc1cc1668ab250"
+        "url": "https://files.pythonhosted.org/packages/41/b7/c5921857d76cee1267eca8f05f3ee57d3e6707734dd3cd32b7016c4770be/sentry_sdk-0.3.7-py2.py3-none-any.whl"
+  "0.3.8":
+    "Any":
+      "3.0":
+        "sha256": "ec845c498cad20a060dc0cd91b83ea323d5f0dd30ae9546400dabd0952058924"
+        "url": "https://files.pythonhosted.org/packages/5a/2a/84dc680f4810d2ff8f670d7ef676e318759ed8a8e62f93212a4bfa01e907/sentry_sdk-0.3.8-py2.py3-none-any.whl"
+  "0.3.9":
+    "Any":
+      "3.0":
+        "sha256": "c1648c30dfbdfdf42224e837adde19b5388909bdb80915196be25c016454c238"
+        "url": "https://files.pythonhosted.org/packages/2b/05/1f027aab8211689d139f7fbe458d68c37dca59a325863758a010c785854f/sentry_sdk-0.3.9-py2.py3-none-any.whl"
+  "0.4.0":
+    "Any":
+      "3.0":
+        "sha256": "f8f302e186076b8cfe80472ac7da93d06325dd446d7bb0ed60e867a4fcb808d9"
+        "url": "https://files.pythonhosted.org/packages/7a/9d/c258713169a86017375ad3c791bcc87190add27084be4ca881c4b1ef7517/sentry_sdk-0.4.0-py2.py3-none-any.whl"
+  "0.4.1":
+    "Any":
+      "3.0":
+        "sha256": "68091ad8200dac306052e389705357b6758744253951f05496284e21284f3194"
+        "url": "https://files.pythonhosted.org/packages/d8/68/2926b08bd9cf3d695c83080f3b32abc237f1ab88303b19ddc276e873b645/sentry_sdk-0.4.1-py2.py3-none-any.whl"
+  "0.4.2":
+    "Any":
+      "3.0":
+        "sha256": "0f8998a847121444388785c7ecf8540cd52d5a323cac38299298821318947926"
+        "url": "https://files.pythonhosted.org/packages/50/ef/22157b4d211bc6f643d12db478075bd103beb07e47f1334e9a54714f3fe0/sentry_sdk-0.4.2-py2.py3-none-any.whl"
+  "0.4.3":
+    "Any":
+      "3.0":
+        "sha256": "475ecd892da2eac77ced7193231baf2431f3852f1795362e9e780e0f7af728b1"
+        "url": "https://files.pythonhosted.org/packages/04/cb/7b4b5ddae00075168124dfce2c73f286f1fd6a7cf666c3ff7deec587ad8d/sentry_sdk-0.4.3-py2.py3-none-any.whl"
+  "0.5.0":
+    "Any":
+      "3.0":
+        "sha256": "b105f1aaca86a42d612ade93630bc903545d221e1cc9c5363aa0a90c7428fe42"
+        "url": "https://files.pythonhosted.org/packages/5c/30/e0959c04e3a81773b64d6bb7e06caf9f8fa2c85ce3996a0734a0d796335c/sentry_sdk-0.5.0-py2.py3-none-any.whl"
+  "0.5.1":
+    "Any":
+      "3.0":
+        "sha256": "c18552010648e6303b557310dc6e4babda3c942c6e4145995699547c64d3982f"
+        "url": "https://files.pythonhosted.org/packages/b3/4d/c4021ce7ab99d7033e2cac02d347256842548c7070558b4b59bf2bb02ebb/sentry_sdk-0.5.1-py2.py3-none-any.whl"
+  "0.5.2":
+    "Any":
+      "3.0":
+        "sha256": "d4eb77414e21258943cdd7ea4aa216e2d994d38700d747d5d3da943edd414b58"
+        "url": "https://files.pythonhosted.org/packages/e3/0d/64f9d5829c423d032bb5242d36121460f86dd12e77b9feedb8e7e73af4e8/sentry_sdk-0.5.2-py2.py3-none-any.whl"
+  "0.5.3":
+    "Any":
+      "3.0":
+        "sha256": "cda876d34a25d20c902df93373a570f00b7753098e26bace0183e6cccc8ed057"
+        "url": "https://files.pythonhosted.org/packages/a7/25/82c196d56aa2ffa0389e650e411e022bf2b8ec78c706370dd28794c603b3/sentry_sdk-0.5.3-py2.py3-none-any.whl"
+  "0.5.4":
+    "Any":
+      "3.0":
+        "sha256": "64839dc06c66785f4ef8700f2a13af650addbcc7711fdbe88031350eeb7b2db2"
+        "url": "https://files.pythonhosted.org/packages/0a/b1/3a783377d75a5998b4a7f4b97b460b0c387f9ed61f31925be43fa8df2336/sentry_sdk-0.5.4-py2.py3-none-any.whl"
+  "0.5.5":
+    "Any":
+      "3.0":
+        "sha256": "7625cfc4eb3673997a757a0f367c6899beda15e447becb6571fa95a3134c0ce8"
+        "url": "https://files.pythonhosted.org/packages/90/19/726926cd4eae08212c10d4a03f9bc43d4a5835eb6a0144d1596a2e740c9e/sentry_sdk-0.5.5-py2.py3-none-any.whl"
+  "0.6.0":
+    "Any":
+      "3.0":
+        "sha256": "065bf7ada5069e8a572fbe9aab9c4ede67038c715d2076a166298825a850e7cb"
+        "url": "https://files.pythonhosted.org/packages/f2/f7/87b01b32abc2ec5efdcc472b1072f50112ee1684af07ffc19ca672c0e55f/sentry_sdk-0.6.0-py2.py3-none-any.whl"
+  "0.6.1":
+    "Any":
+      "3.0":
+        "sha256": "83fddc5b63dfd22074f2817ca4affef8ea7cac9b558da28908fea7443a9b3f3a"
+        "url": "https://files.pythonhosted.org/packages/fb/10/7a62f6f850b9d379e6fc8b08bf59ca10791c41270fdaa488ca220e0c5a7a/sentry_sdk-0.6.1-py2.py3-none-any.whl"
+  "0.6.2":
+    "Any":
+      "3.0":
+        "sha256": "b5a4cd2bb9e86c21e1f4b3fef856785a1075a5430b10a37385c3dce47aaf0649"
+        "url": "https://files.pythonhosted.org/packages/ec/0b/9d64e91787a3bea4abd0c08dd334c68c88535e112bfbb2b0412b178136fc/sentry_sdk-0.6.2-py2.py3-none-any.whl"
+  "0.6.3":
+    "Any":
+      "3.0":
+        "sha256": "3175701058b6196db306125d09d96c0651618c723bac64a210dd47d658eb7751"
+        "url": "https://files.pythonhosted.org/packages/df/72/9098482b817f8587652e6d0ce2355dc9194e257de069971f67295f3a302d/sentry_sdk-0.6.3-py2.py3-none-any.whl"
+  "0.6.4":
+    "Any":
+      "3.0":
+        "sha256": "635f2c9dde9995150435a4f6ba06a944ba94e9754ad7594b42c2fcb001a44dfd"
+        "url": "https://files.pythonhosted.org/packages/90/c7/2a19467ecf44a3bb97d99d52d132529de9567f00153bec1c49e8bff1c5a5/sentry_sdk-0.6.4-py2.py3-none-any.whl"
+  "0.6.5":
+    "Any":
+      "3.0":
+        "sha256": "e81f22975cdc0688b412efb35a36b6befbc4b89830d73d91d982ef4be919cc97"
+        "url": "https://files.pythonhosted.org/packages/97/bd/62edcd0a2825d9212291ed61fea08cab22d52b2a578a6f1ccf54effa3462/sentry_sdk-0.6.5-py2.py3-none-any.whl"
+  "0.6.6":
+    "Any":
+      "3.0":
+        "sha256": "dc775d5d6672cf555d721c3cc9329cc9caed6369ef9aa1b87286017d4ad49614"
+        "url": "https://files.pythonhosted.org/packages/da/85/cc138ab711abf72d5de93da441b6bcc5c454f9a3c7be6ba69c6384024725/sentry_sdk-0.6.6-py2.py3-none-any.whl"
+  "0.6.7":
+    "Any":
+      "3.0":
+        "sha256": "b84e74282f9ed06d792865032dfaa2b8d13b9576eca125674497f5ce5c21788f"
+        "url": "https://files.pythonhosted.org/packages/ff/e9/277d45a40e43e80a09902ad691f5880681849c7bd976f033064e03c8533b/sentry_sdk-0.6.7-py2.py3-none-any.whl"
+  "0.6.8":
+    "Any":
+      "3.0":
+        "sha256": "f3e82027aa82f08c1261beee7155c8078a5c2e390d4c4b7845116b4f01235e39"
+        "url": "https://files.pythonhosted.org/packages/96/d9/eab02695e3a766720308b73198c74bb61a0f19ece49d1fd4d0f6f64b9ecb/sentry_sdk-0.6.8-py2.py3-none-any.whl"
+  "0.6.9":
+    "Any":
+      "3.0":
+        "sha256": "a6cfb0a2316416d100d2732a26c95fb7d534c9dcc16e2682e8d19fcd45f0a2c6"
+        "url": "https://files.pythonhosted.org/packages/80/45/5ebcce089937310f9fa0f2f6847304fde6ad1ce17117e4cddd22baac3214/sentry_sdk-0.6.9-py2.py3-none-any.whl"
+  "0.7.0":
+    "Any":
+      "3.0":
+        "sha256": "073180ac7ebbf1168d86dcc0b684ecb62c0353481d0b606d4c42da63d91de219"
+        "url": "https://files.pythonhosted.org/packages/a5/1a/056fc32538d8d5dcf476a2748caae3a6359d4876860bb551c389ed60a372/sentry_sdk-0.7.0-py2.py3-none-any.whl"
+  "0.7.1":
+    "Any":
+      "3.0":
+        "sha256": "0c36ff218b8135eee726abb74fe37c83b9f389a24e4afa6431bcad7460e4f3af"
+        "url": "https://files.pythonhosted.org/packages/c0/80/668e920e2e9cf694f13bb4583a05f30949d40b6937550f61566d12f02738/sentry_sdk-0.7.1-py2.py3-none-any.whl"
+  "0.7.10":
+    "Any":
+      "3.0":
+        "sha256": "ced85a48171b3421d71f14f1682168f8008581411893e42359469c397fdf6285"
+        "url": "https://files.pythonhosted.org/packages/a7/5a/e533f53fa414970688f34eca7c70c763f3961e6e7a61c1b8617510e92965/sentry_sdk-0.7.10-py2.py3-none-any.whl"
+  "0.7.11":
+    "Any":
+      "3.0":
+        "sha256": "2d74844adbc960180b343c3e808a6afdde25a6ad9fdaaaac77e5d6c3bb1e041e"
+        "url": "https://files.pythonhosted.org/packages/5a/3a/5941d2a1829dd1225699de18629ad5e3b566d4a833eb8b9fc5a1b4d6bed9/sentry_sdk-0.7.11-py2.py3-none-any.whl"
+  "0.7.12":
+    "Any":
+      "3.0":
+        "sha256": "4d2d597a66f22c8bcab100b2b3bca75660ad8367839467e9f1ed466b850791a6"
+        "url": "https://files.pythonhosted.org/packages/c3/88/e187bf20679fdd9ed25eba8d7664f4b19c22b2b938119a8d4836628619ac/sentry_sdk-0.7.12-py2.py3-none-any.whl"
+  "0.7.13":
+    "Any":
+      "3.0":
+        "sha256": "ff51527db4b2e9b66aaa94d5cdeb04304229b542d812ad3644926ec952746619"
+        "url": "https://files.pythonhosted.org/packages/b0/54/335adc055e2a58b3db1724b37e170501e99bcf9ac3d572853213aefd8e82/sentry_sdk-0.7.13-py2.py3-none-any.whl"
+  "0.7.14":
+    "Any":
+      "3.0":
+        "sha256": "b50948bbb553eef11ba650db858e31f5bb7c8d821a9d7338a01d01487d964e8c"
+        "url": "https://files.pythonhosted.org/packages/34/db/44251bbdee7a9b9043dce13b30223f626138fdc696e525516dee9873ab7a/sentry_sdk-0.7.14-py2.py3-none-any.whl"
+  "0.7.2":
+    "Any":
+      "3.0":
+        "sha256": "131e3b9ac11dffd86fe4f1f5d388d3dab372fc9e30d6611d1fc87096a1d67359"
+        "url": "https://files.pythonhosted.org/packages/c2/0b/396931a0e2ba7fccf3cab4bc4b72cab4eee2d5929e4cd99147898da2f988/sentry_sdk-0.7.2-py2.py3-none-any.whl"
+  "0.7.3":
+    "Any":
+      "3.0":
+        "sha256": "ded1a85821d555dd68abdc0a8e7e4eee7b096f8a6d7a4821228b52a62a465f07"
+        "url": "https://files.pythonhosted.org/packages/e6/c8/98df37df5944e75f053b3638547caf3f04e8aceea84215bba54e9e885d3d/sentry_sdk-0.7.3-py2.py3-none-any.whl"
+  "0.7.4":
+    "Any":
+      "3.0":
+        "sha256": "88f50a1112486d81e7145e9c29e4927ff83ffef5e2f7b1319aebd02b04e091b3"
+        "url": "https://files.pythonhosted.org/packages/0c/55/43059d1472daaa1b486d70ea157eefa6dafd64fa7c3aacfdb44faa9dbfd0/sentry_sdk-0.7.4-py2.py3-none-any.whl"
+  "0.7.5":
+    "Any":
+      "3.0":
+        "sha256": "209c2384fe028245ebdb633b119aa63a231441aac80777f4780366ab81fab98a"
+        "url": "https://files.pythonhosted.org/packages/04/ee/07335ee260d15df7b30a7e7be363eec56d1eccc999cb0027e24b217c2f0d/sentry_sdk-0.7.5-py2.py3-none-any.whl"
+  "0.7.6":
+    "Any":
+      "3.0":
+        "sha256": "f94cca2eb41d29fd2bdbedaf9d9a262ab3b4660e5d648d9920fae262e240c368"
+        "url": "https://files.pythonhosted.org/packages/bc/ec/07598075c7ec46c2bc572aa107857ff2c0b566c3f25a4969eb20dd2385bc/sentry_sdk-0.7.6-py2.py3-none-any.whl"
+  "0.7.7":
+    "Any":
+      "3.0":
+        "sha256": "4250f4d2114d1f45d8a94f2f078016b7d8ffc6f57f42db7f20dccd7692bc804c"
+        "url": "https://files.pythonhosted.org/packages/cb/61/709cf211413ed28c0606fe135cd41b7d94ffdc49d874aeba37b6e0d20000/sentry_sdk-0.7.7-py2.py3-none-any.whl"
+  "0.7.8":
+    "Any":
+      "3.0":
+        "sha256": "5be8e4071b3bbe14e4a6a4d277bab0de6ad9f5931703abea213857e97593d528"
+        "url": "https://files.pythonhosted.org/packages/0e/e5/0491c50471533601a4eaf628fd3e3cd715f77a5cce3f6c59ef76bbb6b63d/sentry_sdk-0.7.8-py2.py3-none-any.whl"
+  "0.7.9":
+    "Any":
+      "3.0":
+        "sha256": "2649400cc6ebf5985d5923997997fb381cf84cf53afd803658e2d734e04f775c"
+        "url": "https://files.pythonhosted.org/packages/aa/0a/b4cd6e913e11cef2af3053a4a771be3f395b919764da7706ce52cd1b03ce/sentry_sdk-0.7.9-py2.py3-none-any.whl"
+  "0.8.0":
+    "Any":
+      "3.0":
+        "sha256": "e308129104567cee9f8848ed5098de17cbccc19bd21417c8980d47f80f1409ec"
+        "url": "https://files.pythonhosted.org/packages/2f/fb/adeb7e3a802dde414c62eff2a0f3fde18ef0c246768ea20105a00112049d/sentry_sdk-0.8.0-py2.py3-none-any.whl"
+  "0.8.1":
+    "Any":
+      "3.0":
+        "sha256": "7e42d54c877cca716932fa96ff4778d222b150e56c63032dea86f400179e425c"
+        "url": "https://files.pythonhosted.org/packages/80/bf/69d43736cb82aaff35c0ddcee557d54d9137c7ea1ddbbab556a767e32de8/sentry_sdk-0.8.1-py2.py3-none-any.whl"
+  "0.9.0":
+    "Any":
+      "3.0":
+        "sha256": "31adb5dc65ef35cabb48e3d7ad9804d885f22e74ef606a266beb31661d59a226"
+        "url": "https://files.pythonhosted.org/packages/5d/4b/b11147efdbb3844f5a986afee049830185579498382edb61f7ea62a9c5dc/sentry_sdk-0.9.0-py2.py3-none-any.whl"
+  "0.9.1":
+    "Any":
+      "3.0":
+        "sha256": "f309eddf427e4d4eaff70375980ae8f50294b71412b4bae87b86fb8c569150e4"
+        "url": "https://files.pythonhosted.org/packages/1e/2b/257df4493df726de9140293d8bdef776e5338fde5a53021e69fbbb562568/sentry_sdk-0.9.1-py2.py3-none-any.whl"
+  "0.9.2":
+    "Any":
+      "3.0":
+        "sha256": "6146a59dea4d893df9aabd589003f4aac1311baa218605ad48eb85b52533b183"
+        "url": "https://files.pythonhosted.org/packages/e5/d0/024681f0bfceb7ec0facd37de6c38a1f543b3d8a32d9526d11e4ed206fdd/sentry_sdk-0.9.2-py2.py3-none-any.whl"
+  "0.9.3":
+    "Any":
+      "3.0":
+        "sha256": "eb1ab13fd5db25a07423f4bfac9392ea61d5b3ca5f13c8b7f3a952c7e48cb708"
+        "url": "https://files.pythonhosted.org/packages/59/5a/5730d392dce5c8a098846c551cddc05722e7a9a8f8c54d775d2215a5517f/sentry_sdk-0.9.3-py2.py3-none-any.whl"
+  "0.9.4":
+    "Any":
+      "3.0":
+        "sha256": "457c80b3a0deec4c08ca2de6cff541447fc49835e0c69e09daae1d1ee7810b10"
+        "url": "https://files.pythonhosted.org/packages/4a/9f/38d99f621781b2c833700a4ff39c42070d6005b30b6e64cdfbf84c380766/sentry_sdk-0.9.4-py2.py3-none-any.whl"
+  "0.9.5":
+    "Any":
+      "3.0":
+        "sha256": "692aa93637273365166041ee8e06ccd6b61d5f06560765d78828edbaac83fae1"
+        "url": "https://files.pythonhosted.org/packages/1b/d4/01764ebcf656d94b7c879937d92071b9eba856dbc032d617881f097d8980/sentry_sdk-0.9.5-py2.py3-none-any.whl"
+  "1.0.0":
+    "Any":
+      "3.0":
+        "sha256": "9221e985f425913204989d0e0e1cbb719e8b7fa10540f1bc509f660c06a34e66"
+        "url": "https://files.pythonhosted.org/packages/f3/92/5a33be64990ba815364a8f2dd9e6f51de60d23dfddafb4f1fc5577d4dc64/sentry_sdk-1.0.0-py2.py3-none-any.whl"
+  "1.1.0":
+    "Any":
+      "3.0":
+        "sha256": "c7d380a21281e15be3d9f67a3c4fbb4f800c481d88ff8d8931f39486dd7b4ada"
+        "url": "https://files.pythonhosted.org/packages/1c/4a/a54b254f67d8f4052338d54ebe90126f200693440a93ef76d254d581e3ec/sentry_sdk-1.1.0-py2.py3-none-any.whl"
+  "1.2.0":
+    "Any":
+      "3.0":
+        "sha256": "593f6118cc6d3eba4786c3f802567c937bdb81b3c8e90436e8a29e84071c6936"
+        "url": "https://files.pythonhosted.org/packages/7f/9d/33fb698b92c137e26520ad27d98e21d84a4dc088e7ae683aca157469aad0/sentry_sdk-1.2.0-py2.py3-none-any.whl"
+  "1.3.0":
+    "Any":
+      "3.0":
+        "sha256": "6864dcb6f7dec692635e5518c2a5c80010adf673c70340817f1a1b713d65bb41"
+        "url": "https://files.pythonhosted.org/packages/ce/41/75fad31fff378871c462745ce724b3701a6acad17028d79476ec2545e40f/sentry_sdk-1.3.0-py2.py3-none-any.whl"
+  "1.3.1":
+    "Any":
+      "3.0":
+        "sha256": "f33d34c886d0ba24c75ea8885a8b3a172358853c7cbde05979fc99c29ef7bc52"
+        "url": "https://files.pythonhosted.org/packages/36/25/dfaa573a699991658643b9721df6b10d4be8cba79772b78e9c34a8f9ec66/sentry_sdk-1.3.1-py2.py3-none-any.whl"
+  "1.4.0":
+    "Any":
+      "3.0":
+        "sha256": "494bf9990a54400710b7b6eb7d8174fc89039a4c82feedcf498d800d54e2ee81"
+        "url": "https://files.pythonhosted.org/packages/f4/74/18e96dcf0e42d04c85a6ce2c6fc7ae1b47af6db495b09fe82461c37108a0/sentry_sdk-1.4.0-py2.py3-none-any.whl"
+  "1.4.1":
+    "Any":
+      "3.0":
+        "sha256": "ea04bc3be6eb082f34ff3f8f6380ea9c691766592298f3f975a435dafac6bf6a"
+        "url": "https://files.pythonhosted.org/packages/5c/56/9bdd0383554a66af14f72266ba67de8e947e6a7d3d45090430a1a3c27612/sentry_sdk-1.4.1-py2.py3-none-any.whl"
+  "1.4.2":
+    "Any":
+      "3.0":
+        "sha256": "ffb7b1f7c9a2ca771066aa4b502756e1ef08aff246de23ffecaa5d2af1533a62"
+        "url": "https://files.pythonhosted.org/packages/0a/12/671710832788d83fda7149ee421f1910141d506b0936ac17adb315ee3ac9/sentry_sdk-1.4.2-py2.py3-none-any.whl"
+  "1.4.3":
+    "Any":
+      "3.0":
+        "sha256": "c091cc7115ff25fe3a0e410dbecd7a996f81a3f6137d2272daef32d6c3cfa6dc"
+        "url": "https://files.pythonhosted.org/packages/9f/5e/72ef257641564379af0ade3cd1ff298a4ca2da24939d4f4aa94f7adb72fe/sentry_sdk-1.4.3-py2.py3-none-any.whl"
+  "1.5.0":
+    "Any":
+      "3.0":
+        "sha256": "0db297ab32e095705c20f742c3a5dac62fe15c4318681884053d0898e5abb2f6"
+        "url": "https://files.pythonhosted.org/packages/21/1c/73a5ea515769ddfbc8936e48d7a55f9f43778a8d79755d8c0b9077b43ab4/sentry_sdk-1.5.0-py2.py3-none-any.whl"
+  "1.5.1":
+    "Any":
+      "3.0":
+        "sha256": "e4cb107e305b2c1b919414775fa73a9997f996447417d22b98e7610ded1e9eb5"
+        "url": "https://files.pythonhosted.org/packages/c4/81/ba82b8963838e6fc6e2477970422daf2a7f7c703ca6504ec746e82ac013c/sentry_sdk-1.5.1-py2.py3-none-any.whl"
+  "1.5.2":
+    "Any":
+      "3.0":
+        "sha256": "2cec50166bcb67e1965f8073541b2321e3864cd6fd42a526bcde9f0c4e4cc3f8"
+        "url": "https://files.pythonhosted.org/packages/bf/66/065fe2cdcf795e45fbb0c56fdfff387a9065afe6c092a0626fbfdefa5ff5/sentry_sdk-1.5.2-py2.py3-none-any.whl"
+  "1.5.3":
+    "Any":
+      "3.0":
+        "sha256": "9aeff2a47f4038460296b920bf4d269284e8454e1c67547ee002ccafd9c2442b"
+        "url": "https://files.pythonhosted.org/packages/90/e7/f0a16ae5ea0025e1faf065624bf43762edfe05bd9122738963638820f263/sentry_sdk-1.5.3-py2.py3-none-any.whl"
+  "1.5.4":
+    "Any":
+      "3.0":
+        "sha256": "4fc7960a82c95d906a0514cf4d9aacba1743eb9863a5b7c2a01c525a7d9b21e6"
+        "url": "https://files.pythonhosted.org/packages/61/64/d588297b5c260d1ff38093e2b80d04f724bf23f9f10ecace6fd192529c69/sentry_sdk-1.5.4-py2.py3-none-any.whl"
+  "1.5.5":
+    "Any":
+      "3.0":
+        "sha256": "3817274fba2498c8ebf6b896ee98ac916c5598706340573268c07bf2bb30d831"
+        "url": "https://files.pythonhosted.org/packages/3f/6a/01fb4e5417f5d2ef6279883a9deedabb6b6f223aa706892ea9caa6d7c1e4/sentry_sdk-1.5.5-py2.py3-none-any.whl"
+  "1.5.6":
+    "Any":
+      "3.0":
+        "sha256": "1ab34e3851a34aeb3d1af1a0f77cec73978c4e9698e5210d050e4932953cb241"
+        "url": "https://files.pythonhosted.org/packages/a5/7f/af0b6378d3d536705ab1df290563919ff3da314b0cdf2587bc7a66caceb1/sentry_sdk-1.5.6-py2.py3-none-any.whl"
+  "1.5.7":
+    "Any":
+      "3.0":
+        "sha256": "411a8495bd18cf13038e5749e4710beb4efa53da6351f67b4c2f307c2d9b6d49"
+        "url": "https://files.pythonhosted.org/packages/81/7d/a3ee37866fb7c51e3b28a31014393f5c553ec2f07d78cf777abd5ba41221/sentry_sdk-1.5.7-py2.py3-none-any.whl"
+  "1.5.8":
+    "Any":
+      "3.0":
+        "sha256": "32af1a57954576709242beb8c373b3dbde346ac6bd616921def29d68846fb8c3"
+        "url": "https://files.pythonhosted.org/packages/87/54/0a04c906c97073119e4030c9f4d86e8fe70c93aee1b3bc5670257b76eab0/sentry_sdk-1.5.8-py2.py3-none-any.whl"

@@ -9,16 +9,16 @@ from conan.tools.files import files
 required_conan_version = ">=1.33.0"
 
 
-class Pywin32CtypesConan(ConanFile):
-    name = "pywin32-ctypes"
-    description = ""
+class Pyqt6Qt5Conan(ConanFile):
+    name = "pyqt6-qt6"
+    description = "The subset of a Qt installation needed by PyQt6."
     topics = ("conan", "python", "pypi", "pip")
-    license = "BSD"
-    homepage = "https://github.com/enthought/pywin32-ctypes"
-    url = "https://github.com/enthought/pywin32-ctypes"
+    license = "LGPL v3"
+    homepage = "https://www.riverbankcomputing.com/software/pyqt/"
+    url = "https://www.riverbankcomputing.com/software/pyqt/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = "cpython/[>=3.0]@python/stable"
+    requires = "cpython/[>=3.6]@python/stable"
     no_copy_source = True
 
     @property

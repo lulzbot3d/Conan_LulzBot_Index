@@ -1,0 +1,516 @@
+"sources":
+  "10.0":
+    "Any":
+      "3.0":
+        "sha256": "c21bad3a0ba015e14352e7182b8a338adbb400eb4779dd9227767cb8e39e5eed"
+        "url": "https://files.pythonhosted.org/packages/c8/80/94658454893feddfc6170d189f998e9b7b4414a329dd0a953508a795315d/keyring-10.0-py2.py3-none-any.whl"
+  "10.0.1":
+    "Any":
+      "3.0":
+        "sha256": "1b5883888fdad1615f9151d34315af3355c9bd25a5c17c543785ea33c243db96"
+        "url": "https://files.pythonhosted.org/packages/4d/d1/63b51d6bc7813975ad14312941b0583b97c105c57e38fe4465dc536800cf/keyring-10.0.1-py2.py3-none-any.whl"
+  "10.0.2":
+    "Any":
+      "3.0":
+        "sha256": "c84c508bd355381d39d054c30f6155cfe775997d7f2b0942b52335a949b3bd67"
+        "url": "https://files.pythonhosted.org/packages/52/17/d3902a471afe368105f09f7c80bac395d05524439b7d6ad35d9edc2eacd4/keyring-10.0.2-py2.py3-none-any.whl"
+  "10.1":
+    "Any":
+      "3.0":
+        "sha256": "ba85e0038ebe14fa9ee41d33df09cd25c2d7cd956f88ee9699cd30fdea8393a4"
+        "url": "https://files.pythonhosted.org/packages/89/1a/c8a755e54c91cd4106c17fe72f0389d5403164acad9a44e9171209f8fb0f/keyring-10.1-py2.py3-none-any.whl"
+  "10.2":
+    "Any":
+      "3.0":
+        "sha256": "679e0f163289aae50128815d60894e631bfafc5d10d76cf4e4cae8322c544e07"
+        "url": "https://files.pythonhosted.org/packages/0b/73/2ccc32bfeeddafc13439683c60311b2e97969146a533e3bd263542ba513b/keyring-10.2-py2.py3-none-any.whl"
+  "10.3":
+    "Any":
+      "3.0":
+        "sha256": "a1450c92de1c1807d3538fb42d3241a02945efb45851163bc75ce16a2b273ec2"
+        "url": "https://files.pythonhosted.org/packages/27/e4/5e009777b5338487e5030be878e6363f0d1fd6132ed88f18858b7bd77117/keyring-10.3-py2.py3-none-any.whl"
+  "10.3.1":
+    "Any":
+      "3.0":
+        "sha256": "5539fdf1baefddccf799a0c861dde9e0fa0edcd20624d473c1d535787eeffb4e"
+        "url": "https://files.pythonhosted.org/packages/23/12/e8961817ff7d66f97de09af3e81e69cada03b20f62c69e276c9381af35d8/keyring-10.3.1-py2.py3-none-any.whl"
+  "10.3.2":
+    "Any":
+      "3.0":
+        "sha256": "9ab1b9efe140783ae87c721c6ed4525080725472e5ff62355544568ef5716b18"
+        "url": "https://files.pythonhosted.org/packages/ea/a6/3f38adb61681b1c74fcca65e278c1d0de7fde6351f624c58975b07b8618f/keyring-10.3.2-py2.py3-none-any.whl"
+  "10.3.3":
+    "Any":
+      "3.0":
+        "sha256": "3812b6215120ef3fd4b90e4cfe2ea4304af45ee05b992e4078b631587dee87aa"
+        "url": "https://files.pythonhosted.org/packages/dc/1c/029a77513458161ab4f7623ab590047efba954d91809ee15e10a1066ede2/keyring-10.3.3-py2.py3-none-any.whl"
+  "10.4.0":
+    "Any":
+      "3.0":
+        "sha256": "4fd131d854f9517c921f7c55a574727df4a66c61f76d715fe976ca27d6913c8a"
+        "url": "https://files.pythonhosted.org/packages/64/6a/07415e4c23d4a162337aff8219f70d2677187c798cb2e0333dabac553e3f/keyring-10.4.0-py2.py3-none-any.whl"
+  "10.5.0":
+    "Any":
+      "3.0":
+        "sha256": "a1c9572049e33e54fd78a924cefda856efda9fe47c67b462fa2913e635d638c3"
+        "url": "https://files.pythonhosted.org/packages/72/2a/5ffde45db53af8128e5e2ee1a39d3ca376da160151988d056a069963c7b3/keyring-10.5.0-py2.py3-none-any.whl"
+  "10.5.1":
+    "Any":
+      "3.0":
+        "sha256": "94bf8b929cc0b9ee99654b6f7e99865a40340b66417a8345645fd5838495e0c5"
+        "url": "https://files.pythonhosted.org/packages/c8/fd/a8e1277d1a688d2d5a5a6686096c3f7545ce0062e90b823c3d4c070b8f94/keyring-10.5.1-py2.py3-none-any.whl"
+  "10.6.0":
+    "Any":
+      "3.0":
+        "sha256": "5b5cfd4dc67889f40de93d3f2987cf8ec0f4de08d262dbdc1017f11457266d58"
+        "url": "https://files.pythonhosted.org/packages/b1/4a/89ab7aa2cf501a5e715c7bbb0df11af0c0b2b1d918cdfabca74984dd2c34/keyring-10.6.0-py2.py3-none-any.whl"
+  "11.0.0":
+    "Any":
+      "3.0":
+        "sha256": "72f6c4eab94239550ce38ba0d687da3e595376bf7ccfdf61d8a42f43c7cb2fb7"
+        "url": "https://files.pythonhosted.org/packages/d3/35/2e033dbf7b7506f0fba12dfe15a501f4e2f9ce533d160931b9ac15e08a20/keyring-11.0.0-py2.py3-none-any.whl"
+  "11.1.0":
+    "Any":
+      "3.0":
+        "sha256": "17caf6e84054c619c357270c1a2c929b0a96f3548fccbdf8aa9f95310c8ef4b2"
+        "url": "https://files.pythonhosted.org/packages/86/cd/16a6a69134f0e52bbffc514a938297769d219482cfcb57ed1998bb4997e8/keyring-11.1.0-py2.py3-none-any.whl"
+  "12.0.0":
+    "Any":
+      "3.0":
+        "sha256": "c232ec21a7efd2e7602d1f3aff80e1c022432b2ded0edbe441303bd1b59abf25"
+        "url": "https://files.pythonhosted.org/packages/bb/7a/5ae985341091b026f4c628655ad0911102a61ac758e1a0ff1cc4490b730a/keyring-12.0.0-py2.py3-none-any.whl"
+  "12.0.1":
+    "Any":
+      "3.0":
+        "sha256": "2a0f9e386488f3bbd66927be4f77740873f2948a3a833f6237a0e595926fbfbc"
+        "url": "https://files.pythonhosted.org/packages/df/62/2b91a6f701a5117d574a17a17ac45ae7713b17defe96cde76b09406c5faf/keyring-12.0.1-py2.py3-none-any.whl"
+  "12.0.2":
+    "Any":
+      "3.0":
+        "sha256": "26edbe23dd0d79682b9c2cf825e58376fa87412ba4c94018edbbcabb7dcedfcf"
+        "url": "https://files.pythonhosted.org/packages/ba/a0/a42643ba6f8417bdd22b186f1bb27bae3c0fd6be365eea0ffeb1c1d29051/keyring-12.0.2-py2.py3-none-any.whl"
+  "12.1.0":
+    "Any":
+      "3.0":
+        "sha256": "f9f9d969115f4427775273fabbcf029d5b6809181752659fc07ea2df63b598fa"
+        "url": "https://files.pythonhosted.org/packages/48/c6/1925d51e81b7e37c445f87fc180077ced85f8916058ebd9778db920b9488/keyring-12.1.0-py2.py3-none-any.whl"
+  "12.2.0":
+    "Any":
+      "3.0":
+        "sha256": "34886447c5a96605208c4da9bec886c5c9a38c3f6033dc5f927deb14923d241a"
+        "url": "https://files.pythonhosted.org/packages/42/fc/b2729f018c400d67a02f753111bc26a26dd02cd38116a5239031b212eb8b/keyring-12.2.0-py2.py3-none-any.whl"
+  "12.2.1":
+    "Any":
+      "3.0":
+        "sha256": "fd597e72df7240ec5a4215c50957e41c3d4bd321d97bf163f4a8e75ca287d77b"
+        "url": "https://files.pythonhosted.org/packages/47/c0/4dfeeedaa233a12c3e5eb1e079b4dce96bbcbf0d030abc5e9a6b771e5812/keyring-12.2.1-py2.py3-none-any.whl"
+  "13.0.0":
+    "Any":
+      "3.0":
+        "sha256": "6849b41e69f77cdb122f026f78797675248252775a1db6ebc47610b769772b23"
+        "url": "https://files.pythonhosted.org/packages/a6/2a/f262337da5acd435e1013189e1cab16c40da2c79fc663477efb19156cdf9/keyring-13.0.0-py2.py3-none-any.whl"
+  "13.1.0":
+    "Any":
+      "3.0":
+        "sha256": "fb6ad22365c2e4cbec065fd26551646405d0eed651be929e5d826dec78049dcb"
+        "url": "https://files.pythonhosted.org/packages/33/f4/0b90a69cd0d06e783d0b8b2951050839af7da2d3d153a5a7eaf605e9fb2c/keyring-13.1.0-py2.py3-none-any.whl"
+  "13.2.0":
+    "Any":
+      "3.0":
+        "sha256": "d620c706654cbb272beacacd3205336dccb2d6f63e5f1628069d6b40873cd2f8"
+        "url": "https://files.pythonhosted.org/packages/ed/d0/eb9b638aa87c608e00921b0e0698f1367b6189c59c738c19f8808447438d/keyring-13.2.0-py2.py3-none-any.whl"
+  "13.2.1":
+    "Any":
+      "3.0":
+        "sha256": "6e01954fd3e404820e1fade262ee661974051551ed08c899ffc5e88bb9df288e"
+        "url": "https://files.pythonhosted.org/packages/88/a8/341fa4686e98bf10289eb4eaea89e8176b93c1e38de52e3c42d9112baae1/keyring-13.2.1-py2.py3-none-any.whl"
+  "15.0.0":
+    "Any":
+      "3.0":
+        "sha256": "79403339cf426da7da272457decca44cd23dae454d30e038b8eab33be165ba97"
+        "url": "https://files.pythonhosted.org/packages/ff/a6/9a679b52304900703aea0f0fed81d95fed509097c694451ff7069d296e77/keyring-15.0.0-py2.py3-none-any.whl"
+  "15.1.0":
+    "Any":
+      "3.0":
+        "sha256": "16dddc3edaeb2703aaf5588a0b488b62f162e26f1877b6faf3a3db4b7712df61"
+        "url": "https://files.pythonhosted.org/packages/6c/3f/7a3f780dfa9ee5708507090ce15d6707aded2865f9e6999f48fa88b65bf3/keyring-15.1.0-py2.py3-none-any.whl"
+  "15.2.0":
+    "Any":
+      "3.0":
+        "sha256": "1279f917e42ad71046cf464cc3d04b0bbf83f478c10296a0200e93883791fe64"
+        "url": "https://files.pythonhosted.org/packages/2d/2a/c003dd0812deb375819e3476300aebc47b6034bb4f1fb75dcd830c1153e9/keyring-15.2.0-py2.py3-none-any.whl"
+  "16.0.0":
+    "Any":
+      "3.0":
+        "sha256": "229ab6e4f1babf9e9dc02db36db291fe020795c8d584801a09450d3bef666a01"
+        "url": "https://files.pythonhosted.org/packages/85/25/55798660a50bd2fd7a8ef58a4394fd4fbb474e6b87d55a8d3e49e300d2a4/keyring-16.0.0-py2.py3-none-any.whl"
+  "16.0.1":
+    "Any":
+      "3.0":
+        "sha256": "b1ee90571b4fa1db66e99b7e8ccb0fec5e9669a63d80c41ed152dcd05f599178"
+        "url": "https://files.pythonhosted.org/packages/17/e6/d477b367d3c598f107e22e1abcc93d6e742c3686d94ea5b4174174418ec1/keyring-16.0.1-py2.py3-none-any.whl"
+  "16.0.2":
+    "Any":
+      "3.0":
+        "sha256": "2a5cf5e596cbf8b66b98b8df2c214adfe21e6e18baa82006b2c482bd0c4be94c"
+        "url": "https://files.pythonhosted.org/packages/5f/cb/dc7b2215cd82b77e7b8b48abd8989c1b09990d4c91a3ccfdc18a61157b36/keyring-16.0.2-py2.py3-none-any.whl"
+  "16.1.0":
+    "Any":
+      "3.0":
+        "sha256": "e605f00553c083eaaa8620b29edeea40323c5c5117b64267654f529951e3245c"
+        "url": "https://files.pythonhosted.org/packages/15/43/d97fe201586beca0a4bb24541f71036a16a7fc1d712e8eab850a7ede818f/keyring-16.1.0-py2.py3-none-any.whl"
+  "16.1.1":
+    "Any":
+      "3.0":
+        "sha256": "0209a8a0109b09c729a322ff0448054d32368fc7c53dbf0351b115cefed753b2"
+        "url": "https://files.pythonhosted.org/packages/c6/75/75d9d3f45ff56e4d39a954d5694463887b24ef639c1befb5da027c5a0f0e/keyring-16.1.1-py2.py3-none-any.whl"
+  "17.0.0":
+    "Any":
+      "3.0":
+        "sha256": "f3d6a02f513546ca13b6cd3418d769e8fe1932dc7c00bd0c2a342b5eee370f15"
+        "url": "https://files.pythonhosted.org/packages/c8/4d/e1f19eebda5cd58030ecc1f61321f71661cfdb9d911d0b1053ab0ca7351c/keyring-17.0.0-py2.py3-none-any.whl"
+  "17.1.0":
+    "Any":
+      "3.0":
+        "sha256": "92e046f2e8d6e90f31bb533f05cbcf3ecc3b87c8cecc05cf91e52a9625273eb9"
+        "url": "https://files.pythonhosted.org/packages/7b/be/72de28759133f5a62cd82bea40bc0d09c1d8a336b7022c79eacbca5c1ba8/keyring-17.1.0-py2.py3-none-any.whl"
+  "17.1.1":
+    "Any":
+      "3.0":
+        "sha256": "d71368b9a10dc096c8a1b69a46fc23f0a551f709b9a55b4d4deb7d2fbd809b68"
+        "url": "https://files.pythonhosted.org/packages/28/01/06f2e55264994a89d543ee37f2cfc4af85800824a8ca5c6532f715ff41a9/keyring-17.1.1-py2.py3-none-any.whl"
+  "18.0.0":
+    "Any":
+      "3.0":
+        "sha256": "ca33f5ccc542b9ffaa196ee9a33488069e5e7eac77d5b81969f8a3ce74d0230c"
+        "url": "https://files.pythonhosted.org/packages/a1/28/0058032477bfdf2003e605d175629963759220661615443e20711446bfa7/keyring-18.0.0-py2.py3-none-any.whl"
+  "18.0.1":
+    "Any":
+      "3.0":
+        "sha256": "7b29ebfcf8678c4da531b2478a912eea01e80007e5ddca9ee0c7038cb3489ec6"
+        "url": "https://files.pythonhosted.org/packages/cb/97/351c4839d78c518d8784822ec6f48f601de5cf47ab21242c0a6e5da888cc/keyring-18.0.1-py2.py3-none-any.whl"
+  "19.0.0":
+    "Any":
+      "3.0":
+        "sha256": "a355d4efaaec661b007d50578fcde9c62b326a7f6b9cf9791e8a47657f3dc199"
+        "url": "https://files.pythonhosted.org/packages/3c/67/7329c365b0881ee956dbc7cfe235f75d2679b1e6fd67d7b8e61ef60dcde8/keyring-19.0.0-py2.py3-none-any.whl"
+  "19.0.1":
+    "Any":
+      "3.0":
+        "sha256": "aae82841a2e170ecf4319df0f5c0df1468a98809e77563174949d8394bb59488"
+        "url": "https://files.pythonhosted.org/packages/29/54/22d12573bae3cccd1fb9ead7f69409257be16f7bdd7281f939b035a76399/keyring-19.0.1-py2.py3-none-any.whl"
+  "19.0.2":
+    "Any":
+      "3.0":
+        "sha256": "afbfe7bc9bdba69d25c551b0c738adde533d87e0b51ad6bbe332cbea19ad8476"
+        "url": "https://files.pythonhosted.org/packages/6e/b3/b4d443d2e30c00cdb73612426222172182e54359545cfb17774792619e49/keyring-19.0.2-py2.py3-none-any.whl"
+  "19.1.0":
+    "Any":
+      "3.0":
+        "sha256": "0ca298c5356446c0e6cd4e26210d77c5505e3ec725ca753409f39f1550256088"
+        "url": "https://files.pythonhosted.org/packages/c8/17/a1ce6405d5bbad3f04e2ad97f75ceccf2c16edb370f8bba446ee196da160/keyring-19.1.0-py2.py3-none-any.whl"
+  "19.2.0":
+    "Any":
+      "3.0":
+        "sha256": "f5bb20ea6c57c2360daf0c591931c9ea0d7660a8d9e32ca84d63273f131ea605"
+        "url": "https://files.pythonhosted.org/packages/b1/08/ad1ae7262c8146bee3be360cc766d0261037a90b44872b080a53aaed4e84/keyring-19.2.0-py2.py3-none-any.whl"
+  "19.3.0":
+    "Any":
+      "3.0":
+        "sha256": "9b80469783d3f6106bce1d389c6b8b20c8d4d739943b1b8cd0ddc2a45d065f9d"
+        "url": "https://files.pythonhosted.org/packages/70/33/8a7aa9da0cbdd26cd13ccfdab34da47bf561e9587d6cbf02f9d48d717047/keyring-19.3.0-py2.py3-none-any.whl"
+  "20.0.0":
+    "Any":
+      "3.0":
+        "sha256": "a3f71fc0cf6b74e201e70532879ba1d15db25cb2c7407dce52fe52a6d5fc7b66"
+        "url": "https://files.pythonhosted.org/packages/a0/7b/77364ff41dda99cb9621c8a087ff38ffaddbe0a72ad776905a423858a47a/keyring-20.0.0-py2.py3-none-any.whl"
+  "20.0.1":
+    "Any":
+      "3.0":
+        "sha256": "c674f032424b4bffc62abeac5523ec49cc84aed07a480c3233e0baf618efc15c"
+        "url": "https://files.pythonhosted.org/packages/f1/07/0afb82d449d210a332d126978634470abdd0c754128a9ead8bbe78eb1b43/keyring-20.0.1-py2.py3-none-any.whl"
+  "21.0.0":
+    "Any":
+      "3.0":
+        "sha256": "ad84f7fe26ab51731f089eaf1c44ebf4c5fae323653c908888a3a6212ad0bbe7"
+        "url": "https://files.pythonhosted.org/packages/2a/03/4f57f7b28bfd21a0dc05aec33e012fbaa06cff56d8af63bf2f1451a12ead/keyring-21.0.0-py2.py3-none-any.whl"
+  "21.1.0":
+    "Any":
+      "3.0":
+        "sha256": "24ae23ab2d6adc59138339e56843e33ec7b0a6b2f06302662477085c6c0aca00"
+        "url": "https://files.pythonhosted.org/packages/28/40/2bed013b87d6d2bf4104db67bab7c8c5b5f88ff68b383dc967b6019ee9e5/keyring-21.1.0-py2.py3-none-any.whl"
+  "21.1.1":
+    "Any":
+      "3.0":
+        "sha256": "ebce8a4acfcabbcdfdcae2fc58571cebf11f71262cca898edceef89cdc891898"
+        "url": "https://files.pythonhosted.org/packages/c2/be/fa3593f8ebf1956b363409fd36a098ea5e538754fd547006f92634435664/keyring-21.1.1-py3-none-any.whl"
+  "21.2.0":
+    "Any":
+      "3.0":
+        "sha256": "8179b1cdcdcbc221456b5b74e6b7cfa06f8dd9f239eb81892166d9223d82c5ba"
+        "url": "https://files.pythonhosted.org/packages/04/21/42d92822959a37ccc390742c2706c8b06cc6a29c10a5ef2e8d22cf0e2e33/keyring-21.2.0-py3-none-any.whl"
+  "21.2.1":
+    "Any":
+      "3.0":
+        "sha256": "3401234209015144a5d75701e71cb47239e552b0882313e9f51e8976f9e27843"
+        "url": "https://files.pythonhosted.org/packages/a8/5e/d13b9feb235d042321a239ac8bc85e90cf3bbe49090c6f1383ac3fd53e0e/keyring-21.2.1-py3-none-any.whl"
+  "21.3.0":
+    "Any":
+      "3.0":
+        "sha256": "e7a17caf40c40b6bb8c4772224a487e4a63013560ed0c521065aeba7ecd42182"
+        "url": "https://files.pythonhosted.org/packages/59/4d/469272124b46456c425a505a8b5f2d42d2fe95d1181de2d888d684506cf7/keyring-21.3.0-py3-none-any.whl"
+  "21.3.1":
+    "Any":
+      "3.0":
+        "sha256": "cd4d486803d55bdb13e2d453eb61dbbc984773e4f2b98a455aa85b1f4bc421e4"
+        "url": "https://files.pythonhosted.org/packages/3a/6c/0f50bc8811cd7ae39c47f986e645636333e20834270ba7be0954816e5a88/keyring-21.3.1-py3-none-any.whl"
+  "21.4.0":
+    "Any":
+      "3.0":
+        "sha256": "4e34ea2fdec90c1c43d6610b5a5fafa1b9097db1802948e90caf5763974b8f8d"
+        "url": "https://files.pythonhosted.org/packages/e4/ed/7be20815f248b0d6aae406783c2bee392640924623c4e17b50ca90c7f74d/keyring-21.4.0-py3-none-any.whl"
+  "21.5.0":
+    "Any":
+      "3.0":
+        "sha256": "12de23258a95f3b13e5b167f7a641a878e91eab8ef16fafc077720a95e6115bb"
+        "url": "https://files.pythonhosted.org/packages/53/14/1c952bcd21255f42f9ba0280d3abd8074dca2c27d136eb749b98ab478f72/keyring-21.5.0-py3-none-any.whl"
+  "21.6.0":
+    "Any":
+      "3.0":
+        "sha256": "4a49585d40024826b8eae024c10fece150d020751a9007f5ab793b8f288968f5"
+        "url": "https://files.pythonhosted.org/packages/f0/ed/cc938fab7331776e99c18eda0ee8c7b349a5fd803dce4373e9cc9fb9e7b7/keyring-21.6.0-py3-none-any.whl"
+  "21.7.0":
+    "Any":
+      "3.0":
+        "sha256": "4c41ce4f6d1ee91d589a346699ef5a94ba3429603ac8f700cc0097644cdd6748"
+        "url": "https://files.pythonhosted.org/packages/e2/23/c15f403d1993a003a711a37318bbe66096c0802b265047919d5c14a4d693/keyring-21.7.0-py3-none-any.whl"
+  "21.8.0":
+    "Any":
+      "3.0":
+        "sha256": "4be9cbaaaf83e61d6399f733d113ede7d1c73bc75cb6aeb64eee0f6ac39b30ea"
+        "url": "https://files.pythonhosted.org/packages/d0/a0/20e656cd1e2313af619e382782bd47b5f77a3f33d81992554f3aac56e90d/keyring-21.8.0-py3-none-any.whl"
+  "22.0.0":
+    "Any":
+      "3.0":
+        "sha256": "0744732bdf8bf2c1a30e9d1cb75eca5ac706b4f4dc4295356894dd2c8e31068f"
+        "url": "https://files.pythonhosted.org/packages/a1/43/855f655b21e11e3284b46a135bed1e24ca983058b3635a1e99db3b8e24c0/keyring-22.0.0-py3-none-any.whl"
+  "22.0.1":
+    "Any":
+      "3.0":
+        "sha256": "9f44660a5d4931bdc14c08a1d01ef30b18a7a8147380710d8c9f9531e1f6c3c0"
+        "url": "https://files.pythonhosted.org/packages/96/17/86e1e5b50dc14e5984a661dde2ed3b7f05efe1fdee32145a77708cf06904/keyring-22.0.1-py3-none-any.whl"
+  "22.1.0":
+    "Any":
+      "3.0":
+        "sha256": "dcd2f8f0bec64389dd8fbaa978d1af2b51a88441a0b70f9dff75d7fc02a31b1b"
+        "url": "https://files.pythonhosted.org/packages/f1/35/de18fd266053b6094b3a43a6d2f35204ecbee82f18af224e68d4937819e3/keyring-22.1.0-py3-none-any.whl"
+  "22.2.0":
+    "Any":
+      "3.0":
+        "sha256": "8ae8e53d744e3e395e7402fd04c7474d46c8ad2d65e095bcde8a622dc643f7cd"
+        "url": "https://files.pythonhosted.org/packages/ce/4a/36e2bfed4d95e8ae71399a8176a72823d92eabf2135edbe62dee9fbf2af0/keyring-22.2.0-py3-none-any.whl"
+  "22.3.0":
+    "Any":
+      "3.0":
+        "sha256": "2bc8363ebdd63886126a012057a85c8cb6e143877afa02619ac7dbc9f38a207b"
+        "url": "https://files.pythonhosted.org/packages/96/69/3ee574555067bb416b07b9816dc73dc2a0deb1799464f2f7fe4dee506453/keyring-22.3.0-py3-none-any.whl"
+  "22.4.0":
+    "Any":
+      "3.0":
+        "sha256": "d6c531f6d12f3304db6029af1d19894bd446ecbbadd22465fa0f096b3e12d258"
+        "url": "https://files.pythonhosted.org/packages/35/1e/a3553a702a3c22acc9e8984664206a7d4f950f18aba5a9f571c0b66b66eb/keyring-22.4.0-py3-none-any.whl"
+  "23.0.0":
+    "Any":
+      "3.0":
+        "sha256": "29f407fd5509c014a6086f17338c70215c8d1ab42d5d49e0254273bc0a64bbfc"
+        "url": "https://files.pythonhosted.org/packages/4a/4f/a63f284d26eac29a29e24657d12f17bddac58b12673ca39b53ae5f20c1a3/keyring-23.0.0-py3-none-any.whl"
+  "23.0.1":
+    "Any":
+      "3.0":
+        "sha256": "8f607d7d1cc502c43a932a275a56fe47db50271904513a379d39df1af277ac48"
+        "url": "https://files.pythonhosted.org/packages/26/f9/41230ac47f738f1ba66676dc8d3b30ca5b1f9eb0230fc204bcd9836c4ae9/keyring-23.0.1-py3-none-any.whl"
+  "23.1.0":
+    "Any":
+      "3.0":
+        "sha256": "b32397fd7e7063f8dd74a26db910c9862fc2109285fa16e3b5208bcb42a3e579"
+        "url": "https://files.pythonhosted.org/packages/b5/00/d4ee8383decb2d3dd273a7d62027240e888fddf671ac4398adddd28e8717/keyring-23.1.0-py3-none-any.whl"
+  "23.2.0":
+    "Any":
+      "3.0":
+        "sha256": "66a08700421ed0aaf317c6bf6543f7345f9ab9e7bed6e0ee072f7f6fcddbab75"
+        "url": "https://files.pythonhosted.org/packages/7a/18/bfa210920b2602114f804d72cd234cfd3f82ae213e0e4bb79b06561792d6/keyring-23.2.0-py3-none-any.whl"
+  "23.2.1":
+    "Any":
+      "3.0":
+        "sha256": "bd2145a237ed70c8ce72978b497619ddfcae640b6dcf494402d5143e37755c6e"
+        "url": "https://files.pythonhosted.org/packages/58/b7/cc5a5321a6119e23ee85745ba204a67d646835e8882ba36eece32ee2b4e1/keyring-23.2.1-py3-none-any.whl"
+  "23.3.0":
+    "Any":
+      "3.0":
+        "sha256": "3842db6b5f660d3c0a0b5aeb3bd5aa60241fe313bcfc7828f8df41b1e6fb1e51"
+        "url": "https://files.pythonhosted.org/packages/33/f6/aafcaaf57cfdce44454c1c4584a2fd45ad9b2054649e88e56aa9b3404635/keyring-23.3.0-py3-none-any.whl"
+  "23.4.0":
+    "Any":
+      "3.0":
+        "sha256": "3dc0f66062a4f8f6f2ce30d6a516e6e623e6c3c2e76864204ceaf64695408f07"
+        "url": "https://files.pythonhosted.org/packages/ce/86/137d2460ceb266bf5233d81d23884bca03aa941060ec63622bd745fe09aa/keyring-23.4.0-py3-none-any.whl"
+  "23.4.1":
+    "Any":
+      "3.0":
+        "sha256": "17e49fb0d6883c2b4445359434dba95aad84aabb29bbff044ad0ed7100232eca"
+        "url": "https://files.pythonhosted.org/packages/a4/e9/104ec4bffcf971375c348146c2199d4e241294286cc04a428b12c02e5f81/keyring-23.4.1-py3-none-any.whl"
+  "23.5.0":
+    "Any":
+      "3.0":
+        "sha256": "b0d28928ac3ec8e42ef4cc227822647a19f1d544f21f96457965dc01cf555261"
+        "url": "https://files.pythonhosted.org/packages/0d/bb/8e715dbb1886e6d7e4c6a7024c11a7e137559cd85366f25c67c2bdb311c3/keyring-23.5.0-py3-none-any.whl"
+  "5.4":
+    "Any":
+      "3.0":
+        "sha256": "adfb02dc602737b27781d1d8017a33d6d1e3f292af261aad802a1459240fff1c"
+        "url": "https://files.pythonhosted.org/packages/06/4d/f37953c655e42c38fb9eeeec5d868ba517cda958d21e09da02e13c7c6c74/keyring-5.4-py3-none-any.whl"
+  "5.7.1":
+    "Any":
+      "3.0":
+        "sha256": "488da7cb8ffdc598fdd22cc8472b59c0cfbafdd6cc672cdf5c3ddd1fbe6d794c"
+        "url": "https://files.pythonhosted.org/packages/3f/eb/61c251c35d85423a3a7185c1c20e82ee86f679256e72c0136715978608cd/keyring-5.7.1-py2.py3-none-any.whl"
+  "6.1":
+    "Any":
+      "3.0":
+        "sha256": "4c747fe8d75d3219a839372425df274dc3b1e9c6bdb4bddcf43324e31f29d31c"
+        "url": "https://files.pythonhosted.org/packages/5e/77/63b35324bf5a570a02a47aa4d03ba22665174a794ed7be447c23b6b9442e/keyring-6.1-py2.py3-none-any.whl"
+  "6.1.1":
+    "Any":
+      "3.0":
+        "sha256": "22ae655193353543d3765194e515a12795cc8bef3d4d1bd02b33f2a6342680b7"
+        "url": "https://files.pythonhosted.org/packages/1b/d4/f816fb602d1319173c343a5fe4ff75fccd849f5f9832ab10f94736971a5d/keyring-6.1.1-py2.py3-none-any.whl"
+  "7.0":
+    "Any":
+      "3.0":
+        "sha256": "a0fbdd14e1184dd6f14717b6637fb6aa181ba12c2f38f2e86e1b242700b25a71"
+        "url": "https://files.pythonhosted.org/packages/5e/6f/af56f2320d6f4ddfdb6c29c0abee4ed4d12084b41fdcfb2044dd0f76f3c3/keyring-7.0-py2.py3-none-any.whl"
+  "7.0.1":
+    "Any":
+      "3.0":
+        "sha256": "b0eb7f262338fbef94550837982c7f5dee0de7b54032da6a38745914ef35ae32"
+        "url": "https://files.pythonhosted.org/packages/7f/7d/22139da7aac2d8d635d93271c8f22c3bd5452d4459b40f50376a10ef35bb/keyring-7.0.1-py2.py3-none-any.whl"
+  "7.0.2":
+    "Any":
+      "3.0":
+        "sha256": "2958b83d401aae4d575e0e8000170eda3055784724bae144cd15c69ab110131b"
+        "url": "https://files.pythonhosted.org/packages/13/18/ac6ec29707c9a57d3ee940d3ef222353220281d5813a25b5c59d104e96d4/keyring-7.0.2-py2.py3-none-any.whl"
+  "7.1.1":
+    "Any":
+      "3.0":
+        "sha256": "09299d7ec587314e93e18713f84a9a7346ba951b1fdff29702bf66e8d1729ecb"
+        "url": "https://files.pythonhosted.org/packages/88/87/3945dc6f9fc2dc6f9f8733b129a803f90977d6983ecf47ef0cc8a736b4c5/keyring-7.1.1-py2.py3-none-any.whl"
+  "7.1.2":
+    "Any":
+      "3.0":
+        "sha256": "0f61bc0abf5a5c59a3d2a78b8b94a91c692e21f092b54ac125e3f4705b118c22"
+        "url": "https://files.pythonhosted.org/packages/04/4a/962809ca8bc5a9d87572a0ca040611cde7841a9c59ba44397edd507d7dad/keyring-7.1.2-py2.py3-none-any.whl"
+  "7.2":
+    "Any":
+      "3.0":
+        "sha256": "96ec55b3afcc33a8c90ac048eae11f070333e295a9c450975dc84e5748bb3e17"
+        "url": "https://files.pythonhosted.org/packages/44/38/ee6296109dcc30053956d68099d33b08c3d9e3ec355418a355be51c30217/keyring-7.2-py2.py3-none-any.whl"
+  "7.3":
+    "Any":
+      "3.0":
+        "sha256": "fdc42ec815afa306cdf6f4e32be450d340837d43f95949ddd45bf606e15ef794"
+        "url": "https://files.pythonhosted.org/packages/49/66/a0b691aa62e3ac3c5f84ebccb7f6615abfe95c95356c36be7fa4ca1a6000/keyring-7.3-py2.py3-none-any.whl"
+  "7.3.1":
+    "Any":
+      "3.0":
+        "sha256": "c0785fc681bbd93291f6d281d8ba7fb69f2371ecece0356da613946ac2810943"
+        "url": "https://files.pythonhosted.org/packages/fc/6e/6c0ccae4ab14f71bca287780ea5c99a0003ecf87ce1abcace064510c1e42/keyring-7.3.1-py2.py3-none-any.whl"
+  "8.0":
+    "Any":
+      "3.0":
+        "sha256": "77b5fcf6b896a8f7f6e149638709b9b877909586fa338fe2a889c95bd4754d3b"
+        "url": "https://files.pythonhosted.org/packages/50/11/3bb8fd87acdd7f74b49165a0ca1a24d68a4c577891afa03e2d57cd20e4d5/keyring-8.0-py2.py3-none-any.whl"
+  "8.0.1":
+    "Any":
+      "3.0":
+        "sha256": "149aab5fe1342a43cbae3d6cce7c2a562c86895a46f1f8696bb75a7a6aee70ee"
+        "url": "https://files.pythonhosted.org/packages/a3/17/d55bcbb3b1b2af50118953231a6cbc255efba9d9dae2257c0f6658c5c471/keyring-8.0.1-py2.py3-none-any.whl"
+  "8.1":
+    "Any":
+      "3.0":
+        "sha256": "5c2761f1cb200c6d25d2c3a86c996fa643f016d9624b58da6afe6167782b13fb"
+        "url": "https://files.pythonhosted.org/packages/26/aa/a928e07125f2ae4c38c24b37f2ca0913ddd60dbd01f91e126473214db35e/keyring-8.1-py2.py3-none-any.whl"
+  "8.1.1":
+    "Any":
+      "3.0":
+        "sha256": "8040efe5d2fbc6eed46b733e261994e67a800f62500f804ed39eb4fe51323362"
+        "url": "https://files.pythonhosted.org/packages/43/79/26e925714ed4ca093ecf771a81b0a12b05ae17da60679bee1f805b23c44d/keyring-8.1.1-py2.py3-none-any.whl"
+  "8.2":
+    "Any":
+      "3.0":
+        "sha256": "24a3aa4697c0e7861b706cfffa5afd6e74b963965f8071a1645428be47759a2d"
+        "url": "https://files.pythonhosted.org/packages/06/8e/51e0bf04dab8f93df00f1eabcd3af6ba31a21a3610964587fcdf4551aa81/keyring-8.2-py2.py3-none-any.whl"
+  "8.4":
+    "Any":
+      "3.0":
+        "sha256": "2c3d6e3bbff4527d4bf0bd71062497f6f94b00484acf419c86ebc460adeaeefd"
+        "url": "https://files.pythonhosted.org/packages/c6/6e/ec9c9a149e14f1ea1412b11890f664215fc1f951e23a79451caefc0744be/keyring-8.4-py2.py3-none-any.whl"
+  "8.4.1":
+    "Any":
+      "3.0":
+        "sha256": "15f2116207767f497a8eaf15a189e17ed60e8537dd5beafcf3592d311ebb8121"
+        "url": "https://files.pythonhosted.org/packages/48/bc/321a970e320010a4bc4cdd100d4fd1b3d0548f94043e732bcf1348af5267/keyring-8.4.1-py2.py3-none-any.whl"
+  "8.5":
+    "Any":
+      "3.0":
+        "sha256": "1ccced29551069cac340eb7a1722ca0893ad94cad59e6a17d639c9b0ba117625"
+        "url": "https://files.pythonhosted.org/packages/72/e7/08525ad61c34bb0952a6753e990919990dba89467d6b3e27e8282ef1003a/keyring-8.5-py2.py3-none-any.whl"
+  "8.5.1":
+    "Any":
+      "3.0":
+        "sha256": "d555bf636a76e1d1f7939ac15ae6962aa7b25176ad424d245485edbf8ac2efc3"
+        "url": "https://files.pythonhosted.org/packages/54/24/ddcd0e555e2b94766f435aa184807247e864a1d04aadf418eb298bed9b15/keyring-8.5.1-py2.py3-none-any.whl"
+  "8.6":
+    "Any":
+      "3.0":
+        "sha256": "ee9006a2b046c2b4b20be6a27633512a373fee20b447308521ca3ea4dfa6bdaa"
+        "url": "https://files.pythonhosted.org/packages/07/88/2d7cfadb4d2f8742382cc8acc8c44b33d2bca1bb83f8e4b8c2d415f39e8e/keyring-8.6-py2.py3-none-any.whl"
+  "8.6.1":
+    "Any":
+      "3.0":
+        "sha256": "b2bf77bad79d8bebdecae59ae7c45d146dc4bc79dcdb48432e00ac65f56b9022"
+        "url": "https://files.pythonhosted.org/packages/3d/45/8336c2ca59a99979abef799cae3f017561ecaf348fcbc84e3885601b73ed/keyring-8.6.1-py2.py3-none-any.whl"
+  "8.7":
+    "Any":
+      "3.0":
+        "sha256": "2510768eedf6a8fb4fe7a392cb1161e7ca8c93f4349c4757881850c2118a1f98"
+        "url": "https://files.pythonhosted.org/packages/49/9c/83cb89bfc097b889461f39adce88465b0eb926027faf916e091971d3546f/keyring-8.7-py2.py3-none-any.whl"
+  "9.0":
+    "Any":
+      "3.0":
+        "sha256": "6f13727245d460aebacad80f358e89d6850afa2c36c7e4bc91e3ca25ad08e072"
+        "url": "https://files.pythonhosted.org/packages/29/cb/481e2d556b1d90baa43f6be87e75dbf1ac8df632dd511404c96399606f79/keyring-9.0-py2.py3-none-any.whl"
+  "9.1":
+    "Any":
+      "3.0":
+        "sha256": "2054a7c7528e6d4cde947a2e0711c117e79a32a49bb1082f66a856edfd31cbd1"
+        "url": "https://files.pythonhosted.org/packages/9a/1e/8b0290dc98de928b04c6fc73c301faebf52b9479a3c772edc77b92b4d6f6/keyring-9.1-py2.py3-none-any.whl"
+  "9.2":
+    "Any":
+      "3.0":
+        "sha256": "b571fbc91c1b36ad0bc9d58b9c978b27b2a84f717f8e21cd6be936ab19c6d235"
+        "url": "https://files.pythonhosted.org/packages/52/91/3f91c138d19fe96334b5c6b4f20d0ffa9a23311be3a9f51d5c422811268a/keyring-9.2-py2.py3-none-any.whl"
+  "9.2.1":
+    "Any":
+      "3.0":
+        "sha256": "6698a8ef77c13f6ef8ec90a24262d2967b5f6e63665f361abe13dbffe02457b2"
+        "url": "https://files.pythonhosted.org/packages/2b/81/1ff4d9498652149bb00967f7d52420fc06da12f6cf69e28301bb308abe36/keyring-9.2.1-py2.py3-none-any.whl"
+  "9.3":
+    "Any":
+      "3.0":
+        "sha256": "b29c2775d41f30c6fef928d2b6bc4eda857062a42d4e0c8186d1e5048f5801c1"
+        "url": "https://files.pythonhosted.org/packages/8e/a3/f9079d245b6dba78618c8fea4961f0e3acba9973657c470cb7be3a46503c/keyring-9.3-py2.py3-none-any.whl"
+  "9.3.1":
+    "Any":
+      "3.0":
+        "sha256": "72860d1f9837739b3d37be63f167eac2d2c125a0c7a4a690dcd74b09225e9486"
+        "url": "https://files.pythonhosted.org/packages/45/7b/de9c4c0217529d8099e27c935364b84437fd24f1354e8c0151395d28e3ae/keyring-9.3.1-py2.py3-none-any.whl"

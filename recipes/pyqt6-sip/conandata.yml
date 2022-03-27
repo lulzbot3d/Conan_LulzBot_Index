@@ -1,0 +1,228 @@
+"sources":
+  "13.0.0":
+    "Darwin":
+      "3.6":
+        "sha256": "30d206490edb4816d0e3239db1d73ed99ada4499f0de9bf731c5b65c5667aa88"
+        "url": "https://files.pythonhosted.org/packages/1b/99/62a229ac744a46c54cdc76e3268337c63d693f42b6237f1dd22899023180/PyQt6_sip-13.0.0-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "cc99dae09d26a3cf69980f763c94c2f3080b5a8eb6f83ce4b4127e84f812e114"
+        "url": "https://files.pythonhosted.org/packages/f6/48/586f8a5b9d548f5336a5c14b00c791911643fb425cd4e41a25bb27913307/PyQt6_sip-13.0.0-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "5bdd67a310507558b8e4b4ff0dd18888e0a88256722c8faed06bdd10cc004524"
+        "url": "https://files.pythonhosted.org/packages/ed/9f/6c8a377a2478cd733a52b349a1a88e9f9976090d5df944851909e3050902/PyQt6_sip-13.0.0-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "2f9ccc684d75b38a741bea7769fd5ea9ce2674ce347c9e99892444e5eb4fc761"
+        "url": "https://files.pythonhosted.org/packages/7c/72/c91f8c785afd474ee7719864619f2134bb19dc7bbbdb79c98f7b2508e1f0/PyQt6_sip-13.0.0-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "3.6":
+        "sha256": "d3f418d9d03b5daa65232073a547b8948c5e8f3e65b0bd84c3c0b4adc546f837"
+        "url": "https://files.pythonhosted.org/packages/bf/80/31eb55b7869299b3f5293565b154567e25bc57ce22f21b5bf6eee71ac5f1/PyQt6_sip-13.0.0-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "b37b56d4ea6a5c3916d14a446b42e9aa2767475a06be99cc86d15e37d629fc34"
+        "url": "https://files.pythonhosted.org/packages/7e/d9/36df5d97da1c29578595e19ecb800106240d794de5085aab6878a144fcc6/PyQt6_sip-13.0.0-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "b1e36a438e8b775bccaeee7481d4cc74979b5cff07c65eea7f1de974dcc721bc"
+        "url": "https://files.pythonhosted.org/packages/e6/74/f67e114990be8ccf2aee928ce24e44f9e0b43f6c3f99c253c918ecdf1d48/PyQt6_sip-13.0.0-cp38-cp38-manylinux1_x86_64.whl"
+      "3.9":
+        "sha256": "6a8d607f26fe048f544988fd13bc734f4eeef97b4e8ec722714663dd0ceceba0"
+        "url": "https://files.pythonhosted.org/packages/af/16/fdb5622feca52f92eedead1d55cc0006dc5f4d17046dfd87f4f7093d61a6/PyQt6_sip-13.0.0-cp39-cp39-manylinux1_x86_64.whl"
+    "Windows":
+      "3.6":
+        "sha256": "fed9531a2754163b83dc5d93eb7b650e8d7fb348fa136999e1be5e1b7230fed8"
+        "url": "https://files.pythonhosted.org/packages/ed/05/84bc70e5bd97b4d3b2fc3a343680edff3e81d34ffbf454a5bea1d7d88741/PyQt6_sip-13.0.0-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "a6d2e50b5ce03688075ce339f8d0248a0f8c92b8aa9651b3eddee2d08fcf53a4"
+        "url": "https://files.pythonhosted.org/packages/02/bf/1f38b3e3109d7acfbc0c6331083c46c0833761bf09c090a88c8c60bfeae8/PyQt6_sip-13.0.0-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "7c8108a7d9eb68899dc19ba4f6c6a3d6d84264797ec214dcbe020c6826096c06"
+        "url": "https://files.pythonhosted.org/packages/f3/16/fd600acbfc9091d02b48fa6f2491f106d438b63338510ec82694d0aea8c6/PyQt6_sip-13.0.0-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "64b420b1059ece4aa78799ed229744b35e6637fcee2983cb0e5b0d52026bb806"
+        "url": "https://files.pythonhosted.org/packages/cd/24/e7266a557fdd391ceded9dadda80c2f4768714391fc439076fa0c04c2515/PyQt6_sip-13.0.0-cp39-cp39-win_amd64.whl"
+  "13.0.1":
+    "Darwin":
+      "3.6":
+        "sha256": "ec65dea1c3b7ddbeea4cac565490e9a39d37cf61468f29715f0b164454a05a0f"
+        "url": "https://files.pythonhosted.org/packages/eb/e9/72722856045bd0ac4e7d5713da37154928209f25035350c7e9302da43b9b/PyQt6_sip-13.0.1-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "75ad1923c30d09115d96968b8a26578e51a8938ead849b50fb41395f9a3c8561"
+        "url": "https://files.pythonhosted.org/packages/e4/d6/6b978cb871d8e016f0c16bd4cb9e5cfad6a9f4a6e877c5ce4d7fd45c3b78/PyQt6_sip-13.0.1-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "9d7143ac735949a40b1548e3d5f0bb79d7278eb101379a4fdeb145a3a7ef837e"
+        "url": "https://files.pythonhosted.org/packages/c3/b9/263d8f3123e39102aaba46d08822ad57f458c10addd92f4216a48a66c421/PyQt6_sip-13.0.1-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "c28fc1569649386a99ca3fb9fad22a7066341e23686079e3589c46f3b4d11787"
+        "url": "https://files.pythonhosted.org/packages/b5/8e/445fde8399e3f5d08cc0ec7076b697ba4c4a4d2e7f6032c8a366ce4231e6/PyQt6_sip-13.0.1-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "3.6":
+        "sha256": "412ff1616027f9c4e7f41eebc6f43074a6e80a0b84e11213957382531d27d3bd"
+        "url": "https://files.pythonhosted.org/packages/d8/6c/b444bd2fe23bbe075515d77b46492d05c75419a18201f2e00958d6b52723/PyQt6_sip-13.0.1-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "fe8d34a1691a39890aa7829897d9e02aadb2a5ac3ff91c57f22105b689c448da"
+        "url": "https://files.pythonhosted.org/packages/f8/78/616eab21e5e4c1a84327c0039cee433e004ac2d797c26615891d9199640e/PyQt6_sip-13.0.1-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "63b4a8ff444199f3d8fb3b98bcc5678ef1d548fa000b2f74fa38460c2c72f5da"
+        "url": "https://files.pythonhosted.org/packages/05/3f/4facd46b8f09cb49b2d98ad5a4132c50d5067f6ee3a96ac60b646fd7de6e/PyQt6_sip-13.0.1-cp38-cp38-manylinux1_x86_64.whl"
+      "3.9":
+        "sha256": "1c08645e27543aed7f38f74454a3083866afa1cadde6858a07f77c3f71ae2af6"
+        "url": "https://files.pythonhosted.org/packages/c2/50/d60926bfdd3bcf3f2eec52ff1757cc21d4cf95dce22f6e4e81936ee21305/PyQt6_sip-13.0.1-cp39-cp39-manylinux1_x86_64.whl"
+    "Windows":
+      "3.6":
+        "sha256": "95c29cd7b3e600aa5f4c15e07f7bedd7b3ab94eca38a426dc607de8c1928429e"
+        "url": "https://files.pythonhosted.org/packages/bb/2e/7338cea79c727aeab11ab1289a660837181c57a9c74c327615871c76f9d8/PyQt6_sip-13.0.1-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "908809765d6f6beaf423fd02bf7f7f8160a871d4039bbde1043e5a9cb20de862"
+        "url": "https://files.pythonhosted.org/packages/d7/74/cecf6608498f97327ff05404dcb2e36e697d6c77ab756b4d90369cd0a22f/PyQt6_sip-13.0.1-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "98d54fac379581049e4cf9dcd24c139293530038e09b006e83decbff7543c888"
+        "url": "https://files.pythonhosted.org/packages/8f/25/550d924931c0cf791b8e6f40cd2b91e2032c6fd99f87ef2f695c6c2a3dde/PyQt6_sip-13.0.1-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "41fd704ffb262f49c60081ae76cde816a812bf54f4da6f7a2deaddeaa1668f45"
+        "url": "https://files.pythonhosted.org/packages/2e/72/4999fd152d798dbffe391e2e1a240f5bdb731105525de205904f55ecb954/PyQt6_sip-13.0.1-cp39-cp39-win_amd64.whl"
+  "13.1.0":
+    "Darwin":
+      "3.10":
+        "sha256": "cbc4ee1997c029d84c2f5ac8ab10089943d93e7b5eb9399a967b93969127c61d"
+        "url": "https://files.pythonhosted.org/packages/74/ad/af12cd0d7aec7e269d7ce40f972e1af7adf702ae5d986a9eec68d1f22285/PyQt6_sip-13.1.0-cp310-cp310-macosx_10_9_universal2.whl"
+      "3.6":
+        "sha256": "f591414ea4e3029a4873286496b6685d6a260249f0375657c1043e4db5a5514c"
+        "url": "https://files.pythonhosted.org/packages/c9/8d/823916f1903abefc54a33220b6b392659641f4067c9afa818b5bf5238f67/PyQt6_sip-13.1.0-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "a892f66d506a7adc40c03d95ef54c152614f32c2975f534cd9deb44ca94d1124"
+        "url": "https://files.pythonhosted.org/packages/72/d6/45ed86be50678400f738bb6838685ff3e8da5ba4de6c46f018b4deab052e/PyQt6_sip-13.1.0-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "ee7e635aadc3d3baaeb8ec509e562d7d6cc5c6d738cb874186f076742a2aec27"
+        "url": "https://files.pythonhosted.org/packages/3e/db/51336189f9ee4802f4a81e351dc66a17909632d1c8d1ceeab25fd885bd07/PyQt6_sip-13.1.0-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "f36c6c73137b835024f0bcefe17b74a1fcacd759ebf1a01460f353ced1c34a30"
+        "url": "https://files.pythonhosted.org/packages/62/f3/817188fdf1b5b11843ffbb7e7bc8632729293c030f59723c9d17fcf15db6/PyQt6_sip-13.1.0-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "3.10":
+        "sha256": "c6e1864f0018bb2e27a42a32018fe298790bac1e835bc2a699f341b51c884e7b"
+        "url": "https://files.pythonhosted.org/packages/9d/b8/072e19adce0116e2bccaccc633a6c070b0a5eb80b1ad808894e8db292f60/PyQt6_sip-13.1.0-cp310-cp310-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "04c5f6dd0c5be27f27be286e500cf1dd718b9e00b735b88b5e2ada74d86326e6"
+        "url": "https://files.pythonhosted.org/packages/c6/8f/c37e92a4853f65043d201a4818d59ec39166942bd1643ff3093900771500/PyQt6_sip-13.1.0-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "48fab3bc4121d77c081102ad074f63deeae4736b1a88dd19fe05364421f28376"
+        "url": "https://files.pythonhosted.org/packages/a3/35/80b358836582e32173ea2ed98895a4d588c3ce6eeef5276398ac49391d63/PyQt6_sip-13.1.0-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "c6d017380c0a3e8ef94f6eecc119a056ec3e6f71c9c5b7957a1c2dc51007901f"
+        "url": "https://files.pythonhosted.org/packages/f5/d0/991abda91d85f90b0443af9bb19c90a6ace3b1b7f4232cb314a5e6229498/PyQt6_sip-13.1.0-cp38-cp38-manylinux1_x86_64.whl"
+      "3.9":
+        "sha256": "c20fdbc8f50052242c84680d9cf1580dd815b2d55ae73e71885864b0320b3585"
+        "url": "https://files.pythonhosted.org/packages/5e/0a/a834943cfc5ff293655b1dbb4d5f3a6e2c4f05773916332a2bf12d5f0c63/PyQt6_sip-13.1.0-cp39-cp39-manylinux1_x86_64.whl"
+    "Windows":
+      "3.10":
+        "sha256": "d286186990c2180d2b631660b5eaee202bbba031b87b73272d7b7c2ae1c4d001"
+        "url": "https://files.pythonhosted.org/packages/5c/2c/dfcbeff0e3bd1b67ed0b52ddd5610580d422250ccb6f60deabf81c127324/PyQt6_sip-13.1.0-cp310-cp310-win_amd64.whl"
+      "3.6":
+        "sha256": "1afbba8d83a55164e150e04f8ed52a3a5292a347ddaecbc6f0b819fadccdb176"
+        "url": "https://files.pythonhosted.org/packages/85/7e/23c6de774d92ea6d80dbea2cb1e5d5a51af3c30cb378cf142e4e03067c90/PyQt6_sip-13.1.0-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "5d5001c1ed83b0b9946f5a2b9a9b27f9631dc6613306f88f3946437205d176be"
+        "url": "https://files.pythonhosted.org/packages/2b/25/eaa865a2652ac1e8a6859fc14ee2c68a9b17ef82394cdce0671a2c4fb4e2/PyQt6_sip-13.1.0-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "da4742ad9a983dd384a28d743dd14c47de4842ab476c90a36e8f261998cf83ec"
+        "url": "https://files.pythonhosted.org/packages/e2/d5/4c5a178644e6b1c2b9f1bfe495e75463a6978ea70bfb1fd87a49fbffd598/PyQt6_sip-13.1.0-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "6f0c3fa80b81bb28701772b9d89e11fe3677591048b18d50224bea0138063597"
+        "url": "https://files.pythonhosted.org/packages/2d/22/72ff43299274e4c62b567695fecc6233d74b2ca5ed8c1206ad201423ce80/PyQt6_sip-13.1.0-cp39-cp39-win_amd64.whl"
+  "13.2.0":
+    "Darwin":
+      "3.10":
+        "sha256": "0baa53e464667b289ee157024e244fd9fa190101ec74eae30d17f0692f6af8cd"
+        "url": "https://files.pythonhosted.org/packages/2b/4a/891e3bd5912d9b95bf4f8cd4a46915d096fedba4dd764e544c4b3d26b1d1/PyQt6_sip-13.2.0-cp310-cp310-macosx_10_9_universal2.whl"
+      "3.6":
+        "sha256": "a0dcd554d00e025c844427860336fab8179173e181717a895af234f0279236f9"
+        "url": "https://files.pythonhosted.org/packages/14/2c/354e80be40efb8570df8acdaf7b978869439516c6a4c5250b51b2a483db7/PyQt6_sip-13.2.0-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "9b79ca8554e40d70783ab7f7f6e16043ffd6c1d6cc14da5eba6ba474a7002233"
+        "url": "https://files.pythonhosted.org/packages/d9/03/502c2188a1641e6f0b0720b80364e36399b0cbb5902e1d9019a3a8f0bd89/PyQt6_sip-13.2.0-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "abb26230a444f3b65396c3612af5db4f96a6765a56026078b7b45c8fb8bc1693"
+        "url": "https://files.pythonhosted.org/packages/5c/c9/3ad56937119359bf86f93cc1a402bdce347fd028b89a0b05cb53f4592e86/PyQt6_sip-13.2.0-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "f8a65a876b70fc1c4eb95de74e133c81c146f08ad0e04877e16af8e3798b9d50"
+        "url": "https://files.pythonhosted.org/packages/df/3f/920dbf35276279617c7d6284565845da427122086d23ca8e72b753b7ead6/PyQt6_sip-13.2.0-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "3.10":
+        "sha256": "12d43e55ec5ce70260097c19ff95942d2d329ba8c81fe140e5e9af08cbcfcb9c"
+        "url": "https://files.pythonhosted.org/packages/ae/2b/3ae95d12e2d2b36a7dbec52c09288e33c351f0cb68d2a54d14b5f2904f00/PyQt6_sip-13.2.0-cp310-cp310-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "5f4b4ce20ff851fbf19cc7777485ac531171308705b1b36305cd71680686941f"
+        "url": "https://files.pythonhosted.org/packages/4e/35/95dae341abdf4c5afcd8c6c48210246cae6ac3a0914a4a9cb2f4060e36a8/PyQt6_sip-13.2.0-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "6a12210e8547a8d8f9926fc3773e2c83db4511f9ac8bdec0b11b08a751262474"
+        "url": "https://files.pythonhosted.org/packages/1e/d2/a68697daa781154449ac09f4c1c661e759cb2d356b4b80eefd417792cd58/PyQt6_sip-13.2.0-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "66f3bf78d6bb084d10261111c3a7aa7c4125d73006b763544c81278468e9aa9d"
+        "url": "https://files.pythonhosted.org/packages/08/e1/f0cc591daa0b8654acae36073550de09a51ddc48f2336b3c03f051d79b35/PyQt6_sip-13.2.0-cp38-cp38-manylinux1_x86_64.whl"
+      "3.9":
+        "sha256": "d44e69ed4dc208c6cd791be8c54d8d656e1d395fe537bd1320f01b8ab3edec0f"
+        "url": "https://files.pythonhosted.org/packages/07/ed/1ef74ce839c404a0a6c7ad9e3068c3c8d4c634a269df2094a239d7a3b169/PyQt6_sip-13.2.0-cp39-cp39-manylinux1_x86_64.whl"
+    "Windows":
+      "3.10":
+        "sha256": "cc92d5fc57a9192f269a622c340551ad9cde6d7a282273ccb3c64cd742f73760"
+        "url": "https://files.pythonhosted.org/packages/fb/6c/a7e28e73fb4bdce515ebbd4399a55c09a563e68d7a3eaf112289af96aaa4/PyQt6_sip-13.2.0-cp310-cp310-win_amd64.whl"
+      "3.6":
+        "sha256": "e7c8093a6ef36395353a32df026745254b1ebdfcd490f746307d84ba67bcd93a"
+        "url": "https://files.pythonhosted.org/packages/87/1e/6d007ef3ddaca31866091f8b1114820a745f092c469bc55605b865bd8801/PyQt6_sip-13.2.0-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "149e91b372037765b18e728e68facdb2f072fbf043f76a5a424d2fa78af13163"
+        "url": "https://files.pythonhosted.org/packages/e7/32/7656a2252c314f98cbf8ff78ccfa4f9d9b89ac8187946dc3e437c5848e80/PyQt6_sip-13.2.0-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "cda533d545414576e2d88d106c03eaf340bf8897388277838f9f2ffa6e2a7492"
+        "url": "https://files.pythonhosted.org/packages/5d/96/71185f0261c72a3e94a49b3fb913fdaf4ca4544927af2feacf8d814d292e/PyQt6_sip-13.2.0-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "121b887e40daac64f139ce3d7fc7b1d549ce75d423c6c174abbdf6ec7ab5d636"
+        "url": "https://files.pythonhosted.org/packages/d6/3a/2b506de9f0658cabb85ebb9753a2d0fa8bef9caa65d77c6d26ecbc93b31e/PyQt6_sip-13.2.0-cp39-cp39-win_amd64.whl"
+  "13.2.1":
+    "Darwin":
+      "3.10":
+        "sha256": "226e9e349aa16dc1132f106ca01fa99cf7cb8e59daee29304c2fea5fa33212ec"
+        "url": "https://files.pythonhosted.org/packages/87/be/430134175c46b7022b88107f5dfd77df19125886ff30d6a6982381e39751/PyQt6_sip-13.2.1-cp310-cp310-macosx_10_9_universal2.whl"
+      "3.6":
+        "sha256": "e2e6a3972169891dbc33d806f50ebf17eaa47a487ff6e4910fe2485c47cb6c2b"
+        "url": "https://files.pythonhosted.org/packages/6d/71/6a1ab56e39f2414d474c4bd6f8b53dc27e8179e740bd18721144c4926290/PyQt6_sip-13.2.1-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "c456d5ccc4478254052082e298db01bb9d0495471c1659046697bb5dc9d2506c"
+        "url": "https://files.pythonhosted.org/packages/64/02/983e50e4fae5e9b4c0d743cfa7680de64bf5c8311476557a11f15fa28f78/PyQt6_sip-13.2.1-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "0a49f2d0bb49bc9d72665d62fb5ab6549c72dcf49e1e52dc2046edb8832a17a3"
+        "url": "https://files.pythonhosted.org/packages/15/3e/5266a9d08caa93bee8ab7129d64be3e8258f3bba31d3308936ae1fac76b0/PyQt6_sip-13.2.1-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "616b6bad827e9c6e7ce5179883ca0f44110a42dcb045344aa28a495c05e19795"
+        "url": "https://files.pythonhosted.org/packages/74/e1/e2443a8be4781468af33b4454df1f816f9b640e59ac7dedc49bfd827b510/PyQt6_sip-13.2.1-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "3.10":
+        "sha256": "0314d011633bc697e99f3f9897b484720e81a5f4ba0eaa5f05c5811e2e74ea53"
+        "url": "https://files.pythonhosted.org/packages/8a/82/f8c40edac2c5cac786985d265dff087d54273d6f2fb57597a27dfccda2a2/PyQt6_sip-13.2.1-cp310-cp310-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "a3d53fab72f959b45aeb954124255b585ff8d497a514a2582e0afd808fc2f3da"
+        "url": "https://files.pythonhosted.org/packages/52/37/57d69ab114dc963eb8bf054bbdb52254b38074b7c7a92eda9142b9a6cfa2/PyQt6_sip-13.2.1-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "65f5aee6195bd0e785bd74f75ee080a5d5fb840c03210956e4ccbdde481b487c"
+        "url": "https://files.pythonhosted.org/packages/d7/cf/b88c69caa9f5fbbf97489dbf9853790b709e37dd377f00a445033e4b255e/PyQt6_sip-13.2.1-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "0ede42e84a79871022e1a8e4d5c05f70821b2795910c4cd103e863ce62bc8d68"
+        "url": "https://files.pythonhosted.org/packages/be/bf/e48a5158fdcbfe7bd72d2c114c832011d8ce8b1515fba2b0bfb31047a8e2/PyQt6_sip-13.2.1-cp38-cp38-manylinux1_x86_64.whl"
+      "3.9":
+        "sha256": "f4226d4ab239d8655f94c42b397f23e6e85b246f614ff81162ef9321e47f7619"
+        "url": "https://files.pythonhosted.org/packages/b2/ad/eb56eb15819fc8a3ed5b676e05c003fe39e93ce48c34878dfdfc599a1353/PyQt6_sip-13.2.1-cp39-cp39-manylinux1_x86_64.whl"
+    "Windows":
+      "3.10":
+        "sha256": "8b52d42e42e6e9f934ac7528cd154ac0210a532bb33fa1edfb4a8bbfb73ff88b"
+        "url": "https://files.pythonhosted.org/packages/8c/2a/d4535e2ce011fb1add609eba973b716f5cfa0b83dc6529f734ce74eb0652/PyQt6_sip-13.2.1-cp310-cp310-win_amd64.whl"
+      "3.6":
+        "sha256": "082a80264699d4e2e919a7de8b6662886a353863d2b30a0047fe73d42e65c98e"
+        "url": "https://files.pythonhosted.org/packages/52/bf/b0b3c30f9f67f3f2974810e1e44c6fa483d3a4d8bc241f189736e6bcf0ef/PyQt6_sip-13.2.1-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "43afd9c9fdbc5f6ed2e22cae0752a8b8d9545c6d85f314bd27b861e21d4a97fe"
+        "url": "https://files.pythonhosted.org/packages/fb/0e/29a04a88eb51c994653bcc5143672ad3a117225278d0872dcc28ded7fa3f/PyQt6_sip-13.2.1-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "b0d92f4a21706b18ab80c088cded94cd64d32a0c48e1729a4cc53fe5ab93cc1a"
+        "url": "https://files.pythonhosted.org/packages/19/23/b3ba43a77d8ac063d76ae3a3b410045c011e5d9b673d4826ffe09df4ec45/PyQt6_sip-13.2.1-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "4b119a8fd880ece15a5bdff583edccd89dbc79d49de2e11cbbd6bba72713d1f3"
+        "url": "https://files.pythonhosted.org/packages/e6/14/e4494897305f451eb87eb06ae6dd62e609f3afdefcb6e425407e6eac06f4/PyQt6_sip-13.2.1-cp39-cp39-win_amd64.whl"

@@ -1,0 +1,526 @@
+"sources":
+  "1.9.7":
+    "Any":
+      "2.0":
+        "sha256": "8f19f856fc25c4f414a8ba390b6fdadbd48d9fdc53303e3bbf1c30cba5f449ed"
+        "url": "https://files.pythonhosted.org/packages/f0/25/d9ba8c26d5244002bf3b4135046438adb9f3560c89b5aab434528d1d2889/trimesh-1.9.7-py2-none-any.whl"
+  "3.10.0":
+    "Any":
+      "3.0":
+        "sha256": "4f524af77ceb698c607bb2c3280423caa8e77735c861d59ddd9cc3a62eb80c11"
+        "url": "https://files.pythonhosted.org/packages/41/e3/ca42a931a9fa92c8de7f6feff767404c0570555a5cdbcd918577f1ed0003/trimesh-3.10.0-py3-none-any.whl"
+  "3.10.1":
+    "Any":
+      "3.0":
+        "sha256": "99b5502ae73b1b4c9854d9f25543bcd21415c6ef4edeca4120353073552a54b8"
+        "url": "https://files.pythonhosted.org/packages/92/cc/7d4b2fd5360c67b510bd0ef250660e8839944e69102e5755e5a7cc1fa15a/trimesh-3.10.1-py3-none-any.whl"
+  "3.10.2":
+    "Any":
+      "3.0":
+        "sha256": "9482cc1d519f3ba1809724760278d605df740c0ee379a314b8c329688b8887a7"
+        "url": "https://files.pythonhosted.org/packages/d5/f0/754c2a6d4efde56e8f7e76f11b562ac2719b22fe3eeefdf464ab4e4bf82b/trimesh-3.10.2-py3-none-any.whl"
+  "3.10.3":
+    "Any":
+      "3.0":
+        "sha256": "3173ee05a87e967fd1073479b905cb313a87f02d03374b17fad73495998bdc8f"
+        "url": "https://files.pythonhosted.org/packages/08/a1/ec0bc9bee63231875f6050529a2303030f7ca3dfee40f3545f070c2fa25d/trimesh-3.10.3-py3-none-any.whl"
+  "3.10.5":
+    "Any":
+      "3.0":
+        "sha256": "2760855a1af2b50cb6dc109452bfbeff42a4dc25b548c939f4e893815c8526f9"
+        "url": "https://files.pythonhosted.org/packages/00/d3/2e71f2a2f66dc8b6d6fee861911bb4e493c628f4072e68cb153e14f356af/trimesh-3.10.5-py3-none-any.whl"
+  "3.10.6":
+    "Any":
+      "3.0":
+        "sha256": "3a166938240f73df1c90ded7b53d5e78bd847f636bdef0d7b5d0d38b089b698d"
+        "url": "https://files.pythonhosted.org/packages/84/b7/8518be08bb09ff0dc09ccf6209568b8e8a3e2658767714d944788dcd6083/trimesh-3.10.6-py3-none-any.whl"
+  "3.10.7":
+    "Any":
+      "3.0":
+        "sha256": "fae7270e6ee8bb9a97bd0aca042d8e2eeaf5814acd51f9d5326e2e8ccfdb0961"
+        "url": "https://files.pythonhosted.org/packages/9b/a3/7c03fd81de74c34c8e584274f78fe96dca8a21992e0c089fe7cc68647a3f/trimesh-3.10.7-py3-none-any.whl"
+  "3.6.10":
+    "Any":
+      "3.0":
+        "sha256": "893697e92cd569151bb1b2a4683e3470ff446336c1c86dcc70a7e91012ca73d1"
+        "url": "https://files.pythonhosted.org/packages/61/09/32794cdb9dd7d533018f18f6ebea9df5ee47e991075145c8fd9fc334ce9a/trimesh-3.6.10-py3-none-any.whl"
+  "3.6.11":
+    "Any":
+      "3.0":
+        "sha256": "61ac2a51bcc7f6bb53c73e9a305096b21884bed1c90e67605a21544a2115cc3c"
+        "url": "https://files.pythonhosted.org/packages/60/a5/c468a48b85c23cf1b85b6fe8b50ed5b148f85bb5560a1f759a36d3948b97/trimesh-3.6.11-py3-none-any.whl"
+  "3.6.12":
+    "Any":
+      "3.0":
+        "sha256": "b01e0da36f92b8e2b17c523c7de6228b061f1fbce723dff9d95be165adea8239"
+        "url": "https://files.pythonhosted.org/packages/53/7f/431f4df193d43d4f445e744d69cd684bb74b041ba08c7efa23aeefe3d92d/trimesh-3.6.12-py3-none-any.whl"
+  "3.6.13":
+    "Any":
+      "3.0":
+        "sha256": "f49ff0f18feddf29463ae759576122d8459656ffb9673506475b45a71df1d394"
+        "url": "https://files.pythonhosted.org/packages/00/0b/aa486f69b9c0ffa34334fff91bcdec7be156af8278728af4095164174eaa/trimesh-3.6.13-py3-none-any.whl"
+  "3.6.14":
+    "Any":
+      "3.0":
+        "sha256": "f14f49e536953592083192c6eb670acf23aaf8d1112b45260d60a1be86413da6"
+        "url": "https://files.pythonhosted.org/packages/cc/2d/f8cb8a7c7423c9044dba022b8db273f020ebdbf5a3dc0c5d2e9c46be3208/trimesh-3.6.14-py3-none-any.whl"
+  "3.6.15":
+    "Any":
+      "3.0":
+        "sha256": "b6e24f2a7b0cbb34ffeef9648866447df0f89c9939590ae4ebbf998369d658f1"
+        "url": "https://files.pythonhosted.org/packages/3a/11/f8ea6822364b5382da614ba086ee217c1641d496a5e26e9e0863f9d6d219/trimesh-3.6.15-py3-none-any.whl"
+  "3.6.16":
+    "Any":
+      "3.0":
+        "sha256": "7104d1579ddfc5660e6e6b6dcd57df5f84aa3cdb6231620fa841e0ec9451d953"
+        "url": "https://files.pythonhosted.org/packages/ea/a6/79ab527e26b9f94f5e38ea3c8a079443ceb1e4b1f553b5e5bffe06ff6663/trimesh-3.6.16-py3-none-any.whl"
+  "3.6.17":
+    "Any":
+      "3.0":
+        "sha256": "0c25c00564460e31b29355da7928656a134b8371d7487595e429d5039657e8fc"
+        "url": "https://files.pythonhosted.org/packages/33/1f/03063bfd64ae5ee8e3f9a2574dc905b48a20dea8a19fdec93720e100f1c7/trimesh-3.6.17-py3-none-any.whl"
+  "3.6.18":
+    "Any":
+      "3.0":
+        "sha256": "d8179f367fdfe06ba39f60c311f0b4ed98e21427f232f582842cc8b223dc283e"
+        "url": "https://files.pythonhosted.org/packages/ca/6e/08456280f7c6631f835dc8eee0ac7d2cfc2300dd86753e8e4f20cab4d400/trimesh-3.6.18-py3-none-any.whl"
+  "3.6.19":
+    "Any":
+      "3.0":
+        "sha256": "0ac0b81cb61559b2feb048896fd9c06bbecc5f6daed1c4d9caf0e54b53addf94"
+        "url": "https://files.pythonhosted.org/packages/34/15/5602c70decd16a43287f1416fa2a16c89599260ad2e82ad4fd04f8fcee8f/trimesh-3.6.19-py3-none-any.whl"
+  "3.6.2":
+    "Any":
+      "3.0":
+        "sha256": "223bcdbbf0f521408ca0eac2eb499dd431626508a7224ea4f74818618ceb2c68"
+        "url": "https://files.pythonhosted.org/packages/be/93/964c2d56fac34ab034235644b72ac98fb636fe523b8b6519e911beb6ba31/trimesh-3.6.2-py3-none-any.whl"
+  "3.6.20":
+    "Any":
+      "3.0":
+        "sha256": "637fc669e16edb6588086dcc777f41a34d36b0ca39f65af45a806d91a2fae607"
+        "url": "https://files.pythonhosted.org/packages/5a/14/96ff01215088883b0f606189a020f6794a7ed02116245d7cdb9d76eca27f/trimesh-3.6.20-py3-none-any.whl"
+  "3.6.23":
+    "Any":
+      "3.0":
+        "sha256": "014fa8670fa67d3e389f05b614129356cd38fead2b5bd81b09556e8b8563c710"
+        "url": "https://files.pythonhosted.org/packages/ff/a2/6644117cff36b33c0f6c184ec99168298ae6c76ded2cef60b85b1965aff0/trimesh-3.6.23-py3-none-any.whl"
+  "3.6.24":
+    "Any":
+      "3.0":
+        "sha256": "97c3dadda8713843309ab5831e2e93b24c2a2d8970931d6bdc9c131c48927ad1"
+        "url": "https://files.pythonhosted.org/packages/83/44/2cbfaa5ddaacc65eaeb9bf4656ef8d427d76a971f0a5c878d5c556b77b49/trimesh-3.6.24-py3-none-any.whl"
+  "3.6.29":
+    "Any":
+      "3.0":
+        "sha256": "7bc58ac56289aeffcc27b345184f6938b1a1a0fc1519288dab28818485598314"
+        "url": "https://files.pythonhosted.org/packages/7b/cb/aab5e01e2162982779f04e5cf193318cf385bd56cacbc4787833f43bb073/trimesh-3.6.29-py3-none-any.whl"
+  "3.6.3":
+    "Any":
+      "3.0":
+        "sha256": "cef2483f95266c7fd1a9e4198ede2c4daa87fe1a7faa64653358caae0ae87030"
+        "url": "https://files.pythonhosted.org/packages/a0/5d/e41dd20fcf28857c1a59a07cdb710ad6c195d203af9c688d6f5ab3e899ca/trimesh-3.6.3-py3-none-any.whl"
+  "3.6.30":
+    "Any":
+      "3.0":
+        "sha256": "659f0b5b19ca224091b478fee75f5fa223e31a61527dd21114072fefbc853f8d"
+        "url": "https://files.pythonhosted.org/packages/6a/4d/2f5c33bf4be422cbda94021c986620fa8647f3741d9a2eaab27b7d4328a0/trimesh-3.6.30-py3-none-any.whl"
+  "3.6.32":
+    "Any":
+      "3.0":
+        "sha256": "3c21191883507ff162fd5018fe3e7a88818c2a7b8e83891481f84c2283b7076c"
+        "url": "https://files.pythonhosted.org/packages/00/4b/15edaf0e48d149f04ee474abb2ec879c6194a39eb6a1ba7cfa7bb87da56b/trimesh-3.6.32-py3-none-any.whl"
+  "3.6.33":
+    "Any":
+      "3.0":
+        "sha256": "e5214f54289b8302357f9ad7bb479ef5a6b9e49734fe7870375a974a82022db1"
+        "url": "https://files.pythonhosted.org/packages/e6/fe/3a3a7ed9ebd9fbd7c9b353156274ec26905fb8cd80f6bcba854114fd90ba/trimesh-3.6.33-py3-none-any.whl"
+  "3.6.34":
+    "Any":
+      "3.0":
+        "sha256": "d1541f761f026b7f57fb4c9a3c9a518ce18a00f71ab2988b8f3a43c2c27dd0e7"
+        "url": "https://files.pythonhosted.org/packages/ca/14/25bc145561c81e930e72690e5884622661ea472f63dbe6b4a9a8c028b392/trimesh-3.6.34-py3-none-any.whl"
+  "3.6.35":
+    "Any":
+      "3.0":
+        "sha256": "edf594e9cf620f1b01214c757821a911b880d7fb3b952bd1f34a41cd23ae3731"
+        "url": "https://files.pythonhosted.org/packages/54/ee/36d94f70b636c2c0e307d069f72bbe33b058041d39461ae8518a859ef33f/trimesh-3.6.35-py3-none-any.whl"
+  "3.6.36":
+    "Any":
+      "3.0":
+        "sha256": "2cf40eb464cdcea382ba5583c31f33bc8053ae81f483231db70d1da44d7d50b7"
+        "url": "https://files.pythonhosted.org/packages/41/5f/cff64b89b6250663e1cb9cb9b7a26b0228f492270acf904a12f0733d77a5/trimesh-3.6.36-py3-none-any.whl"
+  "3.6.37":
+    "Any":
+      "3.0":
+        "sha256": "abd8be1dcc57253bfd6e815f48d0625f2a9ae8af6cfd6a3fbfa27fc13b5d0822"
+        "url": "https://files.pythonhosted.org/packages/9b/7c/c4201b0d08f2e55840f528b9c86e8dda59644be4e9c47efc3f2be3de5db5/trimesh-3.6.37-py3-none-any.whl"
+  "3.6.38":
+    "Any":
+      "3.0":
+        "sha256": "f62831d7803b0243d3d08754f8e3f46d3973a10ce42a692df0dcb50ef67e0dc2"
+        "url": "https://files.pythonhosted.org/packages/e0/65/4fe9bbb639517094c8eda552bb4e8c547fea11c1689e5b730de16ebd0c5b/trimesh-3.6.38-py3-none-any.whl"
+  "3.6.39":
+    "Any":
+      "3.0":
+        "sha256": "3afb0848c97ce044e02f7e58ce7dc9ae7e75540fabfcc530cec3efdabdba9399"
+        "url": "https://files.pythonhosted.org/packages/33/3e/00219a2d273b625603278bd909eb99a35084e20854d6582fa879698c1470/trimesh-3.6.39-py3-none-any.whl"
+  "3.6.4":
+    "Any":
+      "3.0":
+        "sha256": "e05772749595341cf1b813cdb94448b770f569781625caca276e99c640caa847"
+        "url": "https://files.pythonhosted.org/packages/60/a6/15ab8ed6cf68ca7306e037d72ddbb1d2aa73e0f95bfce640c690fb722b55/trimesh-3.6.4-py3-none-any.whl"
+  "3.6.41":
+    "Any":
+      "3.0":
+        "sha256": "8cfbcb15451610431b7eab14f1f6f18ec41227d4859f7333063143ead3f0b892"
+        "url": "https://files.pythonhosted.org/packages/a2/c6/20c07f81952ac1cf157e9ee205b2c99d3dadd43fbfc8f3bcc53fd84a084b/trimesh-3.6.41-py3-none-any.whl"
+  "3.6.42":
+    "Any":
+      "3.0":
+        "sha256": "636e1a79a4232758d882cea3120624801c67208878fef0b886215a58cdb1a8a2"
+        "url": "https://files.pythonhosted.org/packages/43/37/e1226ef981288266c180e3cb968d33b6621f2fceccf292acc829463b9bcb/trimesh-3.6.42-py3-none-any.whl"
+  "3.6.43":
+    "Any":
+      "3.0":
+        "sha256": "5431bc78ddfd1e58162596b9f41a8d85cb348c4676d43e67f4c228e6bbde459c"
+        "url": "https://files.pythonhosted.org/packages/0a/dd/3de2fdc20173ededef4f3d3a5d20878daec924883edd4311ccb5886a34ca/trimesh-3.6.43-py3-none-any.whl"
+  "3.6.5":
+    "Any":
+      "3.0":
+        "sha256": "a8a0a26f2cf15161913cfae3c1dc10dc8d4c769ff73fc7e633301ce0f9443c4d"
+        "url": "https://files.pythonhosted.org/packages/9e/e3/57540e7df5f926937dd4df5463e487a41a547396ac4a5ee1462a6cd3e122/trimesh-3.6.5-py3-none-any.whl"
+  "3.6.7":
+    "Any":
+      "3.0":
+        "sha256": "924d52da4fbfc2d93d6f81df6fb6eaaec9466ac60e0b87bd508e89a046884991"
+        "url": "https://files.pythonhosted.org/packages/e3/11/d922b86269813ba0b5be832e43e7907f30f79452c5b8c61e2baf292f027d/trimesh-3.6.7-py3-none-any.whl"
+  "3.6.8":
+    "Any":
+      "3.0":
+        "sha256": "6935e34616b5b810c9a28afb7441260a4bde757251142d93242455708e31b5c8"
+        "url": "https://files.pythonhosted.org/packages/38/91/00accb8b85764d9f94f168ed4892f35ea5acad7a162ee5e2b26d9f1cb08f/trimesh-3.6.8-py3-none-any.whl"
+  "3.6.9":
+    "Any":
+      "3.0":
+        "sha256": "817dfe8dd10a5c2ea7dc58b6041a5ed8a0355da82ab3aa5d83d3685405e7ca54"
+        "url": "https://files.pythonhosted.org/packages/00/9b/3b84a34450621be46b91113dde5aa83b87ed8432bcbbc478870cc5488965/trimesh-3.6.9-py3-none-any.whl"
+  "3.7.0":
+    "Any":
+      "3.0":
+        "sha256": "065978ac1d54a06cd46759c34604a84d7f668a0ed3baaa416ea1ef7c2a499737"
+        "url": "https://files.pythonhosted.org/packages/8f/81/4d65f05e9e401bb30c880cd99e3c55cc02c05c80b172af763dd3be9b2ae9/trimesh-3.7.0-py3-none-any.whl"
+  "3.7.10":
+    "Any":
+      "3.0":
+        "sha256": "7e4c18c8935677cd05f65b30350bba02387d1380776dc149c987dd007ee53a63"
+        "url": "https://files.pythonhosted.org/packages/0c/e3/fa305b238486c07153683b2062ca27ef7bbb8604489eb7c35800d17ffcdc/trimesh-3.7.10-py3-none-any.whl"
+  "3.7.12":
+    "Any":
+      "3.0":
+        "sha256": "71fba34c87b25e3b68e0fa496e9470fbb3e53f431e0aa37024de824a9809c219"
+        "url": "https://files.pythonhosted.org/packages/38/78/37e2900f00dbc069bdb58cd76e379b6efc050e66aad1d08d80f39ee448f4/trimesh-3.7.12-py3-none-any.whl"
+  "3.7.13":
+    "Any":
+      "3.0":
+        "sha256": "d5a37c5b2d5fdb2b321bb2db9249cd5b2854259a0b74af8716aa746121af4875"
+        "url": "https://files.pythonhosted.org/packages/b8/37/91b64b3ca6958dafb83aaa5edaedafab58b4f24667c7123be906bb3d0700/trimesh-3.7.13-py3-none-any.whl"
+  "3.7.14":
+    "Any":
+      "3.0":
+        "sha256": "a6fc34c30022fb0605cb5353a2a3b9251d80431f9258e228203cffb41c177464"
+        "url": "https://files.pythonhosted.org/packages/2f/27/f911a12e6c3f272fb7b40015a54c41223dd90d19cdbc6ae3ad45b8cee162/trimesh-3.7.14-py3-none-any.whl"
+  "3.7.3":
+    "Any":
+      "3.0":
+        "sha256": "fb07b86bb09023fbd30baab1453a3d955a447fab7bac6b1673ae3f0aaadaff37"
+        "url": "https://files.pythonhosted.org/packages/02/2d/e51ae9b6b256d4e9219639ca4b6acead75a0da0d04a669c3d8271f10adb5/trimesh-3.7.3-py3-none-any.whl"
+  "3.7.4":
+    "Any":
+      "3.0":
+        "sha256": "4f4cfab55f09ba2d8cca5c8c78616c2d3a71216d53fe6d0c971aec24d3d3f3dc"
+        "url": "https://files.pythonhosted.org/packages/0a/2d/071cbfed35607e42b732d7135cfb7bb4ca9ee6b64a9bd16888e50cf52eac/trimesh-3.7.4-py3-none-any.whl"
+  "3.7.5":
+    "Any":
+      "3.0":
+        "sha256": "bda8b1d544cb9ffa91054cf0bcec463f673a49ef6b503ebc411bab8e4d30bed8"
+        "url": "https://files.pythonhosted.org/packages/3c/5a/7ec56a15924bcd2249e4b13c60581da31bc94265460d48a9b89f0a4aacdd/trimesh-3.7.5-py3-none-any.whl"
+  "3.7.6":
+    "Any":
+      "3.0":
+        "sha256": "6601c74a50457f9ba22eb304f327506e3590d75f8af602d8849c04c0bf7cb6a9"
+        "url": "https://files.pythonhosted.org/packages/eb/be/c8bbf9021f04cd3011a238f54de7fe74a425cea19cc1c3b936f91afdaa7f/trimesh-3.7.6-py3-none-any.whl"
+  "3.7.7":
+    "Any":
+      "3.0":
+        "sha256": "544341e1ed42cc9208accebf09a4cc6a8ca7b7f4abeea73f358ff4d1b719c5f9"
+        "url": "https://files.pythonhosted.org/packages/e4/66/135dba92a9a2847bc777119f9b2b7953d030000487be366aefc65593687e/trimesh-3.7.7-py3-none-any.whl"
+  "3.7.9":
+    "Any":
+      "3.0":
+        "sha256": "278862806cc19df0209e84f74e7cd5186b2d26f2d5399a40aef94c26cadf7c12"
+        "url": "https://files.pythonhosted.org/packages/1b/0a/26e6162f282acf5a0bb468cdbac71dac81083e15ac671f1d7330e75b7f24/trimesh-3.7.9-py3-none-any.whl"
+  "3.8.1":
+    "Any":
+      "3.0":
+        "sha256": "ffe0fe7851c291defe606e53c6bd3246d601b0464b24c8f222a7268afb533c1e"
+        "url": "https://files.pythonhosted.org/packages/ff/f0/390e5318507be5c938e9b5714c40aa3ea6e8862f9cdaa7091b48eb0293cf/trimesh-3.8.1-py3-none-any.whl"
+  "3.8.10":
+    "Any":
+      "3.0":
+        "sha256": "b2e90bf0303da69adeea2b833cda2622e1d82974a970e5cb658a4edb1c390e05"
+        "url": "https://files.pythonhosted.org/packages/bb/c2/37fa9490f2092708544452a427dc3b8cff20d0283532f7a13dd7bf05743f/trimesh-3.8.10-py3-none-any.whl"
+  "3.8.11":
+    "Any":
+      "3.0":
+        "sha256": "6363b443a6893d906390fb5e09e99dfd8252690de28c3a9f3ae7a1055c55f11a"
+        "url": "https://files.pythonhosted.org/packages/be/0e/cd292585c4de68ad981e35bb21290e8599af0d3d87cd86a808a85b9f25d3/trimesh-3.8.11-py3-none-any.whl"
+  "3.8.12":
+    "Any":
+      "3.0":
+        "sha256": "e5807d940b06f4782d7453945f281ed3a0c639e280081cf4e5cdc684c7aadd68"
+        "url": "https://files.pythonhosted.org/packages/e0/b4/8659a500fff7a5a39dc5ce2bcb97528eb600ebd8ef203abea0df3b27f198/trimesh-3.8.12-py3-none-any.whl"
+  "3.8.13":
+    "Any":
+      "3.0":
+        "sha256": "fdbc11807903f1b549d902ea9ae8d9951e60305699718b7a27a385b55e212b67"
+        "url": "https://files.pythonhosted.org/packages/33/c8/27cda552c917e55e04e259fba35b7bb1bee12e5105a0c1289cc99d5e26f9/trimesh-3.8.13-py3-none-any.whl"
+  "3.8.14":
+    "Any":
+      "3.0":
+        "sha256": "e47199dc4dd85dac54870281a0abb140fd558173e28f40bb491cee2616a9ace2"
+        "url": "https://files.pythonhosted.org/packages/e1/8e/04b09379adbf0d5afc8438b4392834de515736f1c19a83418ca32b5700c6/trimesh-3.8.14-py3-none-any.whl"
+  "3.8.15":
+    "Any":
+      "3.0":
+        "sha256": "5c6bb5c10f69caf8f639e12a1a1e96d8b29943b48e183b27aa5adb18702ac54e"
+        "url": "https://files.pythonhosted.org/packages/3a/39/4c392044f6e7d03e2d6db9cc036de57c66d15d8449aff999a7f3fe97d8cd/trimesh-3.8.15-py3-none-any.whl"
+  "3.8.17":
+    "Any":
+      "3.0":
+        "sha256": "0da2cce5ef3d918e361bf88ef377eafeb89243ca6398e357c69b36167bf0d1a5"
+        "url": "https://files.pythonhosted.org/packages/94/5a/c15bcc5a905e7713a12b304a584302a7e9ded24520e9b07bd6e007d286c9/trimesh-3.8.17-py3-none-any.whl"
+  "3.8.18":
+    "Any":
+      "3.0":
+        "sha256": "9a6164d1d2c2408b4d728f7847a89f9f791610dc801d6aa42b6b4251609825df"
+        "url": "https://files.pythonhosted.org/packages/f3/2a/ea0516629746c0d6dc254fb323bdbd5f0c903aa9e25b8c63a5df9d216325/trimesh-3.8.18-py3-none-any.whl"
+  "3.8.19":
+    "Any":
+      "3.0":
+        "sha256": "c7e6a2bd86cdf6c249e027d9f3fa12f0e56b12166837ede052b73ba6367ee0fa"
+        "url": "https://files.pythonhosted.org/packages/79/e3/a4f0bd71a88a816bd977afea62a11044e1862686fc1b0ec6d184e8b303ee/trimesh-3.8.19-py3-none-any.whl"
+  "3.8.3":
+    "Any":
+      "3.0":
+        "sha256": "de2a2c8a943f336774b7e735ba9ee4e2371d0faba94540bb601fa6a381828959"
+        "url": "https://files.pythonhosted.org/packages/a9/92/9c9d01ff5c3c46f38f80a1a3827ab304668783b0d7065e727297d21c466d/trimesh-3.8.3-py3-none-any.whl"
+  "3.8.4":
+    "Any":
+      "3.0":
+        "sha256": "163caf61622e2e2b3e6a01f211a75dfa23b7b4d956b58b4c1a8e5abb49d4a3b8"
+        "url": "https://files.pythonhosted.org/packages/d0/c4/545bb1db2ca03a108cb2b367df5f7936189df66519791fe7f8cb508f18d5/trimesh-3.8.4-py3-none-any.whl"
+  "3.8.5":
+    "Any":
+      "3.0":
+        "sha256": "07c69c96112a65320cf9d5ab559019effd40ff03dcf5bcf9f1c7434e575d4a0d"
+        "url": "https://files.pythonhosted.org/packages/b9/87/5e952919072ff39d645fa8215ef54e4d1e49e8114b0a7989e99884cacef9/trimesh-3.8.5-py3-none-any.whl"
+  "3.8.6":
+    "Any":
+      "3.0":
+        "sha256": "64041a5726bd505fa1296e0f5439d68a89f49066f457e6ebb0a7a84fb05879fb"
+        "url": "https://files.pythonhosted.org/packages/3b/bd/330869b1c2c7552b4e489b1b4590caaad4fed381686eacc8da85cbe8bc50/trimesh-3.8.6-py3-none-any.whl"
+  "3.8.8":
+    "Any":
+      "3.0":
+        "sha256": "582dba5b69a03a29a5dd8f7d85c70b150491e9083cdfde548689c619ffd09a55"
+        "url": "https://files.pythonhosted.org/packages/c2/d4/e0e54109185f3da90620d7ff8c0797b4c0f93f78ebe719d9696b01cea23d/trimesh-3.8.8-py3-none-any.whl"
+  "3.9.0":
+    "Any":
+      "3.0":
+        "sha256": "e7652c3283c713ffe3b023e44196bdb274e906cb8080cd5dbec2931ba68ea39e"
+        "url": "https://files.pythonhosted.org/packages/98/6f/abdecdb7f9357afd0e89197c3f1d7a1ccbe8258f0a6b56775f02229f24ca/trimesh-3.9.0-py3-none-any.whl"
+  "3.9.1":
+    "Any":
+      "3.0":
+        "sha256": "c79bc929f99e7a69c094a4860bddbecc6ce26adb0c224249386e9c5127b38d3a"
+        "url": "https://files.pythonhosted.org/packages/67/3d/9dc83ffe2bd043f1600a347753bb824adfd9547295424ae0fdd943a21293/trimesh-3.9.1-py3-none-any.whl"
+  "3.9.10":
+    "Any":
+      "3.0":
+        "sha256": "ee3576a3679184547381f48d1242f4db96dc462fd7e45ff0b738a9e0dcddd7f4"
+        "url": "https://files.pythonhosted.org/packages/74/c8/fe0c320a2adacee27fb7b7f5170eda875620a6fa05f2077404824530d317/trimesh-3.9.10-py3-none-any.whl"
+  "3.9.11":
+    "Any":
+      "3.0":
+        "sha256": "50c3bc0b458f0d89dd0331e725441d0e9c7b85cf23037131f6fa4e836694f5f9"
+        "url": "https://files.pythonhosted.org/packages/27/34/1ed5415711a4561d48f9629a1da62eb309eb67927232d6ea570fe0ff0623/trimesh-3.9.11-py3-none-any.whl"
+  "3.9.12":
+    "Any":
+      "3.0":
+        "sha256": "1c3ce17a6870deb1ff15ad2f146f1573c2cc7f38222832b28e0f8d50979ffd0e"
+        "url": "https://files.pythonhosted.org/packages/24/d4/7f2c9a85a24ab52927a12047ffe50109e028901134c15deb929932b88cea/trimesh-3.9.12-py3-none-any.whl"
+  "3.9.13":
+    "Any":
+      "3.0":
+        "sha256": "6c6a7dc6704d5628926ece44a6cd0c1db8c4ca1de9826397fa49173d7bb1b27d"
+        "url": "https://files.pythonhosted.org/packages/c1/37/af3c7dcc6ada34384fecb022e1d65d370b0d0c90cac4a0cacedc2716f4b5/trimesh-3.9.13-py3-none-any.whl"
+  "3.9.14":
+    "Any":
+      "3.0":
+        "sha256": "76bad1f2aa01018eb9a0d22f9e503d2356d524585a0a8a7fd68044e10c7fe398"
+        "url": "https://files.pythonhosted.org/packages/03/ef/5b72643813a762da795346e905a67b40dfa5b853fd490f13dfbbfd684f69/trimesh-3.9.14-py3-none-any.whl"
+  "3.9.15":
+    "Any":
+      "3.0":
+        "sha256": "663ebb267bfba06e3588e954e686caa954b42506531b0bd23c7de55402f24a8c"
+        "url": "https://files.pythonhosted.org/packages/5d/1d/2bb87a294a7c090130f8648c645dee038739cd03efc0f6e73c5bba47af20/trimesh-3.9.15-py3-none-any.whl"
+  "3.9.16":
+    "Any":
+      "3.0":
+        "sha256": "c163ad262cbd16bf3b4047b6bd27d519c3b503f4098011e9ecdcc02fb8380eb8"
+        "url": "https://files.pythonhosted.org/packages/74/3c/8837093381456f94ec4241e7286974bc967b174169d0200017c14586e894/trimesh-3.9.16-py3-none-any.whl"
+  "3.9.18":
+    "Any":
+      "3.0":
+        "sha256": "0b0633db7e6613e1fd9ff62cf507cb5b486bf3d393458bfaff5690825f79c6f6"
+        "url": "https://files.pythonhosted.org/packages/64/41/c36872568592ae6120082d7c3daa9bd980028d57d13508ff4f1ab7f6085b/trimesh-3.9.18-py3-none-any.whl"
+  "3.9.19":
+    "Any":
+      "3.0":
+        "sha256": "4f46fd26c991111d6feac7c313d4e3585cc8d8dd01007c31eac505e42ac4bd2c"
+        "url": "https://files.pythonhosted.org/packages/4e/13/2942ae0f279ee5f3d840da4d50022f1fa94676a050cf47769ef6e9a55edc/trimesh-3.9.19-py3-none-any.whl"
+  "3.9.2":
+    "Any":
+      "3.0":
+        "sha256": "98328083fb8d1b159512545bebd9d2933996e96892df3dc1b6e850583354c3bb"
+        "url": "https://files.pythonhosted.org/packages/f6/4f/03fa15def90355c61703a5302d5fbc0bcbedea77dc38f1ea73ed8c754589/trimesh-3.9.2-py3-none-any.whl"
+  "3.9.20":
+    "Any":
+      "3.0":
+        "sha256": "96f573e2e52461681ec1255f592887e38109f11b005b483d21c6ae0c99e7a86b"
+        "url": "https://files.pythonhosted.org/packages/30/0e/00743d0bbfad9b6aebf0206bd3f8d06386b8fc1b7203e30723687129bb12/trimesh-3.9.20-py3-none-any.whl"
+  "3.9.21":
+    "Any":
+      "3.0":
+        "sha256": "5ef7bbee686e78ed43f744f8b69c8e37b19ee933df64ead4e7840d6e0f85c621"
+        "url": "https://files.pythonhosted.org/packages/cc/4f/1daa54fb3289ebc5284332ee5612df6255df35d23b730abca696a2727905/trimesh-3.9.21-py3-none-any.whl"
+  "3.9.23":
+    "Any":
+      "3.0":
+        "sha256": "fa5d2fa97e3ee3b521707614706dd0952c7bc67a49aba96532512eb8e69e2875"
+        "url": "https://files.pythonhosted.org/packages/bb/b4/efb7121f0f89c6828a01a7e7efc9d31099307f06b75c6cb0a718a7051333/trimesh-3.9.23-py3-none-any.whl"
+  "3.9.24":
+    "Any":
+      "3.0":
+        "sha256": "f33be820cf1a86bdff4a5d62218f904fce6bb3438cfde1602a4b1f6b65af3916"
+        "url": "https://files.pythonhosted.org/packages/fd/8b/1a93c9da9ce2b6e570c9cb701c3d8d9b290b46c122e8dbb553476e01f137/trimesh-3.9.24-py3-none-any.whl"
+  "3.9.25":
+    "Any":
+      "3.0":
+        "sha256": "302494ae6927380ffbecaa3eb07687001d23004bf1b639f56b3d7ec131c1aa26"
+        "url": "https://files.pythonhosted.org/packages/d0/70/7702ef7a39d21680e79fff607ef9d163bc3e1a1def00067ddadd87b778d4/trimesh-3.9.25-py3-none-any.whl"
+  "3.9.26":
+    "Any":
+      "3.0":
+        "sha256": "e4c803b476589dc2847294ae4c228c43a2850e47b59842771ab51f6712ee155b"
+        "url": "https://files.pythonhosted.org/packages/a3/be/b218eea62192ae58f3fc11abd2ac84e6858e017c248151acca7c52c8ecd6/trimesh-3.9.26-py3-none-any.whl"
+  "3.9.27":
+    "Any":
+      "3.0":
+        "sha256": "cc0060578db943ff4747c9b7329540630039f904d7ed6fe11c4795b77e7847dd"
+        "url": "https://files.pythonhosted.org/packages/f7/8f/ab650616cfdbb8b4836d443bd0afb3109de51bb836ce639f8fecaf237253/trimesh-3.9.27-py3-none-any.whl"
+  "3.9.28":
+    "Any":
+      "3.0":
+        "sha256": "57af9362175141d648f75ea32841d464448c5211a8b95a1470211c6cf8ca917a"
+        "url": "https://files.pythonhosted.org/packages/db/34/394f225414fc040c18acd98f9223fa67383563c4443096adf28ca21f4af6/trimesh-3.9.28-py3-none-any.whl"
+  "3.9.29":
+    "Any":
+      "3.0":
+        "sha256": "e964826e70ace6fe37e4fff0fb12b5bd149a7acd4eccb3b0a983078683599557"
+        "url": "https://files.pythonhosted.org/packages/80/02/6fb85693f027bd309bc922770c59c246f03f0c6abb739e3e888e6d292fa3/trimesh-3.9.29-py3-none-any.whl"
+  "3.9.3":
+    "Any":
+      "3.0":
+        "sha256": "2a53a3495d168f02302bd0c1b7213f15a6930297f718b40d2076f2198e8f134a"
+        "url": "https://files.pythonhosted.org/packages/b8/5e/7ed8ef3ce02f1ba507fb93a6e85e7b392a448dfa9ac7f93e31aa67951d09/trimesh-3.9.3-py3-none-any.whl"
+  "3.9.30":
+    "Any":
+      "3.0":
+        "sha256": "fff731688d96cdafe9159aea3b44fe06e89cfdedce931805ddf66c7b25ac0d74"
+        "url": "https://files.pythonhosted.org/packages/aa/81/c3035d6fdc81bfd56d541be5441ca8f0a15ddd1b4559be71f9aa79089e40/trimesh-3.9.30-py3-none-any.whl"
+  "3.9.31":
+    "Any":
+      "3.0":
+        "sha256": "3ee51c9ebfd0568165a91e0a771b484015a829782cf3ee25bc72f2a801095d63"
+        "url": "https://files.pythonhosted.org/packages/75/4d/1b931f72521dec6c6c7c6f83df36207f9a7361cf5fc997e9b46d78abe9d9/trimesh-3.9.31-py3-none-any.whl"
+  "3.9.32":
+    "Any":
+      "3.0":
+        "sha256": "e2ebb930d382b0bbf4dd5d2c3372bedc8dd0cec3a2c235c1663e5de4fba20247"
+        "url": "https://files.pythonhosted.org/packages/35/56/e3317cdaf63db766abd98113ef620af6266cbbdc4acae2862a769d42cfb5/trimesh-3.9.32-py3-none-any.whl"
+  "3.9.33":
+    "Any":
+      "3.0":
+        "sha256": "757500353d26659e393e85f61bec1973920c2724c5793fdd9beb4dad1fa665f8"
+        "url": "https://files.pythonhosted.org/packages/30/f1/9d5f89b2163117822de9b2d85b11ecfa528ad335be5e77619f52e0c85457/trimesh-3.9.33-py3-none-any.whl"
+  "3.9.34":
+    "Any":
+      "3.0":
+        "sha256": "4cb9d9937baf146c97cc7c7803be8cc930e8de97e4096d0cfa4e1c9dd55c2ec3"
+        "url": "https://files.pythonhosted.org/packages/81/98/b62a62453a39e263330c9fc32d6f167a93ef558c8796d185c12e884a7222/trimesh-3.9.34-py3-none-any.whl"
+  "3.9.35":
+    "Any":
+      "3.0":
+        "sha256": "b059a137f0c2b0b8cea8b766bb6e425ad6585e002816aa5f80edc1cc74e7d212"
+        "url": "https://files.pythonhosted.org/packages/c4/fb/6789a5d53919a28a74b0e951f7ed761ac0c29f2279b7e448d252d0d49b7b/trimesh-3.9.35-py3-none-any.whl"
+  "3.9.36":
+    "Any":
+      "3.0":
+        "sha256": "8ac8bea693b3ee119f11b022fc9b9481c9f1af06cb38bc859bf5d16bbbe49b23"
+        "url": "https://files.pythonhosted.org/packages/6b/7a/b39526c2b9323820c04c2ef155c0517af8bd2645312a8f1b2ebcabfe059f/trimesh-3.9.36-py3-none-any.whl"
+  "3.9.39":
+    "Any":
+      "3.0":
+        "sha256": "fbe947f4f5f0fa9b5a0e865f53597d6653c69da84a41459b38ec34bbe430736c"
+        "url": "https://files.pythonhosted.org/packages/53/bf/6003314fb9b43f4de6d9b522137fc0abd5066303dc480017fea56c4a82fa/trimesh-3.9.39-py3-none-any.whl"
+  "3.9.40":
+    "Any":
+      "3.0":
+        "sha256": "af5a8e443a1c166e5370e516596d908dec40f19d1f1600144cf0d97048a80a62"
+        "url": "https://files.pythonhosted.org/packages/44/07/ef6636b2e006824e0d6bc901c3ed56275e1a44912b9f01c1c8137002a8f2/trimesh-3.9.40-py3-none-any.whl"
+  "3.9.41":
+    "Any":
+      "3.0":
+        "sha256": "9389406fd5ec8aa681c75e342a46aec776c0186635de22e120cddf7d1003a717"
+        "url": "https://files.pythonhosted.org/packages/eb/a7/d6273af86bb898374bc366a66b50323daf9eb130c9ebdf06afd63e2b71a3/trimesh-3.9.41-py3-none-any.whl"
+  "3.9.42":
+    "Any":
+      "3.0":
+        "sha256": "a19a318103afbdd31af614b552ad6f6056ed2094ea3a06702c9b580e389bc9d5"
+        "url": "https://files.pythonhosted.org/packages/87/1a/6ef6c3e4be208b0855ee986ac4c5c20f2e34cd0ed477169954dff592d492/trimesh-3.9.42-py3-none-any.whl"
+  "3.9.43":
+    "Any":
+      "3.0":
+        "sha256": "6eede109741f9f8286d55d0b1e702c2f79a1259d6c645e0fa2921587289ecd66"
+        "url": "https://files.pythonhosted.org/packages/91/e6/8b5994b322279ba265ca38909d88d5b5c292785c2feef007a981db5b4c85/trimesh-3.9.43-py3-none-any.whl"
+  "3.9.5":
+    "Any":
+      "3.0":
+        "sha256": "2df58ac2d25ffa437d9531ae36f7661dcc25c286b86c1f6ebeb3365c82a5af38"
+        "url": "https://files.pythonhosted.org/packages/d0/98/5b5867f53ada2840debf9625ec775ce8963403c27f573637a11ee2c91c7d/trimesh-3.9.5-py3-none-any.whl"
+  "3.9.7":
+    "Any":
+      "3.0":
+        "sha256": "b3e3ef1227cdb0cb15c1f393d4e463a371bee9b234a50ae5399cf09f5a8bc300"
+        "url": "https://files.pythonhosted.org/packages/85/5b/b971412e6be76e4745973002d2a90ff7e9ed084a363aac690d8e4ed4b2a4/trimesh-3.9.7-py3-none-any.whl"
+  "3.9.8":
+    "Any":
+      "3.0":
+        "sha256": "8c1a770da353107e67505b24354908c00336c2f0334c28af82f3cb5b1fc20f6b"
+        "url": "https://files.pythonhosted.org/packages/8e/eb/28cd472f53790ff5ba5d8e9138cc5f8cc0a5f761d1114454ff0d37006b7f/trimesh-3.9.8-py3-none-any.whl"
+  "3.9.9":
+    "Any":
+      "3.0":
+        "sha256": "5eab2e16a33d7f173e2934e257a2f08ddc4a22787a70d0efa8df0dbf59773b50"
+        "url": "https://files.pythonhosted.org/packages/54/0c/a702771ce5f3914a17c85994fdb369f826b6c3973404add51bd6f77db0ca/trimesh-3.9.9-py3-none-any.whl"

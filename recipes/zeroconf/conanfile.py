@@ -1,13 +1,16 @@
-from conan import ConanFile
-from conan.tools.env.virtualrunenv import VirtualRunEnv
-from conan.tools.env.virtualbuildenv import VirtualBuildEnv
+from pathlib import Path
 
-required_conan_version = ">=1.44.1"
+from conan import ConanFile
+
+from conans.errors import ConanInvalidConfiguration
+from conans.tools import Version
+from conan.tools.files import files
+
+required_conan_version = ">=1.33.0"
 
 
 class ZeroconfConan(ConanFile):
     name = "zeroconf"
-    version = "0.31.0"
     description = "Pure Python Multicast DNS Service Discovery Library (Bonjour/Avahi compatible)"
     topics = ("conan", "python", "pypi", "pip")
     license = "LGPL"
@@ -15,34 +18,49 @@ class ZeroconfConan(ConanFile):
     url = "https://github.com/jstasiak/python-zeroconf"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "pypi"
-    default_channel = "stable"
-    python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
-    python_requires_extend = "UltimakerBase.UltimakerBase"
-    requires = "python/3.10.2@python/stable",\
-                "ifaddr/0.1.7@pypi/stable"
-    hashes = [
-        "sha256:53a180248471c6f81bd1fffcbce03ed93d7d8eaf10905c9121ac1ea996d19844",
-        "sha256:5a468da018bc3f04bbce77ae247924d802df7aeb4c291bbbb5a9616d128800b0"
-    ]
+    requires = ["cpython/[>=2.7]@python/stable",
+                "ifaddr/0.1.7@pypi/stable"]
+    no_copy_source = True
 
-    def generate(self):
-        rv = VirtualRunEnv(self)
-        rv.generate()
+    @property
+    def _site_packages(self):
+        return "site-packages"
 
-        bv = VirtualBuildEnv(self)
-        bv.generate()
+    def source(self):
+        sources = self.conan_data["sources"][self.version]
+        if self.settings.get_safe("os") in sources:
+            os_bin = self.settings.get_safe("os")
+        elif "Any" in sources:
+            os_bin = "Any"
+        else:
+            raise ConanInvalidConfiguration("Invalid version for Operating System")
 
-    def build(self):
-        pb = self.python_requires["PipBuildTool"].module.PipBuildTool(self)
-        pb.configure()
-        pb.build()
+        actual_python_version = Version(self.deps_cpp_info['cpython'].version)
+
+        python_version = Version("1.0")
+        python_version_key = "1.0"
+
+        for py_version in sources[os_bin].keys():
+            available_python_version = Version(py_version)
+            if python_version < available_python_version <= actual_python_version:
+                python_version = available_python_version
+                python_version_key = py_version
+
+        if python_version is Version("1.0"):
+            raise ConanInvalidConfiguration("No compatible Python Version")
+
+        self.output.info(f"Using wheel = {sources[os_bin][python_version_key]['url']}")
+        files.get(self, **sources[os_bin][python_version_key], destination = self._site_packages)
 
     def package(self):
-        self.copy("*")
+        self.copy("*", src = self._site_packages, dst = self._site_packages)
 
     def package_info(self):
-        self._set_python_site_packages()
+        self.env_info.PYTHONPATH = Path(self.package_folder, self._site_packages)
+        self.user_info.pythonpath = Path(self.package_folder, self._site_packages)
 
     def package_id(self):
-        self.info.settings.build_type = "Release"
+        if len(self.conan_data["sources"][self.version]) >= 1 or "Any" not in self.conan_data["sources"][self.version]:
+            self.info.settings.build_type = "Release"
+        else:
+            self.info.header_only()

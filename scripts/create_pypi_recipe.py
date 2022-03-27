@@ -22,7 +22,7 @@ def main(name: str, version: str, location: str):
                 v = "[" + r[1][:-1].replace(" ", "").replace(",", " ") + "]"
             else:
                 v = "[>=0.0.0]"
-            requirements += f"\"{r[0].replace(' ', '')}/{v}@python/stable\",\\\n                "
+            requirements += f"\"{r[0].replace(' ', '')}/{v}@python/stable\",\n                "
         if len(requirements) > 19:
             requirements = requirements[:-19]
     else:
@@ -39,7 +39,6 @@ def main(name: str, version: str, location: str):
                            homepage = resp["info"].get("home_page", ""),
                            url = resp["info"].get("project_urls", {}).get("Homepage", ""),
                            requirements = requirements.lower(),
-                           hashes = "hashes = []"
                            )
         result_path = Path(location)
         result_path.mkdir(exist_ok = True)

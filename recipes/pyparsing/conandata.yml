@@ -1,0 +1,226 @@
+"sources":
+  "2.0.3":
+    "Any":
+      "3.0":
+        "sha256": "a9c896bab06dbf3759ad5fb63cfdb3777191e2c4ae640e6dd69ed37530f6ba56"
+        "url": "https://files.pythonhosted.org/packages/8f/f4/3a70b5e5b865b1ec45fe48dc5a57cd4facb5c7bd80e5cb1255c362732e81/pyparsing-2.0.3-py2.py3-none-any.whl"
+  "2.0.4":
+    "Any":
+      "3.0":
+        "sha256": "e5c2f4914ec227882874d75180ecbe1fc7cc425b6c35c8c37ed64c307d00b2b5"
+        "url": "https://files.pythonhosted.org/packages/3d/9a/e4159cf9a43d87784291acd56910e86cb246b5660e7170ae774eadf7314b/pyparsing-2.0.4-py2.py3-none-any.whl"
+  "2.0.5":
+    "Any":
+      "3.0":
+        "sha256": "29cfa7c2c22ece030a7da3181542e099355b59d8be34c6d6f9ae87766e369615"
+        "url": "https://files.pythonhosted.org/packages/2b/25/398db7ce5e2118af11f352e652569ecb76005f545e3a81b5c55cf8239913/pyparsing-2.0.5-py2.py3-none-any.whl"
+  "2.0.6":
+    "Any":
+      "3.0":
+        "sha256": "23897437d77a627264b176ccc726b1fa0e2d5e4f44c1aa6b6ac880639b8b1ac3"
+        "url": "https://files.pythonhosted.org/packages/75/af/dbfea3f224a6980c18336a0feefc37f8011cf2b356e6090a35f2cd23f686/pyparsing-2.0.6-py2.py3-none-any.whl"
+  "2.0.7":
+    "Any":
+      "3.0":
+        "sha256": "56adc21a4b86391db146b7f74f8c789c396401915703bbd19b793e2a7c30bb46"
+        "url": "https://files.pythonhosted.org/packages/ac/de/44b122749e143cf87db83edb2d3d239da772e1c3ae4cbeb55964a1bfabdd/pyparsing-2.0.7-py2.py3-none-any.whl"
+  "2.1.0":
+    "Any":
+      "3.0":
+        "sha256": "33b8b9da9989456fb92aeb5ae96c28d74cc8f1b14b42d62b2508174afb155787"
+        "url": "https://files.pythonhosted.org/packages/ed/40/22d4029d6c7b5eb27038ae1ca2ab27a3ff22d88f6577a2f1d9ef609f6447/pyparsing-2.1.0-py2.py3-none-any.whl"
+  "2.1.1":
+    "Any":
+      "3.0":
+        "sha256": "3a9743e0cba1df5ad7e5412d19a5ec1cd320c08852d5b5a4050aabe877d46c1f"
+        "url": "https://files.pythonhosted.org/packages/77/e0/a9ec2ed6e31b123e7babc788806cbd734775a3e4be9fac8f4cbf0b1f4356/pyparsing-2.1.1-py2.py3-none-any.whl"
+  "2.1.10":
+    "Any":
+      "3.0":
+        "sha256": "67101d7acee692962f33dd30b5dce079ff532dd9aa99ff48d52a3dad51d2fe84"
+        "url": "https://files.pythonhosted.org/packages/2b/f7/e5a178fc3ea4118a0edce2a8d51fc14e680c745cf4162e4285b437c43c94/pyparsing-2.1.10-py2.py3-none-any.whl"
+  "2.1.2":
+    "Any":
+      "3.0":
+        "sha256": "b6396a972294b1834e6cfddc5b456f3382340bc0611a0f9523e1a148ca890840"
+        "url": "https://files.pythonhosted.org/packages/f6/f3/d52ce91f76f99752f2cac7043cbfaba63e637aa92296c1837ea64ddb780a/pyparsing-2.1.2-py2.py3-none-any.whl"
+  "2.1.3":
+    "Any":
+      "3.0":
+        "sha256": "3fcd048fc92e5e8317e753b7f207c0a88f9b79c47cd17e491fd3cc669989d133"
+        "url": "https://files.pythonhosted.org/packages/22/26/b56673d1578cfeafe915d946d3075bdbfaeb434a2a5cef4b530c4d1d4d7c/pyparsing-2.1.3-py2.py3-none-any.whl"
+  "2.1.4":
+    "Any":
+      "3.0":
+        "sha256": "7ede41fb90c285a5159372e7de61d2f2451060cb38fa804a4ab53e3bcb2e61b6"
+        "url": "https://files.pythonhosted.org/packages/47/49/64007b0bc2badabb6521f73939a7611d0620e6d335a9dd5c20e127aea267/pyparsing-2.1.4-py2.py3-none-any.whl"
+  "2.1.5":
+    "Any":
+      "3.0":
+        "sha256": "d91797f369fc2f11bbcfcc4234bca1b1ff114bdb3557a14458f1bd35211916e5"
+        "url": "https://files.pythonhosted.org/packages/24/c5/3ce00e6a5fca0eb962553467a51b44de1a13e1bc23dabf58e2e9799b8807/pyparsing-2.1.5-py2.py3-none-any.whl"
+  "2.1.6":
+    "Any":
+      "3.0":
+        "sha256": "5534719f4abaac4efd93c295f9aad9d10f516dd7d1a5cf7f0af7eed5fdad9524"
+        "url": "https://files.pythonhosted.org/packages/82/e2/44fd113b9be057848a30cba3ed238a534814b5266ffc9402605f3a1707ca/pyparsing-2.1.6-py2.py3-none-any.whl"
+  "2.1.7":
+    "Any":
+      "3.0":
+        "sha256": "5956ee068ff3db81684883206c6735dce5d99517f53a960cb464c4652de1ed56"
+        "url": "https://files.pythonhosted.org/packages/52/02/efeb2e572c0fc9524c36701bab40df4d77c2fc00d2854e674f9f7e253836/pyparsing-2.1.7-py2.py3-none-any.whl"
+  "2.1.8":
+    "Any":
+      "3.0":
+        "sha256": "2f0f5ceb14eccd5aef809d6382e87df22ca1da583c79f6db01675ce7d7f49c18"
+        "url": "https://files.pythonhosted.org/packages/85/b9/188515f35f78533b3f82966a2c3f1a71a86df8b801367ee75a77191a861d/pyparsing-2.1.8-py2.py3-none-any.whl"
+  "2.1.9":
+    "Any":
+      "3.0":
+        "sha256": "52027939e7a7990ca83b6bab549d94e298990b27b3308a382099df908abd8748"
+        "url": "https://files.pythonhosted.org/packages/40/f8/926538c3f358a52ea5fd61bfe78f9c208bfd5ebc152d148503e210f23ed2/pyparsing-2.1.9-py2.py3-none-any.whl"
+  "2.2.0":
+    "Any":
+      "3.0":
+        "sha256": "fee43f17a9c4087e7ed1605bd6df994c6173c1e977d7ade7b651292fab2bd010"
+        "url": "https://files.pythonhosted.org/packages/6a/8a/718fd7d3458f9fab8e67186b00abdd345b639976bc7fb3ae722e1b026a50/pyparsing-2.2.0-py2.py3-none-any.whl"
+  "2.2.1":
+    "Any":
+      "3.0":
+        "sha256": "905d8090c335314568b5faee0025b1829f27bb974604a5762a6cdef3a7dfc3b7"
+        "url": "https://files.pythonhosted.org/packages/42/47/e6d51aef3d0393f7d343592d63a73beee2a8d3d69c22b053e252c6cfacd5/pyparsing-2.2.1-py2.py3-none-any.whl"
+  "2.2.2":
+    "Any":
+      "3.0":
+        "sha256": "d29593d8ebe7b57d6967b62494f8c72b03ac0262b1eed63826c6f788b3606401"
+        "url": "https://files.pythonhosted.org/packages/2b/4a/f06b45ab9690d4c37641ec776f7ad691974f4cf6943a73267475b05cbfca/pyparsing-2.2.2-py2.py3-none-any.whl"
+  "2.3.0":
+    "Any":
+      "3.0":
+        "sha256": "40856e74d4987de5d01761a22d1621ae1c7f8774585acae358aa5c5936c6c90b"
+        "url": "https://files.pythonhosted.org/packages/71/e8/6777f6624681c8b9701a8a0a5654f3eb56919a01a78e12bf3c73f5a3c714/pyparsing-2.3.0-py2.py3-none-any.whl"
+  "2.3.1":
+    "Any":
+      "3.0":
+        "sha256": "f6c5ef0d7480ad048c054c37632c67fca55299990fff127850181659eea33fc3"
+        "url": "https://files.pythonhosted.org/packages/de/0a/001be530836743d8be6c2d85069f46fecf84ac6c18c7f5fb8125ee11d854/pyparsing-2.3.1-py2.py3-none-any.whl"
+  "2.4.0":
+    "Any":
+      "3.0":
+        "sha256": "9b6323ef4ab914af344ba97510e966d64ba91055d6b9afa6b30799340e89cc03"
+        "url": "https://files.pythonhosted.org/packages/dd/d9/3ec19e966301a6e25769976999bd7bbe552016f0d32b577dc9d63d2e0c49/pyparsing-2.4.0-py2.py3-none-any.whl"
+  "2.4.1.1":
+    "Any":
+      "3.0":
+        "sha256": "43c5486cefefa536c9aab528881c992328f020eefe4f6d06332449c365218580"
+        "url": "https://files.pythonhosted.org/packages/ff/2c/afc36631a9e0dc9f2b8bd4c19fa2d330cbe07d6679a1c0910418a200acad/pyparsing-2.4.1.1-py2.py3-none-any.whl"
+  "2.4.2":
+    "Any":
+      "3.0":
+        "sha256": "d9338df12903bbf5d65a0e4e87c2161968b10d2e489652bb47001d82a9b028b4"
+        "url": "https://files.pythonhosted.org/packages/11/fa/0160cd525c62d7abd076a070ff02b2b94de589f1a9789774f17d7c54058e/pyparsing-2.4.2-py2.py3-none-any.whl"
+  "2.4.2a1":
+    "Any":
+      "3.0":
+        "sha256": "38181feb3a1278f464b7e1d0d647760f7ab08d93f654f886ff528946450adbab"
+        "url": "https://files.pythonhosted.org/packages/d5/b2/b4a6df21b102541c06cb7912bee6a4e1a1e071b9f5daf155411af4fdbdea/pyparsing-2.4.2a1-py2.py3-none-any.whl"
+  "2.4.3":
+    "Any":
+      "3.0":
+        "sha256": "8997c62f779045b07273e124bbe1d03e2eebb9a38a7ef0798fea4bae72b4b6a3"
+        "url": "https://files.pythonhosted.org/packages/f3/3e/71a8ae0368838ef328ba4470cb73813df77ba1ede0edb758fe01a6b39d2b/pyparsing-2.4.3-py2.py3-none-any.whl"
+  "2.4.4":
+    "Any":
+      "3.0":
+        "sha256": "61b5ed888beab19ddccab3478910e2076a6b5a0295dffc43021890e136edf764"
+        "url": "https://files.pythonhosted.org/packages/a3/c4/7828cf9e71ce8fbd43c1e502f3fdd0498f069fcf9d1c268205ce278ae201/pyparsing-2.4.4-py2.py3-none-any.whl"
+  "2.4.5":
+    "Any":
+      "3.0":
+        "sha256": "20f995ecd72f2a1f4bf6b072b63b22e2eb457836601e76d6e5dfcd75436acc1f"
+        "url": "https://files.pythonhosted.org/packages/c0/0c/fc2e007d9a992d997f04a80125b0f183da7fb554f1de701bbb70a8e7d479/pyparsing-2.4.5-py2.py3-none-any.whl"
+  "2.4.6":
+    "Any":
+      "3.0":
+        "sha256": "c342dccb5250c08d45fd6f8b4a559613ca603b57498511740e65cd11a2e7dcec"
+        "url": "https://files.pythonhosted.org/packages/5d/bc/1e58593167fade7b544bfe9502a26dc860940a79ab306e651e7f13be68c2/pyparsing-2.4.6-py2.py3-none-any.whl"
+  "2.4.7":
+    "Any":
+      "3.0":
+        "sha256": "ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"
+        "url": "https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl"
+  "3.0.0":
+    "Any":
+      "3.0":
+        "sha256": "d487599e9fb0dc36bee6b5c183c6fc5bd372ce667736f3d430ab7d842a54a35a"
+        "url": "https://files.pythonhosted.org/packages/f3/f6/00afe9f8ba5e69480863a75899cdfed2291c666deadb6f0dcc0aab985548/pyparsing-3.0.0-py3-none-any.whl"
+  "3.0.0a1":
+    "Any":
+      "3.0":
+        "sha256": "67199f0c41a9c702154efb0e7a8cc08accf830eb003b4d9fa42c4059002e2492"
+        "url": "https://files.pythonhosted.org/packages/a4/9f/868e59e76cbeea46fe5b49197412f0b58fb975eec0bc16d567b8454c1a6f/pyparsing-3.0.0a1-py3-none-any.whl"
+  "3.0.0a2":
+    "Any":
+      "3.0":
+        "sha256": "1060635ca5ac864c2b7bc7b05a448df4e32d7d8c65e33cbe1514810d339672a2"
+        "url": "https://files.pythonhosted.org/packages/17/34/9e3d46b0b87417c1b42f0bee7ff8f750a8e6fb6a812a6bf5fa15222ae67e/pyparsing-3.0.0a2-py3-none-any.whl"
+  "3.0.0b1":
+    "Any":
+      "3.0":
+        "sha256": "13140e8d0e1edd806eb50f18535d77f2143b40771d4aaef6b4950dd93d48a7db"
+        "url": "https://files.pythonhosted.org/packages/04/d0/2f4c45542b6127262896e4e8e197cd327bc729b245cddd24fcb58aafb66b/pyparsing-3.0.0b1-py3-none-any.whl"
+  "3.0.0b2":
+    "Any":
+      "3.0":
+        "sha256": "f4896b4cc085a1f8f8ae53a1a90db5a86b3825ff73eb974dffee3d9e701007f4"
+        "url": "https://files.pythonhosted.org/packages/ff/c5/14a5edf227544a6da3cb99a1481fc894db9a81306c9a18b736d3ac9fe8d5/pyparsing-3.0.0b2-py3-none-any.whl"
+  "3.0.0b3":
+    "Any":
+      "3.0":
+        "sha256": "10f1886e70da7b76ca1b4cf9bbd60f708ef037892496d5cb7c77ab2982412b2d"
+        "url": "https://files.pythonhosted.org/packages/21/58/746ccd590ec2c1cae28b2a7d1666554aae5a412e8f0062655807a3227e58/pyparsing-3.0.0b3-py3-none-any.whl"
+  "3.0.0rc1":
+    "Any":
+      "3.0":
+        "sha256": "61b247121581f50c7988eece6ebb2d87ccc3be46c5552daf910d56e20cf6da75"
+        "url": "https://files.pythonhosted.org/packages/47/ff/a4a837f49a292559b418076989996531f659f60a5a89488b2e3a2d2831e0/pyparsing-3.0.0rc1-py3-none-any.whl"
+  "3.0.0rc2":
+    "Any":
+      "3.0":
+        "sha256": "f72f2294ef53f917d984093e8ac8ed5818837516132e68c67b7fdd5350c8dabf"
+        "url": "https://files.pythonhosted.org/packages/7e/f4/9f9e3ead4f834c39513a75e2cf439d158dc174072642374d9930ba6429a4/pyparsing-3.0.0rc2-py3-none-any.whl"
+  "3.0.1":
+    "Any":
+      "3.0":
+        "sha256": "fd93fc45c47893c300bd98f5dd1b41c0e783eaeb727e7cea210dcc09d64ce7c3"
+        "url": "https://files.pythonhosted.org/packages/88/5e/0a57c44b43ee416eb19df309ba8323ffa0f6e6af7756c5352d35da72694c/pyparsing-3.0.1-py3-none-any.whl"
+  "3.0.2":
+    "Any":
+      "3.0":
+        "sha256": "09fa60a2e3bc3c6a23c2ed23332199d0e57b2c676b9193750cfc22a4358b69c2"
+        "url": "https://files.pythonhosted.org/packages/71/fb/bc5ae7ffd527917fd147de96ca5d9c03e556f0ca38eccb0ec6061c8e8ed4/pyparsing-3.0.2-py3-none-any.whl"
+  "3.0.3":
+    "Any":
+      "3.0":
+        "sha256": "f8d3fe9fc404576c5164f0f0c4e382c96b85265e023c409c43d48f65da9d60d0"
+        "url": "https://files.pythonhosted.org/packages/1b/19/8d24092f75e3bc7b4b2a78c9c63664bdeb00298acd15fad5d614da2a25b1/pyparsing-3.0.3-py3-none-any.whl"
+  "3.0.4":
+    "Any":
+      "3.0":
+        "sha256": "c0a7dfcd26825bd4453574c4e7ad04aa095975ce54d04f738fe3a8350fbd223a"
+        "url": "https://files.pythonhosted.org/packages/b4/ce/b79d72516a799d1c282f534d49aa5aafaae172da54925e97052bbe22c4d8/pyparsing-3.0.4-py3-none-any.whl"
+  "3.0.5":
+    "Any":
+      "3.0":
+        "sha256": "4881e3d2979f27b41a3a2421b10be9cbfa7ce2baa6c7117952222f8bbea6650c"
+        "url": "https://files.pythonhosted.org/packages/f1/10/313669b34fc25319a171b2a3cdec78da4c6b6a29e7bea200c03755bb6396/pyparsing-3.0.5-py3-none-any.whl"
+  "3.0.6":
+    "Any":
+      "3.0":
+        "sha256": "04ff808a5b90911829c55c4e26f75fa5ca8a2f5f36aa3a51f68e27033341d3e4"
+        "url": "https://files.pythonhosted.org/packages/a0/34/895006117f6fce0b4de045c87e154ee4a20c68ec0a4c9a36d900888fb6bc/pyparsing-3.0.6-py3-none-any.whl"
+  "3.0.7":
+    "Any":
+      "3.0":
+        "sha256": "a6c06a88f252e6c322f65faf8f418b16213b51bdfaece0524c1c1bc30c63c484"
+        "url": "https://files.pythonhosted.org/packages/80/c1/23fd82ad3121656b585351aba6c19761926bb0db2ebed9e4ff09a43a3fcc/pyparsing-3.0.7-py3-none-any.whl"

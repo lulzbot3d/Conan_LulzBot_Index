@@ -1,0 +1,396 @@
+"sources":
+  "0.14":
+    "Any":
+      "2.7":
+        "sha256": "4daad3cff5ef14d367efd07caee3e74d582f2e416404effc81a32ca1a400c711"
+        "url": "https://files.pythonhosted.org/packages/8b/e6/bf1904eef083bb28bda1b1273259481669b05bd043a950cdc917697b2069/zeroconf-0.14-py27-none-any.whl"
+  "0.15":
+    "Any":
+      "2.7":
+        "sha256": "fffadca819cd49b79234cf1d96b8d237e26e9deb9f2ccd5deda75a4d5f797256"
+        "url": "https://files.pythonhosted.org/packages/0b/4d/7347e6972e370c935d5907a44b2bff1840762d16ae434f995c28f6540cb6/zeroconf-0.15-py27-none-any.whl"
+  "0.15.1":
+    "Any":
+      "3.0":
+        "sha256": "92fde1bc25cb2a3bf0cd4f0b5b9f51cf511f3cf7fffccf649969be586cd23f26"
+        "url": "https://files.pythonhosted.org/packages/da/1f/b52255ed7e5e5ecd75c1126d35b1e00af5ca96917b4f29d293b53e1d9ff3/zeroconf-0.15.1-py3-none-any.whl"
+  "0.16.0":
+    "Any":
+      "3.0":
+        "sha256": "aff6c7dabbcdbebc8bd55e93b75465f13798f524fcbcbe7c4bb75b1ce04ce0ee"
+        "url": "https://files.pythonhosted.org/packages/88/69/f7f8730d7421512b1d24d99c31e2105e280b8c8e338659bc9dffdf2836ab/zeroconf-0.16.0-py2.py3-none-any.whl"
+  "0.17.0":
+    "Any":
+      "3.0":
+        "sha256": "07946d7deaea42aef285675b4caebb468d86934fd2c236c1e459e277d24937cc"
+        "url": "https://files.pythonhosted.org/packages/9b/dd/4a2d0c0349bbb8a21011e8f7a2c70d07f55b3f48e428a5bd9acfdb7d4468/zeroconf-0.17.0-py2.py3-none-any.whl"
+  "0.17.1":
+    "Any":
+      "3.0":
+        "sha256": "fd23c3ee7ff9fb45da98fe76ee3643a57cde0697fd608f211812a0e36de7d8f4"
+        "url": "https://files.pythonhosted.org/packages/ac/f3/68c9e74bb9205724f450342fe503b1cc2a524ce921ec383a97b9ddd4b9f8/zeroconf-0.17.1-py2.py3-none-any.whl"
+  "0.17.2":
+    "Any":
+      "3.0":
+        "sha256": "1abc2cf3e2e135892ab7f2d764c017f33a9abe6707e9db6de26c0bc607936d54"
+        "url": "https://files.pythonhosted.org/packages/8f/3f/71f85b596f76438baba80596f909942d1badc06483fb47acf44fc874fca6/zeroconf-0.17.2-py2.py3-none-any.whl"
+  "0.17.3":
+    "Any":
+      "3.0":
+        "sha256": "27afaeb520f4526f29bdcecb4ecdc0329ee27e54db8ae1f5aa647b9ce674ce48"
+        "url": "https://files.pythonhosted.org/packages/71/19/4494ea5d63c0533a0310610f57c5f2363dbfc2ac44f0e65e9b0f558836c3/zeroconf-0.17.3-py2.py3-none-any.whl"
+  "0.17.4":
+    "Any":
+      "3.0":
+        "sha256": "dae6cfe9969344e429ae38c7eac479f644aac834709cf571bedf1bce21826c50"
+        "url": "https://files.pythonhosted.org/packages/49/59/2cb0eec41ac29ff35f56abe24cc811d6fc38263eaff28e320e3619a2f04e/zeroconf-0.17.4-py2.py3-none-any.whl"
+  "0.17.5":
+    "Any":
+      "3.0":
+        "sha256": "54f858ef2ec36c1887a749a596d5fea91d0d48e2cf74ce933a6cfde5208e8724"
+        "url": "https://files.pythonhosted.org/packages/34/f0/967241d96c09bf180fabe765523b07169a928e83727320b10bd56371fa08/zeroconf-0.17.5-py2.py3-none-any.whl"
+  "0.17.6":
+    "Any":
+      "3.0":
+        "sha256": "dd513d7027203444eb3003c6b21dd394a0d6fcf50c5fcb80d2e2bfd6cf0b4497"
+        "url": "https://files.pythonhosted.org/packages/1b/25/dc49a36f0e55d852c9bd5022b20ffc31ffc31c9e76afe7dea75a29f5a8d9/zeroconf-0.17.6-py2.py3-none-any.whl"
+  "0.17.7":
+    "Any":
+      "3.0":
+        "sha256": "6ccc5b524d262f0e9828fa0f1c9c032603bce8c4198fd98d722191cfd43429ca"
+        "url": "https://files.pythonhosted.org/packages/1d/07/24c787b962d258570318331172568eab7917a6e911637f0e2b79dc79c7a9/zeroconf-0.17.7-py2.py3-none-any.whl"
+  "0.18.0":
+    "Any":
+      "3.0":
+        "sha256": "af03b7f4c54bf354c1f94e40f81cdcb017127718f038ad29acf35add4f9682fe"
+        "url": "https://files.pythonhosted.org/packages/84/5f/820520d4b0f59d0b7c7f9fddeef0b88c24120c227cac22855fb6d2a8fa48/zeroconf-0.18.0-py2.py3-none-any.whl"
+  "0.19.0":
+    "Any":
+      "3.0":
+        "sha256": "4a3312f55f31d0049aba04e5f101f912012b54c0e53d5d4e04945359794ec519"
+        "url": "https://files.pythonhosted.org/packages/71/45/1ff1a5350bebd3ff7862422a130e849ad8ff79b059ddacc89ab579dfcb17/zeroconf-0.19.0-py2.py3-none-any.whl"
+  "0.19.1":
+    "Any":
+      "3.0":
+        "sha256": "6df707b9bb1595800aa31dd18d04e04a80f74278f0c25a18d84278714d89e30b"
+        "url": "https://files.pythonhosted.org/packages/6b/88/48dbe88b10098f98acef33218763c5630b0081c7fd0849ab4793b1e9b6d3/zeroconf-0.19.1-py2.py3-none-any.whl"
+  "0.20.0":
+    "Any":
+      "3.0":
+        "sha256": "c2879bbc1365f430f02cfbcca508c57f1237e5fa2526c0b060b8165827b2c59f"
+        "url": "https://files.pythonhosted.org/packages/60/1f/743dd0bb96d51912a54c074729b2a264610e73018afc1ff51da3583506b3/zeroconf-0.20.0-py2.py3-none-any.whl"
+  "0.21.0":
+    "Any":
+      "3.0":
+        "sha256": "929dd2f61f2c9d0db344bfb3d4baf1347b14f330b77308224c023c677b20d694"
+        "url": "https://files.pythonhosted.org/packages/d8/22/5968409ae25051f333b24ec6504a24425b183f7ee860f95aaed6496de430/zeroconf-0.21.0-py2.py3-none-any.whl"
+  "0.21.1":
+    "Any":
+      "3.0":
+        "sha256": "c65639727fc29396b250f687c5742a85dbe4c0843a0410e9631011d54017bc85"
+        "url": "https://files.pythonhosted.org/packages/22/cf/1da5a9ccd0cf5e71826175356f18dcb21a5056db3774b3ed70ae0d7f454a/zeroconf-0.21.1-py2.py3-none-any.whl"
+  "0.21.2":
+    "Any":
+      "3.0":
+        "sha256": "cdfe015480d2e688dfcc69592a89bc536cc880cafc1b41a2047a05d656136f66"
+        "url": "https://files.pythonhosted.org/packages/71/a4/dfbf71e054e1847775bf3604d88aa4a080355ac02e52875800be305c1f6c/zeroconf-0.21.2-py2.py3-none-any.whl"
+  "0.21.3":
+    "Any":
+      "3.0":
+        "sha256": "f6385ed54f34c74d240ea92d9f4eeae1bf3acd1a111bb292200e2523f8f74e99"
+        "url": "https://files.pythonhosted.org/packages/d2/4e/3e751bc1f33d0368bdba509a140cb9f2e54cd1cfb8ebcf4ebd8a5eef794b/zeroconf-0.21.3-py2.py3-none-any.whl"
+  "0.22.0":
+    "Any":
+      "3.0":
+        "sha256": "2b8674c35997ec2d52542581e252fb2b4d0e7fe6a4b068187db3acd1e17d2836"
+        "url": "https://files.pythonhosted.org/packages/b3/90/30ab2edad1e0812b9d8128df4ac84346a63fda77b8570fbf2461c00cacc2/zeroconf-0.22.0-py3-none-any.whl"
+  "0.23.0":
+    "Any":
+      "3.0":
+        "sha256": "21d02538ff52fc572e1d785c692b97b8d4374623cb95d593cc06ab92bd5aaf61"
+        "url": "https://files.pythonhosted.org/packages/c0/1a/b594e55ed85942789ceb4233f8cbca946873be5f77a02c1c75ef6944e6fe/zeroconf-0.23.0-py3-none-any.whl"
+  "0.24.0":
+    "Any":
+      "3.0":
+        "sha256": "50689ce94a031378bcdb47586f539396511cf6971826cd96a845261973ee100a"
+        "url": "https://files.pythonhosted.org/packages/43/25/b6746049834c7ede865c3a3079d7bdb6f0a3cebdd6997eb916be3a647440/zeroconf-0.24.0-py3-none-any.whl"
+  "0.24.1":
+    "Any":
+      "3.0":
+        "sha256": "c3625f912f683b4606fb52ca6c522e30a065a363a601b0fb9319bb5e3c0b7ebe"
+        "url": "https://files.pythonhosted.org/packages/51/02/01dd66acbaad6fde4c9e701eea9a3f10cad473a38c218ce17d79d2dc2196/zeroconf-0.24.1-py3-none-any.whl"
+  "0.24.2":
+    "Any":
+      "3.0":
+        "sha256": "eb5ebf84d10f6aedd9ccf607bc18133f4f3df5f17edeeebf0e44bfcf7788966e"
+        "url": "https://files.pythonhosted.org/packages/e2/6e/75fe90dc1cc329e8ec348eba290a994e081c040e6d37094adde1597d9fc4/zeroconf-0.24.2-py3-none-any.whl"
+  "0.24.3":
+    "Any":
+      "3.0":
+        "sha256": "7c073ebf817de62a2e4e3ab5d4bd79817e7031c4a2300954c61704d80d0e55bb"
+        "url": "https://files.pythonhosted.org/packages/35/c2/66800724e76095d5bc7ad6f76ccaa495e5d4e4a8e1c36f39aa820f17468c/zeroconf-0.24.3-py3-none-any.whl"
+  "0.24.4":
+    "Any":
+      "3.0":
+        "sha256": "25188fc5516d59fe44440588b652bb388db91f389903fd9b009054da4e24e4f8"
+        "url": "https://files.pythonhosted.org/packages/f7/ab/3e4d23b14c7afef0c88d7839dd1157241a4e629f4d72ced35b0eba9ad806/zeroconf-0.24.4-py3-none-any.whl"
+  "0.24.5":
+    "Any":
+      "3.0":
+        "sha256": "83c4f611338096cafea46509d08e26891800b75abdead43d13bb13094c459187"
+        "url": "https://files.pythonhosted.org/packages/7c/51/7c32812eebd06f55f83786c32efb741a2f8533ea9966d592f51fa0bff860/zeroconf-0.24.5-py3-none-any.whl"
+  "0.25.0":
+    "Any":
+      "3.0":
+        "sha256": "1d8a3d971d186499f211656d66b39e4cbf46bf1c620b03c944f4ba847aa7ffd2"
+        "url": "https://files.pythonhosted.org/packages/e1/cc/7f5294935e2e49cf65805a6b452456b84794984e3866a2aa513e5d13e8c2/zeroconf-0.25.0-py3-none-any.whl"
+  "0.25.1":
+    "Any":
+      "3.0":
+        "sha256": "265bc23ddcea3d76940b6bb5b85d8a5a4e20618e5e6c3da677794e7e26a0e8c5"
+        "url": "https://files.pythonhosted.org/packages/ea/e7/6b006639302b1a0dc9ee9b2e9366da5c93a2eaf7a94c180755c033cf96e1/zeroconf-0.25.1-py3-none-any.whl"
+  "0.26.0":
+    "Any":
+      "3.0":
+        "sha256": "e1e84eb98ce44335190bbb16a237052d07811b1516de69c7983d77162097fdbf"
+        "url": "https://files.pythonhosted.org/packages/e2/b2/ab84af5cb782868ca9c48fc84df08efb84b13faea06eec6ba81666e8757d/zeroconf-0.26.0-py3-none-any.whl"
+  "0.26.1":
+    "Any":
+      "3.0":
+        "sha256": "a0cdd43ee8f00e7082f784c4226d2609070ad0b2aeb34b0154466950d2134de6"
+        "url": "https://files.pythonhosted.org/packages/b9/69/8f11a2917240e8bb1f2210ba3a84d69d46486caafcce5ea90d00b6042172/zeroconf-0.26.1-py3-none-any.whl"
+  "0.26.2":
+    "Any":
+      "3.0":
+        "sha256": "569c801e50891e0cc639c223e296e870dd9f6242a4f2b41d356666735b2a4264"
+        "url": "https://files.pythonhosted.org/packages/da/20/7b8551113804f0477738db5ff375c14ddb92ce82b1759928c895fb612964/zeroconf-0.26.2-py3-none-any.whl"
+  "0.26.3":
+    "Any":
+      "3.0":
+        "sha256": "ee2015ed0df56640626e0c636d1c9b1751c7b9632515b329b86ffa7f258dddab"
+        "url": "https://files.pythonhosted.org/packages/5b/c3/02e8fe31c66334db2edba41aa73eca2348e058d6def00036d02851726c50/zeroconf-0.26.3-py3-none-any.whl"
+  "0.27.0":
+    "Any":
+      "3.0":
+        "sha256": "6410cd8252e89719f33a30b1bf5fbae473b66d390327229a57ae655bc0fe557c"
+        "url": "https://files.pythonhosted.org/packages/b1/5d/adbdd8bd6ca08bdd021cb388b5a638b61295af802ab8c73485587dca319a/zeroconf-0.27.0-py3-none-any.whl"
+  "0.27.1":
+    "Any":
+      "3.0":
+        "sha256": "1eac46908bf7d719b1d04c140b7a7ba995d2bc31f5a15d863f5b10da1b6a33b3"
+        "url": "https://files.pythonhosted.org/packages/27/83/7ccfd01d25576a370640bf7fcf9d040f201b0309f945f668b07ffc171bf5/zeroconf-0.27.1-py3-none-any.whl"
+  "0.28.0":
+    "Any":
+      "3.0":
+        "sha256": "8c448ad37ed074ce8811c9eb2765c01714a93f977a1c04fc39fbf6f516b0566f"
+        "url": "https://files.pythonhosted.org/packages/f8/e7/d97b10e786aaf74d2e55e5b7bfb193d08e7459742bf051fdbcf5501575c7/zeroconf-0.28.0-py3-none-any.whl"
+  "0.28.1":
+    "Any":
+      "3.0":
+        "sha256": "aae48e790f0f7c213c3893654ae2f53f7de01e05a34271bf17aa4c99def73940"
+        "url": "https://files.pythonhosted.org/packages/f4/b4/52412d5d0feb98465d53a2c3b95a5b3916d62da70626adc3d898c9d0f682/zeroconf-0.28.1-py3-none-any.whl"
+  "0.28.2":
+    "Any":
+      "3.0":
+        "sha256": "ab9bd4dfc76db2b1c5c18b279b8216162c754c7252f12b7525ea7f6819f83779"
+        "url": "https://files.pythonhosted.org/packages/dd/67/2f9fd6da253f11bf73919a17a9adce88c422604250902ff6394b46286c5c/zeroconf-0.28.2-py3-none-any.whl"
+  "0.28.3":
+    "Any":
+      "3.0":
+        "sha256": "9ae1d9fbb53e1e5b0965a1e60873f99568f0424a03eb28ce793e75c999a8fc50"
+        "url": "https://files.pythonhosted.org/packages/08/c2/6fa6dce027bb9e507761e0c28e3f69b99bea0009a26d76a806bd8d056649/zeroconf-0.28.3-py3-none-any.whl"
+  "0.28.4":
+    "Any":
+      "3.0":
+        "sha256": "28b5590e32b6504a219d100a2007e7ba4d40804fd6802b238164ea3a664b29cb"
+        "url": "https://files.pythonhosted.org/packages/24/89/eef74f79161fe0ae755061960f6d576f94272bf47db8bb6bea48fadd68e0/zeroconf-0.28.4-py3-none-any.whl"
+  "0.28.5":
+    "Any":
+      "3.0":
+        "sha256": "f69cc7f9cc3b2a85c7f2cdafe2bb7fb00cf01604bc3df392f7ed5e3c303d7705"
+        "url": "https://files.pythonhosted.org/packages/b3/aa/c8078b8b288a3c9301cf1e6821b196b5d99204195646b06c3f5446eb1ee8/zeroconf-0.28.5-py3-none-any.whl"
+  "0.28.6":
+    "Any":
+      "3.0":
+        "sha256": "17ae1e1681091b91b0337517db222eae1807003154c01b0bd0ab99572dfeafd8"
+        "url": "https://files.pythonhosted.org/packages/63/26/bc6f1645adc4efd547be61dea567fa7dcbf339897748e91d1ac998c1dd63/zeroconf-0.28.6-py3-none-any.whl"
+  "0.28.7":
+    "Any":
+      "3.0":
+        "sha256": "9872b779cf290b6d623d3cb1024d5c88fd9b7c4b2dd35ce54397cf8887632ad1"
+        "url": "https://files.pythonhosted.org/packages/aa/a8/4569a232f44e49ac149718628cab15ae8b6bb69140f5913cf22440a25833/zeroconf-0.28.7-py3-none-any.whl"
+  "0.28.8":
+    "Any":
+      "3.0":
+        "sha256": "3608be2db58f6f0dc70665e02ab420fb8bf428016f2c78403d879e066ecc9bff"
+        "url": "https://files.pythonhosted.org/packages/67/b4/bffd1025384b89fca829921b1e76582dd195513879895f03ceb6e484f54b/zeroconf-0.28.8-py3-none-any.whl"
+  "0.29.0":
+    "Any":
+      "3.0":
+        "sha256": "85fdeeef88b08965ab87559177457cfdb5dd2e4bc62a476208c2473a51dfa0b2"
+        "url": "https://files.pythonhosted.org/packages/8b/7f/d62f46a53932d2ef1ad9600be390ab8cb637160c14f9b980f19ed278e739/zeroconf-0.29.0-py3-none-any.whl"
+  "0.30.0":
+    "Any":
+      "3.0":
+        "sha256": "4dedcf1d46404702fcbb8d40750afc47c4edcdb8ef16db461cb3355989a5eadb"
+        "url": "https://files.pythonhosted.org/packages/e1/04/1f11d81b8a4b9732caa4e97d7bb8026723cac7a7b8c848fd7cd6fa232155/zeroconf-0.30.0-py3-none-any.whl"
+  "0.31.0":
+    "Any":
+      "3.0":
+        "sha256": "5a468da018bc3f04bbce77ae247924d802df7aeb4c291bbbb5a9616d128800b0"
+        "url": "https://files.pythonhosted.org/packages/36/d4/cf3952bf4ed616e0fce6864894696b367a4a984c8de9ea7ff007ee0e55ee/zeroconf-0.31.0-py3-none-any.whl"
+  "0.32.0":
+    "Any":
+      "3.0":
+        "sha256": "c97c63330a2b9a7a4372eb04c9b9ada3c8ce05f79c0a63771c09577834486ad2"
+        "url": "https://files.pythonhosted.org/packages/44/3c/8343c83d2a764dbcbd3894e607b28d654ea047439c54e8dbd4b59c4a3d12/zeroconf-0.32.0-py3-none-any.whl"
+  "0.32.1":
+    "Any":
+      "3.0":
+        "sha256": "5b91d4d93c225f60dbb37915f63c2d1b445b7b39ba17f8da42f51c373d866af4"
+        "url": "https://files.pythonhosted.org/packages/44/34/89c941229bd8e734b47a58472932f388d33f7b97da2e62e476bf84e3e538/zeroconf-0.32.1-py3-none-any.whl"
+  "0.33.0":
+    "Any":
+      "3.0":
+        "sha256": "412a2ad34a7680f473e5e8ff8afdf3c22e393f3d505f8ecd801b5a10a969dac9"
+        "url": "https://files.pythonhosted.org/packages/4e/36/b96dbf1a71233cbd33837ccfa2e85d067ca3ebfc0a95a0a88e52f4c3acd5/zeroconf-0.33.0-py3-none-any.whl"
+  "0.33.1":
+    "Any":
+      "3.0":
+        "sha256": "46992d0786129c769c652c875221d394a63bdbef12832d443ac9e521005d46e1"
+        "url": "https://files.pythonhosted.org/packages/ca/45/755081937d29192dafe7053c4a80975cf53881ac7486777190432fc85a49/zeroconf-0.33.1-py3-none-any.whl"
+  "0.33.2":
+    "Any":
+      "3.0":
+        "sha256": "2bc3503a9af1a15ee00a08d784881cb3111b4d24eff1f59e540f3b0813f1c365"
+        "url": "https://files.pythonhosted.org/packages/91/29/c590cc1ecb0d230ccb341b1afec97d4d14b2ac89b459e8761913ebb0d0ab/zeroconf-0.33.2-py3-none-any.whl"
+  "0.33.3":
+    "Any":
+      "3.0":
+        "sha256": "a0f01a091d906c18b8d52cf3dbe5cef6ad8147216e6322fd9b41ea2cda361a9b"
+        "url": "https://files.pythonhosted.org/packages/d1/35/0543e0b16f7a3690a83ff4b5482aff5ae4f5a0120c11cad7b94f313b0556/zeroconf-0.33.3-py3-none-any.whl"
+  "0.33.4":
+    "Any":
+      "3.0":
+        "sha256": "71ebebbc35d4703d72a3635127626d511d5ee7da4b3946430eac2cdadca81b12"
+        "url": "https://files.pythonhosted.org/packages/d5/ac/9bab7455f681e4ec282d5a75131bba5026a870be599ab91ca0b0dda64b8c/zeroconf-0.33.4-py3-none-any.whl"
+  "0.34.0":
+    "Any":
+      "3.0":
+        "sha256": "82d7ff32314f7cddc8e78226f0135193204791dee52d5f0014b2ead2b49c2772"
+        "url": "https://files.pythonhosted.org/packages/fc/e8/b9754d79620285502449a3fcc6b968a20e56cbb9af92576b727e9225c0aa/zeroconf-0.34.0-py3-none-any.whl"
+  "0.34.1":
+    "Any":
+      "3.0":
+        "sha256": "46a5950f9126d14459e09a69e1d9667ee82056fa87b164c19ad289a7f9eab137"
+        "url": "https://files.pythonhosted.org/packages/90/b7/480fbbcac2bc9c12b3baffb102f8df2cabd811cee604e960a1f1ad451c69/zeroconf-0.34.1-py3-none-any.whl"
+  "0.34.2":
+    "Any":
+      "3.0":
+        "sha256": "082c8516da3958cde0511b20aa8d6e51270a9ea8d7f44a41ffdc9e9d1a2c2b4b"
+        "url": "https://files.pythonhosted.org/packages/83/8a/3aa6a7caa67ca64afd4b0401926d2ca996fba4ab2a5cd318fe858967880d/zeroconf-0.34.2-py3-none-any.whl"
+  "0.34.3":
+    "Any":
+      "3.0":
+        "sha256": "873028e8c0079c96cb08ed5e3a01dcb6b74bf69848bfab876872939083a713c8"
+        "url": "https://files.pythonhosted.org/packages/13/4e/6bee55cf800ab70b3a6832cc46af6ce1ccaae0e428a45d6baf1c6ee9bddf/zeroconf-0.34.3-py3-none-any.whl"
+  "0.35.0":
+    "Any":
+      "3.0":
+        "sha256": "fd58104bff89603579fd71e1b5653bd7e63398c0b455a2efa390035bcbcaf4da"
+        "url": "https://files.pythonhosted.org/packages/b1/4a/1bb83fd43a6e4c23f716a9d740ce8f92fe81923b1139246d54b5eb9a3102/zeroconf-0.35.0-py3-none-any.whl"
+  "0.35.1":
+    "Any":
+      "3.0":
+        "sha256": "456743109cbce123946708d6b520e14b545cc13195bc3fadaa3fc3d229508fad"
+        "url": "https://files.pythonhosted.org/packages/01/d8/084bd6202c13a02aa574ad23bb925357cd279b8b41fa496835219c9e0883/zeroconf-0.35.1-py3-none-any.whl"
+  "0.36.0":
+    "Any":
+      "3.0":
+        "sha256": "0b673aefdc9213e13a0c3990bd68127b29f9a0499d67bc1a9b0a009a1c80f904"
+        "url": "https://files.pythonhosted.org/packages/da/05/ca9d3e818319e8b507ebbfede72f27c7ec3053285c7c3434f74d6e7765ed/zeroconf-0.36.0-py3-none-any.whl"
+  "0.36.1":
+    "Any":
+      "3.0":
+        "sha256": "7792d68e81bc25d08ce454d5b57134c8601e950dee503f37e7c4a3c30e34e613"
+        "url": "https://files.pythonhosted.org/packages/3d/05/3a51f35773438d027f7068bfc003d9603998b3a1727bad16b12ee7deb7d5/zeroconf-0.36.1-py3-none-any.whl"
+  "0.36.11":
+    "Any":
+      "3.0":
+        "sha256": "b19ab0c7f9453c1746fdb7bf3d4e0912d5a7aca01194e96cd19f8fa7694322ad"
+        "url": "https://files.pythonhosted.org/packages/ed/a2/53e1bd72497c7f30f6e41d497ac6ea19c8e363d26930e7039200e578bac6/zeroconf-0.36.11-py3-none-any.whl"
+  "0.36.12":
+    "Any":
+      "3.0":
+        "sha256": "770f4d74cc1709dc6d0eca86b62f5f81515663a774a6aa4ff076f2b65ab514e2"
+        "url": "https://files.pythonhosted.org/packages/ad/a1/193a309b1cacf35688eb820cfb5fcc90f47b6ec2f529dfeca18862c04ffe/zeroconf-0.36.12-py3-none-any.whl"
+  "0.36.13":
+    "Any":
+      "3.0":
+        "sha256": "0664cc89b6534dcf8d76af8849fb64354e275e32d131c9f2d2a2b5cba6606161"
+        "url": "https://files.pythonhosted.org/packages/3a/2b/0f5e8add05c2689a7871568a904519302d2da662f33d478e28984623b20c/zeroconf-0.36.13-py3-none-any.whl"
+  "0.36.2":
+    "Any":
+      "3.0":
+        "sha256": "c2fbc3ace3a58d9f45912da055eb7bd7ca6ee0da849239a5be38548b624fd1a5"
+        "url": "https://files.pythonhosted.org/packages/73/34/474853be969f18ac30a8b212f8665cb0460946788cd61647747a634eaf36/zeroconf-0.36.2-py3-none-any.whl"
+  "0.36.3":
+    "Any":
+      "3.0":
+        "sha256": "75196f599458a0678d06e2a2d18c5b943cdf8ac1f32788d13a94c9320699576b"
+        "url": "https://files.pythonhosted.org/packages/4a/78/475e6b219e89fb70ac62f3864acfb7f968c82853597a0deeef23601033bd/zeroconf-0.36.3-py3-none-any.whl"
+  "0.36.4":
+    "Any":
+      "3.0":
+        "sha256": "dda2337e4a41aeda7a4c7412bfd2117d76adf0c8e41c1d7b8f7121e09b558218"
+        "url": "https://files.pythonhosted.org/packages/ab/ee/798bb5304b7f724592b33833c5e20dcce3ab053edb9baddd966b5c525d6a/zeroconf-0.36.4-py3-none-any.whl"
+  "0.36.5":
+    "Any":
+      "3.0":
+        "sha256": "e7cab1e9169cf9bf2a6d9df7138aa4c2ed101541c92f0c87dfa144e3626f7bfd"
+        "url": "https://files.pythonhosted.org/packages/d9/9a/b29e255caf8df5eb15b19aee8e03a253544da8204f9d5ea2aa00dced4c2e/zeroconf-0.36.5-py3-none-any.whl"
+  "0.36.6":
+    "Any":
+      "3.0":
+        "sha256": "78af8bbe1a16b739757d4d493153438a9770f373cb4caf03d892bebb5748aa97"
+        "url": "https://files.pythonhosted.org/packages/4c/cc/d42a9091b318133079d2cf77bf704c7265010c455f7eac2d52213e1fc57c/zeroconf-0.36.6-py3-none-any.whl"
+  "0.36.7":
+    "Any":
+      "3.0":
+        "sha256": "1e9abe929c35bf4f9b123f3528df7aaf389c915bd030cf0f3260344758c1f465"
+        "url": "https://files.pythonhosted.org/packages/32/1d/4374370ec13d72ed301e74c38b0987b24b6beeb4e8f8af74305fc0e40a05/zeroconf-0.36.7-py3-none-any.whl"
+  "0.36.8":
+    "Any":
+      "3.0":
+        "sha256": "262ff2e4025559eaf4acf5c689e86fd414bf1337796634d16925624c5996f414"
+        "url": "https://files.pythonhosted.org/packages/b8/4d/b8c9c3f6d20f1b9e55037663f44865dd309f64790e3f4c68d333f5884e37/zeroconf-0.36.8-py3-none-any.whl"
+  "0.36.9":
+    "Any":
+      "3.0":
+        "sha256": "dce72fdeda50e722a0d2ca99956b5f089ad338723b13e58bb8a2d9082e3403f2"
+        "url": "https://files.pythonhosted.org/packages/6e/be/075387bd823eb575f38f5156e043860887eaf66d9436910eec872afc3a4f/zeroconf-0.36.9-py3-none-any.whl"
+  "0.37.0":
+    "Any":
+      "3.0":
+        "sha256": "1de8e4274ff0af35bab098ec596f9448b26db9c4d90dc61a861f1cf4f435bc75"
+        "url": "https://files.pythonhosted.org/packages/7a/29/08e07d4ec4e081f460df75a3866f14cdf356e2c05effb856a7fb185406b5/zeroconf-0.37.0-py3-none-any.whl"
+  "0.38.0":
+    "Any":
+      "3.0":
+        "sha256": "4b1df684c1e947ef7ed3c81a6dee1271649afdb74e33adb47ed101a51be29c63"
+        "url": "https://files.pythonhosted.org/packages/c5/b8/c818b46884d876d34017b2b6dff6b45d042afe6201dbb57181f3bc3066b7/zeroconf-0.38.0-py3-none-any.whl"
+  "0.38.1":
+    "Any":
+      "3.0":
+        "sha256": "1b76481c6cf645237d2984e8deae874e1c75f3efc0d40985032942eb2a02b946"
+        "url": "https://files.pythonhosted.org/packages/a7/30/ca9f2a7a49051dc9118917b9c24dc86024506f3bb446fee14510b5d6b78c/zeroconf-0.38.1-py3-none-any.whl"
+  "0.38.3":
+    "Any":
+      "3.0":
+        "sha256": "3cdd72184881c2d9ba163582cdd133732a3825306f048e58e4eab29f32b95b17"
+        "url": "https://files.pythonhosted.org/packages/01/79/3b67afa70a3c612a5ebe66f43bf3ea50974de8c8d4c0bf603fb355096efb/zeroconf-0.38.3-py3-none-any.whl"
+  "0.38.4":
+    "Any":
+      "3.0":
+        "sha256": "f5dd86d12d06d1eec9fad05778d3c5787c2bcc03df4de4728b938df6bff70129"
+        "url": "https://files.pythonhosted.org/packages/c7/8d/feb017d71b322a3a243ccaf5e1d1c87a6aa5b84be7aa69542453e7d338a5/zeroconf-0.38.4-py3-none-any.whl"

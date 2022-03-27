@@ -1,0 +1,2035 @@
+"sources":
+  "0.8.1": {}
+  "0.8.2":
+    "Windows":
+      "2.6":
+        "sha256": "7252666185597997155525ddf7d977c8975d23d90a61f946bab997b66e7479c0"
+        "url": "https://files.pythonhosted.org/packages/ed/41/29b2a48a993ccb40ed32e94ee2091037b9343640335b92374f2ccc794f83/cffi-0.8.2-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "fc6adb25d87b3ad1a2e43251e5032eead68e62adae33eb82be6c0ccbc48fb62e"
+        "url": "https://files.pythonhosted.org/packages/96/a4/608939bba099b5031bfbb9eb323e92e3dbde6b57e10e84fe80816dd2ef73/cffi-0.8.2-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "114193b028902f33bd82a92376b0904c2e58a1699dfbfc561b7bfd51f3a46aa1"
+        "url": "https://files.pythonhosted.org/packages/32/03/72e424cc949d7102a895d52af69f8e3cf43dce168ed1e3dfe9befe4da268/cffi-0.8.2-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "b1633e6997f3f61a97e4a4849a2377b85994cb1db1e5ae32816e707342aea200"
+        "url": "https://files.pythonhosted.org/packages/8c/8d/9c833380739ed48fbb4b9d629a2c0ab4c54d2fca51d5b0d0111371f089bc/cffi-0.8.2-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "534d962b0e61e50524da62b2bf2f8174dcef5fc879c86383a3f3051f6fe8f04b"
+        "url": "https://files.pythonhosted.org/packages/9f/3a/26047ae01e169c5d00fa25383d613f90be1edca102357c50eb5f127a9c27/cffi-0.8.2-cp34-none-win_amd64.whl"
+  "0.8.3":
+    "Windows":
+      "2.6":
+        "sha256": "47d6515442129443871d5a3abaaaec0bf34d979222cb6a268dea3da62204ff2c"
+        "url": "https://files.pythonhosted.org/packages/43/d2/839b59d222b6d32a314d27121ebad2c51ddbf9373c1422343e4305604585/cffi-0.8.3-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "0fa86bc9f9e42dfb91e0fa174c23ff6c1c0b6ad4fc6ceb805bc059a1fd9db41f"
+        "url": "https://files.pythonhosted.org/packages/68/ef/e805bac9c35ada9f24427ba05d3da93d322a6daea9e332d0d86e17d8b3c5/cffi-0.8.3-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "2c3468844b2cdc6a79e414c1b5c1657c05313b381704247e57ee7517dac16702"
+        "url": "https://files.pythonhosted.org/packages/5c/58/a5e6a759ec3df1c3eac0d8d605a8d819e2f1a9ce212f4bd2e5dd0b5482e1/cffi-0.8.3-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "2fc9080216c08f14a8901e7bd66eaee9bd77e5eb316df0313d523c6417cb3938"
+        "url": "https://files.pythonhosted.org/packages/16/be/d0f897038454ccf0a90f578919fc4849cad9cfe0f05c2c157dd72aade9d8/cffi-0.8.3-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "5eb762a3f1be4cf13a9037f30d4778b7276412e373d2ae0616fad5764e02e22d"
+        "url": "https://files.pythonhosted.org/packages/40/64/1d48d41e9ecf0402f91f85fb365f7e9deb82ba9af126d78d3f82416535e9/cffi-0.8.3-cp34-none-win_amd64.whl"
+  "0.8.4":
+    "Windows":
+      "2.6":
+        "sha256": "cda60ef2fd6b81ac9c527f727fd7585e8af2873769c1999cd278b6981af95d36"
+        "url": "https://files.pythonhosted.org/packages/09/e9/c10a1a0e3a2b9c9f4844f03e3d032b644351d2434d57f0d61c437ba6fc10/cffi-0.8.4-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "6154c0b114ee3e5c688ddbfc88adce3132092f1bb19460f250308ce78d2c35e9"
+        "url": "https://files.pythonhosted.org/packages/f6/92/4dfc2ec798f1bb476366f9e9c787dd78a3f9504d0167962069217c65e849/cffi-0.8.4-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "46aa7c2f74fed036aab919733761777107fac479014f2ea0f01b79a446c78401"
+        "url": "https://files.pythonhosted.org/packages/09/ef/d7fc05b185fe39e1d15c9eacd58e3791e947304abaae6c3c02c31bbe2f0f/cffi-0.8.4-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "b8bd8faad0a171c8d8dbf4ff640e6908633d7c3095ac64f826a5b90bf693cdb7"
+        "url": "https://files.pythonhosted.org/packages/9e/dd/190dcc00d4e84957e54584e92aeeeff1f9d876a8ded9108734ba9d3eddde/cffi-0.8.4-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "b6e7e74c4bba381d2d0c024ef22f3826d906e0edccc40ecc1ac386547599780e"
+        "url": "https://files.pythonhosted.org/packages/7c/32/5861fc2d88e076e71fa719ad3d242ac2c60c94edb9e3eea9d506496fab76/cffi-0.8.4-cp34-none-win_amd64.whl"
+  "0.8.5":
+    "Windows":
+      "2.6":
+        "sha256": "359602ffbf6a6407e644735e4038638c9b9830ae8c4ef8f4c35d1eef211eb330"
+        "url": "https://files.pythonhosted.org/packages/7b/30/9b3d29b4d55d485d96d332ae332795737174a24b4813fbd9f389386dd1f8/cffi-0.8.5-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "6f2fdc07bb8a9dc6366668632f50fd6dd0b50319041c5bdfeb0b1087984f0900"
+        "url": "https://files.pythonhosted.org/packages/3a/00/3eb676223a166d6e016813f08925c1758034f921a33a98d36da5b1c98767/cffi-0.8.5-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "a6cfe83eee2b452770a0c971a379b091cbee189cb8e69c56345ce56e55ce5735"
+        "url": "https://files.pythonhosted.org/packages/0a/62/d627821b21382c86a4231292a4beffd07c01e9ebbc6d98f51066d8504a00/cffi-0.8.5-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "d12242197d507eb22904b891fbb1195a4d60ae4765d5a424f09e23beb8f8b070"
+        "url": "https://files.pythonhosted.org/packages/05/a2/323444b0799a1c5ca5eb6fa287d54ee31cd195b820aa8551caf513b6e56b/cffi-0.8.5-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "e977004cadf7715411d06c982f19c6ea13a00578f533d67108982f1ae3c76a70"
+        "url": "https://files.pythonhosted.org/packages/43/ea/7413064d6dbe180625a0d26cd9bbb743a84d5040d1c10843492ac5915aa9/cffi-0.8.5-cp34-none-win_amd64.whl"
+  "0.8.6":
+    "Windows":
+      "2.6":
+        "sha256": "54afbd33a188d4f0673900cbc654f6b912a67ad51689d51fc1e90970047c40cd"
+        "url": "https://files.pythonhosted.org/packages/a1/ad/de90dd0f6e19956bc6de2c1b342a0039271c04e5befbbb804fc85c0fe5cc/cffi-0.8.6-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "af568763926041eace2eedce17509d750f5376f56c96a77f7eaf49e9058b25ac"
+        "url": "https://files.pythonhosted.org/packages/e5/87/0bcb34aa8bc6e052b22d53a9ba1a8cdca1ac6e8858510ad31d03df766657/cffi-0.8.6-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "e3f092cc438cd06812adb9ca09b565a7d292bb3574b581c1dbd23fe2b999a180"
+        "url": "https://files.pythonhosted.org/packages/1b/ed/3a4bae9be1d00d834a32e69e1e7136aafcb4b11bda5a21c9eaf378a05b37/cffi-0.8.6-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "0396236c9ff290034f67461a37b52b3e44f8786209536ef809c877597efb6e6e"
+        "url": "https://files.pythonhosted.org/packages/d1/45/75809acef7e68a4a641ba34949c70f05ed1856e5fac682ea3f73ea5810c6/cffi-0.8.6-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "d3effda712f865000cd4a91ac93d0ebc74e3d77c58113b61546b132854939dac"
+        "url": "https://files.pythonhosted.org/packages/72/09/3c8a57aae8d7b41f6d97db7a5639b6e7d0fd6f83e0c6a6c2fb3ddd51510a/cffi-0.8.6-cp34-none-win_amd64.whl"
+  "0.9.0":
+    "Windows":
+      "2.6":
+        "sha256": "ae81583fc2b7440e9a392c8904f872cd5322c4bb811a2d4023f24c6c9109ad4e"
+        "url": "https://files.pythonhosted.org/packages/f6/f8/b479ebd8b1ce7698a8775ea95890d07450f6e8372402726ecfcd5808cbaf/cffi-0.9.0-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "d27c52fa93286af50c1e1df88d95244769efd9dae8084c97ad4aa66c786464b0"
+        "url": "https://files.pythonhosted.org/packages/31/7d/8666105a36b83cd252c3534472c8975f73c2e2f26a9dc36113d908415aa9/cffi-0.9.0-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "9cf838a67f8031fb89e9e7f063d2cabb8e8b94a80f60c5d2fcb2f916f8e369cf"
+        "url": "https://files.pythonhosted.org/packages/58/e5/ac43008ad10682f07a5974afb1cf3b6d640709995857b1242b62a10c525e/cffi-0.9.0-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "43673f6af43447c40ec2bba6d198122db6d2e9bc1bb1d32b8b61449a2a6c4201"
+        "url": "https://files.pythonhosted.org/packages/1c/dd/5ef3e8c7fac3862c2b734a6bbe8ca3d6bdb1f6ec54d8ed17cdac834b39df/cffi-0.9.0-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "5d6fbcad650639f26e0eec59bb086bf3d46c9aa291ca73be50874ef007622094"
+        "url": "https://files.pythonhosted.org/packages/5b/e5/8a33841fc7e07149ae37538cfcb3288ff84fe460e9796b037e77f9ce93f6/cffi-0.9.0-cp34-none-win_amd64.whl"
+  "0.9.1":
+    "Windows":
+      "2.6":
+        "sha256": "ac9366242de38a252c7f2f880a5255a5a9228c90ea88f960caf273f7e67e7090"
+        "url": "https://files.pythonhosted.org/packages/ea/f8/d76a3f250be7918f2b47848787eacfc789c73ba3577b2c25bd5ee4298f41/cffi-0.9.1-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "872d12b54c24342d01bf281293d2f3d85bb57d3ed09e0ea18ff0a172ef8790ea"
+        "url": "https://files.pythonhosted.org/packages/f3/04/695accdf6752f48080e4a1149f6c29089d6d9648b80e0648a6388982a2a4/cffi-0.9.1-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "70e534fbc9579db4b0bf472b3d2666a8d3695c0ed3fd064955a7689ac059b923"
+        "url": "https://files.pythonhosted.org/packages/6b/e5/50eadf1393dd0437ec2f117e516322251d034a87f47a0acd354e1aef985d/cffi-0.9.1-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "790d83b35c853b9e4795507539ed271b30c3ebdfc62e8b29521eea1c5e3e24a9"
+        "url": "https://files.pythonhosted.org/packages/c9/a8/07bca3fa2ee5eaf23ff0eadf24873f60429cdfca53770faec41f23bba7c0/cffi-0.9.1-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "d4ed62a198c7b177ffef92735c935455852db7d39f521d4f6729fdc03c38556c"
+        "url": "https://files.pythonhosted.org/packages/33/f4/a3b86786b253d588acac0e0c2904247a24beae27cb3930a129b90a919ecb/cffi-0.9.1-cp34-none-win_amd64.whl"
+  "0.9.2":
+    "Windows":
+      "2.6":
+        "sha256": "6efc38520bde271702926d1dbbb0ae7ca7afc5f6ad55e0345cc12dc8e4b4cbf3"
+        "url": "https://files.pythonhosted.org/packages/87/89/184359863f72e3eadf30ec933bf73d5f89d759de1924d6fbb48aa9e95726/cffi-0.9.2-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "e483bec64f5193d9e4f1c542a25cde394c7b8c8d5db53cf5cb09c13f964602a3"
+        "url": "https://files.pythonhosted.org/packages/4f/f1/e036c690386224e6d88f3c4564d29d569308c7380a30fdd2bc6af5dcc013/cffi-0.9.2-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "c18e10cefc37fd8435639d566a59cd1ba8e6981a7cb317d0b7351f2d1652269b"
+        "url": "https://files.pythonhosted.org/packages/ac/15/91f3387ff678063bfcfdbf1059c00291515b915a43ef399080f9fa73a00f/cffi-0.9.2-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "34da9c304ace1284ac5ca80b896c5b12ebde2698112fe979e5be6ffc998f4ae9"
+        "url": "https://files.pythonhosted.org/packages/d3/e8/86aafd2cca177bdc42713f54a6a8f18655657638414597eb456ec2c39554/cffi-0.9.2-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "2f2c53115dcfc254108f61913e4b400393d63d4aae7783cabea6622b926aecd0"
+        "url": "https://files.pythonhosted.org/packages/bf/be/b12031f386c778488206c0d154643c02f45383b92e6439924771e3e375ac/cffi-0.9.2-cp34-none-win_amd64.whl"
+  "1.0.0":
+    "Windows":
+      "2.6":
+        "sha256": "dae5e80a1dbd98575a2035e6289dcd9a9a6dff9e6e11cc2859c1dc5486b78690"
+        "url": "https://files.pythonhosted.org/packages/ea/0e/f970bceba9102f7d17367188f6e8b43f070057cb7e07be6350feb6faf990/cffi-1.0.0-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "f13173e08d99cbf2ae765b581cb399a3695592b702c1053eb697057e43af1767"
+        "url": "https://files.pythonhosted.org/packages/57/66/efc5d493d5ab8f73dc1502dd2c365f6c5afeb90c256060a5571653d15cf3/cffi-1.0.0-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "0f48e77a28fcd79b6f80587cb976855cdc112cc3b37ea264860d1ed99d5f6850"
+        "url": "https://files.pythonhosted.org/packages/d2/0a/baebab2cbb2298a9141d015fa7716c99408785bcad61ce400a6dde2785e2/cffi-1.0.0-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "d0066ce990726eb7672818dea750568b2571f6c5a424c1023936ff33328070db"
+        "url": "https://files.pythonhosted.org/packages/d6/71/52b2788272e72be73ade75651f04923d52102869db42b85672356f4ac794/cffi-1.0.0-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "d9fbcffd13ae23cd98a3ec9a0f786da3ed49e3aeca729f84d90eddc2aa2951e9"
+        "url": "https://files.pythonhosted.org/packages/90/ba/8f283ba09ca69eeb51b1ccae4bbdd24986ce36df543bba5aa09fd4eea9d7/cffi-1.0.0-cp34-none-win_amd64.whl"
+  "1.0.1":
+    "Windows":
+      "2.6":
+        "sha256": "017781e37892beb5b53c75f44f555bebbc77601ba7570c272357cb13d5bd1a23"
+        "url": "https://files.pythonhosted.org/packages/e8/02/e7183fcf585ca12ddf09cf57fc1e4bdc4f7fa4b2cbe996ee8b12f5ee90b2/cffi-1.0.1-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "4f0da1bda664e284dbec59f81116d3bec0c8a122ccfe83c23283cb146fd70c1a"
+        "url": "https://files.pythonhosted.org/packages/76/24/34bbdc3b36442554bbd1dd7f3b6695fa918056a4edbd9ed08dab60879213/cffi-1.0.1-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "5452ac76fa0ae1928f1f098ad2e311698cc9cb770528fdd76285bdecf0cc71fc"
+        "url": "https://files.pythonhosted.org/packages/f5/71/ace003789b1f6ab748607413d040b9d0ba35a079f9a1a97609a2944797d6/cffi-1.0.1-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "a7ec661184eab27c4ab3c98f1cc9be90a96f41dce970acc2030b6626455b2b8b"
+        "url": "https://files.pythonhosted.org/packages/e7/6a/7c8a604c72ff10b8529fc8f24e80952d9e3ebbfef4bec4b4be962f93ae42/cffi-1.0.1-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "aae5bfff42f1714a1dcdaca14119c63c44df6e251dd3f162e0bf91662526e0ec"
+        "url": "https://files.pythonhosted.org/packages/2d/fd/cb7804d3c64480c6cb16d69aa3cc3e3615b9fced1b650e1b41e83a1ca30a/cffi-1.0.1-cp34-none-win_amd64.whl"
+  "1.0.2":
+    "Windows":
+      "2.6":
+        "sha256": "dade6fb1222382778d7cd6339619efde1466169b7625232250273862577be6f0"
+        "url": "https://files.pythonhosted.org/packages/d1/0f/f90e1cdb575800a726e700d56c483a376117d4a58384d90ce57015094c1c/cffi-1.0.2-2-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "970a80876984cf954c2527ebe1edd6bfd9a1c0361eba6d8b876a368c1ec82853"
+        "url": "https://files.pythonhosted.org/packages/13/27/ef609d79f7e38563563ce86aed813fe2c146d5f625fee6c05ee4265b27c6/cffi-1.0.2-2-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "88a52ae39cf55abf784f72f959e1823989a333a98c4b5c20064b05dd08b04416"
+        "url": "https://files.pythonhosted.org/packages/10/75/31e5ce7ed127f74a896c52d74353ee9c97bb944ce7b83eed22376dc110c2/cffi-1.0.2-2-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "b5fdda33a86a3af99da4d466f5a240b5a49f5b7616f0f7887436b078b6db9c78"
+        "url": "https://files.pythonhosted.org/packages/b9/54/401e9712bbe87e6c282c4cf3cc3ea634b8a7d8084210c33c45d554268960/cffi-1.0.2-2-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "af41a7ebed3031c27d108127a97258df4bdcd64dbd024e3c6bc553b6c65c6d97"
+        "url": "https://files.pythonhosted.org/packages/2c/0e/37cc93477d525c0ded5da62a5da194605bfd334136705a70e473a6f1b112/cffi-1.0.2-2-cp34-none-win_amd64.whl"
+  "1.0.3":
+    "Windows":
+      "2.6":
+        "sha256": "dfbd214e4a0cd1d6372b0dece3b1288965bd65183894c37b9c90960f57b2d43f"
+        "url": "https://files.pythonhosted.org/packages/2d/d8/3e371a76716ea8f6c4672f997c1be75f7f0ef4fa841299c704f60b045eb0/cffi-1.0.3-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "90df7b9657afb14c853cc03601c7232e3f1a88f69336e909a55a9262a86af040"
+        "url": "https://files.pythonhosted.org/packages/19/50/f173382f91ab12f2e11adccee11ff11cd71ed7abc713bf81992caeae08c5/cffi-1.0.3-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "646fd0c9e677fb2a2f29ea46606d0447c8ac368d222b4fefcf72dbf89b62c64e"
+        "url": "https://files.pythonhosted.org/packages/8f/67/e67831c9165d861e5a246cabc71f8fc1b5eca36c16087d569f0c949a7c42/cffi-1.0.3-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "944306ce4fadecea9685b97d1793b1a66e5633def88aece4a92e92024252be7a"
+        "url": "https://files.pythonhosted.org/packages/00/87/07e599147215264a6f03979a0b74141b46d9c9d4aaf3584d09f8c04490d9/cffi-1.0.3-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "77c3091a1bdea61978b4360e5c2c8909a02c926ee8c9d8d143c2fb504153a9e3"
+        "url": "https://files.pythonhosted.org/packages/c3/cd/b3e1d5b209c5e5cd80e72e173fb2b24e83e2d49ff854f291c072ee8a1448/cffi-1.0.3-cp34-none-win_amd64.whl"
+  "1.1.0":
+    "Windows":
+      "2.6":
+        "sha256": "4dfadfceec44ebf7936a551e13aa2c725cec548e0c0d388e463e6b432ecdd360"
+        "url": "https://files.pythonhosted.org/packages/50/6e/21fbe5983f6b6c74dc81d2c52e68d8b72c87cc7f59ea600243203247c5a8/cffi-1.1.0-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "e57a9e949a9021c3c4490a2f946c260f8fb97c6f7ccf79939e0b3a75ba1cbed5"
+        "url": "https://files.pythonhosted.org/packages/ae/42/5aff96bc01290214ffbedda0023f43284f89e3c08d4548eadb9c08318cce/cffi-1.1.0-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "be589398a322f92dd170c082ff10fe0ce53add72a614d62f0be9373c23fccd14"
+        "url": "https://files.pythonhosted.org/packages/de/6b/26bf863300df742c7cfcade6140e46435a69269b9483d3f66e57286ef5fc/cffi-1.1.0-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "84fda80bbce773cc95c7a80ad01ab066e6222cb51dc17a6ce82ede2144e6421d"
+        "url": "https://files.pythonhosted.org/packages/6e/11/cb7d3f4c4499f347e3acb5641773036a42606021a782e17333fe69a23bd9/cffi-1.1.0-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "0ba34be46934571bdc4234eb417bd8c49a6da73b6afce57c2bc16240b89f58a3"
+        "url": "https://files.pythonhosted.org/packages/63/cf/09774e52c714a271ab2f0f016f24c36b060b655eaef6cbbcc6cac80ae707/cffi-1.1.0-cp34-none-win_amd64.whl"
+  "1.1.1":
+    "Windows":
+      "2.6":
+        "sha256": "bf22c0330400a1d38e82861b2f7fb25d11ddcc1c477eb10c8bdf26a8fefe6b00"
+        "url": "https://files.pythonhosted.org/packages/1e/17/8ae98d1c46706b6f1c69d691a45485120484fb5481c1453b64a5d6e294e3/cffi-1.1.1-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "4b4668b8dd61c7951d81b6035860bb703203fa013a8478367378052897ef99c9"
+        "url": "https://files.pythonhosted.org/packages/e1/9b/cfea73dc100a51e2f4f72fe6b2da73d1941a849b1001fff35515b58a8713/cffi-1.1.1-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "ac6055092db1c28687f4d1409ac48d7efd5693c3623b609c114858c636683562"
+        "url": "https://files.pythonhosted.org/packages/87/fc/a4b612a54fe81e1e933d90d6d4be22487f3b5693df5690317cb0f27198c6/cffi-1.1.1-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "2fd13389f50c56d322c0268399ee25f2eb878491523307e45d5137aada854a76"
+        "url": "https://files.pythonhosted.org/packages/a4/23/11d0c628233109f85577b0040c584fd683300ec2a346b419c4f1100932fc/cffi-1.1.1-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "6565572d69b0199a9d306dc692c528cbe2ac36cc8853af693bbaa8310ce7087a"
+        "url": "https://files.pythonhosted.org/packages/1a/d9/4738cff50602369746f79441f321599a242ed07974e6e61ac810636ac55b/cffi-1.1.1-cp34-none-win_amd64.whl"
+  "1.1.2":
+    "Windows":
+      "2.6":
+        "sha256": "7a3c91721417d094f7a6be1d945a9c3a2725bd54f227abd29b5cda10b7fee175"
+        "url": "https://files.pythonhosted.org/packages/85/f3/fb3b2429d7d176d7b546ff3f62d9f6d37d9cea5326cc9538f9559cf9198f/cffi-1.1.2-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "a7195d34c9b15f8616f6558107dcd29bfb4c8585061d5eaabbfdac80f71e57c4"
+        "url": "https://files.pythonhosted.org/packages/ad/f0/8b4599427782ecc52bbbfd95345d76d914934699307b8269849b53cf148d/cffi-1.1.2-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "758138656d4f62f07aa476c1f93d3708f0ec4e4c61dc7c9df6da9cd2e1d0b7d6"
+        "url": "https://files.pythonhosted.org/packages/df/2c/32ffa4cba1662647110c73cb22996039c6f2e750bb46de48f1127ff407cf/cffi-1.1.2-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "9b86ba94ca6f2eff1099f5a175a4420044a6d6cd17123d5c5c07a238e9727340"
+        "url": "https://files.pythonhosted.org/packages/a5/98/c3d2facd52c254b856b8d8f9abe968f247e6f7f81031361709af17917d7c/cffi-1.1.2-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "f9497a973884ae034376b969f7199965c45944719b7fc51ca1934c8c19cf655b"
+        "url": "https://files.pythonhosted.org/packages/8a/47/e1947175d9bdd7346b0d80f5e05a4c08f666fda1c0d7f5b5ce6a43122551/cffi-1.1.2-cp34-none-win_amd64.whl"
+  "1.10.0":
+    "Darwin":
+      "2.6":
+        "sha256": "446699c10f3c390633d0722bc19edbc7ac4b94761918a4a4f7908a24e86ebbd0"
+        "url": "https://files.pythonhosted.org/packages/6b/03/fe3a24b297b50989d6aeae17cfea843011f216caf959bf998ea0d02c0e0d/cffi-1.10.0-cp26-cp26m-macosx_10_7_intel.whl"
+      "2.7":
+        "sha256": "7248506981eeba23888b4140a69a53c4c0c0a386abcdca61ed8dd790a73e64b9"
+        "url": "https://files.pythonhosted.org/packages/c6/76/01261e5c26f0f00ac4ada7ab21eae6fc5c4734a3d691226ee111faf8a267/cffi-1.10.0-cp27-cp27mu-macosx_10_10_x86_64.whl"
+      "3.3":
+        "sha256": "c1d8b3d8dcb5c23ac1a8bf56422036f3f305a3c5a8bc8c354256579a1e2aa2c1"
+        "url": "https://files.pythonhosted.org/packages/fd/6c/9468da0838ff63f9fdc27aa8f91eab27e8b4f19c1df22e5e4fdc641cbaac/cffi-1.10.0-cp33-cp33m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "e7d88fecb7b6250a1fd432e6dc64890342c372fce13dbfe4bb6f16348ad00c14"
+        "url": "https://files.pythonhosted.org/packages/92/69/d5b485a2d9285119b61e5d16cea2e1ce9b22c45edbe97dbdb3a04b8ea369/cffi-1.10.0-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "e2b7e090188833bc58b2ae03fb864c22688654ebd2096bcf38bc860c4f38a3d8"
+        "url": "https://files.pythonhosted.org/packages/16/de/6e15f637b0dccc2f11214f388f23bdf7c1b16f0028f85f0f2d334a87c621/cffi-1.10.0-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "96e599b924ef009aa867f725b3249ee51d76489f484d3a45b4bd219c5ec6ed59"
+        "url": "https://files.pythonhosted.org/packages/9b/f9/606ccd64f77315cb067e8b43a1483d66bbda4ca94ecf97dfe1ae76cabb09/cffi-1.10.0-cp36-cp36m-macosx_10_6_intel.whl"
+    "Linux":
+      "2.6":
+        "sha256": "a41406f6d62abcdf3eef9fd998d8dcff04fd2a7746644143045feeebd76352d1"
+        "url": "https://files.pythonhosted.org/packages/c8/d0/01aa6adc6c38a829d504ab112d39a296b83c146e85efe3725288ab7d0c78/cffi-1.10.0-cp26-cp26mu-manylinux1_x86_64.whl"
+      "2.7":
+        "sha256": "c49187260043bd4c1d6a52186f9774f17d9b1da0a406798ebf4bfc12da166ade"
+        "url": "https://files.pythonhosted.org/packages/50/85/d74d06ac09fc2deb3d9bd6d6aca4ca13d82b8118c04494cd0e84fcd81624/cffi-1.10.0-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.3":
+        "sha256": "d09ff358f75a874f69fa7d1c2b4acecf4282a950293fcfcf89aa606da8a9a500"
+        "url": "https://files.pythonhosted.org/packages/c0/58/8314bb5ac510d82f919ae66d37a0c45363a3671147f0c77d7ee7e1d436e1/cffi-1.10.0-cp33-cp33m-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "267dd2c66a5760c5f4d47e2ebcf8eeac7ef01e1ae6ae7a6d0d241a290068bc38"
+        "url": "https://files.pythonhosted.org/packages/ec/fb/633225f1e83b6f459a05caf07fca0436ef3965c8958149b4db65ab9dc6a6/cffi-1.10.0-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "4fc9c2ff7924b3a1fa326e1799e5dd58cac585d7fb25fe53ccaa1333b0453d65"
+        "url": "https://files.pythonhosted.org/packages/ec/70/80392b7197ce5ed303456a35939830e4d04b0f0f8a899558fb9dcf218a5b/cffi-1.10.0-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "e7175287f7fe7b1cc203bb958b17db40abd732690c1e18e700f10e0843a58598"
+        "url": "https://files.pythonhosted.org/packages/99/2f/2304b68ee2eea8395fb98702077e667849b98b9037956fafbef65fd53e0b/cffi-1.10.0-cp36-cp36m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.6":
+        "sha256": "587a5043df4b00a2130e09fed42da02a4ed3c688bd9bf07a3ac89d2271f4fb07"
+        "url": "https://files.pythonhosted.org/packages/c6/3a/e2698ef21b88e2dc3af4897e522abbeb7db861d342995ac7d35f9cef254b/cffi-1.10.0-cp26-cp26m-win_amd64.whl"
+      "2.7":
+        "sha256": "f4019826a2dec066c909a1f483ef0dcf9325d6740cc0bd15308942b28b0930f7"
+        "url": "https://files.pythonhosted.org/packages/81/d0/505ef854cbeebe07067e9436dfb5e5b71c698aa69b4e23b783d4299be447/cffi-1.10.0-cp27-cp27m-win_amd64.whl"
+      "3.3":
+        "sha256": "5de52b081a2775e76b971de9d997d85c4457fc0a09079e12d66849548ae60981"
+        "url": "https://files.pythonhosted.org/packages/6c/fa/9e56324883c716f2dc07367fda1fd76ca32809267308d07cce7854d385e7/cffi-1.10.0-cp33-cp33m-win_amd64.whl"
+      "3.4":
+        "sha256": "98b89b2c57f97ce2db7aeba60db173c84871d73b40e41a11ea95de1500ddc57e"
+        "url": "https://files.pythonhosted.org/packages/92/38/349891be25c061c283d71674c3af4539054ce59d61ab1bfbb8960eee813a/cffi-1.10.0-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "ab22285797631df3b513b2cd3ecdc51cd8e3d36788e3991d93d0759d6883b027"
+        "url": "https://files.pythonhosted.org/packages/1c/6a/95e5e720b88c609f2ef79102afdea0c8c6ee0056713e7ce74b3d0a100083/cffi-1.10.0-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "5576644b859197da7bbd8f8c7c2fb5dcc6cd505cadb42992d5f104c013f8a214"
+        "url": "https://files.pythonhosted.org/packages/3b/18/3998f2948c2841f28a68e8f77b5ae8bc247d3bccd89a2cd401c8c1c24c08/cffi-1.10.0-cp36-cp36m-win_amd64.whl"
+  "1.11.0":
+    "Darwin":
+      "2.7":
+        "sha256": "56a8c39e6e7225474b36c16a03240fcbbfc5c8cb016645793e0dec2d2f9bdf67"
+        "url": "https://files.pythonhosted.org/packages/db/96/e78b40d2ce4c141a463f8d75d4df5fb93474b4f3f967ba8f86a39a35149a/cffi-1.11.0-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "5152bbde6ee514a11e2cd1b76a7ccab5af1043356ec3df9efe0112d97b20dae3"
+        "url": "https://files.pythonhosted.org/packages/dc/21/1a7aaec7a36e8eacadb57045c9732962185bc5bbb52ed946f2e322089a43/cffi-1.11.0-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "fd3c49d7d22ba75382e19c4877e1d4dca232ef48137442f8582c2259b0cdf612"
+        "url": "https://files.pythonhosted.org/packages/2c/2b/33af741a5f53307691382d3bd5ba45fee3da21658f0bdf1f016d70ac3fb0/cffi-1.11.0-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "8a5632592b2752375b6d9e81da022896ece235713129fcc33703b3e10c639ef9"
+        "url": "https://files.pythonhosted.org/packages/03/d6/8e321f24a2e3b20d33358541f77c1799c1789fac67053f5ee73a36d4dee8/cffi-1.11.0-cp36-cp36m-macosx_10_6_intel.whl"
+    "Linux":
+      "2.6":
+        "sha256": "d361e8c504bae02f665fad8d5ba4b74a6c1fab7862eec39cddcc21e4479fa275"
+        "url": "https://files.pythonhosted.org/packages/16/25/9e42730b51318aeb6545bcd0fc568271063926fec9f83bd51f333c87e3f3/cffi-1.11.0-cp26-cp26mu-manylinux1_x86_64.whl"
+      "2.7":
+        "sha256": "b45efc8d81640a8e9122c1ba1817da2a998ca0168c40de7bbfc47b960771ca94"
+        "url": "https://files.pythonhosted.org/packages/12/14/9912da32881785ca4079892daa80d75d01665f36d9775c94a40924801867/cffi-1.11.0-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.3":
+        "sha256": "47853d133f0de32697b55e0c2ee377d88e3143bc8645a3b93d38be2f5387b0a2"
+        "url": "https://files.pythonhosted.org/packages/e8/fc/9db261373d284abc30894929d12e49d48388232d1cac067b13bbf7201ea0/cffi-1.11.0-cp33-cp33m-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "f6202eab19fd2c44d7d7af2bb8d286cf18b7b3d67b0e5bf1f2f113c99303ff87"
+        "url": "https://files.pythonhosted.org/packages/2a/d3/9aaf90c694595c7132613096e192de4a0701d0225209d424de0075e63d3b/cffi-1.11.0-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "dd9577197fff563e4784ef4ace7da28c7da96a81895b69c008cdb82f1e82853c"
+        "url": "https://files.pythonhosted.org/packages/01/cb/3f6c311f13e0e04a691c161ff5f2272304cc0e7fcd95500ea7848d5b3da5/cffi-1.11.0-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "f14c53dc624529eef175c993ceb886f37ecece09825bf47bf3230aacbc3b7acc"
+        "url": "https://files.pythonhosted.org/packages/bd/28/7129e4c0bd7f3c19e823654a4463410b439f468b96adfabfa9eedfcdc49a/cffi-1.11.0-cp36-cp36m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "bd93a0df4dc72893ba604c05d487ea4d47a799e54172b89e414953685b0b08fb"
+        "url": "https://files.pythonhosted.org/packages/ff/cc/bda1078e087a3769298f3732b5ce9ccc2a9899ecb48ca2f4882c8b737e9a/cffi-1.11.0-cp27-cp27m-win_amd64.whl"
+      "3.3":
+        "sha256": "6153b26756de2f34f80ca4e8b1e79011ad62bb670539dc3df71e62909a112fdf"
+        "url": "https://files.pythonhosted.org/packages/4f/07/9c6c331e121e76be9339eb0e223de4a4418358e2281a738a927908e3e112/cffi-1.11.0-cp33-cp33m-win_amd64.whl"
+      "3.4":
+        "sha256": "7a55f044dd78fdca379d455550c581b9455af022b8f8b5d97f585a25f4da63f6"
+        "url": "https://files.pythonhosted.org/packages/1b/13/7cf6bb6d52b3a064595286349996d35254fbdb70ad6072909bd7003bb244/cffi-1.11.0-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "59fc30a6f7331fe69cfc67ef151fd03a33491d25430ae0c4597e69c4235fa87e"
+        "url": "https://files.pythonhosted.org/packages/06/cd/563ef179bc8032381b0fc7a38b8f9a49292022c97c4510c3e4f42fb99d0a/cffi-1.11.0-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "765cf591a2f790b012075c7f54344a02b622a8561708ec27b3042c8c1699a465"
+        "url": "https://files.pythonhosted.org/packages/e8/37/2cd7033e9d0a5ac7d8faac7fabf19d2d85f81a21066b57dca4ad65ddc77d/cffi-1.11.0-cp36-cp36m-win_amd64.whl"
+  "1.11.1":
+    "Darwin":
+      "2.7":
+        "sha256": "5af456d82aba74acfe63ec5c472a330ddaff8633bcc928c965236cee8db9e8a3"
+        "url": "https://files.pythonhosted.org/packages/4d/17/8806f6f8a84c9536f44fd8d60d5ff7f60c2d111ac714a4c082161321ace5/cffi-1.11.1-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "314d351e86138396415878f9bde9442126db12db8a1748a2f7e8f8109070dbcc"
+        "url": "https://files.pythonhosted.org/packages/90/52/4d035250e6b331926934caf56d39d2b73a20e21a6e21eadffc3635cfe3a9/cffi-1.11.1-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "695ccec3ba3a43a931255f57a59d5209292c6ee83b07cc52ac0f3fa911ae3e2e"
+        "url": "https://files.pythonhosted.org/packages/9b/90/e4de06bb42e3dc1a34eee71463b696b49820275670a5a0999c0ec5a60f74/cffi-1.11.1-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "3dde89c1704e18ac7e8691c719f15777fe10c54e115cc82be7a8a565511eff99"
+        "url": "https://files.pythonhosted.org/packages/9d/4d/bca75292bdeca2121b16ff659c89b8a4f9090b980a4809430ba5775bce5a/cffi-1.11.1-cp36-cp36m-macosx_10_6_intel.whl"
+    "Linux":
+      "2.6":
+        "sha256": "6d528e8d8411c8a989ebbe3c2dafce679c2fb386c20dd9c9acfc04ffe8a9de71"
+        "url": "https://files.pythonhosted.org/packages/3e/78/152054d244067000e560089d171bfb58a6233e5cb00c3225249e1bce1ab3/cffi-1.11.1-cp26-cp26mu-manylinux1_x86_64.whl"
+      "2.7":
+        "sha256": "3504eb0b3fa0688e0b9374b975862d511f159d478d06378fed86de86d1217bfb"
+        "url": "https://files.pythonhosted.org/packages/9b/be/a9edd796dfec17c7da0f6f7472877066fa1053699a78a959bb37fd7a0ac4/cffi-1.11.1-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.3":
+        "sha256": "0d68b217c53376696d88c24279d79b9bf0d38a650a1f55a5729c87c2ec4a12ca"
+        "url": "https://files.pythonhosted.org/packages/f4/ef/138472ab1a458f8068902efda068ee8b227de21b63dd6df990dc750ce169/cffi-1.11.1-cp33-cp33m-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "404cf921efe774201b468059034741ceaa617332131eeb0143bee3c63255fe1c"
+        "url": "https://files.pythonhosted.org/packages/57/37/b069eff076030c53fcdd376d1822c3182e143df517b1f6064bdf03ec9bb8/cffi-1.11.1-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "16e7bd908828a487f58509ad9eb9f40d3fbe23a7031958ef4f9ae628631c50b8"
+        "url": "https://files.pythonhosted.org/packages/29/f1/a3b0bbd807dd6085eb32a837adf1ecaeac2ea1b47041feffb8c290735159/cffi-1.11.1-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "0049ad81e1095eb65683510f73ae80ed6bd99286fffa12ca2b106b92cd90bc49"
+        "url": "https://files.pythonhosted.org/packages/85/13/626ac3ba7aace2403c017237028559e0c19ac4bb3b21db537fc7e51ab746/cffi-1.11.1-cp36-cp36m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "39ed8eff749296ede7fca5b5006b8a529f24e304668584e8cf0966b260d3ffd4"
+        "url": "https://files.pythonhosted.org/packages/05/a1/bfd2f42382f8584a0bdcf25be05d381d5c0c23e12b6aa1844a19c621b39e/cffi-1.11.1-cp27-cp27m-win_amd64.whl"
+      "3.3":
+        "sha256": "cd78b68f3fa141f54a658caba219c750c8b86008a1f3db6b0cac4b5ae3d302fb"
+        "url": "https://files.pythonhosted.org/packages/4d/63/1c3261dacf19284342c4592fb855f46d3d2f1617d134e5abf48033fddc44/cffi-1.11.1-cp33-cp33m-win_amd64.whl"
+      "3.4":
+        "sha256": "2ef79c841ab4e570e43d76177e9430c4c8e3a9b3bbc7885b18c870bb7ce79d23"
+        "url": "https://files.pythonhosted.org/packages/ca/8e/d046b9e60b5fbae3f8da7da95eeb5aee776a9d452f3cfb5dfc495be54775/cffi-1.11.1-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "19f81c224cf63cf568e5ef46fac1c55aa6b512e56187d2317ecfc7d607d70ca8"
+        "url": "https://files.pythonhosted.org/packages/81/dd/b6b097ef7ac9a9da6dbc71a6f5438a0d406ad932c3fa5a81fb48e70a80a5/cffi-1.11.1-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "418820b0a4d8a9c43cc0e2b5aca09beb3be0e1d2280acbea12709a0b2353223f"
+        "url": "https://files.pythonhosted.org/packages/12/c7/2f426018ea0dc47ebe53a8ae3df23e19bbc6c00519642093235ed2a9952b/cffi-1.11.1-cp36-cp36m-win_amd64.whl"
+  "1.11.2":
+    "Darwin":
+      "2.7":
+        "sha256": "248198cb714fe09f5c60b6acba3675d52199c6142641536796cdf89dd45e5590"
+        "url": "https://files.pythonhosted.org/packages/d3/6e/d86f46c9f635adde07596324159cf00c2f3a5cf4efca0bee1be6fcee64bd/cffi-1.11.2-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "11a8ba88ef6ae89110ef029dae7f1a293365e50bdd0c6ca973beed80cec95ae4"
+        "url": "https://files.pythonhosted.org/packages/c9/57/4c6dcd159f63e84999d951e0859c27a4476d8aaa481a77bdbead547537cf/cffi-1.11.2-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "09b7d195d163b515ef7c2b2e26a689c9816c83d5319cceac6c36ffdab97ab048"
+        "url": "https://files.pythonhosted.org/packages/a1/73/12fe1af8592c09adaff84cad6ef05036086b852afaa741c4eac2688c2d07/cffi-1.11.2-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "f6799913eb510b682de971ddef062bbb4a200f190e55cae81c413bc1fd4733c1"
+        "url": "https://files.pythonhosted.org/packages/4e/b5/8b7fa7dc048198ca47afefa099ec0d238c50dc0ddd2d46e18bb87efdd85a/cffi-1.11.2-cp36-cp36m-macosx_10_6_intel.whl"
+    "Linux":
+      "2.6":
+        "sha256": "bdd28cf8302eeca1b4c70ec727de384d4f6ea640b0e698934fd9b4c3bc88eeb1"
+        "url": "https://files.pythonhosted.org/packages/60/3f/ed4937422ef943ec6db2c3ddf3b8e1dc1621e0903d1c9fba1d834f7a16dc/cffi-1.11.2-cp26-cp26mu-manylinux1_x86_64.whl"
+      "2.7":
+        "sha256": "d7461ef8671ae40f991384bbc4a6b1b79f4e7175d8052584be44041996f46517"
+        "url": "https://files.pythonhosted.org/packages/f0/4a/7469dbbe70827f5490c71d04dd25e8cdaf99e7cd1dd25ea5c1bbcf7afbc4/cffi-1.11.2-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.3":
+        "sha256": "61cf049b1c649d8eec360a1a1d09a61c37b9b2d542364506e8feb4afd232363d"
+        "url": "https://files.pythonhosted.org/packages/47/8f/8125ae66da781b735a3bb36d1866ce7f010038d3d527e66833866f344a65/cffi-1.11.2-cp33-cp33m-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "062c66dabc3faf8e0db1ca09a6b8e308846e5d35f43bed1a68c492b0d96ac171"
+        "url": "https://files.pythonhosted.org/packages/da/e7/a4fe93ce6980a3f080eb5ec0e20df8970b43b83cb38c76ea379e2f9caba6/cffi-1.11.2-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "89829f5cfbcb5ad568a3d61bd23a8e33ad69b488d8f6a385e0097a4c20742a9b"
+        "url": "https://files.pythonhosted.org/packages/7d/4f/cc8334e67f69142856a05b7fd82acd9811c15aec0e1c2a34ead1ae7fe5c0/cffi-1.11.2-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "5f96c92d5f5713ccb71e76dfa14cf819c59ecb9778e94bcb541e13e6d96d1ce5"
+        "url": "https://files.pythonhosted.org/packages/dc/1e/b383fde1f0a14b6ef5a60f71797c778ea1ef8bb34b726cb57061c0542c58/cffi-1.11.2-cp36-cp36m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "d54a7c37f954fdbb971873c935a77ddc33690cec9b7ac254d9f948c43c32fa83"
+        "url": "https://files.pythonhosted.org/packages/97/20/9a2272848bed0695f6113f5ac9f124422f08dc603eda06d665d5257daa49/cffi-1.11.2-cp27-cp27m-win_amd64.whl"
+      "3.3":
+        "sha256": "e72d8b5056f967ecb57e166537408bc913f2f97dc568027fb6342fcfa9f81d64"
+        "url": "https://files.pythonhosted.org/packages/bd/c6/c289cecfce23182e3ac086ca748de0ffae63828fe02f5260930464178bdb/cffi-1.11.2-cp33-cp33m-win_amd64.whl"
+      "3.4":
+        "sha256": "8b3d6dc9981cedfb1ddcd4600ec0c7f5ac2c6ad2dc482011c7eecb4ae9c819e0"
+        "url": "https://files.pythonhosted.org/packages/2e/81/d494aee0249036d40355bf6415cd6063163ab4f13d9f1a948c5511966bd4/cffi-1.11.2-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "a79b15b9bb4726672865cf5b0f63dee4835974a2b11b49652d70d49003f5d1f4"
+        "url": "https://files.pythonhosted.org/packages/a6/62/2b28402314a070fecabde1320cf51fb4c44dd1af13323825ed1e9f6808ce/cffi-1.11.2-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "75e1de9ba7c155d89bcf67d149b1c741df553c8158536e8d27e63167403159af"
+        "url": "https://files.pythonhosted.org/packages/a8/98/8ec65ab0c3791479fd6df7f8d32137a0e229728d53b88c901f32da429662/cffi-1.11.2-cp36-cp36m-win_amd64.whl"
+  "1.11.3":
+    "Darwin":
+      "2.7":
+        "sha256": "b2721aa579a2437993dbfba385a293a177f3266bc6972afa1d470a22fed40361"
+        "url": "https://files.pythonhosted.org/packages/bc/3a/6125509aedeed48468c4efcb6b75d48aa42932a996c3800eba3c149be0f3/cffi-1.11.3-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "f510f8f13ce68509f1af27026f957a40e4449a405a4bd1bd9edb440763736b2e"
+        "url": "https://files.pythonhosted.org/packages/b0/cb/bd6999424ed3e92b07b4b7af831bb452fc70926ef7fc0ce170fca6c696c0/cffi-1.11.3-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "68ffc820cf5367df54d4289dd5edcc5c90269ee82314b911302151c02eb1135e"
+        "url": "https://files.pythonhosted.org/packages/cd/e7/bafc2a7009923b611369c87655ecba8335b57f527e6393eac1f7722db6e6/cffi-1.11.3-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "65c9eb28b4534ec166de4c76fdfd7924b261bea5930e372b53a0ab4ccbbe9ba2"
+        "url": "https://files.pythonhosted.org/packages/a8/7f/bc66cef6e690469b5ca05140433f930636e8780765e214282d0e02cccdb3/cffi-1.11.3-cp36-cp36m-macosx_10_6_intel.whl"
+    "Linux":
+      "2.7":
+        "sha256": "a1b6b5287377817a2256654f8508e692dc0dff5bc3f8d42565835b19942d7e34"
+        "url": "https://files.pythonhosted.org/packages/3b/a9/e7ac1ad5c64a05d65841134c59633140b941daf710336e71522c2cd3d46d/cffi-1.11.3-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.3":
+        "sha256": "bd08ed3544b8d4190ca43efc2bcadbe55adb4d9c809a17b7bec0ebacec392d96"
+        "url": "https://files.pythonhosted.org/packages/95/c1/8f39e363d3ef3e2e9e2efc0b05ca7032e394a2c438d9688583b3fc6c2c36/cffi-1.11.3-cp33-cp33m-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "02367ee9fa7c3b11466a5e323a659880da60d1fe48ef90b3320b582b5269b36c"
+        "url": "https://files.pythonhosted.org/packages/74/28/cbb83df8aa9e8d60617e6c461d078e5b39147eff2b9a2697c59fe39ad3d6/cffi-1.11.3-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "49f8ac0fc18d26cbf6ef535af05ace1c08d59e95d9b16e03336dda1ba1445a13"
+        "url": "https://files.pythonhosted.org/packages/56/be/84a66c45df0a3c527819fa302549c70f6ebdc988fdda941e4bd66b2424c1/cffi-1.11.3-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "d710b6ba1fefd5c221b0fcda68b5c009c40143453b5f29cfea4f659815150e96"
+        "url": "https://files.pythonhosted.org/packages/a4/6f/d9e4c88569ceb5078dc89834974b600a31df424ace8d481fdc61f83c5c0c/cffi-1.11.3-cp36-cp36m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "0bb23614864c67bc3c8fe49f27ce99fe5613370f3a8c05d1ef662600cc5dc71c"
+        "url": "https://files.pythonhosted.org/packages/76/04/222fa752a51062fcfad49ade7fecc02a7ed4802d077945f048cd1e5e4181/cffi-1.11.3-cp27-cp27m-win_amd64.whl"
+      "3.3":
+        "sha256": "e64191679cf81ea74a491b9a64ec9477b721c55e32dbba378911ccc70fb3df95"
+        "url": "https://files.pythonhosted.org/packages/cb/2c/73caaed2296fc6b70ee48bbaea6ed92353e132f43cca2a846c0e47bf19a3/cffi-1.11.3-cp33-cp33m-win_amd64.whl"
+      "3.4":
+        "sha256": "eb55f7daba4f54e01e05a2e35f7ffc1470a413e8ad2bb9e242638dfa50d0ded5"
+        "url": "https://files.pythonhosted.org/packages/5c/d1/49c2fda682304f541ec0ff14778058c0b6b51a3eee1c7048684071453e65/cffi-1.11.3-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "ce54317605fa5eb197e69e955359c9b348e9b4976b1691c92a4da214597f45eb"
+        "url": "https://files.pythonhosted.org/packages/91/4e/fd7561c85c27bc541ae75fb378a3411b30608fac4e1c84ac044700e866ac/cffi-1.11.3-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "d54078395b772912bbe1b260a7417ff908680a76df7d4ef43637b01a369d514b"
+        "url": "https://files.pythonhosted.org/packages/bd/15/451730ed32f3f44beba66c46c2c9c8483d37d0eac86ac11139a4355693eb/cffi-1.11.3-cp36-cp36m-win_amd64.whl"
+  "1.11.4":
+    "Darwin":
+      "2.7":
+        "sha256": "5d0d7023b72794ea847725680e2156d1d01bc698a9007fccce46d03c904fe093"
+        "url": "https://files.pythonhosted.org/packages/23/48/5fa86470b70bdc527b5c133926267322ed0752501e63777aef8b4bef633e/cffi-1.11.4-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "b8d1454ef627098dc76ccfd6211a08065e6f84efe3754d8d112049fec3768e71"
+        "url": "https://files.pythonhosted.org/packages/26/35/030d808a33bd5777bd6c66a4579cc00f6e7e5d7252211c73c5c6dd2c7ccf/cffi-1.11.4-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "7a831170b621e98f45ed1d5758325be19619a593924127a0a47af9a72a117319"
+        "url": "https://files.pythonhosted.org/packages/4e/33/a52ea24466da315c8e545803c9dca55e466e2d53bb6fc1090ba86630af45/cffi-1.11.4-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "6d191fb20138fe1948727b20e7b96582b7b7e676135eabf72d910e10bf7bfa65"
+        "url": "https://files.pythonhosted.org/packages/21/8c/def667808d04e72687b8f18a24aedc829c8c740f8a8d730857c84fad3d75/cffi-1.11.4-cp36-cp36m-macosx_10_6_intel.whl"
+    "Linux":
+      "2.7":
+        "sha256": "6ca52651f6bd4b8647cb7dee15c82619de3e13490f8e0bc0620830a2245b51d1"
+        "url": "https://files.pythonhosted.org/packages/e1/37/c0b6157ca6d409d58e27db95a79df0cb0df2064de9de7db30dfbe02d4b13/cffi-1.11.4-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.3":
+        "sha256": "6c99d19225e3135f6190a3bfce2a614cae8eaa5dcaf9e0705d4ccb79a3959a3f"
+        "url": "https://files.pythonhosted.org/packages/3c/fa/f272ad4d48700565fc5fb631851fc41c8fa0bfbd58406265336ef9c2b7db/cffi-1.11.4-cp33-cp33m-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "0640f12f04f257c4467075a804a4920a5d07ef91e11c525fc65d715c08231c81"
+        "url": "https://files.pythonhosted.org/packages/f1/52/4207a0e75f13e961a10ead3cdd805e42c5cd76a65132faba5a00ed0487cd/cffi-1.11.4-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "0fe3b3d571543a4065059d1d3d6d39f4ca6da0f2207ad13547094522e32ead46"
+        "url": "https://files.pythonhosted.org/packages/cd/e7/2e146fd7fe666727dd67d8a882c8692a40524541fb0f785300b011a12ed0/cffi-1.11.4-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "b3653644d6411bf4bd64c1f2ca3cb1b093f98c68439ade5cef328609bbfabf8c"
+        "url": "https://files.pythonhosted.org/packages/1f/c5/d214b7333439ca6dc717f484582ca08204ed852f93398a06f01dd2d9120f/cffi-1.11.4-cp36-cp36m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "9532c5bc0108bd0fe43c0eb3faa2ef98a2db60fc0d4019f106b88d46803dd663"
+        "url": "https://files.pythonhosted.org/packages/d9/99/affa3a02138d805fef3860587d82fcbcfb2c25f445230c8377c4a8aad113/cffi-1.11.4-cp27-cp27m-win_amd64.whl"
+      "3.3":
+        "sha256": "69c37089ccf10692361c8d14dbf4138b00b46741ffe9628755054499f06ed548"
+        "url": "https://files.pythonhosted.org/packages/21/4c/2b5f3cd13d84d81fe3f1fbf9855da07e57f6bcab4ec92986fe937345c639/cffi-1.11.4-cp33-cp33m-win_amd64.whl"
+      "3.4":
+        "sha256": "a67c430a9bde73ae85b0c885fcf41b556760e42ea74c16dc70431a349989b448"
+        "url": "https://files.pythonhosted.org/packages/11/58/786fcd8e75b60541f343a989932a2fc11d60393aa74e1186f0c278db07e4/cffi-1.11.4-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "f4992cd7b4c867f453d44c213ee29e8fd484cf81cfece4b6e836d0982b6fa1cf"
+        "url": "https://files.pythonhosted.org/packages/84/98/4811170fa591b6d0bd901ceac7f98dd2e6eeb1035e4a3043247dae0ed014/cffi-1.11.4-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "87f837459c3c78d75cb4f5aadf08a7104db15e8c7618a5c732e60f252279c7a6"
+        "url": "https://files.pythonhosted.org/packages/0a/83/75ef8ddfb7b6bf682794f63c1f9573f7b86d65599482e0cdd9478c068817/cffi-1.11.4-cp36-cp36m-win_amd64.whl"
+  "1.11.5":
+    "Darwin":
+      "2.7":
+        "sha256": "1b0493c091a1898f1136e3f4f991a784437fac3673780ff9de3bcf46c80b6b50"
+        "url": "https://files.pythonhosted.org/packages/7e/4a/b647e46faaa2dcfb16069b6aad2d8509982fd63710a325b8ad7db80f18be/cffi-1.11.5-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "b75110fb114fa366b29a027d0c9be3709579602ae111ff61674d28c93606acca"
+        "url": "https://files.pythonhosted.org/packages/a3/b5/c1261ffd1444246e7129f831bd321789ea12e679d39250540a00c71f599d/cffi-1.11.5-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "ed01918d545a38998bfa5902c7c00e0fee90e957ce036a4000a88e3fe2264917"
+        "url": "https://files.pythonhosted.org/packages/2e/33/7ae61a4724e4627458b2971e78e200c6ac93464e0b7b40f26c0109880fcc/cffi-1.11.5-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "3eb6434197633b7748cea30bf0ba9f66727cdce45117a712b29a443943733257"
+        "url": "https://files.pythonhosted.org/packages/8e/be/40b1bc2c3221acdefeb9dab6773d43cda7543ed0d8c8df8768f05af2d01e/cffi-1.11.5-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "ca1bd81f40adc59011f58159e4aa6445fc585a32bb8ac9badf7a2c1aa23822f2"
+        "url": "https://files.pythonhosted.org/packages/0b/ba/32835c9965d8a0090723e1d0b47373365525c4bd08c807b5efdc9fecbc99/cffi-1.11.5-cp37-cp37m-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "edabd457cd23a02965166026fd9bfd196f4324fe6032e866d0f3bd0301cd486f"
+        "url": "https://files.pythonhosted.org/packages/14/dd/3e7a1e1280e7d767bd3fa15791759c91ec19058ebe31217fe66f3e9a8c49/cffi-1.11.5-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.3":
+        "sha256": "4c91af6e967c2015729d3e69c2e51d92f9898c330d6a851bf8f121236f3defd3"
+        "url": "https://files.pythonhosted.org/packages/11/01/61405d55140631801eb33d6bc37e5d622b27163102d5b93411da246b7bec/cffi-1.11.5-cp33-cp33m-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "fdf1c1dc5bafc32bc5d08b054f94d659422b05aba244d6be4ddc1c72d9aa70fb"
+        "url": "https://files.pythonhosted.org/packages/64/3d/684e2f507c61995ee725c44e6f34e7a6a9b7286161ef370575f1bbda3899/cffi-1.11.5-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "2ba8a45822b7aee805ab49abfe7eec16b90587f7f26df20c71dd89e45a97076f"
+        "url": "https://files.pythonhosted.org/packages/59/cc/0e1635b4951021ef35f5c92b32c865ae605fac2a19d724fb6ff99d745c81/cffi-1.11.5-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "770f3782b31f50b68627e22f91cb182c48c47c02eb405fd689472aa7b7aa16dc"
+        "url": "https://files.pythonhosted.org/packages/6d/c0/47db8f624f3e4e2f3f27be03a93379d1ba16a1450a7b1aacfa0366e2c0dd/cffi-1.11.5-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "a6a5cb8809091ec9ac03edde9304b3ad82ad4466333432b16d78ef40e0cce0d5"
+        "url": "https://files.pythonhosted.org/packages/51/7b/d1014289d0578c3522b2798b9cb87c65e5b36798bd3ae68a75fa1fe09e78/cffi-1.11.5-cp37-cp37m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "79f9b6f7c46ae1f8ded75f68cf8ad50e5729ed4d590c74840471fc2823457d04"
+        "url": "https://files.pythonhosted.org/packages/89/12/684bad296567b9300c7ac82a4f635b489ed589fa7c0bb2042208e3c020e3/cffi-1.11.5-cp27-cp27m-win_amd64.whl"
+      "3.3":
+        "sha256": "95d5251e4b5ca00061f9d9f3d6fe537247e145a8524ae9fd30a2f8fbce993b5b"
+        "url": "https://files.pythonhosted.org/packages/9d/2d/fd0267be09660c7bf8317626ae907b29c40c29c8f01d961801fd892b44c8/cffi-1.11.5-cp33-cp33m-win_amd64.whl"
+      "3.4":
+        "sha256": "be2a9b390f77fd7676d80bc3cdc4f8edb940d8c198ed2d8c0be1319018c778e1"
+        "url": "https://files.pythonhosted.org/packages/e9/df/c20e46b11afc2d5d52b86e7280e7ef8ac76a223ff78c552eba468440aea5/cffi-1.11.5-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "e55e22ac0a30023426564b1059b035973ec82186ddddbac867078435801c7801"
+        "url": "https://files.pythonhosted.org/packages/da/8c/beb1ec9ad61570d082641d0b00df141c102b531547bed382f55bcab25789/cffi-1.11.5-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "3c85641778460581c42924384f5e68076d724ceac0f267d66c757f7535069c93"
+        "url": "https://files.pythonhosted.org/packages/2f/85/a9184548ad4261916d08a50d9e272bf6f93c54f3735878fbfc9335efd94b/cffi-1.11.5-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "495c5c2d43bf6cebe0178eb3e88f9c4aa48d8934aa6e3cddb865c058da76756b"
+        "url": "https://files.pythonhosted.org/packages/ca/f2/e375b7469a2dfe9d1feac81a10df97f18cd771b9a10ac62ca9864b760f7c/cffi-1.11.5-cp37-cp37m-win_amd64.whl"
+  "1.12.0":
+    "Darwin":
+      "3.4":
+        "sha256": "2e556610fcf5d4c41d480221dec071d517096ff452053b6f4eacfa20fec0dbce"
+        "url": "https://files.pythonhosted.org/packages/7b/b1/824d0bd05eac4b81400b1396ade4cb945f29d61be1092292c35391e00b55/cffi-1.12.0-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "3991da7c291c8c80a4c53303e0abb857bc3598af27fbe203214ddd13dc7cf33a"
+        "url": "https://files.pythonhosted.org/packages/20/a3/15290e4ccab421b42b2fbfaf8824a5a9bf68d6bea50a4393c0350a3a029f/cffi-1.12.0-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "116b32a34c862dac9a0c8c28e68fa7d63750068443d0bb595c090c70de7bf080"
+        "url": "https://files.pythonhosted.org/packages/32/30/eca74df9c48761eb7c1269fd9153466adbc87667dab75ba9b6b3d87af04f/cffi-1.12.0-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "9b658f51245abb1ed6a5467ca58933e912ea6039327745655de6753f848fb98a"
+        "url": "https://files.pythonhosted.org/packages/33/09/00ca304a50014105110f45cc57f58ff1441809c2b4fb3d5f2762aef05e12/cffi-1.12.0-cp37-cp37m-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "8a1f16671de9cd41b508f9b2c82de2523f568103b4c32cdeee3c6ed777005766"
+        "url": "https://files.pythonhosted.org/packages/6c/b5/d2f3c10bf5c845e308778bbeb06e426976fe3d12c81782d5c9b3c02eae9b/cffi-1.12.0-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "ad86d01920b90384d7b2fe0df7e75dc06562471e14aa0905351fecd31007016b"
+        "url": "https://files.pythonhosted.org/packages/d1/9c/410cd3e116df289d9973cc53a264210e49f321e860e9a7c4bc2cabe5e9a2/cffi-1.12.0-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "1ec69cca03f9e8e6e2e835f44a1572e0b6d6130aa71a2100459ee33a6c370e04"
+        "url": "https://files.pythonhosted.org/packages/51/d4/d6038faf286b6c6f49b45d055dd3bd2c1836dc77867393617273c2dc748f/cffi-1.12.0-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "39f47648b5f2755aa977b37fc49581bdd3d0a500eb31f61c034af2ff05d6f56f"
+        "url": "https://files.pythonhosted.org/packages/95/bd/dc75eae06a6c988c2d7c87f959e3c4410dcc3e262c653bffd13974296cbd/cffi-1.12.0-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "ddf1824a0f04f324f1d380f44893abb57394379763e4ed6200bc188f33b32325"
+        "url": "https://files.pythonhosted.org/packages/34/c2/c207685b3d0c9e87c01386c242b9ec9f5ed9305eefa39d005f40245a114e/cffi-1.12.0-cp37-cp37m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "84fe536dc89877b722b5b4ea578f5beac60759363513aeb1df6ec914c6dd6ba1"
+        "url": "https://files.pythonhosted.org/packages/4c/3f/cbbb3a76b72faef28a3569494905a0beb298b114785db38e57e75870873a/cffi-1.12.0-cp27-cp27m-win_amd64.whl"
+      "3.4":
+        "sha256": "be8a266b312707584762036c65d5aa34c56319c6e60536ad8d3f1255d209b2a7"
+        "url": "https://files.pythonhosted.org/packages/ac/91/eecbb8f5878c40d569413ebfc06c30a92d7cee985195e3607a1c799dc0b1/cffi-1.12.0-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "b8a36ff55ec3d22bd4c2baac080b48a9c9fe0af5df363fa1dee7c334dfb06519"
+        "url": "https://files.pythonhosted.org/packages/17/e5/200d11e5942420d5bb7308852d6b7b6b4b8bcf7f6cc0634d8ac3e34eb0f0/cffi-1.12.0-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "e0eaa6da93e87229f2d8e133c3baa459ed626e374d20486e2dc94a8e9d2f019d"
+        "url": "https://files.pythonhosted.org/packages/3d/96/a77ac5ac55b2f00ad85f1f3e259c513acdeb624842f90c7bbc16e3ddbb0c/cffi-1.12.0-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "0fd93b32d96d7ce46d0fb0db6d82f73e2e6ee37696a0fed152240c780ff99d16"
+        "url": "https://files.pythonhosted.org/packages/6b/a4/4d9ba87108405ef0612907c1da4595a2cb4fba91a18105e68c1b7751bfe3/cffi-1.12.0-cp37-cp37m-win_amd64.whl"
+  "1.12.1":
+    "Darwin":
+      "2.7":
+        "sha256": "bd78df3b594013b227bf31d0301566dc50ba6f40df38a70ded731d5a8f2cb071"
+        "url": "https://files.pythonhosted.org/packages/b2/03/8c9052bfb8fd8f40eead289731b21e5b82573cecd6d4366bfa7b50769bf0/cffi-1.12.1-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "f5653c2581acb038319e6705d4e3593677676df14b112f13e0b5b44b6a18df1a"
+        "url": "https://files.pythonhosted.org/packages/33/26/53245fa230c6e8aeab09be656252df0e39edefc7b30f06801b41337aaab1/cffi-1.12.1-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "a85bc1d7c3bba89b3d8c892bc0458de504f8b3bcca18892e6ed15b5f7a52ad9d"
+        "url": "https://files.pythonhosted.org/packages/de/48/35a964979d666bf22e4a3b12c2f3d59dc12cacd042be3a21053d33f22422/cffi-1.12.1-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "7075b361f7a4d0d4165439992d0b8a3cdfad1f302bf246ed9308a2e33b046bd3"
+        "url": "https://files.pythonhosted.org/packages/80/0e/1b97b1267fb3a56440804ccaf512c3526066943bd079b6561a97b0481003/cffi-1.12.1-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "df4f840d77d9e37136f8e6b432fecc9d6b8730f18f896e90628712c793466ce6"
+        "url": "https://files.pythonhosted.org/packages/a5/32/f5439e93ad29c551f7238d3a0ee3dd5c7a8e60141a911b865ee0f1079982/cffi-1.12.1-cp37-cp37m-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "358e96cfffc185ab8f6e7e425c7bb028931ed08d65402fbcf3f4e1bff6e66556"
+        "url": "https://files.pythonhosted.org/packages/9f/1f/f825741ebadb8497d1c3ec954062f1e09e97881618eecc9ef7c5c7ff8bbb/cffi-1.12.1-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "5b37dde5035d3c219324cac0e69d96495970977f310b306fa2df5910e1f329a1"
+        "url": "https://files.pythonhosted.org/packages/e1/50/70aec52977238915f3ad8d278375534b6ea6c0e7b7bc4e10bd913a7502fe/cffi-1.12.1-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "37c7db824b5687fbd7ea5519acfd054c905951acc53503547c86be3db0580134"
+        "url": "https://files.pythonhosted.org/packages/16/7c/06992c4b200629d0287d3cb1b0fa56c27a3cb1f00ad99daae29dde2d519a/cffi-1.12.1-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "7678b5a667b0381c173abe530d7bdb0e6e3b98e062490618f04b80ca62686d96"
+        "url": "https://files.pythonhosted.org/packages/be/99/3a088b41d93aa46f07cf7fd4da1b3287e6899ad7b2b75f1a177edf025e1a/cffi-1.12.1-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "5d35819f5566d0dd254f273d60cf4a2dcdd3ae3003dfd412d40b3fe8ffd87509"
+        "url": "https://files.pythonhosted.org/packages/fc/32/bf446f299e5ae3315e1cc3ec2f4ae668a5424a5e1d29b78562016eecc951/cffi-1.12.1-cp37-cp37m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "3262573d0d60fc6b9d0e0e6e666db0e5045cbe8a531779aa0deb3b425ec5a282"
+        "url": "https://files.pythonhosted.org/packages/7a/b9/76f197f38b5837e365b7f7804b45dc93793edaf70802efc24f592bef49a8/cffi-1.12.1-cp27-cp27m-win_amd64.whl"
+      "3.4":
+        "sha256": "f9e2c66a6493147de835f207f198540a56b26745ce4f272fbc7c2f2cfebeb729"
+        "url": "https://files.pythonhosted.org/packages/75/c9/4708c5350c5fc8bee56e2e016c54d003c7013d9871ffd0d94984652b11fc/cffi-1.12.1-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "f7c7aa485a2e2250d455148470ffd0195eecc3d845122635202d7467d6f7b4cf"
+        "url": "https://files.pythonhosted.org/packages/96/02/a7461e428f015c0a8ff46ce24a1bfc896e1d74cce248fd09c1f50bcdf812/cffi-1.12.1-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "27cdc7ba35ee6aa443271d11583b50815c4bb52be89a909d0028e86c21961709"
+        "url": "https://files.pythonhosted.org/packages/5d/55/2aa7343b729dafb53a2aca8c8027e5a9f8c374cea89542011f868022791a/cffi-1.12.1-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "bae96e26510e4825d5910a196bf6b5a11a18b87d9278db6d08413be8ea799469"
+        "url": "https://files.pythonhosted.org/packages/d5/c5/e159346967e2935f196bc0899a5e9266b544ebaa3faeecf6a49ed92b4dbd/cffi-1.12.1-cp37-cp37m-win_amd64.whl"
+  "1.12.2":
+    "Darwin":
+      "2.7":
+        "sha256": "fb6934ef4744becbda3143d30c6604718871495a5e36c408431bf33d9c146889"
+        "url": "https://files.pythonhosted.org/packages/91/16/b0f4e7ae4b0994c83bfb146f72d34156c37e2d4d2085497f28071846e041/cffi-1.12.2-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "59888faac06403767c0cf8cfb3f4a777b2939b1fbd9f729299b5384f097f05ea"
+        "url": "https://files.pythonhosted.org/packages/20/58/b2c03fe38db639d73044e8b8f536fc965be346bb0c01c8d6bc615ca780a5/cffi-1.12.2-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "59c87886640574d8b14910840327f5cd15954e26ed0bbd4e7cef95fa5aef218f"
+        "url": "https://files.pythonhosted.org/packages/fe/03/514b5099f7d0fff5622ef52c935586c2fd54160b136d9c9ed17948b2f704/cffi-1.12.2-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "3dd13feff00bddb0bd2d650cdb7338f815c1789a91a6f68fdc00e5c5ed40329b"
+        "url": "https://files.pythonhosted.org/packages/b9/55/1951423c47d581bec4b85d1b7f22ee55bb1831d04d2cbe108bee17021353/cffi-1.12.2-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "b4f1d6332339ecc61275bebd1f7b674098a66fea11a00c84d1c58851e618dc0d"
+        "url": "https://files.pythonhosted.org/packages/6b/af/e39e89ecbfb676c6aa5855b1795bb207f4005187495c8d40e26b5fb51bfa/cffi-1.12.2-cp37-cp37m-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "8fc7a49b440ea752cfdf1d51a586fd08d395ff7a5d555dc69e84b1939f7ddee3"
+        "url": "https://files.pythonhosted.org/packages/9d/6f/aea9f5559fb593da07ff34e67513bd62483b45715b4a5f5fae6a0a5792ea/cffi-1.12.2-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "9c759051ebcb244d9d55ee791259ddd158188d15adee3c152502d3b69005e6bd"
+        "url": "https://files.pythonhosted.org/packages/7a/0e/c14aeb7a8c73ddd60cb318ada44c4a4a6d1c29666759921584f269a95b07/cffi-1.12.2-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "4065c32b52f4b142f417af6f33a5024edc1336aa845b9d5a8d86071f6fcaac5a"
+        "url": "https://files.pythonhosted.org/packages/5b/44/fdae2a8f66af426055f9b6fff0b155217081eddaf08a3df79ca11fe05bda/cffi-1.12.2-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "c8149780c60f8fd02752d0429246088c6c04e234b895c4a42e1ea9b4de8d27fb"
+        "url": "https://files.pythonhosted.org/packages/20/f7/87b62a8895bf7c93e907b05b97bc4459c81a38a61151f03a6eae13d863aa/cffi-1.12.2-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "b4d1011fec5ec12aa7cc10c05a2f2f12dfa0adfe958e56ae38dc140614035804"
+        "url": "https://files.pythonhosted.org/packages/a7/3f/2667a1516d935938245bd256b56a2f96d739ac3683e6778380f06c6e4c79/cffi-1.12.2-cp37-cp37m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "0bffb69da295a4fc3349f2ec7cbe16b8ba057b0a593a92cbe8396e535244ee9d"
+        "url": "https://files.pythonhosted.org/packages/ea/49/5cbf97418f28ac0e88d0450f28d266138e2fe62f14696ec23714192afa31/cffi-1.12.2-cp27-cp27m-win_amd64.whl"
+      "3.4":
+        "sha256": "51a4ba1256e9003a3acf508e3b4f4661bebd015b8180cc31849da222426ef585"
+        "url": "https://files.pythonhosted.org/packages/e8/a5/76e1ec9e71496b53dafdaa8522410efb93a078edc037f30015633a564045/cffi-1.12.2-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "70aeadeecb281ea901bf4230c6222af0248c41044d6f57401a614ea59d96d145"
+        "url": "https://files.pythonhosted.org/packages/5a/5d/58b4ded447f6677fda98081463cd6b4893d387809cef7f35edac25b02926/cffi-1.12.2-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "00b97afa72c233495560a0793cdc86c2571721b4271c0667addc83c417f3d90f"
+        "url": "https://files.pythonhosted.org/packages/3f/57/e1ba9f697f597cffa35a473c8ad8014b6028f034bdf4d9a91d387cef300e/cffi-1.12.2-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "9b5c2afd2d6e3771d516045a6cfa11a8da9a60e3d128746a7fe9ab36dfe7221f"
+        "url": "https://files.pythonhosted.org/packages/18/dd/3936f31df9d4c6e07d7dbbee2bda3ebde49c20e0ff9364c753601cd4b4bd/cffi-1.12.2-cp37-cp37m-win_amd64.whl"
+  "1.12.3":
+    "Darwin":
+      "2.7":
+        "sha256": "5662ad4e4e84f1eaa8efce5da695c5d2e229c563f9d5ce5b0113f71321bcf753"
+        "url": "https://files.pythonhosted.org/packages/16/f6/46a3dece43541b2cbf3776ec2299e370a2408d9380958401cacb6d101853/cffi-1.12.3-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "a2e85dc204556657661051ff4bab75a84e968669765c8a2cd425918699c3d0e8"
+        "url": "https://files.pythonhosted.org/packages/b8/2f/84168fb07f8b7c40a8145bef3d621089c898fbeb8c5f042ed8b4f47fdcc6/cffi-1.12.3-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "046ef9a22f5d3eed06334d01b1e836977eeef500d9b78e9ef693f9380ad0b83d"
+        "url": "https://files.pythonhosted.org/packages/fb/28/c9b9a9eea8011285474de7d0043850b99610c0f2c2f7cc7d8b54c3adff03/cffi-1.12.3-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "73e1ffefe05e4ccd7bcea61af76f36077b914f92b76f95ccf00b0c1b9186f3f9"
+        "url": "https://files.pythonhosted.org/packages/79/46/a0133536162ad7fe5ae27f22f6ed14a77132b32589dce71223ebe7e02371/cffi-1.12.3-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "a1f0fd46eba2d71ce1589f7e50a9e2ffaeb739fb2c11e8192aa2b45d5f6cc41f"
+        "url": "https://files.pythonhosted.org/packages/f0/48/5aa4ea664eba26dd5142558d04762f5065c02220b4665b3f7eecb9bb614e/cffi-1.12.3-cp37-cp37m-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "2444d0c61f03dcd26dbf7600cf64354376ee579acad77aef459e34efcb438c63"
+        "url": "https://files.pythonhosted.org/packages/8d/e9/0c8afd1579e5cf7bc0f06fbcd7cdb954cbc0baadd505973949a99337da1c/cffi-1.12.3-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "d2c5cfa536227f57f97c92ac30c8109688ace8fa4ac086d19d0af47d134e2909"
+        "url": "https://files.pythonhosted.org/packages/d5/a1/7e366f126fcd72cbc39a96166fa2b39d52808a233c73bf6405714277a852/cffi-1.12.3-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "4d0004eb4351e35ed950c14c11e734182591465a33e960a4ab5e8d4f04d72647"
+        "url": "https://files.pythonhosted.org/packages/62/76/135eeffe0089e6724bdd65c1bf9f1654db9b47783e65b8d9f1454c540d8b/cffi-1.12.3-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "59b4dc008f98fc6ee2bb4fd7fc786a8d70000d058c2bbe2698275bc53a8d3fa7"
+        "url": "https://files.pythonhosted.org/packages/5f/bf/6aa1925384c23ffeb579e97a5569eb9abce41b6310b329352b8252cee1c3/cffi-1.12.3-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "ae61af521ed676cf16ae94f30fe202781a38d7178b6b4ab622e4eec8cefaff42"
+        "url": "https://files.pythonhosted.org/packages/a0/ea/37fe21475c884f88a2ae496cab10e8f84f0cc11137be860af9eb37a3edb9/cffi-1.12.3-cp37-cp37m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "a5457d47dfff24882a21492e5815f891c0ca35fefae8aa742c6c263dac16ef1f"
+        "url": "https://files.pythonhosted.org/packages/fa/24/37ec704b98ffc36e7d0ade9e4653539c0b8e6fec34f084f30194609aa10b/cffi-1.12.3-cp27-cp27m-win_amd64.whl"
+      "3.4":
+        "sha256": "d42b5796e20aacc9d15e66befb7a345454eef794fdb0737d1af593447c6c8f45"
+        "url": "https://files.pythonhosted.org/packages/03/cd/f9266e3e9bf7628ddd35d2844e64168c6d774fe5c77237053e2435e71873/cffi-1.12.3-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "066bc4c7895c91812eff46f4b1c285220947d4aa46fa0a2651ff85f2afae9c90"
+        "url": "https://files.pythonhosted.org/packages/fd/29/3335b084ed4ea262c6079c0e70e84117a758a0d07d42fe3d1b07a575aaa3/cffi-1.12.3-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "066c7ff148ae33040c01058662d6752fd73fbc8e64787229ea8498c7d7f4041b"
+        "url": "https://files.pythonhosted.org/packages/f1/b5/ca3583cbf7975f53b030be773caeabd4e19bac467714e525eaff447a8ac8/cffi-1.12.3-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "e070535507bd6aa07124258171be2ee8dfc19119c28ca94c9dfb7efd23564512"
+        "url": "https://files.pythonhosted.org/packages/2f/ad/9722b7752fdd88c858be57b47f41d1049b5fb0ab79caf0ab11407945c1a7/cffi-1.12.3-cp37-cp37m-win_amd64.whl"
+  "1.13.0":
+    "Darwin":
+      "2.7":
+        "sha256": "f56dff1bd81022f1c980754ec721fb8da56192b026f17f0f99b965da5ab4fbd2"
+        "url": "https://files.pythonhosted.org/packages/b1/b1/b6080ec40952c35b509fbef7b84e849916a3952e7080b64c842fa74c9987/cffi-1.13.0-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "24eff2997436b6156c2f30bed215c782b1d8fd8c6a704206053c79af95962e45"
+        "url": "https://files.pythonhosted.org/packages/43/e0/3ceb7eb41d803bb23ca06e262c77678580c62c702084e23e3b0b2d2ec029/cffi-1.13.0-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "fa4cc13c03ea1d0d37ce8528e0ecc988d2365e8ac64d8d86cafab4038cb4ce89"
+        "url": "https://files.pythonhosted.org/packages/59/2f/28e5e1520d483b12f317e8a6da6e3194a8d0adfa9f4923205a75b8eb9370/cffi-1.13.0-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "6f19c9df4785305669335b934c852133faed913c0faa63056248168966f7a7d5"
+        "url": "https://files.pythonhosted.org/packages/62/3d/0f51aa745519dc8012821555dd1c9c20721d73ff325bcd04869027764599/cffi-1.13.0-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "719537b4c5cd5218f0f47826dd705fb7a21d83824920088c4214794457113f3f"
+        "url": "https://files.pythonhosted.org/packages/df/eb/79652fd053b610bda97b4e51665467a9ef7f51e0497d2d38ff1ab5272b58/cffi-1.13.0-cp37-cp37m-macosx_10_6_intel.whl"
+      "3.8":
+        "sha256": "ca42034c11eb447497ea0e7b855d87ccc2aebc1e253c22e7d276b8599c112a27"
+        "url": "https://files.pythonhosted.org/packages/75/1b/734701e2d418d826a35f6f4c9da8aafbdc69332dc7d3cd0637132fafc016/cffi-1.13.0-cp38-cp38-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "fa8cf1cb974a9f5911d2a0303f6adc40625c05578d8e7ff5d313e1e27850bd59"
+        "url": "https://files.pythonhosted.org/packages/3f/e8/e0181a24f040c1f001cc4d5bba7036b2f04ec18b4089d720ebce207e98d2/cffi-1.13.0-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "e77cd105b19b8cd721d101687fcf665fd1553eb7b57556a1ef0d453b6fc42faa"
+        "url": "https://files.pythonhosted.org/packages/bd/3d/30cfce94428a7d634d996b630fce1e3498960684ed0b7dc60613ae388aee/cffi-1.13.0-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "8f7eec920bc83692231d7306b3e311586c2e340db2dc734c43c37fbf9c981d24"
+        "url": "https://files.pythonhosted.org/packages/e2/bf/6c09b002f5caba60266ef4eded2bbbe32e74f50afb8d06e37cea4abed37d/cffi-1.13.0-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "853376efeeb8a4ae49a737d5d30f5db8cdf01d9319695719c4af126488df5a6a"
+        "url": "https://files.pythonhosted.org/packages/6c/e6/2ca409305c8fb797a8ac65c8f5d4955ddea892bdf49e5319755207de1120/cffi-1.13.0-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "1b9ab50c74e075bd2ae489853c5f7f592160b379df53b7f72befcbe145475a36"
+        "url": "https://files.pythonhosted.org/packages/fa/20/b93b26ad86f48403144823f521aa571a71e61575863a260cca2918ec3881/cffi-1.13.0-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "362e896cea1249ed5c2a81cf6477fabd9e1a5088aa7ea08358a4c6b0998294d2"
+        "url": "https://files.pythonhosted.org/packages/c0/91/9197cdb3493ca5f5991006b15ac3d8b60341ea72bd448c3daa36792633e6/cffi-1.13.0-cp38-cp38-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "85bbf77ffd12985d76a69d2feb449e35ecdcb4fc54a5f087d2bd54158ae5bb0c"
+        "url": "https://files.pythonhosted.org/packages/38/14/c4e606d2c645c75b6fe1d6f638298c146c14f71925606020a9b037498a40/cffi-1.13.0-cp27-cp27m-win_amd64.whl"
+      "3.4":
+        "sha256": "ba956c9b44646bc1852db715b4a252e52a8f5a4009b57f1dac48ba3203a7bde1"
+        "url": "https://files.pythonhosted.org/packages/56/8e/c5ae3f6c776b53d55a9eb2e017c90817e22dd880c8f9cee112397714e636/cffi-1.13.0-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "fd409b7778167c3bcc836484a8f49c0e0b93d3e745d975749f83aa5d18a5822f"
+        "url": "https://files.pythonhosted.org/packages/73/eb/a42f1b1d0e073f939f91cf60bfb3eacebd8c0227857f1e1f3bfa1d8c0bbb/cffi-1.13.0-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "8978115c6f0b0ce5880bc21c967c65058be8a15f1b81aa5fdbdcbea0e03952d1"
+        "url": "https://files.pythonhosted.org/packages/53/38/19d56fbaee80462e9e4c6db81b526d06994e4fb0253c3b6b35ef221a1ffd/cffi-1.13.0-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "2eff642fbc9877a6449026ad66bf37c73bf4232505fb557168ba5c502f95999b"
+        "url": "https://files.pythonhosted.org/packages/4e/21/4021e49d88e1870703db84a1757062f770ec5e18c4f1fa61b8380fd0673a/cffi-1.13.0-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "40eddb3589f382cb950f2dcf1c39c9b8d7bd5af20665ce273815b0d24635008b"
+        "url": "https://files.pythonhosted.org/packages/c9/a5/7f5b85daf1992172d7b84e2a17dd66b5a9577018fc6063d7bacfc0b97e14/cffi-1.13.0-cp38-cp38-win_amd64.whl"
+  "1.13.1":
+    "Darwin":
+      "2.7":
+        "sha256": "9009e917d8f5ef780c2626e29b6bc126f4cb2a4d43ca67aa2b40f2a5d6385e78"
+        "url": "https://files.pythonhosted.org/packages/88/f4/4847a6fa7e68dcdf143fe03306b687a3b885d371984baf7b7301600005da/cffi-1.13.1-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "6fd58366747debfa5e6163ada468a90788411f10c92597d3b0a912d07e580c36"
+        "url": "https://files.pythonhosted.org/packages/dd/f3/49c147ccd7d9398697a11f3b7f015b2c0ddecc72e49216fe930c3e3a93ff/cffi-1.13.1-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "a19089fa74ed19c4fe96502a291cfdb89223a9705b1d73b3005df4256976142e"
+        "url": "https://files.pythonhosted.org/packages/9d/3f/7c6c67d871edfa2813ed0e9b284bb85f0cafa1cd6e7a4e8ed91757824d1c/cffi-1.13.1-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "5ba86e1d80d458b338bda676fd9f9d68cb4e7a03819632969cf6d46b01a26730"
+        "url": "https://files.pythonhosted.org/packages/00/ea/c540bb29c85640ebb75c62adacb5455189350c4e28f1504e0869899a129c/cffi-1.13.1-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "4895640844f17bec32943995dc8c96989226974dfeb9dd121cc45d36e0d0c434"
+        "url": "https://files.pythonhosted.org/packages/41/bd/61e98c053fd54317decdc314279a0917e1c3807186f0ee7ea854cd09a645/cffi-1.13.1-cp37-cp37m-macosx_10_6_intel.whl"
+      "3.8":
+        "sha256": "6381ab708158c4e1639da1f2a7679a9bbe3e5a776fc6d1fd808076f0e3145331"
+        "url": "https://files.pythonhosted.org/packages/a0/5f/f26fcd0400e5d3a919818207d2efb10c82e4d65607e149b3c15b71fa3c23/cffi-1.13.1-cp38-cp38-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "7cfcfda59ef1f95b9f729c56fe8a4041899f96b72685d36ef16a3440a0f85da8"
+        "url": "https://files.pythonhosted.org/packages/bf/16/9d79400159c95b2f2d896ad22f3dd43898214eba1acbbd4439d29eee6e1e/cffi-1.13.1-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "728ec653964655d65408949b07f9b2219df78badd601d6c49e28d604efe40599"
+        "url": "https://files.pythonhosted.org/packages/b4/37/6e9921ffe965629160ef3ff5611f8eb1fe2cdedf40f1937025822437983a/cffi-1.13.1-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "bb75ba21d5716abc41af16eac1145ab2e471deedde1f22c6f99bd9f995504df0"
+        "url": "https://files.pythonhosted.org/packages/c0/57/196993d5587fb8c5d3ce9965e520584e79729b9f3b1e2bf74ff68a84506d/cffi-1.13.1-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "33142ae9807665fa6511cfa9857132b2c3ee6ddffb012b3f0933fc11e1e830d5"
+        "url": "https://files.pythonhosted.org/packages/ab/15/d6bd2c322da944ba74ca545dd5e4af6e1e72339cbbc738e6877e349cdfbe/cffi-1.13.1-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "a40ed527bffa2b7ebe07acc5a3f782da072e262ca994b4f2085100b5a444bbb2"
+        "url": "https://files.pythonhosted.org/packages/67/c7/b37e5f687e59499ea605ea3c0dccb0cc6b46bd96340a39fdad8e64b65bfb/cffi-1.13.1-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "0cf9e550ac6c5e57b713437e2f4ac2d7fd0cd10336525a27224f5fc1ec2ee59a"
+        "url": "https://files.pythonhosted.org/packages/0d/85/fa637061cc51edfa61ef688099ef1e4ccffdb0be2063006b31a78232345c/cffi-1.13.1-cp38-cp38-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "0ea23c9c0cdd6778146a50d867d6405693ac3b80a68829966c98dd5e1bbae400"
+        "url": "https://files.pythonhosted.org/packages/c1/1d/612d045d09c8c3e64193a553127d4281c044cab11afa25b602784d792748/cffi-1.13.1-cp27-cp27m-win_amd64.whl"
+      "3.4":
+        "sha256": "8a2bcae2258d00fcfc96a9bde4a6177bc4274fe033f79311c5dd3d3148c26518"
+        "url": "https://files.pythonhosted.org/packages/da/11/ece23a786cd777ca0293dd89bf0dafa95e2e77ebe7e9c0bb51615111e08e/cffi-1.13.1-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "fd82eb4694be712fcae03c717ca2e0fc720657ac226b80bbb597e971fc6928c2"
+        "url": "https://files.pythonhosted.org/packages/b7/52/2b415a7e6d81106df3a22a762f02fd8adee898ceacb90cfb567c1ae48d56/cffi-1.13.1-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "47368f69fe6529f8f49a5d146ddee713fc9057e31d61e8b6dc86a6a5e38cecc1"
+        "url": "https://files.pythonhosted.org/packages/44/17/d4d3515d6b029c0a73d22af97ef653b6f79443c132b10b7319844b0ba185/cffi-1.13.1-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "1e389e069450609c6ffa37f21f40cce36f9be7643bbe5051ab1de99d5a779526"
+        "url": "https://files.pythonhosted.org/packages/e0/81/6d6433ebeebe92a5eef8159684a1f3959a180f74a008d7865c9f577e7bff/cffi-1.13.1-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "263242b6ace7f9cd4ea401428d2d45066b49a700852334fd55311bde36dcda14"
+        "url": "https://files.pythonhosted.org/packages/f3/43/a179e19da2175a6b5f4a678f76476b045186d3a88bb7682bc77418e42b1a/cffi-1.13.1-cp38-cp38-win_amd64.whl"
+  "1.13.2":
+    "Darwin":
+      "2.7":
+        "sha256": "3c9fff570f13480b201e9ab69453108f6d98244a7f495e91b6c654a47486ba43"
+        "url": "https://files.pythonhosted.org/packages/7a/be/2f4cddf26e051d104dd7f6e99d298786b38c8cdf46376d4fb493a54559d8/cffi-1.13.2-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "71a608532ab3bd26223c8d841dde43f3516aa5d2bf37b50ac410bb5e99053e8f"
+        "url": "https://files.pythonhosted.org/packages/6a/20/6c914b7f3934f82b6b5ff1455acc30d0e5beec9b1c16714dd0193654afd3/cffi-1.13.2-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "ccb032fda0873254380aa2bfad2582aedc2959186cce61e3a17abc1a55ff89c3"
+        "url": "https://files.pythonhosted.org/packages/0b/55/9a013c5c5b69a11996551a5c0cc8f8f757df7134f4d7a6f65deccccd7c46/cffi-1.13.2-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "0e3ea92942cb1168e38c05c1d56b0527ce31f1a370f6117f1d490b8dcd6b3a04"
+        "url": "https://files.pythonhosted.org/packages/c1/ae/bcf26260176ca7ea576f4c7ddf8dc2a5397d8792699dc9dce2790851958e/cffi-1.13.2-cp36-cp36m-macosx_10_6_intel.whl"
+      "3.7":
+        "sha256": "d75c461e20e29afc0aee7172a0950157c704ff0dd51613506bd7d82b718e7410"
+        "url": "https://files.pythonhosted.org/packages/d5/61/32b1aa5ef1bf60be4ef679c4aae082a7ceef98517e0e0fde68072c6ef8b6/cffi-1.13.2-cp37-cp37m-macosx_10_6_intel.whl"
+      "3.8":
+        "sha256": "74a1d8c85fb6ff0b30fbfa8ad0ac23cd601a138f7509dc617ebc65ef305bb98d"
+        "url": "https://files.pythonhosted.org/packages/cf/bb/a3f00f4eccec9a3bdaaf31f5c0261f34888284dc6760495d2d6f82dec0c5/cffi-1.13.2-cp38-cp38-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "8169cf44dd8f9071b2b9248c35fc35e8677451c52f795daa2bb4643f32a540bc"
+        "url": "https://files.pythonhosted.org/packages/93/5d/c4f950891251e478929036ca07b22f0b10324460c1d0a4434c584481db51/cffi-1.13.2-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "0b49274afc941c626b605fb59b59c3485c17dc776dc3cc7cc14aca74cc19cc42"
+        "url": "https://files.pythonhosted.org/packages/ac/bf/79229a2df6c53320c03b8d67599e6e508c6dde446fd53d8397a2aab2a553/cffi-1.13.2-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "135f69aecbf4517d5b3d6429207b2dff49c876be724ac0c8bf8e1ea99df3d7e5"
+        "url": "https://files.pythonhosted.org/packages/a8/8d/986e0c4e2aa3b24db56a0affc50d1a379150e3c4da45d51d549dc2697d53/cffi-1.13.2-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "291f7c42e21d72144bb1c1b2e825ec60f46d0a7468f5346841860454c7aa8f57"
+        "url": "https://files.pythonhosted.org/packages/49/72/0d42f94fe94afa8030350c26e9d787219f3f008ec9bf6b86c66532b29236/cffi-1.13.2-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "2e9c80a8c3344a92cb04661115898a9129c074f7ab82011ef4b612f645939f12"
+        "url": "https://files.pythonhosted.org/packages/16/cd/1f4ddf6be8300713c676bb9f3a2d3b8eb8accc0a6a24f57d4f6c4cd59d34/cffi-1.13.2-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "415bdc7ca8c1c634a6d7163d43fb0ea885a07e9618a64bda407e04b04333b7db"
+        "url": "https://files.pythonhosted.org/packages/05/7d/723ceca757d8016850d1110df44b91121695f22f782f876b483ecb3928a9/cffi-1.13.2-cp38-cp38-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "32a262e2b90ffcfdd97c7a5e24a6012a43c61f1f5a57789ad80af1d26c6acd97"
+        "url": "https://files.pythonhosted.org/packages/cb/27/0daf49c18f1280a2d23537eb42424005ffe19787e1bf7fb5be117855197a/cffi-1.13.2-cp27-cp27m-win_amd64.whl"
+      "3.4":
+        "sha256": "7d4751da932caaec419d514eaa4215eaf14b612cff66398dd51129ac22680b20"
+        "url": "https://files.pythonhosted.org/packages/a1/44/1ab3c485808d4c3b869cf115461a368ac1ff976b62e03e22ecca674b59d0/cffi-1.13.2-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "e570d3ab32e2c2861c4ebe6ffcad6a8abf9347432a37608fe1fbd157b3f0036b"
+        "url": "https://files.pythonhosted.org/packages/4b/e8/49364c25d886c5b251408b4695ac5039b4e81d2b1304511c047d0bace17b/cffi-1.13.2-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "fd43a88e045cf992ed09fa724b5315b790525f2676883a6ea64e3263bae6549d"
+        "url": "https://files.pythonhosted.org/packages/9e/99/1adcccd6f7761186eb70e4591f45e941529fbf8e5df8e2d79e914887b118/cffi-1.13.2-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "6471a82d5abea994e38d2c2abc77164b4f7fbaaf80261cb98394d5793f11b12a"
+        "url": "https://files.pythonhosted.org/packages/71/71/6011c17e8a523be0be20149ed7ba7e8671db7ec6fc52868e4f9a49d527f8/cffi-1.13.2-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "2781e9ad0e9d47173c0093321bb5435a9dfae0ed6a762aabafa13108f5f7b2ba"
+        "url": "https://files.pythonhosted.org/packages/4f/c9/135197be2a44f8dbe59373a55018843aa586e14af23e813897f40b6689f6/cffi-1.13.2-cp38-cp38-win_amd64.whl"
+  "1.14.0":
+    "Darwin":
+      "2.7":
+        "sha256": "1cae98a7054b5c9391eb3249b86e0e99ab1e02bb0cc0575da191aedadbdf4384"
+        "url": "https://files.pythonhosted.org/packages/14/ef/8fb81a8ebde3eb113a412a7548afb0b19c7d1793992039f4be26b2074e81/cffi-1.14.0-cp27-cp27m-macosx_10_9_x86_64.whl"
+      "3.5":
+        "sha256": "001bf3242a1bb04d985d63e138230802c6c8d4db3668fb545fb5005ddf5bb5ff"
+        "url": "https://files.pythonhosted.org/packages/5d/94/12dd4fbacd4197da0b6b7f15fcda4a2bceb08875654d1fb8950eb29f96b1/cffi-1.14.0-cp35-cp35m-macosx_10_9_x86_64.whl"
+      "3.6":
+        "sha256": "95cd16d3dee553f882540c1ffe331d085c9e629499ceadfbda4d4fde635f4b7d"
+        "url": "https://files.pythonhosted.org/packages/d2/ff/0574f409c8ccabec9a93f0a01646f7e998f586c8e7099baee35710119df5/cffi-1.14.0-cp36-cp36m-macosx_10_9_x86_64.whl"
+      "3.7":
+        "sha256": "e577934fc5f8779c554639376beeaa5657d54349096ef24abe8c74c5d9c117c3"
+        "url": "https://files.pythonhosted.org/packages/b2/77/547a14d5677c5448359fbd9e59b9ab3cca62e91417cf71e46ca234fbbfa5/cffi-1.14.0-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "3b911c2dbd4f423b4c4fcca138cadde747abdb20d196c4a48708b8a2d32b16dd"
+        "url": "https://files.pythonhosted.org/packages/e7/1c/922f632aa04341813b84f30f9b359cf6e8f0d7420a2226604b167643c315/cffi-1.14.0-cp38-cp38-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "cab50b8c2250b46fe738c77dbd25ce017d5e6fb35d3407606e7a4180656a5a6a"
+        "url": "https://files.pythonhosted.org/packages/08/29/8001b940ef40e7a25ffe8f3188bc9b118934b513d64f769dbf461e46f4ed/cffi-1.14.0-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "b8c78301cefcf5fd914aad35d3c04c2b21ce8629b5e4f4e45ae6812e461910fa"
+        "url": "https://files.pythonhosted.org/packages/d6/7f/7acc85c478f5056b98c9961a31697b1e53fbec158ee5f723097e1c355660/cffi-1.14.0-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "028a579fc9aed3af38f4892bdcc7390508adabc30c6af4a6e4f611b0c680e6ac"
+        "url": "https://files.pythonhosted.org/packages/f1/c7/72abda280893609e1ddfff90f8064568bd8bcb2c1770a9d5bb5edb2d1fea/cffi-1.14.0-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "14491a910663bf9f13ddf2bc8f60562d6bc5315c1f09c704937ef17293fb85b0"
+        "url": "https://files.pythonhosted.org/packages/ff/1d/0b743dadcdf4980b717163fd2d24cd18c1c0c7a78a076268afd7e0e2c25e/cffi-1.14.0-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "3d311bcc4a41408cf5854f06ef2c5cab88f9fded37a3b95936c9879c1640d4c2"
+        "url": "https://files.pythonhosted.org/packages/49/de/1ab40dd857172da4accad610c25badfdfc23ec7e1bbcc6f9212cfcb3419d/cffi-1.14.0-cp38-cp38-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "c420917b188a5582a56d8b93bdd8e0f6eca08c84ff623a4c16e809152cd35793"
+        "url": "https://files.pythonhosted.org/packages/2c/8c/165c6169d447cae43b461073b8dbc6011b7e66bd310cd86d419db9d458a6/cffi-1.14.0-cp27-cp27m-win_amd64.whl"
+      "3.5":
+        "sha256": "8a6c688fefb4e1cd56feb6c511984a6c4f7ec7d2a1ff31a10254f3c817054ae4"
+        "url": "https://files.pythonhosted.org/packages/88/16/5098af3840492509a712fa73024a0e39b4d5cd366fe6674d90a55ca7bc0d/cffi-1.14.0-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "337d448e5a725bba2d8293c48d9353fc68d0e9e4088d62a9571def317797522b"
+        "url": "https://files.pythonhosted.org/packages/94/49/8df433247344bf992ed319416a3c252f190dbfd7331cf7bb1432ca46980f/cffi-1.14.0-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "2089ed025da3919d2e75a4d963d008330c96751127dd6f73c8dc0c65041b4c26"
+        "url": "https://files.pythonhosted.org/packages/cf/d6/77bafa8180a8ec309a5300296f2855f7d58c0530d2e4a39064ae8ab42e4e/cffi-1.14.0-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "00789914be39dffba161cfc5be31b55775de5ba2235fe49aa28c148236c4e06b"
+        "url": "https://files.pythonhosted.org/packages/b4/78/eefed9f51baa2b2c891915b4590a237ed6bc6d02beec177fc503bae8eb53/cffi-1.14.0-cp38-cp38-win_amd64.whl"
+  "1.14.1":
+    "Darwin":
+      "2.7":
+        "sha256": "66dd45eb9530e3dde8f7c009f84568bc7cac489b93d04ac86e3111fb46e470c2"
+        "url": "https://files.pythonhosted.org/packages/e2/1d/66bc659318f6872a086392aea02e8694b8041cd1acc9c7ceeb0f0d657df1/cffi-1.14.1-cp27-cp27m-macosx_10_9_x86_64.whl"
+      "3.5":
+        "sha256": "d6033b4ffa34ef70f0b8086fd4c3df4bf801fee485a8a7d4519399818351aa8e"
+        "url": "https://files.pythonhosted.org/packages/9f/8d/b047a850a0f6fe3043cb190d0dbd1ba3fb615bf20d039515feb5790fe281/cffi-1.14.1-cp35-cp35m-macosx_10_9_x86_64.whl"
+      "3.6":
+        "sha256": "f960375e9823ae6a07072ff7f8a85954e5a6434f97869f50d0e41649a1c8144f"
+        "url": "https://files.pythonhosted.org/packages/9d/d3/f64f07d0110481ff20c2825711ec5d8b3c47a144ef4887dbd60872a56543/cffi-1.14.1-cp36-cp36m-macosx_10_9_x86_64.whl"
+      "3.7":
+        "sha256": "e23cb7f1d8e0f93addf0cae3c5b6f00324cccb4a7949ee558d7b6ca973ab8ae9"
+        "url": "https://files.pythonhosted.org/packages/b9/77/9dfa132945772d3d6a006cfdebe49d7c028064a28f241baeaf08496fbfae/cffi-1.14.1-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "267adcf6e68d77ba154334a3e4fc921b8e63cbb38ca00d33d40655d4228502bc"
+        "url": "https://files.pythonhosted.org/packages/dc/00/3d48c7486bd9abfd7e0ab921014712042393dacb5fc0ce0651d0d9295298/cffi-1.14.1-cp38-cp38-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "bac0d6f7728a9cc3c1e06d4fcbac12aaa70e9379b3025b27ec1226f0e2d404cf"
+        "url": "https://files.pythonhosted.org/packages/b6/7b/d10af127ece0dde09dddd187983064e570b7f3c38d412513ef7239691de8/cffi-1.14.1-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "892daa86384994fdf4856cb43c93f40cbe80f7f95bb5da94971b39c7f54b3a9c"
+        "url": "https://files.pythonhosted.org/packages/bc/e7/eaf1d746678478f3d54117a3b826aa426168936b88d9a288d347a08d97d4/cffi-1.14.1-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "cda422d54ee7905bfc53ee6915ab68fe7b230cacf581110df4272ee10462aadc"
+        "url": "https://files.pythonhosted.org/packages/eb/9c/c6b452e414ea289822f3cc44bdf4822066dc7b947f03eaa2a2b97dda5032/cffi-1.14.1-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "f90c2267101010de42f7273c94a1f026e56cbc043f9330acd8a80e64300aba33"
+        "url": "https://files.pythonhosted.org/packages/d1/fd/10e2050b3afcb03d78b2b33212c3ff17b3985ae25d0feb34c0c9eb417549/cffi-1.14.1-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "98be759efdb5e5fa161e46d404f4e0ce388e72fbf7d9baf010aff16689e22abe"
+        "url": "https://files.pythonhosted.org/packages/b0/38/969cda34369ffca608cc13db7cb522d7712a67bb060e91ddc55c1c2d7b60/cffi-1.14.1-cp38-cp38-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "b87dfa9f10a470eee7f24234a37d1d5f51e5f5fa9eeffda7c282e2b8f5162eb1"
+        "url": "https://files.pythonhosted.org/packages/2a/ff/16c6b380ce8a12e1b9876d251db0d798ef0c05b2a606f2314fda384cb268/cffi-1.14.1-cp27-cp27m-win_amd64.whl"
+      "3.5":
+        "sha256": "fcf32bf76dc25e30ed793145a57426064520890d7c02866eb93d3e4abe516948"
+        "url": "https://files.pythonhosted.org/packages/45/ad/cca5e6e0fcd15893ae889804e84e7bbca9ce55fdc22397c9d3adddf98b9b/cffi-1.14.1-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "4ce1e995aeecf7cc32380bc11598bfdfa017d592259d5da00fc7ded11e61d022"
+        "url": "https://files.pythonhosted.org/packages/80/8c/fc54b0b840a4dc4503b7b1b3f916b1cdc31ed1cad4a04c11ced31653abd6/cffi-1.14.1-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "4fa72a52a906425416f41738728268072d5acfd48cbe7796af07a923236bcf96"
+        "url": "https://files.pythonhosted.org/packages/e7/79/e0142d463aba6b419732eecdaf762cbd789695ccdcf746b7a3bc2a516cd0/cffi-1.14.1-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "b1d6ebc891607e71fd9da71688fcf332a6630b7f5b7f5549e6e631821c0e5d90"
+        "url": "https://files.pythonhosted.org/packages/40/ad/eb98b5ec6129ffdabedca218ded2c529d59b935dac7cc6108366e379de96/cffi-1.14.1-cp38-cp38-win_amd64.whl"
+  "1.14.2":
+    "Darwin":
+      "2.7":
+        "sha256": "da9d3c506f43e220336433dffe643fbfa40096d408cb9b7f2477892f369d5f82"
+        "url": "https://files.pythonhosted.org/packages/47/91/2db397aee5683f6129a4bd5b7c959df64726c839a3d55f1c46dac95ed0ac/cffi-1.14.2-cp27-cp27m-macosx_10_9_x86_64.whl"
+      "3.5":
+        "sha256": "6843db0343e12e3f52cc58430ad559d850a53684f5b352540ca3f1bc56df0731"
+        "url": "https://files.pythonhosted.org/packages/2f/47/db5864d656dd7e5768b9102a1a5a72e1faadb625da2b4eaa025a8ff226f4/cffi-1.14.2-cp35-cp35m-macosx_10_9_x86_64.whl"
+      "3.6":
+        "sha256": "29c4688ace466a365b85a51dcc5e3c853c1d283f293dfcc12f7a77e498f160d2"
+        "url": "https://files.pythonhosted.org/packages/73/0d/42ac9ecb1f856f1e84b3e0a100dea0945730b7e6b63e7fc9145c822df9c4/cffi-1.14.2-cp36-cp36m-macosx_10_9_x86_64.whl"
+      "3.7":
+        "sha256": "6539314d84c4d36f28d73adc1b45e9f4ee2a89cdc7e5d2b0a6dbacba31906798"
+        "url": "https://files.pythonhosted.org/packages/37/4a/404fd61a83ff0edf6e3cb81724436e6817a5ef09ef3963f7ebbc777ee05f/cffi-1.14.2-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "e613514a82539fc48291d01933951a13ae93b6b444a88782480be32245ed4afa"
+        "url": "https://files.pythonhosted.org/packages/ca/d9/652605f17084608256c487df7998df014bfe9f813543b9cd9da5b642338e/cffi-1.14.2-cp38-cp38-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "57214fa5430399dffd54f4be37b56fe22cedb2b98862550d43cc085fb698dc2c"
+        "url": "https://files.pythonhosted.org/packages/5f/a1/489c4a6fddd981b3b0cd74ce23517f12547bc6e14a5b5cab0cf1db3eb1e6/cffi-1.14.2-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "8662aabfeab00cea149a3d1c2999b0731e70c6b5bac596d95d13f643e76d3d4e"
+        "url": "https://files.pythonhosted.org/packages/1a/dd/62b42c1e665318902a62bf2f37e2510fbfa9a7016e6d1c07c76c0bf2e8c6/cffi-1.14.2-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "65867d63f0fd1b500fa343d7798fa64e9e681b594e0a07dc934c13e76ee28fb1"
+        "url": "https://files.pythonhosted.org/packages/82/7e/9cc46f072c9a414b5a6e08c5c2da5db3bff2601e69c4a6d4f6a34e6f9cfc/cffi-1.14.2-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "95e9094162fa712f18b4f60896e34b621df99147c2cee216cfa8f022294e8e9f"
+        "url": "https://files.pythonhosted.org/packages/ad/82/cc3e38b7859e1426d7c004503962074317f3ccbd46adbef5b8094c9688c3/cffi-1.14.2-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "c0b48b98d79cf795b0916c57bebbc6d16bb43b9fc9b8c9f57f4cf05881904c75"
+        "url": "https://files.pythonhosted.org/packages/f7/90/1bd5aa1ae9127d789b4d4a74fa63f369ef6cfaa45f7c6151059d5be96674/cffi-1.14.2-cp38-cp38-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "15a5f59a4808f82d8ec7364cbace851df591c2d43bc76bcbe5c4543a7ddd1bf1"
+        "url": "https://files.pythonhosted.org/packages/d0/4f/3743776b54bacae115070fc113648720b2fc039c0daf1fbf61722df5363e/cffi-1.14.2-cp27-cp27m-win_amd64.whl"
+      "3.5":
+        "sha256": "bf44a9a0141a082e89c90e8d785b212a872db793a0080c20f6ae6e2a0ebf82ad"
+        "url": "https://files.pythonhosted.org/packages/2d/13/3cada4a89eba0a7fa651d0161ce08204774ae7c8c321e154359993f979b0/cffi-1.14.2-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "7057613efefd36cacabbdbcef010e0a9c20a88fc07eb3e616019ea1692fa5df4"
+        "url": "https://files.pythonhosted.org/packages/c0/8f/de60e57567ed4f161c3590df39d8ce61b2d800551ac0269b01f6ccb8e0c9/cffi-1.14.2-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "e4b9b7af398c32e408c00eb4e0d33ced2f9121fd9fb978e6c1b57edd014a7d15"
+        "url": "https://files.pythonhosted.org/packages/c6/8f/dfb115c3ff7fdfb49e47d0e4cd0566c62e94427e90e22f0e5f6ec84be7d9/cffi-1.14.2-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "12a453e03124069b6896107ee133ae3ab04c624bb10683e1ed1c1663df17c13c"
+        "url": "https://files.pythonhosted.org/packages/c6/6e/ea6f2a993c2489d5f95e3272c441720496a16ed68fe0a9cebd6e10ec1169/cffi-1.14.2-cp38-cp38-win_amd64.whl"
+  "1.14.3":
+    "Darwin":
+      "2.7":
+        "sha256": "3eeeb0405fd145e714f7633a5173318bd88d8bbfc3dd0a5751f8c4f70ae629bc"
+        "url": "https://files.pythonhosted.org/packages/d4/48/db25d742bdc912c2128885f38dc1e4607960736b51e5c108147525962ef0/cffi-1.14.3-2-cp27-cp27m-macosx_10_9_x86_64.whl"
+      "3.5":
+        "sha256": "cb763ceceae04803adcc4e2d80d611ef201c73da32d8f2722e9d0ab0c7f10768"
+        "url": "https://files.pythonhosted.org/packages/2e/0a/21a1669bb8f35be81a9b27f61116b9c08e140979d4b222e763e2624f446b/cffi-1.14.3-2-cp35-cp35m-macosx_10_9_x86_64.whl"
+      "3.6":
+        "sha256": "44f60519595eaca110f248e5017363d751b12782a6f2bd6a7041cba275215f5d"
+        "url": "https://files.pythonhosted.org/packages/2f/80/fb0e5dfc17ee82078fc59e46d02c152d30c9d8c307a0d3f619052643f3eb/cffi-1.14.3-2-cp36-cp36m-macosx_10_9_x86_64.whl"
+      "3.7":
+        "sha256": "c53af463f4a40de78c58b8b2710ade243c81cbca641e34debf3396a9640d6ec1"
+        "url": "https://files.pythonhosted.org/packages/f1/4f/c961a0f75b2305a64acd34eaceabb75a60065bd9ba9b3175fa2744dbc1ee/cffi-1.14.3-2-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "33c6cdc071ba5cd6d96769c8969a0531be2d08c2628a0143a10a7dcffa9719ca"
+        "url": "https://files.pythonhosted.org/packages/74/9d/bfa10946bcae5d9b922fbdc244d94e89e5b5be3f7539950bc1dc43a89b6b/cffi-1.14.3-2-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "c11579638288e53fc94ad60022ff1b67865363e730ee41ad5e6f0a17188b327a"
+        "url": "https://files.pythonhosted.org/packages/ac/66/4d73161c554722b5ac6197029272a1636be30cf971f7779b52df06d7ba9f/cffi-1.14.3-2-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "3363e77a6176afb8823b6e06db78c46dbc4c7813b00a41300a4873b6ba63b171"
+        "url": "https://files.pythonhosted.org/packages/98/76/90d154092a65911a386eb28fc0c6c65808d2d794d662b392cba236fec11e/cffi-1.14.3-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "0b1ad452cc824665ddc682400b62c9e4f5b64736a2ba99110712fdee5f2505c4"
+        "url": "https://files.pythonhosted.org/packages/92/4e/81944b0b3fbdc6ffb6eb550d6ec9840c6bb40d3b2c0b370bed87118f443c/cffi-1.14.3-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "4d7c26bfc1ea9f92084a1d75e11999e97b62d63128bcc90c3624d07813c52808"
+        "url": "https://files.pythonhosted.org/packages/50/ca/bbca0fd95b24a1d4f0d2e016f09f35ae68d4fe72bf34cc538d0a0d2d3e10/cffi-1.14.3-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "22399ff4870fb4c7ef19fff6eeb20a8bbf15571913c181c78cb361024d574579"
+        "url": "https://files.pythonhosted.org/packages/26/d7/1c485a42d59d45f14f27bb93769e56142518c85ddf379dbdad7e42d0ffcd/cffi-1.14.3-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "529c4ed2e10437c205f38f3691a68be66c39197d01062618c55f74294a4a4828"
+        "url": "https://files.pythonhosted.org/packages/c6/60/44b6c54dbbee7d5eafbc34e0a0b67207e85906fe8e36c830dfd3966dde1d/cffi-1.14.3-cp38-cp38-manylinux1_x86_64.whl"
+      "3.9":
+        "sha256": "bf39a9e19ce7298f1bd6a9758fa99707e9e5b1ebe5e90f2c3913a47bc548747c"
+        "url": "https://files.pythonhosted.org/packages/1b/e4/dc93b4dcb92e31a232e381c56d521d751f92cdda199a2191b397e1030aea/cffi-1.14.3-cp39-cp39-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "2f9674623ca39c9ebe38afa3da402e9326c245f0f5ceff0623dccdac15023e05"
+        "url": "https://files.pythonhosted.org/packages/05/7e/e60348fc9e1ccb72d69c8b766fd3c55b8b6f473ed59725b5685f337553ea/cffi-1.14.3-cp27-cp27m-win_amd64.whl"
+      "3.5":
+        "sha256": "e66399cf0fc07de4dce4f588fc25bfe84a6d1285cc544e67987d22663393926d"
+        "url": "https://files.pythonhosted.org/packages/48/65/abdd133820c9c1b66ed2590864d33869c80791d76879c04298abf8c1d0f6/cffi-1.14.3-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "de31b5164d44ef4943db155b3e8e17929707cac1e5bd2f363e67a56e3af4af6e"
+        "url": "https://files.pythonhosted.org/packages/cb/30/0ec1524004c65fe745dc2842b93c86e07cd6b3c1d11c0c96320ca3e49fb7/cffi-1.14.3-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "6642f15ad963b5092d65aed022d033c77763515fdc07095208f15d3563003869"
+        "url": "https://files.pythonhosted.org/packages/87/f0/a4ec0ac56fa09d0cf6440dfa817562e8bea181b4bbb6cde3a86271e78097/cffi-1.14.3-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "bbd2f4dfee1079f76943767fce837ade3087b578aeb9f69aec7857d5bf25db15"
+        "url": "https://files.pythonhosted.org/packages/16/9d/76682c8583263095e5358e4162990af49a11713c257797400c0f6522fb52/cffi-1.14.3-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "c150eaa3dadbb2b5339675b88d4573c1be3cb6f2c33a6c83387e10cc0bf05bd3"
+        "url": "https://files.pythonhosted.org/packages/a6/d1/e4bd8c815efebba5c6b633b08c90099ca1f6e1f0cb06e76d041fce846980/cffi-1.14.3-cp39-cp39-win_amd64.whl"
+  "1.14.4":
+    "Darwin":
+      "2.7":
+        "sha256": "ebb253464a5d0482b191274f1c8bf00e33f7e0b9c66405fbffc61ed2c839c775"
+        "url": "https://files.pythonhosted.org/packages/3b/f5/5d47895916a2d7c774b6ffc7f6b43e98132cf1f4b6605de5f726c5b70f0d/cffi-1.14.4-cp27-cp27m-macosx_10_9_x86_64.whl"
+      "3.5":
+        "sha256": "51a8b381b16ddd370178a65360ebe15fbc1c71cf6f584613a7ea08bfad946698"
+        "url": "https://files.pythonhosted.org/packages/2e/4b/ab3b3857365bfde7644cf1f3aeb1cc6383b4a6095289e1b120ff1c35615a/cffi-1.14.4-cp35-cp35m-macosx_10_9_x86_64.whl"
+      "3.6":
+        "sha256": "f803eaa94c2fcda012c047e62bc7a51b0bdabda1cad7a92a522694ea2d76e49f"
+        "url": "https://files.pythonhosted.org/packages/58/6c/f3571b25daec9c6fa057078698e3758ad375d06eea893c793a82b5cbb195/cffi-1.14.4-cp36-cp36m-macosx_10_9_x86_64.whl"
+      "3.7":
+        "sha256": "a7711edca4dcef1a75257b50a2fbfe92a65187c47dab5a0f1b9b332c5919a3fb"
+        "url": "https://files.pythonhosted.org/packages/c9/b3/39687d321725baf7f831c5868b6ba44922f5693947bf0e8a0110cffd7fb4/cffi-1.14.4-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "df5169c4396adc04f9b0a05f13c074df878b6052430e03f50e68adf3a57aa28d"
+        "url": "https://files.pythonhosted.org/packages/c8/60/fa014a4a47ab4b6df5e52a0aacb5be1fb3cd7a2d9990b01b9a5ecb360818/cffi-1.14.4-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "840793c68105fe031f34d6a086eaea153a0cd5c491cde82a74b420edd0a2b909"
+        "url": "https://files.pythonhosted.org/packages/a1/51/bc899f2934462cfeeb436d803b51e042f9281164453130bc335ebc1ae5c6/cffi-1.14.4-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "d9efd8b7a3ef378dd61a1e77367f1924375befc2eba06168b6ebfa903a5e59ca"
+        "url": "https://files.pythonhosted.org/packages/50/5e/b4d3cff96422425dfcaa0a09414b5b17b311e74e56a4c457b16396dd73a7/cffi-1.14.4-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "af5c59122a011049aad5dd87424b8e65a80e4a6477419c0c1015f73fb5ea0293"
+        "url": "https://files.pythonhosted.org/packages/bf/d7/ca80f3cce68e1b4d5dc24792a496cf65c27ea6b385185f3bb4befb4d71e7/cffi-1.14.4-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "0638c3ae1a0edfb77c6765d487fee624d2b1ee1bdfeffc1f0b58c64d149e7eec"
+        "url": "https://files.pythonhosted.org/packages/1c/1a/90fa7e7ee05d91d0339ef264bd8c008f57292aba4a91ec512a0bbb379d1d/cffi-1.14.4-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "798caa2a2384b1cbe8a2a139d80734c9db54f9cc155c99d7cc92441a23871c03"
+        "url": "https://files.pythonhosted.org/packages/71/47/debced71573d0e023039c96b38d68b23bd454536a28f83a9c6533b5c5a81/cffi-1.14.4-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "8d6603078baf4e11edc4168a514c5ce5b3ba6e3e9c374298cb88437957960a53"
+        "url": "https://files.pythonhosted.org/packages/66/c8/56efb65bd9fff582c84f11bbfe2cf70c6abcaa852e35be45583e823bb59d/cffi-1.14.4-cp38-cp38-manylinux1_x86_64.whl"
+      "3.9":
+        "sha256": "045d792900a75e8b1e1b0ab6787dd733a8190ffcf80e8c8ceb2fb10a29ff238a"
+        "url": "https://files.pythonhosted.org/packages/8c/f5/36613ed67b6201d40d6f1f1bc93b909e78065f7e31f6725ac20507943442/cffi-1.14.4-cp39-cp39-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "f60567825f791c6f8a592f3c6e3bd93dd2934e3f9dac189308426bd76b00ef3b"
+        "url": "https://files.pythonhosted.org/packages/34/62/70afd36ad48e3803135b67f2ba2a7e4ec8c23d759200a05c4904757fc3b2/cffi-1.14.4-cp27-cp27m-win_amd64.whl"
+      "3.5":
+        "sha256": "64081b3f8f6f3c3de6191ec89d7dc6c86a8a43911f7ecb422c60e90c70be41c7"
+        "url": "https://files.pythonhosted.org/packages/a9/d4/9f0e32b50369185afba2083f58995ebc0722a5a14969424ccde4f2e359ef/cffi-1.14.4-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "6bc25fc545a6b3d57b5f8618e59fc13d3a3a68431e8ca5fd4c13241cd70d0009"
+        "url": "https://files.pythonhosted.org/packages/c5/0c/2443b6a63b78c384d0c703c9731850e0fd1d43f80e4a56b6a744890ad9cf/cffi-1.14.4-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "9cc46bc107224ff5b6d04369e7c595acb700c3613ad7bcf2e2012f62ece80c35"
+        "url": "https://files.pythonhosted.org/packages/65/7b/cf83e7da59967d7f8599ac27338d570af4d770791b1ea744677b27aafcb4/cffi-1.14.4-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "ec80dc47f54e6e9a78181ce05feb71a0353854cc26999db963695f950b5fb375"
+        "url": "https://files.pythonhosted.org/packages/f6/d4/bf5516922cc914174a936e7094d5f136ee4178b3509069dd3da8e3040a1a/cffi-1.14.4-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "f032b34669220030f905152045dfa27741ce1a6db3324a5bc0b96b6c7420c87b"
+        "url": "https://files.pythonhosted.org/packages/b8/4b/017ab4ca6472b7293c685ada47504424fca81b1b973577aa06bc530ad645/cffi-1.14.4-cp39-cp39-win_amd64.whl"
+  "1.14.5":
+    "Darwin":
+      "2.7":
+        "sha256": "bb89f306e5da99f4d922728ddcd6f7fcebb3241fc40edebcb7284d7514741991"
+        "url": "https://files.pythonhosted.org/packages/45/47/6c826c696b91821e94914f2465f7363ef50433d471968fb18ccd44ea2be5/cffi-1.14.5-cp27-cp27m-macosx_10_9_x86_64.whl"
+      "3.5":
+        "sha256": "5de7970188bb46b7bf9858eb6890aad302577a5f6f75091fd7cdd3ef13ef3045"
+        "url": "https://files.pythonhosted.org/packages/30/f3/e800a574a76c4779bae17a9f347a6b6a8b3fb8d9efdca0aedcc1326ccd09/cffi-1.14.5-cp35-cp35m-macosx_10_9_x86_64.whl"
+      "3.6":
+        "sha256": "3d3dd4c9e559eb172ecf00a2a7517e97d1e96de2a5e610bd9b68cea3925b4892"
+        "url": "https://files.pythonhosted.org/packages/4d/3d/7cbf1aa7f34de5ecf18b1b63cbc3250911e85567f0eb4f97d7f03ebc165b/cffi-1.14.5-cp36-cp36m-macosx_10_9_x86_64.whl"
+      "3.7":
+        "sha256": "2894f2df484ff56d717bead0a5c2abb6b9d2bf26d6960c4604d5c48bbc30ee73"
+        "url": "https://files.pythonhosted.org/packages/10/f3/d11dfd315ae16f465a815e8746aafe3e4c7905e8cadf26dc04b1fe201fb6/cffi-1.14.5-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "8b198cec6c72df5289c05b05b8b0969819783f9418e0409865dac47288d2a053"
+        "url": "https://files.pythonhosted.org/packages/57/cc/4c80c4796ca182433502cd20119a2f4b2bab6caa097745ecaf23fc692ae1/cffi-1.14.5-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "1071534bbbf8cbb31b498d5d9db0f274f2f7a865adca4ae429e147ba40f73dea"
+        "url": "https://files.pythonhosted.org/packages/7a/27/49175e6f5f86f4322e56c6aaa70964a76e1bda05bb440cb15e71fb83815c/cffi-1.14.5-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "cbde590d4faaa07c72bf979734738f328d239913ba3e043b1e98fe9a39f8b2b6"
+        "url": "https://files.pythonhosted.org/packages/ab/a7/1df1dcd222c9a35d2d0c4c123bd55a533ed2d07b09909ad085829deea4d6/cffi-1.14.5-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "d42b11d692e11b6634f7613ad8df5d6d5f8875f5d48939520d351007b3c13406"
+        "url": "https://files.pythonhosted.org/packages/6c/a6/1662485aee65761f09707220d9e847baac4a912d419ee0139a9de22f34c4/cffi-1.14.5-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "69e395c24fc60aad6bb4fa7e583698ea6cc684648e1ffb7fe85e3c1ca131a7d5"
+        "url": "https://files.pythonhosted.org/packages/2b/cf/9a3b04e57191a970836aeaa8b2075574f02fbdb65d6368457a2f13213e7f/cffi-1.14.5-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "cd2868886d547469123fadc46eac7ea5253ea7fcb139f12e1dfc2bbd406427d1"
+        "url": "https://files.pythonhosted.org/packages/97/2d/cd29c79f2eb1384577d0662f23c89d29621152f14bef8c6b25747785744b/cffi-1.14.5-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "6c97d7350133666fbb5cf4abdc1178c812cb205dc6f41d174a7b0f18fb93337e"
+        "url": "https://files.pythonhosted.org/packages/5c/0f/e07df370fac0e99e938edc62c8a15e54b9d75605e11838fa0ef300118e1d/cffi-1.14.5-cp38-cp38-manylinux1_x86_64.whl"
+      "3.9":
+        "sha256": "6e4714cc64f474e4d6e37cfff31a814b509a35cb17de4fb1999907575684479c"
+        "url": "https://files.pythonhosted.org/packages/86/c8/e3ce68952243b1e3ccf619bc11452da3723ee8adb529c1e0665a1b46b70c/cffi-1.14.5-cp39-cp39-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "51182f8927c5af975fece87b1b369f722c570fe169f9880764b1ee3bca8347b5"
+        "url": "https://files.pythonhosted.org/packages/d3/aa/900a97521594f29ee4207272020862b3735b4ee4620d767f3aab2106c707/cffi-1.14.5-cp27-cp27m-win_amd64.whl"
+      "3.5":
+        "sha256": "29314480e958fd8aab22e4a58b355b629c59bf5f2ac2492b61e3dc06d8c7a315"
+        "url": "https://files.pythonhosted.org/packages/db/86/6da76a51886484e4a09d719f6af037c56134f6896cfad38c39392aa718de/cffi-1.14.5-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "005a36f41773e148deac64b08f233873a4d0c18b053d37da83f6af4d9087b813"
+        "url": "https://files.pythonhosted.org/packages/4e/04/25885ffc576fffe36bae2007c65f481dc886ae828520be94fb629eeed32b/cffi-1.14.5-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "9cf8022fb8d07a97c178b02327b284521c7708d7c71a9c9c355c178ac4bbd3d4"
+        "url": "https://files.pythonhosted.org/packages/c6/92/9188a1dff4934d0bd18df7f92dc481324b3342814cea34849b393ea2d232/cffi-1.14.5-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "1f436816fc868b098b0d63b8920de7d208c90a67212546d02f84fe78a9c26396"
+        "url": "https://files.pythonhosted.org/packages/b4/8c/f7ba28010df236a61644b6cedd83d1e2e0bf84b4e5e534db536b490cfde0/cffi-1.14.5-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "f2d45f97ab6bb54753eab54fffe75aaf3de4ff2341c9daee1987ee1837636f1d"
+        "url": "https://files.pythonhosted.org/packages/aa/0c/20c3ccdb32fdf86e38901d548f0e11b47d7e037b95373efc1c2379129358/cffi-1.14.5-cp39-cp39-win_amd64.whl"
+  "1.14.6":
+    "Darwin":
+      "2.7":
+        "sha256": "22b9c3c320171c108e903d61a3723b51e37aaa8c81255b5e7ce102775bd01e2c"
+        "url": "https://files.pythonhosted.org/packages/fd/c5/8983a249cb521c5e153f2f4a33442fca9db1fc0a9da2a1edcef9311c8ab3/cffi-1.14.6-cp27-cp27m-macosx_10_9_x86_64.whl"
+      "3.5":
+        "sha256": "aedb15f0a5a5949ecb129a82b72b19df97bbbca024081ed2ef88bd5c0a610534"
+        "url": "https://files.pythonhosted.org/packages/8c/4f/111d4da6f0fd2f042bad4d66b97dd7e7554a8eebae00ffcfa6dcfdb61ea4/cffi-1.14.6-cp35-cp35m-macosx_10_9_x86_64.whl"
+      "3.6":
+        "sha256": "e8c6a99be100371dbb046880e7a282152aa5d6127ae01783e37662ef73850d8f"
+        "url": "https://files.pythonhosted.org/packages/62/84/16fcb8ed5d3347c14612e6dee2f577ab7de951696c6210bbf0c912015867/cffi-1.14.6-cp36-cp36m-macosx_10_9_x86_64.whl"
+      "3.7":
+        "sha256": "4373612d59c404baeb7cbd788a18b2b2a8331abcc84c3ba40051fcd18b17a4d5"
+        "url": "https://files.pythonhosted.org/packages/a2/4e/6225779f1ccb7916cd6c640ca4dbe6e0ce1452952bb822d66d5e875a6f53/cffi-1.14.6-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "ba6f2b3f452e150945d58f4badd92310449876c4c954836cfb1803bdd7b422f0"
+        "url": "https://files.pythonhosted.org/packages/ca/e1/015e2ae23230d9de8597e9ad8c0b81d5ac181f08f2e6e75774b7f5301677/cffi-1.14.6-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "06c54a68935738d206570b20da5ef2b6b6d92b38ef3ec45c5422c0ebaf338d4d"
+        "url": "https://files.pythonhosted.org/packages/54/39/cc4587c7c179a545a454c2252a64a8ab0d76b28f347e66caa825c7b36ae6/cffi-1.14.6-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "e22dcb48709fc51a7b58a927391b23ab37eb3737a98ac4338e2448bef8559b33"
+        "url": "https://files.pythonhosted.org/packages/74/f5/f0cb35e78044bf19309e635b20550bf3443322e0ff2ff09e6732c0ed0851/cffi-1.14.6-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "f627688813d0a4140153ff532537fbe4afea5a3dffce1f9deb7f91f848a832b5"
+        "url": "https://files.pythonhosted.org/packages/42/2e/3c765955eef06835253802b36afca233b86bdedabf584327bb2d7ed4ee23/cffi-1.14.6-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "d950695ae4381ecd856bcaf2b1e866720e4ab9a1498cba61c602e56630ca7195"
+        "url": "https://files.pythonhosted.org/packages/f2/cd/3f5f059fed635d71047fa9ce507635088f982ab280fc24cde91d9afb9c1c/cffi-1.14.6-cp36-cp36m-manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "fd4305f86f53dfd8cd3522269ed7fc34856a8ee3709a5e28b2836b2db9d4cd69"
+        "url": "https://files.pythonhosted.org/packages/46/5e/2f5f83be1586e04f4f14b32c48aafb29197355cca8f62d430f915706fafa/cffi-1.14.6-cp37-cp37m-manylinux1_x86_64.whl"
+      "3.8":
+        "sha256": "9f3e33c28cd39d1b655ed1ba7247133b6f7fc16fa16887b120c0c670e35ce346"
+        "url": "https://files.pythonhosted.org/packages/80/a8/1562ce87c8cb8c736cbef40bc235f4a2ac7835822c231f717e3064dfcc93/cffi-1.14.6-cp38-cp38-manylinux1_x86_64.whl"
+      "3.9":
+        "sha256": "f3ebe6e73c319340830a9b2825d32eb6d8475c1dac020b4f0aa774ee3b898d1c"
+        "url": "https://files.pythonhosted.org/packages/be/2a/6d266eea47dbb2d872bbd1b8954a2d167668481ff34ebb70ffdd1113eeab/cffi-1.14.6-cp39-cp39-manylinux1_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "7bcac9a2b4fdbed2c16fa5681356d7121ecabf041f18d97ed5b8e0dd38a80224"
+        "url": "https://files.pythonhosted.org/packages/d4/2b/33e7cef059d0b2003d722805d9b820af3eee24db2da701818e22588b5a36/cffi-1.14.6-cp27-cp27m-win_amd64.whl"
+      "3.5":
+        "sha256": "57e555a9feb4a8460415f1aac331a2dc833b1115284f7ded7278b54afc5bd218"
+        "url": "https://files.pythonhosted.org/packages/74/d5/0498193220024eab3d39347e7d8e054fa7683d50624dda59a49ec83e748b/cffi-1.14.6-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "a9da7010cec5a12193d1af9872a00888f396aba3dc79186604a09ea3ee7c029e"
+        "url": "https://files.pythonhosted.org/packages/74/f3/adcc0bfb0246a799fa0b37ac3895635886b1626ff60d4abb624b8c53b75e/cffi-1.14.6-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "8eb687582ed7cd8c4bdbff3df6c0da443eb89c3c72e6e5dcdd9c81729712791a"
+        "url": "https://files.pythonhosted.org/packages/01/ca/bd11b77c294cf6729742e61dcf3a95518dfae6e65b2f9e89ef2c8f895d01/cffi-1.14.6-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "c33d18eb6e6bc36f09d793c0dc58b0211fccc6ae5149b808da4a62660678b156"
+        "url": "https://files.pythonhosted.org/packages/c7/c1/c6850b57362ac05d842314849c183ca4df1aea0c865e54a20aadedf4f9af/cffi-1.14.6-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "818014c754cd3dba7229c0f5884396264d51ffb87ec86e927ef0be140bfdb0d2"
+        "url": "https://files.pythonhosted.org/packages/80/3f/120c03ce27f959ad8449f84f476054970ddd461bdf6e534f9176f9a02dd6/cffi-1.14.6-cp39-cp39-win_amd64.whl"
+  "1.15.0":
+    "Darwin":
+      "2.7":
+        "sha256": "c2502a1a03b6312837279c8c1bd3ebedf6c12c4228ddbad40912d671ccc8a962"
+        "url": "https://files.pythonhosted.org/packages/c1/db/38b6dbdb2c40094d68d6b0cd1ad75d2bffa63975064e3b307be833044d59/cffi-1.15.0-cp27-cp27m-macosx_10_9_x86_64.whl"
+      "3.10":
+        "sha256": "0104fb5ae2391d46a4cb082abdd5c69ea4eab79d8d44eaaf79f1b1fd806ee4c2"
+        "url": "https://files.pythonhosted.org/packages/f0/00/3003a6f8c20bc349cc7c307432dcbd3711135a1ce12b763e7b09726674f0/cffi-1.15.0-cp310-cp310-macosx_10_9_x86_64.whl"
+      "3.6":
+        "sha256": "64d4ec9f448dfe041705426000cc13e34e6e5bb13736e9fd62e34a0b0c41566e"
+        "url": "https://files.pythonhosted.org/packages/ca/b6/47394997a21758f0a30907b3e35e6019281a635b467540c26b631fec4f3d/cffi-1.15.0-cp36-cp36m-macosx_10_9_x86_64.whl"
+      "3.7":
+        "sha256": "06c48159c1abed75c2e721b1715c379fa3200c7784271b3c46df01383b593636"
+        "url": "https://files.pythonhosted.org/packages/8b/d0/da0ccff5dc535194e0d910df42a6c1a9598dd5589220f3c1a99d67249acf/cffi-1.15.0-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "4238e6dab5d6a8ba812de994bbb0a79bddbdf80994e4ce802b6f6f3142fcc880"
+        "url": "https://files.pythonhosted.org/packages/5e/f0/693b6c7fea52d1afad55d1bfa3e5991a9075d98ac66330ab404dbc69ec8d/cffi-1.15.0-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "45e8636704eacc432a206ac7345a5d3d2c62d95a507ec70d62f23cd91770482a"
+        "url": "https://files.pythonhosted.org/packages/61/51/cff222be618f0e060a6991ab387f9574776fd0711a63b2be80df47ec5fad/cffi-1.15.0-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "d4d692a89c5cf08a8557fdeb329b82e7bf609aadfaed6c0d79f5a449a3c7c023"
+        "url": "https://files.pythonhosted.org/packages/26/28/fb01ff898aa7c93e4774799b3dc0a3693cfee48c5ea4e524ce30e6b10e7e/cffi-1.15.0-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.10":
+        "sha256": "00c878c90cb53ccfaae6b8bc18ad05d2036553e6d9d1d9dbcf323bbe83854ca3"
+        "url": "https://files.pythonhosted.org/packages/ae/27/a99335833b6c4d356bdeaadd87d0e9e83969761513dba6dc2a8123d95ca1/cffi-1.15.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+      "3.6":
+        "sha256": "27c219baf94952ae9d50ec19651a687b826792055353d07648a5695413e0c605"
+        "url": "https://files.pythonhosted.org/packages/49/7b/449daf9cacfd7355cea1b4106d2be614315c29ac16567e01756167f6daab/cffi-1.15.0-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "fd8a250edc26254fe5b33be00402e6d287f562b6a5b2152dec302fa15bb3e997"
+        "url": "https://files.pythonhosted.org/packages/44/6b/5edf93698ef1dc745774e47e26f5995040dd3604562dd63f5959fcd3a49e/cffi-1.15.0-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+      "3.8":
+        "sha256": "57e9ac9ccc3101fac9d6014fba037473e4358ef4e89f8e181f8951a2c0162024"
+        "url": "https://files.pythonhosted.org/packages/e5/fe/1dac7533ddb73767df8ba26183a9375dde2ee136aec7c92c9fb3038108e3/cffi-1.15.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+      "3.9":
+        "sha256": "74fdfdbfdc48d3f47148976f49fab3251e550a8720bebc99bf1483f5bfb5db3e"
+        "url": "https://files.pythonhosted.org/packages/e2/25/00fd291e0872d43dabe070e7b761ba37453a1a94bd6e28c31b73112d8f0c/cffi-1.15.0-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "e7022a66d9b55e93e1a845d8c9eba2a1bebd4966cd8bfc25d9cd07d515b33fa6"
+        "url": "https://files.pythonhosted.org/packages/8d/b7/0043b6fafa0560bce18dc3bf7a9fbabe222d603598a8851c08d305e631e5/cffi-1.15.0-cp27-cp27m-win_amd64.whl"
+      "3.10":
+        "sha256": "5e069f72d497312b24fcc02073d70cb989045d1c91cbd53979366077959933e0"
+        "url": "https://files.pythonhosted.org/packages/c9/06/3dc78a8537fba6d442d45a2d9c0d71679d2bfc88e82452780874256cf883/cffi-1.15.0-cp310-cp310-win_amd64.whl"
+      "3.6":
+        "sha256": "f6f824dc3bce0edab5f427efcfb1d63ee75b6fcb7282900ccaf925be84efb0fc"
+        "url": "https://files.pythonhosted.org/packages/0a/fe/f5090f4b636cef41680510fba13eee107420e6e016a8d30c386eb832a964/cffi-1.15.0-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "3415c89f9204ee60cd09b235810be700e993e343a408693e80ce7f6a40108029"
+        "url": "https://files.pythonhosted.org/packages/51/1a/d3f1a0ec3bf66deca2e63f1f66c9b1ed8c43aa38b064ba86cbfcffa9ab3a/cffi-1.15.0-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "181dee03b1170ff1969489acf1c26533710231c58f95534e3edac87fff06c443"
+        "url": "https://files.pythonhosted.org/packages/b6/15/a50bf922c5f025665a9671c5ef063c3f384303d422f6b1d3134510cc044e/cffi-1.15.0-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "3773c4d81e6e818df2efbc7dd77325ca0dcb688116050fb2b3011218eda36139"
+        "url": "https://files.pythonhosted.org/packages/bd/92/25f744cbe55e7e54b35f256f9fdd50a590c434cf47afb78b8a6278a87c2d/cffi-1.15.0-cp39-cp39-win_amd64.whl"
+  "1.15.0rc1":
+    "Darwin":
+      "2.7":
+        "sha256": "e4bb67bdef349768f3e662b63d3fc6a939e9e425326acebe4c0c1b48b6f38267"
+        "url": "https://files.pythonhosted.org/packages/46/87/24f8515c9f99e13b4cf319118918ea34aba28fe700e8c4d2cd713828a915/cffi-1.15.0rc1-cp27-cp27m-macosx_10_9_x86_64.whl"
+      "3.10":
+        "sha256": "016ba30a6c3e93e48fd57b1a8624516aeba61f85ed1d5c31d9dd34f77fdff4f6"
+        "url": "https://files.pythonhosted.org/packages/c2/04/df8fe7d8072aa2b04d50a5619d99d14f1488ce09f3c7efeaa62525501910/cffi-1.15.0rc1-cp310-cp310-macosx_10_9_x86_64.whl"
+      "3.6":
+        "sha256": "2941c0ae3161b185b116eb939386c9c1dc8d4294ea0a3886c7248c50c23defe8"
+        "url": "https://files.pythonhosted.org/packages/e3/f8/dad433348a89adf8b7047b7a606802f80bdb5c93f285658be60b0be55c8f/cffi-1.15.0rc1-cp36-cp36m-macosx_10_9_x86_64.whl"
+      "3.7":
+        "sha256": "e185aa34d2ab08e0fe1f6bd60aa6950bfcb84059e7debb8bcfb4f1818eafd6e3"
+        "url": "https://files.pythonhosted.org/packages/60/dc/f14918b65818d2902ac159a6d9560c74d2f5aedf4a8074204d09911b5b08/cffi-1.15.0rc1-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "d6f8782c19a0b12b4c5d9cefe1b2ca1636591531c7f20c4ae4d7c5b4077d3af5"
+        "url": "https://files.pythonhosted.org/packages/43/7b/06e7c4ac6ceaf7e779aa3f9750de9fcddd0599fdce1097da498e15b3549c/cffi-1.15.0rc1-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "9c2e5e75c7c3d65131a366e0ae460542a1ace97ae93cc0f283f9efff1a97ebfa"
+        "url": "https://files.pythonhosted.org/packages/79/aa/8c4390407fae838f8a248cd49df9a1780b60070557d0876f3a9c4d5e147a/cffi-1.15.0rc1-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "f909436b96a032aed0a8529464910ae7665b5826b35801a03d9012dde3fcc9cb"
+        "url": "https://files.pythonhosted.org/packages/59/d9/09258814e072d9b1abb3160fd42504dd21915b0506c660afcacc67f47d8c/cffi-1.15.0rc1-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.10":
+        "sha256": "6a78361a30688afc1c79f09cee629dc5f6d627f7fbd43ab9a37b239e7609940f"
+        "url": "https://files.pythonhosted.org/packages/b8/5b/146c1b8258aa661edb6cd28ac8bb06431118e6dbb0e6673a96a772c73ea4/cffi-1.15.0rc1-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+      "3.6":
+        "sha256": "3e11347d5d19bd13359587270f2b4580fc3a6761fedb7d4a81ffac2e68c66b6c"
+        "url": "https://files.pythonhosted.org/packages/0a/7e/fc12331483d7e497be503fef37de2fadb4475b863419ac6276d47f109ad2/cffi-1.15.0rc1-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "e34d93929b4cf93e736be64c0c926af6bf90f0887de0253de233509665d36c9c"
+        "url": "https://files.pythonhosted.org/packages/52/35/efcc0353ed83b178253c609cd4c5260d03bcb655dfb7590eaf77132ef0d9/cffi-1.15.0rc1-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+      "3.8":
+        "sha256": "b96741e5ab3290aae9712e708362d4843e77d8a2418a3af3c08dda14d9691bab"
+        "url": "https://files.pythonhosted.org/packages/41/72/83b450b7a30bed0e4ac9261dd961a60d7a9cdb3125b5f1784ea575259495/cffi-1.15.0rc1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+      "3.9":
+        "sha256": "6e1db0b63067f1a96f1b92fc8149aa20327a11d18ab3e3ad23be2d8aeb3a6bbb"
+        "url": "https://files.pythonhosted.org/packages/c6/be/ece1744d61b1f85282ef648155511e06f9f28ea369d3df6cabf87286a5d2/cffi-1.15.0rc1-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "7623bbfc421d26698cc9dc4b8907ca6a149c7547d5c94ac6f55b1685e9f187b1"
+        "url": "https://files.pythonhosted.org/packages/f6/80/49111774cafeb8e03e6718ceb2e71dfac1061d371d5bb62a43728739e611/cffi-1.15.0rc1-cp27-cp27m-win_amd64.whl"
+      "3.10":
+        "sha256": "1edddb00facd25f2fb0cc2f271b3a795cbbe804b36319ace01d15fb962309293"
+        "url": "https://files.pythonhosted.org/packages/72/4f/197920d861e7fac3b1c140708bc5bbcd14b42d4b5277b14a014440fac94d/cffi-1.15.0rc1-cp310-cp310-win_amd64.whl"
+      "3.6":
+        "sha256": "c4a469421402b50e48cc2ffa05229cbdd7dc0164ce2d31eae6b2ac8195ef9634"
+        "url": "https://files.pythonhosted.org/packages/07/67/feb52729991ebeb2c32550ed4b0e5eca4c7f592f7ed9fb4e4e799609ba25/cffi-1.15.0rc1-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "23feec3ff73fd47d9bf3fed96e5debb32727c67c9dcbfea67e172f8fac4500e6"
+        "url": "https://files.pythonhosted.org/packages/53/c3/e19f65a8583eb296c9e4eb377c3dff50d59e20f4bf408fa7dcb13461eebd/cffi-1.15.0rc1-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "d89fcd91a1e0da07b35fbe09f0e10fff880e9ca5f76478f6bbfab10c9c9ef6f2"
+        "url": "https://files.pythonhosted.org/packages/d2/25/d42c2e147e62dc2d5c84fb7645af78c5edb1f028beb1125aff851d4c3116/cffi-1.15.0rc1-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "78f691b8c882d65162062bb10a69423f9d3005b3c8ec9977c60e14fe0036525f"
+        "url": "https://files.pythonhosted.org/packages/9b/6a/7e9a732c278c2307ad126a1229b8d2db736f39c7684e5da38d00ddc777f5/cffi-1.15.0rc1-cp39-cp39-win_amd64.whl"
+  "1.15.0rc2":
+    "Darwin":
+      "2.7":
+        "sha256": "d3eacf2acbae1a9c9ea734b771599191ccd3b21a4b1aaa160f30270127f5d79b"
+        "url": "https://files.pythonhosted.org/packages/ef/a3/1850c0244449bf88a5f3aef6c4b9c456c85fde9923e7e8ef30b2eaaf8aa7/cffi-1.15.0rc2-cp27-cp27m-macosx_10_9_x86_64.whl"
+      "3.10":
+        "sha256": "dc2f352dbc1b1562442fdb061fa6953850fcb977e09c94e347f2d702e62261f6"
+        "url": "https://files.pythonhosted.org/packages/eb/0a/863fe1b9f49e14575c3bb4ee84235f0de2550510befb8f8ee5e57b265189/cffi-1.15.0rc2-cp310-cp310-macosx_10_9_x86_64.whl"
+      "3.6":
+        "sha256": "b360176e10fe892948aec2656822cea1ac53b52fceaebc9f49c4f304dbb67d99"
+        "url": "https://files.pythonhosted.org/packages/29/97/4562f5d59b24c63fc858ca6f1ffdf696866ac85a3592d5ce97bc886e7095/cffi-1.15.0rc2-cp36-cp36m-macosx_10_9_x86_64.whl"
+      "3.7":
+        "sha256": "1e4e4a181c4d7718b5e820db5f5552ba75d49237f5766b56ac39d76dab986340"
+        "url": "https://files.pythonhosted.org/packages/c9/6f/f209a56f1a6037047a4ffe7a02c364492a134716029c054f7eaa5529f153/cffi-1.15.0rc2-cp37-cp37m-macosx_10_9_x86_64.whl"
+      "3.8":
+        "sha256": "1b2d4964dbda701e00ef673b9171078c68ab87945e4e41b0f97cc6cf8b228519"
+        "url": "https://files.pythonhosted.org/packages/27/16/a38b677241ec854ee42a7de3ea66ba9a4fb76af46c2917620cf50418872a/cffi-1.15.0rc2-cp38-cp38-macosx_10_9_x86_64.whl"
+      "3.9":
+        "sha256": "760eab7b40e8b1da0e68afc0524f951c03a55c9cd1589718094bb4e759f24972"
+        "url": "https://files.pythonhosted.org/packages/23/33/5cc0a8b8388197012b3d0be91f9238824d54e57f5930c4152f1114dd365a/cffi-1.15.0rc2-cp39-cp39-macosx_10_9_x86_64.whl"
+    "Linux":
+      "2.7":
+        "sha256": "c996ccae21e66ca1576c6ccf69017bbad59eb3694b14eda963b726e786dd20c2"
+        "url": "https://files.pythonhosted.org/packages/b5/6d/a0c590c0d9491ff46cc71203b663a4ead804a364d068955b5f62dadc3e2a/cffi-1.15.0rc2-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.10":
+        "sha256": "9e490d1d3621e792d38d2ad504024b0cc98a90ee44380d22672da39175ca0b47"
+        "url": "https://files.pythonhosted.org/packages/62/70/5c7bf8c3b8ff15e049b3735787f39cf7c2fff99f3fb931a78e956e9921d0/cffi-1.15.0rc2-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+      "3.6":
+        "sha256": "e2059472cb38a3f0ed10c62f9b654442779d95f1490f4cdbf6ddd6e5b6552474"
+        "url": "https://files.pythonhosted.org/packages/32/7b/72343a3c8ecd653c0a1065474b7727c1894912594350c4ddd312fa00a329/cffi-1.15.0rc2-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.whl"
+      "3.7":
+        "sha256": "5fe287dad6b1f2a936ae7ffdb2822dd9c0ed01bc56eed6ad3bad0788cba841c0"
+        "url": "https://files.pythonhosted.org/packages/b6/65/e331285ef313ea6e7dec18687b4ff91c9535a4125430a64662862bddc846/cffi-1.15.0rc2-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+      "3.8":
+        "sha256": "b62b6d33de56392a7a5c35e72b7006b12cfb68d57d608bd55c98f7e2b71229c6"
+        "url": "https://files.pythonhosted.org/packages/0f/c0/eb5473b850542a5f389d6c3a999310aca85a3e8920b6d23b8736a96e3d8f/cffi-1.15.0rc2-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+      "3.9":
+        "sha256": "61e0f7f6b719dfa786e5f39887cb62d96477956006edce4869a11e75287a5c58"
+        "url": "https://files.pythonhosted.org/packages/3b/ad/bc36e95fdc0212745e9da5f6f778d2e9904f7f7e6280d57527ab2fb405cf/cffi-1.15.0rc2-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+    "Windows":
+      "2.7":
+        "sha256": "546e07621327d841e92eb000b1b8857b6ca38dc07aec2b40b50392ccd18457e9"
+        "url": "https://files.pythonhosted.org/packages/fe/d1/9843079e7c96284e653413f1cc4a59b80479627781e6636e9758b840771a/cffi-1.15.0rc2-cp27-cp27m-win_amd64.whl"
+      "3.10":
+        "sha256": "4fdb3bfc6d359b6c2389ce3f9541861f8866690da8beb1a07edd7c2b909689a2"
+        "url": "https://files.pythonhosted.org/packages/6a/cd/04b67b2d7e4c2daed8e6bd2e0471d8095062c013504fb5f70862058bc326/cffi-1.15.0rc2-cp310-cp310-win_amd64.whl"
+      "3.6":
+        "sha256": "b086e09e7a13dfc91e9334d8bfc4895a7212452905db41c88add6563deb5d6be"
+        "url": "https://files.pythonhosted.org/packages/c7/dc/487a727467b55e38530c85c6ee0504db2fd58157411f0654404ab49a9be6/cffi-1.15.0rc2-cp36-cp36m-win_amd64.whl"
+      "3.7":
+        "sha256": "68b9cc5f9872cc8ac2dd2dc4249a17e46537005b87ef2f7aa863fba7e6aceae0"
+        "url": "https://files.pythonhosted.org/packages/54/a4/cd6503deda0187216076ca644f90e1425126ca660c0365d83a7eaf29e3e7/cffi-1.15.0rc2-cp37-cp37m-win_amd64.whl"
+      "3.8":
+        "sha256": "2b63ec0afdceb26c998487ee995ce40aa7de13113c8a8c07430cb825b4cf600d"
+        "url": "https://files.pythonhosted.org/packages/31/e5/c22842ee1c6496439ef41c1e8d357c9b2a6dde21561d0b09ebe606e70f2d/cffi-1.15.0rc2-cp38-cp38-win_amd64.whl"
+      "3.9":
+        "sha256": "cccfdb53d37d1b0407d30c5cf321845ba4b3df42d904396c9bd44fe460896046"
+        "url": "https://files.pythonhosted.org/packages/1e/be/175f4b80dec24be6ba98f3bdc5665c6e9b37db8b5a54ce607ed100516ba8/cffi-1.15.0rc2-cp39-cp39-win_amd64.whl"
+  "1.2.0":
+    "Windows":
+      "2.6":
+        "sha256": "1fbb125d3e5818d5097bbf565e424d60ee1b0c4ec58401eb73f3f134cb582f39"
+        "url": "https://files.pythonhosted.org/packages/87/1c/fc425e6ad05191456209b6116d64b811c52099c021e65c9fa5332f52e5ab/cffi-1.2.0-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "656e7670d5e33d4b0cf9eeedddafea699af598e6d086e9802205ce07199e702d"
+        "url": "https://files.pythonhosted.org/packages/2c/9f/ee334eafc2f1200e8c6978dd77ec3d32feebf287f1102d941feb1841d69c/cffi-1.2.0-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "d3f0e89793a83e1f8d5102dd3f35a2c7c74abc5634eb40bc137f3315cd52a33f"
+        "url": "https://files.pythonhosted.org/packages/f6/27/d7fafad7766ecfd1b27187d5d4cf4a5a7cebc87f04274e813aca49ae77e8/cffi-1.2.0-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "a88b2772d46fa34d935f6f45a2384c5cc10383d078603427e411eb3a8d94eec8"
+        "url": "https://files.pythonhosted.org/packages/4d/d6/0f1e713ca39a91f3b49bdb52d666b896129950643d9ef74a0f3ad9f12e88/cffi-1.2.0-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "3116a5cfa92bfe6d2e1062838f6052739384e1b32bef1aabd7c69d722fdbe925"
+        "url": "https://files.pythonhosted.org/packages/78/a5/86e197189ab20a7aa10365c82ff9364f8e17229026b47587a754eae13daf/cffi-1.2.0-cp34-none-win_amd64.whl"
+      "3.5":
+        "sha256": "ae44d8267f4295051c828769ff04e7665cc64a9e3fb13ca36672d00cf03c7b9d"
+        "url": "https://files.pythonhosted.org/packages/12/7c/88f760bd1ec6b3bb2c56dd589e3f580c44fdf389cdd60c117b1e426d541f/cffi-1.2.0-cp35-none-win_amd64.whl"
+  "1.2.1":
+    "Darwin":
+      "2.6":
+        "sha256": "1135c50ad5204bef04c7a73e21816060b713ffd76d32363d5250013cba2e2226"
+        "url": "https://files.pythonhosted.org/packages/57/44/905184ca5e91d1ff1c70bab895a9d02ddddbdd3c44dd8706050539ba1af5/cffi-1.2.1-cp26-none-macosx_10_10_intel.whl"
+      "2.7":
+        "sha256": "ebfc8a818a58e8281cb793f60d77a281521235e4f233adfe7e3a86fdc4c42df0"
+        "url": "https://files.pythonhosted.org/packages/e0/33/bdeba005dd0bab287a739fd7c4c3546c42d358dc2b1dd7ef45822050ea05/cffi-1.2.1-cp27-none-macosx_10_10_intel.whl"
+      "3.3":
+        "sha256": "dce80fbece280d1c8de4ba9b727b912e7bf5ea56fdf6be56d5427c9544cc9a59"
+        "url": "https://files.pythonhosted.org/packages/b3/5d/207177e34c70233018c1bed0f324c0180e469050c0cc50fc52dde226a0a6/cffi-1.2.1-cp33-cp33m-macosx_10_10_x86_64.whl"
+      "3.4":
+        "sha256": "49a23a662c3c8d41369ac73cb4ed35278a169214d3dc1fa7513de8ca08e44744"
+        "url": "https://files.pythonhosted.org/packages/01/85/751fed7d6af45edadc766e55bd6c10dabaec516529db1a6ac91235699f2e/cffi-1.2.1-cp34-cp34m-macosx_10_10_x86_64.whl"
+      "3.5":
+        "sha256": "e82174887d1f56e3ad30e466291552fe841d62e7c5652dad479b153287170705"
+        "url": "https://files.pythonhosted.org/packages/87/91/eafe8b65e52ebf9381773fea85a33e5d57c159db72f8a83314a9d61aa1f3/cffi-1.2.1-cp35-cp35m-macosx_10_10_x86_64.whl"
+    "Windows":
+      "2.6":
+        "sha256": "3538151fbb37eb4481b0837593e5732e31ded8b0604c50fcf43d52f1c019a90a"
+        "url": "https://files.pythonhosted.org/packages/12/a6/1d96cc4c49eea792f752bcb4fff3348b32ad10e4e2d8a7fffa425b95b1ed/cffi-1.2.1-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "65e5ea6077f7646ab54ad7ee2d9976dcbc4046ea6f8edc2a85e0c355c09db0f6"
+        "url": "https://files.pythonhosted.org/packages/8c/cd/180920dfb88790e4ff9ed305f3638cae7833c43576afe1c4a566c9623499/cffi-1.2.1-cp27-none-win_amd64.whl"
+      "3.2":
+        "sha256": "67979a88298181dc74df0c6c0d4069c63ebf93b7096af055e3b16e75587a402a"
+        "url": "https://files.pythonhosted.org/packages/85/6e/410c04aad0e350547405d1865fc8be984c265aa0415e9721435ce58a00af/cffi-1.2.1-cp32-none-win_amd64.whl"
+      "3.3":
+        "sha256": "74c98cf06e30bf8f5e84d97ab8eabed8914bc3e126fc1fa4dc81c408db8781ab"
+        "url": "https://files.pythonhosted.org/packages/69/85/6498cf359a70b0f70f88ee38f6a027634db865dfd8a4127443a342db085f/cffi-1.2.1-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "f3ba1b193b3dce288745676acff1b6a5185e46b9bb961f1d34bcd6153f76ef2d"
+        "url": "https://files.pythonhosted.org/packages/d2/37/6280a68b4ec2a12be3ca07d9ab3740a5bfbe91323e593e3b9c18ad9d197b/cffi-1.2.1-cp34-none-win_amd64.whl"
+      "3.5":
+        "sha256": "f0cafb39c20ec4da9af63675ade79f6442b8db5d8be4ef3873e852d3944079b3"
+        "url": "https://files.pythonhosted.org/packages/40/c9/a6f24733a50fa1c1f90ffa71adb7b6ba57b586178f107bcaf7c18ba97ae6/cffi-1.2.1-cp35-none-win_amd64.whl"
+  "1.3.0":
+    "Darwin":
+      "2.6":
+        "sha256": "6551162d3d2358af41e460f399094dde183b916fada3c0d8209e7a37825e99a3"
+        "url": "https://files.pythonhosted.org/packages/db/60/6c772796961cd86753e34f7f43a983e1df36d89df915d2af4edb69108fe6/cffi-1.3.0-cp26-none-macosx_10_10_intel.whl"
+      "2.7":
+        "sha256": "fca8bfa95c87c3fcee1c5d00731ed96ade505d485b38f82e4c3beb44f55a2045"
+        "url": "https://files.pythonhosted.org/packages/48/f1/42b718375073f4c506a06b4aad37ce2d9f65e446c305d9ae900090099bdf/cffi-1.3.0-cp27-none-macosx_10_10_intel.whl"
+      "3.3":
+        "sha256": "38710faced9e9006d37d1721a42ab8329e67093e3398adddd66833f7ad5f95cf"
+        "url": "https://files.pythonhosted.org/packages/1d/17/c162120330b18e194ca37b25ba98eb967dbf3585c4a9af0bec6f30231d94/cffi-1.3.0-cp33-cp33m-macosx_10_10_x86_64.whl"
+      "3.4":
+        "sha256": "ad8fa144a98d4a1ef35291a737acbce8b7ac0c795838922ca2f734d086b3b942"
+        "url": "https://files.pythonhosted.org/packages/76/8e/c885d103818c8098b1b4bf9a377671d5433291894c4bc70ce14c0e04c7e6/cffi-1.3.0-cp34-cp34m-macosx_10_10_x86_64.whl"
+      "3.5":
+        "sha256": "dd6ee4463d595f776e47146a1a9455548abbb23fbfa56864cbeaa3fd641436b2"
+        "url": "https://files.pythonhosted.org/packages/93/7a/d28dd319fe67cd2f1953e2a90a234a19e3999d16083cb4b82b24f6129d66/cffi-1.3.0-cp35-cp35m-macosx_10_10_x86_64.whl"
+    "Windows":
+      "2.6":
+        "sha256": "f7bdcaeaed1285eca35618a302a5cb1c1ac7ddd88eab7cb1fe384b54634322b0"
+        "url": "https://files.pythonhosted.org/packages/0e/be/9eb1861cd220ba61fc9fad94cd6ad544299dcdc990966cd574ea1537e476/cffi-1.3.0-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "b176e83d52630dbae09760d68d73a48abad1aa0888d9a80defa418fdab684f61"
+        "url": "https://files.pythonhosted.org/packages/f2/23/3374e1680d6b94c4b1f4ba713f00af2ea3b467bf96586a0d0e1a8dbda4cf/cffi-1.3.0-cp27-none-win_amd64.whl"
+      "3.3":
+        "sha256": "761fed57d9209454eeefdba0d1134ebf7ced5a18008f69e1c43f7963ce809717"
+        "url": "https://files.pythonhosted.org/packages/ac/ca/11a639d88c4b87304da5afe85d294757bd1be556f3fd2fbedbb4cba1bd77/cffi-1.3.0-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "5672144381e5fcecaa0aa7dda7c4d727d056ff8e53abf3c1a5dd2f3f1c72ffa8"
+        "url": "https://files.pythonhosted.org/packages/8d/40/23cf4c1591f11f3450b6ca721bb414ba765d2634320ca289935678625383/cffi-1.3.0-cp34-none-win_amd64.whl"
+      "3.5":
+        "sha256": "0319a25b7d39951201a9afe1028242f207213006f3453bfc8bb636716aba0abe"
+        "url": "https://files.pythonhosted.org/packages/8d/f3/22e88980e079f7243645434ab42691b91c37fba88c7a3899fb56252b3695/cffi-1.3.0-cp35-none-win_amd64.whl"
+  "1.3.1":
+    "Darwin":
+      "2.6":
+        "sha256": "c78d0f79064fd064194fe5c7e5a3b6b2f6dbb4858376bb5202a4488c691f612e"
+        "url": "https://files.pythonhosted.org/packages/db/0f/57147cef1bc51eb9c5541579c6cd3a2407632a0ad5b3c6a3e42be440081e/cffi-1.3.1-cp26-none-macosx_10_10_intel.whl"
+      "2.7":
+        "sha256": "8e4b402cb9da58f27522d07817c4e4b1bee76357afab85fc35f35e1e7f0951ee"
+        "url": "https://files.pythonhosted.org/packages/a8/b1/e221cf218c9f1c71fd78c2595e65a44199f757fcc2761f1c5c9e5b554f1f/cffi-1.3.1-cp27-none-macosx_10_6_intel.whl"
+      "3.3":
+        "sha256": "98711a8ce3edaa15e3da598abdb2b479fe74ebc2133b277c52bb432256e3c8d3"
+        "url": "https://files.pythonhosted.org/packages/ff/ba/632237373301deb091a5c6104c35ed105f1835345ef8dd8efa8c9d521954/cffi-1.3.1-cp33-cp33m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "5cb29d3971cac11af334804c7c05706c08928a4947f8207e8c4ebd807e444f65"
+        "url": "https://files.pythonhosted.org/packages/5f/02/2e6a322dc6f0a0a7c29888940f79a78fa520b958ebd007ff295f9bc633dd/cffi-1.3.1-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "547f64018687c4110856b06585a9d68902eb995f198f8b137a95d8f0253c3776"
+        "url": "https://files.pythonhosted.org/packages/7a/a1/43873875eea8a5bcf2ea199b95f53c21be786771532426f1912b320d94c1/cffi-1.3.1-cp35-cp35m-macosx_10_6_intel.whl"
+    "Windows":
+      "2.6":
+        "sha256": "0fd52a93644af933012632d32d8c67d680d6a2cbd1fd305b9c6dce2f7b43c38f"
+        "url": "https://files.pythonhosted.org/packages/59/90/ecff9e90da4d5a94a0932ef7feaab343df1dc617683dba5b455803a3bf8a/cffi-1.3.1-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "6b4c1f69ad7311f3690de2b611451ada3a674ea0c96101603fabf464a2417507"
+        "url": "https://files.pythonhosted.org/packages/f7/ef/85604b115859b80df004d4fd74fe44e8fc9af390ef71afe5869ac32def90/cffi-1.3.1-cp27-none-win_amd64.whl"
+      "3.3":
+        "sha256": "ab5f4bfa148228ae88ed2341d55b05933024dedaff8ee7accca3cef347ef162b"
+        "url": "https://files.pythonhosted.org/packages/1c/e3/9381019ea4919adf424ff20ae454d88e4597878d28fe9196ac87da8b425e/cffi-1.3.1-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "ad2c4b919ac36203d94ad8cd0a993e046b72a716545df4b1c4aa66600796bf63"
+        "url": "https://files.pythonhosted.org/packages/b7/b4/c4d957cdf4ce1236dbc5fe864cfa928c65cb61fe2242373a2d0b33633073/cffi-1.3.1-cp34-none-win_amd64.whl"
+      "3.5":
+        "sha256": "d0fb123946c502df66838e7841b39f7e436c4991b01d1daf4aed66e2411c28cb"
+        "url": "https://files.pythonhosted.org/packages/d2/65/47510b059a6cd8cdcf807eed47e75bbb8ff32e0d92bbbf1b27cf923eb1e8/cffi-1.3.1-cp35-none-win_amd64.whl"
+  "1.4.0":
+    "Darwin":
+      "2.6":
+        "sha256": "0feac4359bd199ef3388189ad1780ac1a4e872bb8af953de05814dd7a8b3f34e"
+        "url": "https://files.pythonhosted.org/packages/c6/98/f6855bd4c1dd4ec1edd03acc49192ee5230b570261c9169220ab0da6fae0/cffi-1.4.0-cp26-none-macosx_10_7_intel.whl"
+      "2.7":
+        "sha256": "cc90a001838010a6310616d1b0c16920956dfe1c59d3302aa005e874dd9f6fe2"
+        "url": "https://files.pythonhosted.org/packages/55/ca/26f52aa760022dc780d787d1a1c79f4243f7e9450b52d326aca340952388/cffi-1.4.0-cp27-none-macosx_10_6_intel.whl"
+      "3.3":
+        "sha256": "7fa441798f03a104c122d58f1fb204b23f3bb6b9fb08351b4473d63582196e8c"
+        "url": "https://files.pythonhosted.org/packages/7e/73/4311ecb15b1125f980d4aa2d0a04eafaf9d02630d4d08c7230ca3f3ffd21/cffi-1.4.0-cp33-cp33m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "8ac3a565ee987a010ea08bc83703839bcd8fb0a5141b3e4bb1daa4b2fefceeb0"
+        "url": "https://files.pythonhosted.org/packages/4b/7e/7d91ff6e242d48298a33621e92c89eca5e423ed7a595a246a412913862c5/cffi-1.4.0-cp34-cp34m-macosx_10_6_intel.whl"
+    "Windows":
+      "2.6":
+        "sha256": "3a5bcb6ffb1c8d26b5752cfee8a19728997ba30d4dfd62603fa886804edb759d"
+        "url": "https://files.pythonhosted.org/packages/41/a9/2432a5df48c8e87a8da92467e9f67f6f4d6c7781c9dccd71bd7a40527938/cffi-1.4.0-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "6ce8dfc2e3507dbff0f8de1aad10779455f2d8bc3b98305c402a88c390dce202"
+        "url": "https://files.pythonhosted.org/packages/9b/f1/b4c429b82322d0a7612501dea1d29c47d8403417d06859e607f6df5280c8/cffi-1.4.0-cp27-none-win_amd64.whl"
+      "3.3":
+        "sha256": "f7e9adfa1aca8949fa9ff7b9e4da688ead751a5365f2cd338b3757ecd8d23bc3"
+        "url": "https://files.pythonhosted.org/packages/50/d0/dc5cb771a425583d0429ae054acf446ae79c908398209ee738ce53094e5e/cffi-1.4.0-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "9f1b2d3857b9b0e75824ac5b570ec05a29b2531c9207ac41082ea8a93840a87f"
+        "url": "https://files.pythonhosted.org/packages/bb/b7/9f8e6595235ceb781c54742563594856db5d1d5b6c9b9b189c1cdbb11080/cffi-1.4.0-cp34-none-win_amd64.whl"
+      "3.5":
+        "sha256": "27c5345e5c75f450ca15c28dc8294446e0eff3b31a4985bd800c8fddffedb16c"
+        "url": "https://files.pythonhosted.org/packages/1f/11/535b8191099d2ace114801e9cf808ba03d3cc6c04e17853ba0e21f9905c6/cffi-1.4.0-cp35-none-win_amd64.whl"
+  "1.4.1":
+    "Windows":
+      "2.6":
+        "sha256": "1146e1d7f773347f3081d123de210881900928bc6ee5277bc9eb0f0fb261f7b0"
+        "url": "https://files.pythonhosted.org/packages/48/c0/d084e85ea8cb7dcfffa9579f32045721c1658f36a3a681b66410dc143125/cffi-1.4.1-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "56af3dd97abd992d0e5216aae83e364d67f16cc3eab9d46728290cb3d34aad40"
+        "url": "https://files.pythonhosted.org/packages/5e/1c/4c0729aaaa9ed64c2e836336518ae99edafd5b697db1484946423c705c42/cffi-1.4.1-cp27-none-win_amd64.whl"
+      "3.3":
+        "sha256": "239fa95b27aa055803220dfee2bda36cdb291c7d2e95901c3a8386b4f342c413"
+        "url": "https://files.pythonhosted.org/packages/8a/ab/c577dc75cf9fccb4f2f759e09248f94d7e5e3c0c1d045457c3ed8daff50f/cffi-1.4.1-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "546fe1c5facad95134afbb126969cfeced4b6ab93d2c8fd60eba54bdfa825984"
+        "url": "https://files.pythonhosted.org/packages/5a/bd/b24547b26c4740a985c2f345a933c662724d973878d68acdf8ce7a63148c/cffi-1.4.1-cp34-none-win_amd64.whl"
+      "3.5":
+        "sha256": "2d3e3e78ec2335d7475eb9679ca94c1458d2ad8debb8bce91175c7896503cd46"
+        "url": "https://files.pythonhosted.org/packages/ec/68/97d859677d18c5ca9f9fe2c96b040483a4186e9baaa058a8097fed58099a/cffi-1.4.1-cp35-none-win_amd64.whl"
+  "1.4.2":
+    "Darwin":
+      "2.6":
+        "sha256": "53c1c9ddb30431513eb7f3cdef0a3e06b0f1252188aaa7744af0f5a4cd45dbaf"
+        "url": "https://files.pythonhosted.org/packages/e9/87/e9dcea046d0c7d8f7582bcd398cac61ef3d408458b37ce55c1a094697fa7/cffi-1.4.2-cp26-none-macosx_10_7_intel.whl"
+      "2.7":
+        "sha256": "86cdca2cd9cba41422230390df17dfeaa9f344a911e3975c8be9da57b35548e9"
+        "url": "https://files.pythonhosted.org/packages/ed/4d/ea7402978fd8eae877d7fd0f70781f11875ef81ec3ea9e8e9ef595241d56/cffi-1.4.2-cp27-none-macosx_10_6_intel.whl"
+      "3.3":
+        "sha256": "000f358d4b0fa249feaab9c1ce7d5b2fe7e02e7bdf6806c26418505fc685e268"
+        "url": "https://files.pythonhosted.org/packages/08/43/18f48f9b166c244842c4b38f888002fc1fad814cff5c77c4320108c95cbb/cffi-1.4.2-cp33-cp33m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "e2b2d42236469a40224d39e7b6c60575f388b2f423f354c7ee90a5b7f58c8065"
+        "url": "https://files.pythonhosted.org/packages/12/0f/b265660e0f3b9662454654d92b02f757ade9a4cfa70fed59ed2647ee592f/cffi-1.4.2-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "5ca8fe30425265a49274e4b0213a1bc98f4b13449ae5e96f984771e5d83e58c1"
+        "url": "https://files.pythonhosted.org/packages/de/1c/55b3d3a11760569e25800257e5a444bb2377cdf586c0a17d0a1548273cf0/cffi-1.4.2-cp35-cp35m-macosx_10_6_intel.whl"
+    "Windows":
+      "2.6":
+        "sha256": "809c6ca8cfbcaeebfbd432b4576001b40d38ff2463773cb57577d75e1a020bc3"
+        "url": "https://files.pythonhosted.org/packages/10/46/b2c591fcd34aa0df6ecc07528ca593ed709c7f7a1de2c789e388d1391598/cffi-1.4.2-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "969aeffd7c0e097f6be1efd682c156ae226591a0793a94b6c2d5e4293f4c8d4e"
+        "url": "https://files.pythonhosted.org/packages/7f/62/096127bd8322349b441e6d9ae3934be057a1504a3003638d6f1429aa92ef/cffi-1.4.2-cp27-none-win_amd64.whl"
+      "3.3":
+        "sha256": "3127b3ab33eb23ccac071f9a0802748e5cf7c5cbcd02482bb063e35b41dbb0b0"
+        "url": "https://files.pythonhosted.org/packages/8c/a0/82523c41c3df076ca1913ef8a0c318de3b2ccc37f5e36818ac5276e7274b/cffi-1.4.2-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "a4de7a4d11aed488bab4fb14f4988587a829bece5a20433f780d6e33b08083cb"
+        "url": "https://files.pythonhosted.org/packages/4f/b4/4f173d5396ca6474ec803f7c613f515b88548f37dc66bfd109fb29400566/cffi-1.4.2-cp34-none-win_amd64.whl"
+      "3.5":
+        "sha256": "86cd6912bbc83e9405d4a73cd7f4b4ee8353652d2dbc7c820106ed5b4d1bab3a"
+        "url": "https://files.pythonhosted.org/packages/98/8d/5ea1586ce7e938490047750a6e0b9ab7798a92a93142ac47d4b8415f3087/cffi-1.4.2-cp35-none-win_amd64.whl"
+  "1.5.0":
+    "Darwin":
+      "2.6":
+        "sha256": "512d076b5c1b95508ba0a36aa535f42c5317d03d655a7b7f803768a6ceee1320"
+        "url": "https://files.pythonhosted.org/packages/0a/8b/b0ff4a284dad3cd2de8f035bd616145430eec24adbfb177222d9ae950430/cffi-1.5.0-cp26-none-macosx_10_7_intel.whl"
+      "2.7":
+        "sha256": "d9e00e797b426f691c7481746457bfac8d85668409caa9b63f50a54e6ef2481a"
+        "url": "https://files.pythonhosted.org/packages/f3/70/21feb24075e6cfbabd75ee750dbc239c3f44d40fd959b79a479e3a554908/cffi-1.5.0-cp27-none-macosx_10_6_intel.whl"
+      "3.3":
+        "sha256": "84ef501e5e5d71ae587cbca60bc6820f7a5dcf458f632add11f9abdf2d704874"
+        "url": "https://files.pythonhosted.org/packages/3a/ac/61625f05d419d9469dee8d9ab38bb31435b613a7a94086affae68284e2d7/cffi-1.5.0-cp33-cp33m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "79db594065be15e617a992da05b3f391c988aea417e4e841fa3af18890812ceb"
+        "url": "https://files.pythonhosted.org/packages/3f/9b/0ce45a07c2284793c31415e3d45fd94d5bf1d17c9e3ee8abea1437cd4e18/cffi-1.5.0-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "0d799c5bb93ffb5903689417397babbdd3de80580c31b55c5b8e27f73a7fae03"
+        "url": "https://files.pythonhosted.org/packages/d2/66/d1e62e9d19234afc410b07df045b569892bcdb45871d3fad2397a1b1d165/cffi-1.5.0-cp35-cp35m-macosx_10_6_intel.whl"
+    "Windows":
+      "2.6":
+        "sha256": "c0bc164a58dfb1991d487303a633f5ae891d89484a7e5e64a5648e5e53afd0b0"
+        "url": "https://files.pythonhosted.org/packages/c8/f1/a309d25146c34f0263d6a78a9bc664935a6f161a813ae86e60b39a01aca2/cffi-1.5.0-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "3a84bfe63b5e81d25e3cbf53178a6ae625352c204954422be7d750776c344aad"
+        "url": "https://files.pythonhosted.org/packages/4d/1f/23e129d1201d9ce17767dd4a0e53874a00062429ab4cd515245b3e91b371/cffi-1.5.0-cp27-none-win_amd64.whl"
+      "3.3":
+        "sha256": "c05e43b5dbc1e6aa3f6b72fe850d782923dcfd0425ce37a78856bdbf43defa6a"
+        "url": "https://files.pythonhosted.org/packages/52/91/98c74154a41b11090a3aac916962a6b993a0d706d9e357c34169ec00a078/cffi-1.5.0-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "bc053ca1ab5de843fbe3bf2bb753be689835ec70427c443cb3084cfa3ae32ef6"
+        "url": "https://files.pythonhosted.org/packages/33/bd/789e917cb327a05c06aa703b3dafe40f75b106cab9308802366562da9dce/cffi-1.5.0-cp34-none-win_amd64.whl"
+      "3.5":
+        "sha256": "f944a0fcdf496b6d3d69872e627c8417ed46066e16ffa601e4357bd11e3e3e0d"
+        "url": "https://files.pythonhosted.org/packages/a5/fd/b33f3a739d2390991537f5326e493088fdff0b7b5d1f8aea2b19b5cdb8d5/cffi-1.5.0-cp35-none-win_amd64.whl"
+  "1.5.2":
+    "Darwin":
+      "2.6":
+        "sha256": "124669e36fd1af9efc921808a263a6013d98917afbc4a35b21e2a3b939c8333b"
+        "url": "https://files.pythonhosted.org/packages/cf/a5/695f73096cb4831067e717703013045c2f86db3415c72005353db933cb02/cffi-1.5.2-cp26-cp26m-macosx_10_7_intel.whl"
+      "2.7":
+        "sha256": "e14da9545ad533e775298072775473adff10adc8a03bc2a1a7eb361b1dbb76c3"
+        "url": "https://files.pythonhosted.org/packages/54/cd/3e6e9326284a01b9ebaf66ad18b7593a3a0e195a0dce48fad1f53fabcd7e/cffi-1.5.2-cp27-cp27m-macosx_10_6_intel.whl"
+      "3.3":
+        "sha256": "2d944c55fd0f1b2c2153fedef1f603a9ddd7c6230153c9d664e0e6f01fb9bdf8"
+        "url": "https://files.pythonhosted.org/packages/46/e5/a24491149c0c17e3850cd92d11749c107dc14f36fe02ca78417dad312ea5/cffi-1.5.2-cp33-cp33m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "e9c26edef32482a7c34a6e7fd7000bd4fa48f8faaf21eaa36f95e0c15a483308"
+        "url": "https://files.pythonhosted.org/packages/b8/89/8eb5216dba77ce14497411830485755f428c89dace81d8110a93eeaaa288/cffi-1.5.2-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "10154ed65b135fd1e94df56e6e05796c2c745e62c3233d147bf873417efdc9aa"
+        "url": "https://files.pythonhosted.org/packages/a0/20/5ee7d58c0790a0eb2b08cbd7d8ba511f6e39918574bb2eb33fbb93ea47a3/cffi-1.5.2-cp35-cp35m-macosx_10_6_intel.whl"
+    "Windows":
+      "2.6":
+        "sha256": "6a11f27b3124e7e40c46db4b5ee0fe38c7eb3fdd445b6a545dda4fc36fec1154"
+        "url": "https://files.pythonhosted.org/packages/3c/dd/77dca2404d8e9d5dfccb3f2057c504deb7f8ae30b087d3fd34aee713d59d/cffi-1.5.2-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "3571472b11d4ed2b9b15a2806e37f7548fe26444452b8cf5478dd6bc684b2afe"
+        "url": "https://files.pythonhosted.org/packages/a2/d5/88452a23c51801a4ff8ffd31ed98148563ab69aaf2f8234d94b0fe80fc4c/cffi-1.5.2-cp27-none-win_amd64.whl"
+      "3.3":
+        "sha256": "bba60fa2e1919454af72247f72577dbdcd69b889cdc5daeb0d7a5323ac0b0c7b"
+        "url": "https://files.pythonhosted.org/packages/76/a2/d51a9959d07486195137ac08fd52e0032c660529a3f1cdc337025355a8d6/cffi-1.5.2-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "70be6a1a0b3b5841f204bc3886f8f52d694d957d70219c4acfd63490c6c2bfdf"
+        "url": "https://files.pythonhosted.org/packages/93/3a/bcc808e3a8ca1418638f1bd117fe3d822c4e9b55486e7db1bb48d75d314e/cffi-1.5.2-cp34-none-win_amd64.whl"
+      "3.5":
+        "sha256": "96ca8beab869c2a0164b3ec9716dc85713a8e8b480e8d303520e6869dec27216"
+        "url": "https://files.pythonhosted.org/packages/b1/ed/c106d868432d8264dcfe6daf40b2440a7efc1ab4a23b71e769e2989b804a/cffi-1.5.2-cp35-none-win_amd64.whl"
+  "1.6.0":
+    "Darwin":
+      "2.6":
+        "sha256": "73111b0e999c9a2f7d56ddd904208371c7112290ed2e9584389c5e055e9ecdff"
+        "url": "https://files.pythonhosted.org/packages/ae/9c/4ba1da7702654c52c44a46a30774ccddcc936d0456298b50f8e490475d85/cffi-1.6.0-cp26-none-macosx_10_7_intel.whl"
+      "2.7":
+        "sha256": "97c8942d1126f2a66cf51314198ea86337dc6562b504dbc6592a3ef140ad3a46"
+        "url": "https://files.pythonhosted.org/packages/0a/78/546fe7134d64d91f42be3ea59401e196c5eb659d29496e1eca7e8b61cd12/cffi-1.6.0-cp27-none-macosx_10_6_intel.whl"
+      "3.3":
+        "sha256": "f3b451dad75e245b970a2bc189dab6185b7c7807ab96dbe07537cfa7131612fd"
+        "url": "https://files.pythonhosted.org/packages/20/4b/d929b6dfcfc67f57db5e33d91f8872b8194623f835d8977fc8d909fda88e/cffi-1.6.0-cp33-cp33m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "e237b1c9704d2a7464f9703d517b678081c45945ae9a7dbfbb6de0b2b117b683"
+        "url": "https://files.pythonhosted.org/packages/6c/c3/cb4b6dfd1fc1f30c1cdb605f984001ff76d88fc4eb966f5e72dd52e0df40/cffi-1.6.0-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "1791bf18501214c9fd1e2b9ecebf163bbab674de09db881fb5d66ab674e5543c"
+        "url": "https://files.pythonhosted.org/packages/0c/4d/781be57ede078a536c4e85ab3e99c44485ae7c9db26d4e75f0f15a8ac8ea/cffi-1.6.0-cp35-cp35m-macosx_10_6_intel.whl"
+    "Windows":
+      "2.6":
+        "sha256": "248fd102dc8ee66bccb82ecc34f6fa680a4be8a9e1015a85762dab32955ff386"
+        "url": "https://files.pythonhosted.org/packages/b7/d6/eb01b4856db521a3d88ee06f3faf102953a962a6584573dbacd039592622/cffi-1.6.0-cp26-none-win_amd64.whl"
+      "2.7":
+        "sha256": "e871480bb51ef0cf2d4d60ea74c496c5248a817ce7515b2fd4d4032aa2bd96fc"
+        "url": "https://files.pythonhosted.org/packages/a9/0e/c4fdd37004a9c6480269cda6385d367f0e370e5abf4ca481e9898f4d1a7b/cffi-1.6.0-cp27-none-win_amd64.whl"
+      "3.3":
+        "sha256": "cd7f098e148beb091cb779d16f3091d173b56a4399f1d728b52362f303c1262e"
+        "url": "https://files.pythonhosted.org/packages/e9/d2/eb60ecfc5d9e3a1eb37b227b59aaf67f2b4a540a80583ef772b92a726a1a/cffi-1.6.0-cp33-none-win_amd64.whl"
+      "3.4":
+        "sha256": "2edb3548450dae91e31d42c062790623e7ed98cf43b6914f1f32ed09abe59484"
+        "url": "https://files.pythonhosted.org/packages/60/2f/e20fa59f82eeaf7dfc7a4956714666ad7794dd40e8344efdfc58c2838603/cffi-1.6.0-cp34-none-win_amd64.whl"
+      "3.5":
+        "sha256": "995d12efee093d8ca0f8239485aceef9e506036d8f7cd892f2a58774884fdb05"
+        "url": "https://files.pythonhosted.org/packages/fc/bc/459864fef0be69ec960fde3f44c58f44f4b07851f21eef5e237ff9a1aeb6/cffi-1.6.0-cp35-none-win_amd64.whl"
+  "1.7.0":
+    "Darwin":
+      "2.6":
+        "sha256": "8b57e9a1b73d0592ffc70b6b6d726d7646792d6c5696718491af06244e4be2fe"
+        "url": "https://files.pythonhosted.org/packages/c4/f4/2f9bd00278aa19b7b30273bf89a45d8ed93ea2eeaf784e7ee066592cf4df/cffi-1.7.0-cp26-cp26m-macosx_10_7_intel.whl"
+      "2.7":
+        "sha256": "6387faa1f6465b5270aa5dfccfefed730bf0bcf501990e3df48b880ade229418"
+        "url": "https://files.pythonhosted.org/packages/1b/d6/ffec84e98c6d309f87982cff4a99557878558eaac79a283ace1d72932d9c/cffi-1.7.0-cp27-cp27mu-macosx_10_10_x86_64.whl"
+      "3.3":
+        "sha256": "a2e7b20e62095b68ad4a897ec61e9198393ceca18623c1779d376fa09d568b3a"
+        "url": "https://files.pythonhosted.org/packages/80/ad/632cf6e086bf365937f3ab7d3a752e8960d8ec32a2fa2ef7fd31cabe2157/cffi-1.7.0-cp33-cp33m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "de8acec32abea99cd62908ded38f4c01ce9b9ccf619b8b8100e4fa866762cede"
+        "url": "https://files.pythonhosted.org/packages/f7/73/cf1ea34d329cbd22d61fe88e30afa352283e86461d23da465c3ecc6d423b/cffi-1.7.0-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "db669b191e032d30e3416504bc038a787a32f7364482ae9d953782af12a4752a"
+        "url": "https://files.pythonhosted.org/packages/6c/4d/4d455857b0ce3133b2ebb3c9675d686ddaf085a1082c48165688abffb95a/cffi-1.7.0-cp35-cp35m-macosx_10_6_intel.whl"
+    "Linux":
+      "2.6":
+        "sha256": "822fefe130f4f02405694638dd4963d8020dc4a1b2160293747e3abba7e06a84"
+        "url": "https://files.pythonhosted.org/packages/26/83/451709ffd272f70483da907e94fa55ee0d4cc9f9a24b40b3f031fe11d25d/cffi-1.7.0-cp26-cp26mu-manylinux1_x86_64.whl"
+      "2.7":
+        "sha256": "681b75175dda622215b448a768c6f5caf025b7a0de729e4ca17496b979dc67f7"
+        "url": "https://files.pythonhosted.org/packages/46/26/2413bf923b1de47d9e9cf48f248dec1a16027a7773452315f34746253c35/cffi-1.7.0-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.3":
+        "sha256": "0efa5131175174fb54da6a33335603eaae2bb48cbca7e36586684db46e41558b"
+        "url": "https://files.pythonhosted.org/packages/71/4d/13d54a80a6296664fb7036ef1b24d6e84cd02a3418f5d71e94cf6f2b8ab0/cffi-1.7.0-cp33-cp33m-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "b0adfaa325dfc01b4b49055312c4ac40c2c94371e91e3c9be2b74cefb10b5eef"
+        "url": "https://files.pythonhosted.org/packages/a0/55/9dabf40822874565deba628602d60fcbb8d99a67764d0c1cc334b64c32fc/cffi-1.7.0-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "81f11a42f7821516da513a591c91427a21fa75a82e5d857055dc5e0bec02ba5f"
+        "url": "https://files.pythonhosted.org/packages/40/69/3fd55f451a597e78123a63226813ce674ced1057dee45db7902203a78ceb/cffi-1.7.0-cp35-cp35m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.6":
+        "sha256": "c03060a15dae98800c00dee4f28cf824e178532d87f4676ebe3a01957e53c380"
+        "url": "https://files.pythonhosted.org/packages/7c/a4/c4d5668875a7305fc7e5b3fa3310eea57b288964071f6021c97f84c18b53/cffi-1.7.0-cp26-cp26m-win_amd64.whl"
+      "2.7":
+        "sha256": "08a7f66f69e211f0f63696593f767aeb61ff61fb64eeb510378a2242170dc6dc"
+        "url": "https://files.pythonhosted.org/packages/ad/2e/2644cbacfa5f82877c90f75089ab6b2bbb9b2e1969e7499a020fbbec5b85/cffi-1.7.0-cp27-cp27m-win_amd64.whl"
+      "3.3":
+        "sha256": "b8767576c35446b7b29c5d899d62e0cebad07f71f8df81679a58f0c5b4bdd8c6"
+        "url": "https://files.pythonhosted.org/packages/2a/5e/d147f2979809017143fcfdad496fd3215d0c9ec1dcdff52b66268cc8a457/cffi-1.7.0-cp33-cp33m-win_amd64.whl"
+      "3.4":
+        "sha256": "d07f62982bac1dcc7fe301f19b6580ec4866d9ed8af1a17137cc544981389a71"
+        "url": "https://files.pythonhosted.org/packages/ce/21/b16dff517ee08525e061a1ec78089207a3ca1f8f885840bd39ba1d583e4c/cffi-1.7.0-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "e499d2360f3fa81a01d3252088149e63286b9097b1e074124e28fbe7012518a0"
+        "url": "https://files.pythonhosted.org/packages/30/97/0f4c957a802c8491aad300f6461761214235cb21f91383e3ab2148d20ef9/cffi-1.7.0-cp35-cp35m-win_amd64.whl"
+  "1.8.2":
+    "Darwin":
+      "2.6":
+        "sha256": "b627bb1679a7fd4a67b0fd5bdfb6067eccbb5017c91bf5f893eec8ec479af97c"
+        "url": "https://files.pythonhosted.org/packages/b1/bd/ed4022d5dfbae88dd36d6f61905d9841eef35397b25e0c56bb64c68b83f9/cffi-1.8.2-cp26-cp26m-macosx_10_7_intel.whl"
+      "2.7":
+        "sha256": "95d44d1ea716550a705235e784eb066bba702d5fb29c90ae904bae64f56083ac"
+        "url": "https://files.pythonhosted.org/packages/62/7a/348c35b6eb7b28ceb794d8c22d73b138dcbb03dee93498e6e7fe840d2c9c/cffi-1.8.2-cp27-cp27mu-macosx_10_10_x86_64.whl"
+      "3.3":
+        "sha256": "b31de0961fd5a96d41b5927cbba65299b34364d3ac70ae31f14bc7ef14920373"
+        "url": "https://files.pythonhosted.org/packages/dd/53/fbf1a9f332992e79fe653d46e9fca571f32c87f18c0d05434655dfa64173/cffi-1.8.2-cp33-cp33m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "af331b04f1a2ba97e6159f2a22642d1666633d5f6708fe92de6570045dd53e9e"
+        "url": "https://files.pythonhosted.org/packages/6f/bd/df270a65078b0afe719ff90e408527b0e8cb93433bb689ae202e3bea590b/cffi-1.8.2-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "d9442958af268e980299b4b6d63cc2d363b450ea0506f7be7ba525290d10a70a"
+        "url": "https://files.pythonhosted.org/packages/8b/8b/549c779a4abbd4b97226b887835fe0428bc66d4e235035c7f7e7efbe677b/cffi-1.8.2-cp35-cp35m-macosx_10_6_intel.whl"
+    "Linux":
+      "2.6":
+        "sha256": "5d8f7ce2f41f7032342067c502b7e6f9240383644efee1bad5d12a308a89c530"
+        "url": "https://files.pythonhosted.org/packages/5c/4c/abb42eff531bb2e36015b3837daab9ad3bb25f5a03dd7e430a09c66a3ea5/cffi-1.8.2-cp26-cp26mu-manylinux1_x86_64.whl"
+      "2.7":
+        "sha256": "6280241714bb5cbe23119f0a87abd249566e31638fee994b7419fb08f47dc418"
+        "url": "https://files.pythonhosted.org/packages/20/81/59fda2d6eb987a64e544f2cc8a541d8061b1cbc37923cb16ec97f3236cec/cffi-1.8.2-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.3":
+        "sha256": "6a71c55987c3d02a347219b9be16543006ae7ab4600ca1eed054b03f376a3e09"
+        "url": "https://files.pythonhosted.org/packages/46/d1/8cd123d6763a8857450b867473a3226638124998fde7dfd3e426407f941f/cffi-1.8.2-cp33-cp33m-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "819779ec10c289c1a1b1abbbcb85e5b9097dbd084d45bca10cd88ca7c8d320f7"
+        "url": "https://files.pythonhosted.org/packages/2a/53/8e5426d9089ec49326fd66f0d7505718574f93315fe86082ce4a8d64a9f6/cffi-1.8.2-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "42bd054cee8c6b5107bd7b51369d16d33574f5b28f1deb47d2114cf1a6056559"
+        "url": "https://files.pythonhosted.org/packages/d4/b8/9c1b2f9eb6a5f7643dd873061130dd233fa9618930908d426df06dbdca6c/cffi-1.8.2-cp35-cp35m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.6":
+        "sha256": "94151eb9712ae2cabbd49f7e76f184dd48d933f3952829a71cd17572ec93ac86"
+        "url": "https://files.pythonhosted.org/packages/15/c8/52850260f3451124bcd6a899d0ed7e0272dfdf86adb589effd556b38ba40/cffi-1.8.2-cp26-cp26m-win_amd64.whl"
+      "2.7":
+        "sha256": "6e6adc3f85c51feadaa20f27cca376f7639be882f2fcc3067fced17729ca23fd"
+        "url": "https://files.pythonhosted.org/packages/c2/22/6f21928333fbed138ac7dbf9b1ffb8a269d445c0f3c6d6e5ffbd64d519a7/cffi-1.8.2-cp27-cp27m-win_amd64.whl"
+      "3.3":
+        "sha256": "2bcab693374ac29bf9b680b32324bd2bf675832ba8da7de037d4a308e7c171e3"
+        "url": "https://files.pythonhosted.org/packages/39/6e/40d719f9e9ca0600afc2c635ba11546712b97552138e756732c5c24f5985/cffi-1.8.2-cp33-cp33m-win_amd64.whl"
+      "3.4":
+        "sha256": "6c3f0ceb1505bc5e3178a9b0f3bec4e165a929f4a68ed6357878c0ccb2979e0c"
+        "url": "https://files.pythonhosted.org/packages/f2/7b/c54273a7a487f6ac2177400c654d83e10a9487faa36055f427c9de617942/cffi-1.8.2-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "e3952c99025fc37457388e09504634fbc482ba0d80ef470d104967741833e27a"
+        "url": "https://files.pythonhosted.org/packages/29/6d/e715ec9ec6b8ec061f35940f7825248c56fd26b7143b389646d1db480a08/cffi-1.8.2-cp35-cp35m-win_amd64.whl"
+  "1.8.3":
+    "Darwin":
+      "2.6":
+        "sha256": "1090590fbeb8f369251c822c3e6516b891b6fdd577625d71bab31bacbd304c77"
+        "url": "https://files.pythonhosted.org/packages/4b/32/53a2556618c9be2e499673e399ecbd182576cafa04a69f0338b2a8e0b0e7/cffi-1.8.3-cp26-cp26m-macosx_10_7_intel.whl"
+      "2.7":
+        "sha256": "b56289f06c124ed191081df55daeb37b571ade9375d1e18988d0c9819e4a675f"
+        "url": "https://files.pythonhosted.org/packages/5a/14/9f99ac35d937389cba856007f10ef0307f2ea11fcf7236d4e8e028db7300/cffi-1.8.3-cp27-cp27mu-macosx_10_10_x86_64.whl"
+      "3.3":
+        "sha256": "d0140dbca2134825b3f38024d4e140a2ad9baeb6ee8f87fd48a442062f417ad0"
+        "url": "https://files.pythonhosted.org/packages/77/28/9056fd7e12707bf54b02bc6c3cf827078884c5ba002213faf826ba422ce2/cffi-1.8.3-cp33-cp33m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "6f2802177893c97beeddbacb96bded0db411ccd6b05b020eebcd42d20e2b96d8"
+        "url": "https://files.pythonhosted.org/packages/7d/f7/2bc1746f2ce2f52b8667c0161c56d2716c8373673731e019a4ce1caabe93/cffi-1.8.3-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "b7a146d7229e0c3e9818c4240eade4430d0af88495037d27085374abef23ff83"
+        "url": "https://files.pythonhosted.org/packages/20/0b/8b40641de3f555b6fa0676eff4d006227e3869be793add24fc471139d18c/cffi-1.8.3-cp35-cp35m-macosx_10_6_intel.whl"
+    "Linux":
+      "2.6":
+        "sha256": "74866d355ea3afe8b33f735ac4d14d485815e6d189a679f4fb2348c0113063fb"
+        "url": "https://files.pythonhosted.org/packages/fd/a7/96c5b548796b3d42c68fc92721139690a254af01849c13a2bbc77b47cf9e/cffi-1.8.3-cp26-cp26mu-manylinux1_x86_64.whl"
+      "2.7":
+        "sha256": "47ea859cd153300778f33220c69cad97cc9c4d3e312a50b01d1521b94789ebfc"
+        "url": "https://files.pythonhosted.org/packages/3d/e5/3ef5169bd4cf0cc1607d986fc37fea2dbc073763cf3bf6b3818c9ec84135/cffi-1.8.3-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.3":
+        "sha256": "d9c345d966685cd558b7f2d1ec6520cca1823e36c0bad89692808f13bdb5e12f"
+        "url": "https://files.pythonhosted.org/packages/90/fd/74056575011f4cac4fc0fa3ce8468883a74c6e7353fe1a97efec70dcec50/cffi-1.8.3-cp33-cp33m-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "8dafe0d5a19e039a4ee8bc6070d2136e9373ea85fbdd3e2b2cab21f7d60c77e7"
+        "url": "https://files.pythonhosted.org/packages/c1/29/56f1c49a01b7c5e654e7ae1942eaceed4a93d963171c86f5bd968517f768/cffi-1.8.3-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "75348f45112cee84c233a010f404b9369da438e578104dd3b01f1054f9f7519a"
+        "url": "https://files.pythonhosted.org/packages/7b/14/5c12e88ad74dec77e1f49b782305b253b5aeb56896b199a466cc3946a454/cffi-1.8.3-cp35-cp35m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.6":
+        "sha256": "c46eab25dcceb4ef98094a1bc5bd3d6a3fd4429b27e0a53dc9e86b9e7375a2d7"
+        "url": "https://files.pythonhosted.org/packages/b5/c9/f34be785db3f60dcb75b06687546b65cbf27cfe3d9bc9ea638bb2fa5faf3/cffi-1.8.3-cp26-cp26m-win_amd64.whl"
+      "2.7":
+        "sha256": "2d92b3d661211ceac94aca2a4efda4db709174e04c9a30ed12fb8ab78e78672f"
+        "url": "https://files.pythonhosted.org/packages/19/80/5096db21f443071ef8ce99ec2e16830030edd3377f1a7e951723da7f7059/cffi-1.8.3-cp27-cp27m-win_amd64.whl"
+      "3.3":
+        "sha256": "9e466d8dd18ab0ee8def4e2c5df2bf0892957c9276b6eb406d8efcc632f3ded7"
+        "url": "https://files.pythonhosted.org/packages/36/a0/e9076a971f5eee6a4730ea58cbf12cc36c3e98e23702e9aad2488b2260bd/cffi-1.8.3-cp33-cp33m-win_amd64.whl"
+      "3.4":
+        "sha256": "828cdf093ad07b41d8005c8bafd1cd197a9b0aae33fc2f5b52ddbdb4bec765b1"
+        "url": "https://files.pythonhosted.org/packages/48/65/66fb1043a13526ffcc3802a5ecc5297db28e1a2c2335a9c897d923ba134d/cffi-1.8.3-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "f48ec170fa1d6e388a3162af000b76e84455f4c29cd62b08d64f49bf2a98581c"
+        "url": "https://files.pythonhosted.org/packages/5b/dc/e03cbd138f27cb012753c649168ad624423b06337d3908ee650aa943e4aa/cffi-1.8.3-cp35-cp35m-win_amd64.whl"
+  "1.9.1":
+    "Darwin":
+      "2.6":
+        "sha256": "bcaf3d86385daaab0ae51c9c53ebe70a6c1c5dfcb9e311b13517e04773ddf6b6"
+        "url": "https://files.pythonhosted.org/packages/b2/0c/2fef419688a38003632a77fdcb04e2d01332a90319d624ce806d938d0aeb/cffi-1.9.1-cp26-cp26m-macosx_10_7_intel.whl"
+      "2.7":
+        "sha256": "36d06de7b09b1eba54b1f5f76e2221afef7489cc61294508c5a7308a925a50c6"
+        "url": "https://files.pythonhosted.org/packages/1f/f2/08ca7e1f5f4cf85afb4434f937ccd3add34d53eb8247d52666eda751c81f/cffi-1.9.1-cp27-cp27mu-macosx_10_10_x86_64.whl"
+      "3.3":
+        "sha256": "f93d1edcaea7b6a7a8fbf936f4492a9a0ee0b4cb281efebd5e1dd73e5e432c71"
+        "url": "https://files.pythonhosted.org/packages/77/30/8e468363645c25e4896207381c7522ea0bf64697e3fdc82d83d00f18f920/cffi-1.9.1-cp33-cp33m-macosx_10_6_intel.whl"
+      "3.4":
+        "sha256": "97d9f338f91b7927893ea6500b953e4b4b7e47c6272222992bb76221e17056ff"
+        "url": "https://files.pythonhosted.org/packages/ee/21/efcc84e9b796e18d68a62dace1b4d214f46ec7a03d305691271c95c45942/cffi-1.9.1-cp34-cp34m-macosx_10_6_intel.whl"
+      "3.5":
+        "sha256": "f4eb9747a37120b35f59c8e96265e87b0c432ff010d32fc0772992aa14659502"
+        "url": "https://files.pythonhosted.org/packages/7b/c6/2951ceef71b820141eb05df1d1fdcd653bfd6b90f4dc2910135f5a69af5c/cffi-1.9.1-cp35-cp35m-macosx_10_6_intel.whl"
+      "3.6":
+        "sha256": "60881c79eb72cb75bd0a4be5e31c9e431739146c4184a2618cabea3938418984"
+        "url": "https://files.pythonhosted.org/packages/46/b4/2215a6d52bf0af6dfc09cdf269ab88d545baba426dd9d40caf120091f9c5/cffi-1.9.1-cp36-cp36m-macosx_10_6_intel.whl"
+    "Linux":
+      "2.6":
+        "sha256": "3f1908d0bcd654f8b7b73204f24336af9f020b707fb8af937e3e2279817cbcd6"
+        "url": "https://files.pythonhosted.org/packages/84/b2/9931fa2a73bc4371d97f6d4594482b69e6db015c79816a2d6aee3029f4e4/cffi-1.9.1-cp26-cp26mu-manylinux1_x86_64.whl"
+      "2.7":
+        "sha256": "9163f7743cf9991edaddf9cf886708e288fab38e1b9fec9c41c15c85c8f7f147"
+        "url": "https://files.pythonhosted.org/packages/5f/bc/9fd2ce704560d2be1b13fe8939bca4941c8cf60e7fc97a0abd73edd44686/cffi-1.9.1-cp27-cp27mu-manylinux1_x86_64.whl"
+      "3.3":
+        "sha256": "74aadea668c94eef4ceb09be3d0eae6619e28b4f1ced4e29cd43a05bb2cfd7a4"
+        "url": "https://files.pythonhosted.org/packages/30/3f/d8534e99c0afa82048b2315d368ed59e9b85da6a51b363cf6ee8dd1141b1/cffi-1.9.1-cp33-cp33m-manylinux1_x86_64.whl"
+      "3.4":
+        "sha256": "83266cdede210393889471b0c2631e78da9d4692fcca875af7e958ad39b897ee"
+        "url": "https://files.pythonhosted.org/packages/b6/b4/150fea97a0c51a65580b1b62d7ed3edaa98a0847d7da6082679e161cad9b/cffi-1.9.1-cp34-cp34m-manylinux1_x86_64.whl"
+      "3.5":
+        "sha256": "a7930e73a4359b52323d09de6d6860840314aa09346cbcf4def8875e1b07ebc7"
+        "url": "https://files.pythonhosted.org/packages/96/05/04379df69e617fffdbfcf0c9b3a14dfc5440fb1dd622587279638fab8a24/cffi-1.9.1-cp35-cp35m-manylinux1_x86_64.whl"
+      "3.6":
+        "sha256": "0f1b3193c17b93c75e73eeac92f22eec4c98a021d9969b1c347d1944fae0d26b"
+        "url": "https://files.pythonhosted.org/packages/f0/47/2b967857a94b01127742dec3ed5595a596358cfbb170be6e3e89efd6786d/cffi-1.9.1-cp36-cp36m-manylinux1_x86_64.whl"
+    "Windows":
+      "2.6":
+        "sha256": "04b133ef629ae2bc05f83d0b079a964494a9cd17914943e690c57209b44aae20"
+        "url": "https://files.pythonhosted.org/packages/c7/e5/765f5c172cd8907f8c3795b3dfeacc888a086f9881e93ead3b9802264293/cffi-1.9.1-cp26-cp26m-win_amd64.whl"
+      "2.7":
+        "sha256": "fce6b0cb9ade1546178c031393633b09c4793834176496c99a94de0bfa471b27"
+        "url": "https://files.pythonhosted.org/packages/34/75/9286191ebadff6dd246f9d4bb065fc1fa93e976e638e6e46cff41ed44c06/cffi-1.9.1-cp27-cp27m-win_amd64.whl"
+      "3.3":
+        "sha256": "2570f93b42c61013ab4b26e23aa25b640faf5b093ad7dd3504c3a8eadd69bc24"
+        "url": "https://files.pythonhosted.org/packages/50/07/b84ab2b418ab3b51bc7f5c9b03c7aabcf2c08ed82b04323003187b9b7693/cffi-1.9.1-cp33-cp33m-win_amd64.whl"
+      "3.4":
+        "sha256": "65c223e77f87cb463191ace3398e0a6d84ce4ac575d42eb412a220b099f593d6"
+        "url": "https://files.pythonhosted.org/packages/96/0b/24ae05a7da9f83560b44a24dc8112378b757dadce90b7361b3b6bd44ab80/cffi-1.9.1-cp34-cp34m-win_amd64.whl"
+      "3.5":
+        "sha256": "1fb1cf40c315656f98f4d3acfb1bd031a14a9a69d155e9a180d5f9b52eaf745a"
+        "url": "https://files.pythonhosted.org/packages/03/e5/386426fb2b819a9316835f1f2c89b1e76745ba81d9f5a25a2d02f33502ee/cffi-1.9.1-cp35-cp35m-win_amd64.whl"
+      "3.6":
+        "sha256": "e5ef800ef8ef9ee05ae9a5b7d7d9cf7d6c936b32e312e54823faca3034ee16ab"
+        "url": "https://files.pythonhosted.org/packages/8e/c0/6fde9958f1bedc9f48e2df7cd7e598388ec884e61e9ef2b610ce523fa2f1/cffi-1.9.1-cp36-cp36m-win_amd64.whl"

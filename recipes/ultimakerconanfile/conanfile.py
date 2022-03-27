@@ -46,7 +46,7 @@ class UltimakerBase(object):
         return os.path.join("lib", self._python_name, "site-packages")
 
     def _set_python_site_packages(self):
-        site_package_path = os.path.join(self.folders.package_folder, self.self._python_site_packages_path)
+        site_package_path = os.path.join(self.folders.package_folder, self._python_site_packages_path)
         self.runenv_info.prepend_path("PYTHONPATH", site_package_path)
         self.buildenv_info.prepend_path("PYTHONPATH", site_package_path)
         self.user_info.pythonpath = site_package_path

@@ -1,59 +1,65 @@
-import os
-from conan import ConanFile
-from conan.tools.env.virtualrunenv import VirtualRunEnv
-from conan.tools.env.virtualbuildenv import VirtualBuildEnv
+from pathlib import Path
 
-required_conan_version = ">=1.44.1"
+from conan import ConanFile
+
+from conans.errors import ConanInvalidConfiguration
+from conans.tools import Version
+from conan.tools.files import files
+
+required_conan_version = ">=1.33.0"
 
 
 class KeyringConan(ConanFile):
     name = "keyring"
-    version = "23.0.1"
     description = "Store and access your passwords safely."
     topics = ("conan", "python", "pypi", "pip")
-    license = ""
+    license = "MIT"
     homepage = "https://github.com/jaraco/keyring"
     url = "https://github.com/jaraco/keyring"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "pypi"
-    default_channel = "stable"
-    python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
-    python_requires_extend = "UltimakerBase.UltimakerBase"
-    hashes = [
-        "sha256:045703609dd3fccfcdb27da201684278823b72af515aedec1a8515719a038cb8",
-        "sha256:8f607d7d1cc502c43a932a275a56fe47db50271904513a379d39df1af277ac48"
-    ]
+    requires = "cpython/[>=3.0]@python/stable"
+    no_copy_source = True
 
-    def requirements(self):
-        self.requires("python/3.10.2@python/stable")
-        self.requires(f"importlib-metadata/4.10.1@python/stable")
-        if self.settings.os == "Windows":
-            self.requires("pywin32-ctypes/0.2.0@python/stable")
-        # TODO: We currently don't support Linux
-        # if self.settings.os == "Linux":
-        #     self.requires("secretstorage/3.3.1@python/stable")
-        #     self.requires("jeepney/0.7.1@python/stable")
+    @property
+    def _site_packages(self):
+        return "site-packages"
 
-    def generate(self):
-        rv = VirtualRunEnv(self)
-        rv.generate()
+    def source(self):
+        sources = self.conan_data["sources"][self.version]
+        if self.settings.get_safe("os") in sources:
+            os_bin = self.settings.get_safe("os")
+        elif "Any" in sources:
+            os_bin = "Any"
+        else:
+            raise ConanInvalidConfiguration("Invalid version for Operating System")
 
-        bv = VirtualBuildEnv(self)
-        bv.generate()
+        actual_python_version = Version(self.deps_cpp_info['cpython'].version)
 
-    def build(self):
-        pb = self.python_requires["PipBuildTool"].module.PipBuildTool(self)
-        pb.configure()
-        pb.build()
+        python_version = Version("1.0")
+        python_version_key = "1.0"
+
+        for py_version in sources[os_bin].keys():
+            available_python_version = Version(py_version)
+            if python_version < available_python_version <= actual_python_version:
+                python_version = available_python_version
+                python_version_key = py_version
+
+        if python_version is Version("1.0"):
+            raise ConanInvalidConfiguration("No compatible Python Version")
+
+        self.output.info(f"Using wheel = {sources[os_bin][python_version_key]['url']}")
+        files.get(self, **sources[os_bin][python_version_key], destination = self._site_packages)
 
     def package(self):
-        self.copy("*")
+        self.copy("*", src = self._site_packages, dst = self._site_packages)
 
     def package_info(self):
-        self._set_python_site_packages()
-        self.runenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
-        self.buildenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
+        self.env_info.PYTHONPATH = Path(self.package_folder, self._site_packages)
+        self.user_info.pythonpath = Path(self.package_folder, self._site_packages)
 
     def package_id(self):
-        self.info.settings.build_type = "Release"
+        if len(self.conan_data["sources"][self.version]) >= 1 or "Any" not in self.conan_data["sources"][self.version]:
+            self.info.settings.build_type = "Release"
+        else:
+            self.info.header_only()

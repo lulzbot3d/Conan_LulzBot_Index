@@ -1,13 +1,16 @@
-from conan import ConanFile
-from conan.tools.env.virtualrunenv import VirtualRunEnv
-from conan.tools.env.virtualbuildenv import VirtualBuildEnv
+from pathlib import Path
 
-required_conan_version = ">=1.44.1"
+from conan import ConanFile
+
+from conans.errors import ConanInvalidConfiguration
+from conans.tools import Version
+from conan.tools.files import files
+
+required_conan_version = ">=1.33.0"
 
 
 class ScipyConan(ConanFile):
     name = "scipy"
-    version = "1.8.0rc2"
     description = "SciPy: Scientific Library for Python"
     topics = ("conan", "python", "pypi", "pip")
     license = "BSD"
@@ -15,39 +18,49 @@ class ScipyConan(ConanFile):
     url = "https://www.scipy.org"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "pypi"
-    default_channel = "stable"
-    python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
-    python_requires_extend = "UltimakerBase.UltimakerBase"
-    requires = "python/3.10.2@python/stable",\
-               "numpy/1.21.5@pypi/stable"
-    hashes = [
-        "sha256:d73b13eb0452c178f946b4db60b27e400225df02e926609652ed67798054e77d",
-        "sha256:8db99b6c017ab971b04a0781103a31ce745d4f0ac2b7db999523d4a94549ae15",
-        "sha256:739ee3f6688c96516248f88725bbe1f241f3e0ab708f5eda98e2a9fe5cf38fba",
-        "sha256:aa31ae8d8cf0abba07bc795f75b1aacf46b6136be22eefb4435040386f0f2bec",
-        "sha256:4035b0f70d1bdbfe143005bb1033938529f684c0b93b4a90c2f59bbd88bcd0d3",
-        "sha256:d6ccda8592a30120ea4c3ab669a10ab6e0c45284df9066b6583165d5092e75a7",
-        "sha256:94a33efa21cffc5c3f8d416c0c1c79914019b9e3a82b5461176e4dc1c42218ea"
-    ]
+    requires = ["cpython/[>=2.7]@python/stable",
+                "numpy/1.21.5@pypi/stable"]
+    no_copy_source = True
 
-    def generate(self):
-        rv = VirtualRunEnv(self)
-        rv.generate()
+    @property
+    def _site_packages(self):
+        return "site-packages"
 
-        bv = VirtualBuildEnv(self)
-        bv.generate()
+    def source(self):
+        sources = self.conan_data["sources"][self.version]
+        if self.settings.get_safe("os") in sources:
+            os_bin = self.settings.get_safe("os")
+        elif "Any" in sources:
+            os_bin = "Any"
+        else:
+            raise ConanInvalidConfiguration("Invalid version for Operating System")
 
-    def build(self):
-        pb = self.python_requires["PipBuildTool"].module.PipBuildTool(self)
-        pb.configure()
-        pb.build()
+        actual_python_version = Version(self.deps_cpp_info['cpython'].version)
+
+        python_version = Version("1.0")
+        python_version_key = "1.0"
+
+        for py_version in sources[os_bin].keys():
+            available_python_version = Version(py_version)
+            if python_version < available_python_version <= actual_python_version:
+                python_version = available_python_version
+                python_version_key = py_version
+
+        if python_version is Version("1.0"):
+            raise ConanInvalidConfiguration("No compatible Python Version")
+
+        self.output.info(f"Using wheel = {sources[os_bin][python_version_key]['url']}")
+        files.get(self, **sources[os_bin][python_version_key], destination = self._site_packages)
 
     def package(self):
-        self.copy("*")
+        self.copy("*", src = self._site_packages, dst = self._site_packages)
 
     def package_info(self):
-        self._set_python_site_packages()
+        self.env_info.PYTHONPATH = Path(self.package_folder, self._site_packages)
+        self.user_info.pythonpath = Path(self.package_folder, self._site_packages)
 
     def package_id(self):
-        self.info.settings.build_type = "Release"
+        if len(self.conan_data["sources"][self.version]) >= 1 or "Any" not in self.conan_data["sources"][self.version]:
+            self.info.settings.build_type = "Release"
+        else:
+            self.info.header_only()

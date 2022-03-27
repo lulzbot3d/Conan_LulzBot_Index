@@ -1,15 +1,16 @@
-import os
+from pathlib import Path
 
 from conan import ConanFile
-from conan.tools.env.virtualrunenv import VirtualRunEnv
-from conan.tools.env.virtualbuildenv import VirtualBuildEnv
 
-required_conan_version = ">=1.44.1"
+from conans.errors import ConanInvalidConfiguration
+from conans.tools import Version
+from conan.tools.files import files
+
+required_conan_version = ">=1.33.0"
 
 
 class TrimeshConan(ConanFile):
     name = "trimesh"
-    version = "3.9.36"
     description = "Import, export, process, analyze and view triangular meshes."
     topics = ("conan", "python", "pypi", "pip")
     license = "MIT"
@@ -17,36 +18,49 @@ class TrimeshConan(ConanFile):
     url = "https://github.com/mikedh/trimesh"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    default_user = "pypi"
-    default_channel = "stable"
-    python_requires = ["UltimakerBase/0.4@ultimaker/testing", "PipBuildTool/0.2@ultimaker/testing"]
-    python_requires_extend = "UltimakerBase.UltimakerBase"
-    requires = "python/3.10.2@python/stable",\
-               "numpy/1.21.5@pypi/stable"
-    hashes = [
-        "sha256:f01e8edab14d1999700c980c21a1546f37417216ad915a53be649d263130181e",
-        "sha256:8ac8bea693b3ee119f11b022fc9b9481c9f1af06cb38bc859bf5d16bbbe49b23"
-    ]
+    requires = ["cpython/[>=2.0]@python/stable",
+                "numpy/1.21.5@pypi/stable"]
+    no_copy_source = True
 
-    def generate(self):
-        rv = VirtualRunEnv(self)
-        rv.generate()
+    @property
+    def _site_packages(self):
+        return "site-packages"
 
-        bv = VirtualBuildEnv(self)
-        bv.generate()
+    def source(self):
+        sources = self.conan_data["sources"][self.version]
+        if self.settings.get_safe("os") in sources:
+            os_bin = self.settings.get_safe("os")
+        elif "Any" in sources:
+            os_bin = "Any"
+        else:
+            raise ConanInvalidConfiguration("Invalid version for Operating System")
 
-    def build(self):
-        pb = self.python_requires["PipBuildTool"].module.PipBuildTool(self)
-        pb.configure()
-        pb.build()
+        actual_python_version = Version(self.deps_cpp_info['cpython'].version)
+
+        python_version = Version("1.0")
+        python_version_key = "1.0"
+
+        for py_version in sources[os_bin].keys():
+            available_python_version = Version(py_version)
+            if python_version < available_python_version <= actual_python_version:
+                python_version = available_python_version
+                python_version_key = py_version
+
+        if python_version is Version("1.0"):
+            raise ConanInvalidConfiguration("No compatible Python Version")
+
+        self.output.info(f"Using wheel = {sources[os_bin][python_version_key]['url']}")
+        files.get(self, **sources[os_bin][python_version_key], destination = self._site_packages)
 
     def package(self):
-        self.copy("*")
+        self.copy("*", src = self._site_packages, dst = self._site_packages)
 
     def package_info(self):
-        self._set_python_site_packages()
-        self.runenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
-        self.buildenv_info.prepend_path("PATH", os.path.join(self.package_folder, "bin"))
+        self.env_info.PYTHONPATH = Path(self.package_folder, self._site_packages)
+        self.user_info.pythonpath = Path(self.package_folder, self._site_packages)
 
     def package_id(self):
-        self.info.settings.build_type = "Release"
+        if len(self.conan_data["sources"][self.version]) >= 1 or "Any" not in self.conan_data["sources"][self.version]:
+            self.info.settings.build_type = "Release"
+        else:
+            self.info.header_only()
