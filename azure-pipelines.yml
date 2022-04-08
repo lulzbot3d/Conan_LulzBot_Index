@@ -1,0 +1,18 @@
+# Starter pipeline
+# Proof-of-concept
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: |
+    pip3 install conan
+    conan config install https://github.com/ultimaker/conan-config.git
+    conan user -p ${CONAN_PASS} -r ultimaker ${CONAN_USER}
+    conan export recipes/ultimakerconanfile UltimakerBase/0.4@ultimaker/testing
+    conan alias UltimakerBase/0.4@ultimaker/testing UltimakerBase/(latest)@ultimaker/testing
+    conan upload UltimakerBase -r ultimaker --force
+  displayName: 'Run a multi-line script'
