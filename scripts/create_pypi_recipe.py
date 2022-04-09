@@ -22,7 +22,7 @@ def main(name: str, version: str, location: str):
                 v = "[" + r[1][:-1].replace(" ", "").replace(",", " ") + "]"
             else:
                 v = "[>=0.0.0]"
-            requirements += f"\"{r[0].replace(' ', '')}/{v}@python/stable\",\n                "
+            requirements += f"\"{r[0].replace(' ', '')}/{v}@ultimaker/testing\",\n                "
         if len(requirements) > 19:
             requirements = requirements[:-19]
     else:

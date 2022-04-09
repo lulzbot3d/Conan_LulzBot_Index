@@ -23,8 +23,8 @@ class CffiConan(ConanFile):
     build_policy = "missing"
     default_user = "pypi"
     default_channel = "stable"
-    requires = ["cpython/[>=2.7]@python/stable",
-                "pycparser/2.20@pypi/stable"]
+    requires = ["cpython/[>=2.7]@ultimaker/testing",
+                "pycparser/2.20@ultimaker/testing"]
     no_copy_source = True
 
     @property

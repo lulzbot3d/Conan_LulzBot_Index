@@ -18,9 +18,9 @@ class Pyqt6SipConan(ConanFile):
     url = "https://www.riverbankcomputing.com/software/sip/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = ["cpython/[>=3.6.0]@python/stable",
-                "toml/0.10.2@pypi/stable",
-                "packaging/21.3@pypi/stable"]
+    requires = ["cpython/[>=3.6.0]@ultimaker/testing",
+                "toml/0.10.2@ultimaker/testing",
+                "packaging/21.3@ultimaker/testing"]
     exports_sources = "cmake/**"
     no_copy_source = True
 

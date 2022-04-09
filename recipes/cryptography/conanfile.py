@@ -18,8 +18,8 @@ class CryptographyConan(ConanFile):
     url = "https://github.com/pyca/cryptography"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = ["cpython/[>=3.6.0]@python/stable",
-                "cffi/1.14.1@pypi/stable"]
+    requires = ["cpython/[>=3.6.0]@ultimaker/testing",
+                "cffi/1.14.1@ultimaker/testing"]
     no_copy_source = True
 
     @property

@@ -17,7 +17,7 @@ class IfaddrConan(ConanFile):
     homepage = "https://github.com/pydron/ifaddr"
     url = "https://github.com/pydron/ifaddr"
     settings = "os", "compiler", "build_type", "arch"
-    requires = "cpython/[>=3.0]@python/stable"
+    requires = "cpython/[>=3.0]@ultimaker/testing"
     no_copy_source = True
 
     @property

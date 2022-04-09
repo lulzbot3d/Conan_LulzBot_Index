@@ -18,7 +18,7 @@ class CertifiConan(ConanFile):
     url = "https://certifiio.readthedocs.io/en/latest/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = "cpython/[>=3.3]@python/stable"
+    requires = "cpython/[>=3.3]@ultimaker/testing"
     no_copy_source = True
 
     @property

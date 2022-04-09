@@ -18,7 +18,7 @@ class PyparsingConan(ConanFile):
     url = "https://github.com/pyparsing/pyparsing/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = "cpython/[>=3.6]@python/stable"
+    requires = "cpython/[>=3.6]@ultimaker/testing"
     no_copy_source = True
 
     @property

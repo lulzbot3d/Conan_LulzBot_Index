@@ -18,7 +18,7 @@ class NumpyConan(ConanFile):
     url = "https://www.numpy.org"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = "cpython/[>=2.6]@python/stable"
+    requires = "cpython/[>=2.6]@ultimaker/testing"
     no_copy_source = True
 
     @property

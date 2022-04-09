@@ -19,9 +19,9 @@ class Pyqt6Conan(ConanFile):
     url = "https://www.riverbankcomputing.com/software/pyqt/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = ["cpython/[>=3.6]@python/stable",
-                "pyqt6-sip/13.2.0@pypi/stable",
-                "pyqt6-qt6/6.2.2@pypi/stable"]
+    requires = ["cpython/[>=3.6]@ultimaker/testing",
+                "pyqt6-sip/13.2.0@ultimaker/testing",
+                "pyqt6-qt6/6.2.2@ultimaker/testing"]
     no_copy_source = True
 
     @property

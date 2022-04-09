@@ -18,7 +18,7 @@ class PyserialConan(ConanFile):
     url = "https://github.com/pyserial/pyserial"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = "python/[>=3.0]@python/stable"
+    requires = "python/[>=3.0]@ultimaker/testing"
     no_copy_source = True
 
     @property

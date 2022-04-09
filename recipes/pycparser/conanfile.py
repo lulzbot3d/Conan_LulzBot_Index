@@ -18,7 +18,7 @@ class PycparserConan(ConanFile):
     url = "https://github.com/eliben/pycparser"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = "cpython/[>=2.7]@python/stable"
+    requires = "cpython/[>=2.7]@ultimaker/testing"
     no_copy_source = True
 
     @property

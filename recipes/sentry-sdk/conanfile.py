@@ -18,7 +18,7 @@ class SentrySDKConan(ConanFile):
     url = "https://github.com/getsentry/sentry-python"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = "cpython/[>=3.0]@python/stable"
+    requires = "cpython/[>=3.0]@ultimaker/testing"
     no_copy_source = True
 
     @property

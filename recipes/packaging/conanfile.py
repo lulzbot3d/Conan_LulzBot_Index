@@ -18,8 +18,8 @@ class PackagingConan(ConanFile):
     url = "https://github.com/pypa/packaging"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = ["cpython/[>=3.6.0]@python/stable",
-                "pyparsing/3.0.7@pypi/stable"]
+    requires = ["cpython/[>=3.6.0]@ultimaker/testing",
+                "pyparsing/3.0.7@ultimaker/testing"]
     no_copy_source = True
 
     @property

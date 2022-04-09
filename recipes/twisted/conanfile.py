@@ -18,14 +18,14 @@ class TwistedConan(ConanFile):
     url = "https://twistedmatrix.com/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = ["cpython/[>=2.7]@python/stable",
-                "constantly/15.1.0@pypi/stable",
-                "hyperlink/21.0.0@pypi/stable",
-                "incremental/21.3.0@pypi/stable",
-                "zope_interface/5.4.0@pypi/stable",
-                "twisted-iocpsupport/1.0.2@pypi/stable",
-                "Automat/20.2.0@pypi/stable",
-                "attrs/21.2.0@pypi/stable"]
+    requires = ["cpython/[>=2.7]@ultimaker/testing",
+                "constantly/15.1.0@ultimaker/testing",
+                "hyperlink/21.0.0@ultimaker/testing",
+                "incremental/21.3.0@ultimaker/testing",
+                "zope_interface/5.4.0@ultimaker/testing",
+                "twisted-iocpsupport/1.0.2@ultimaker/testing",
+                "Automat/20.2.0@ultimaker/testing",
+                "attrs/21.2.0@ultimaker/testing"]
     no_copy_source = True
 
     @property

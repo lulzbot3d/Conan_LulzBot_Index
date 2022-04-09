@@ -18,8 +18,8 @@ class ZeroconfConan(ConanFile):
     url = "https://github.com/jstasiak/python-zeroconf"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = ["cpython/[>=2.7]@python/stable",
-                "ifaddr/0.1.7@pypi/stable"]
+    requires = ["cpython/[>=2.7]@ultimaker/testing",
+                "ifaddr/0.1.7@ultimaker/testing"]
     no_copy_source = True
 
     @property

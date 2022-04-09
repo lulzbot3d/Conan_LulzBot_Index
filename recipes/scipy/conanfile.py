@@ -18,8 +18,8 @@ class ScipyConan(ConanFile):
     url = "https://www.scipy.org"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = ["cpython/[>=2.7]@python/stable",
-                "numpy/1.21.5@pypi/stable"]
+    requires = ["cpython/[>=2.7]@ultimaker/testing",
+                "numpy/1.21.5@ultimaker/testing"]
     no_copy_source = True
 
     @property

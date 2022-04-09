@@ -18,7 +18,7 @@ class TomlConan(ConanFile):
     url = "https://github.com/uiri/toml"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = "cpython/[>=2.6.0]@python/stable"
+    requires = "cpython/[>=2.6.0]@ultimaker/testing"
     no_copy_source = True
 
     @property
