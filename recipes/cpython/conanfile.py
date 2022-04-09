@@ -183,9 +183,9 @@ class CPythonConan(ConanFile):
                 if tools.Version(self._version_number_only) < "3.8":
                     self.requires("mpdecimal/2.4.2")
                 elif tools.Version(self._version_number_only) < "3.10":
-                    self.requires("mpdecimal/2.5.0")
+                    self.requires("mpdecimal/2.5.0@ultimaker/testing")
                 else:
-                    self.requires("mpdecimal/2.5.0")  # FIXME: no 2.5.1 to troubleshoot apple
+                    self.requires("mpdecimal/2.5.0@ultimaker/testing")  # FIXME: no 2.5.1 to troubleshoot apple
         if self.settings.os != "Windows":
             if not tools.is_apple_os(self.settings.os):
                 self.requires("libuuid/1.0.3")
