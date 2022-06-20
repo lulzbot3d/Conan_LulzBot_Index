@@ -18,11 +18,16 @@ class Pyqt6SipConan(ConanFile):
     url = "https://www.riverbankcomputing.com/software/sip/"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = ["cpython/[>=3.6.0]@ultimaker/testing",
-                "toml/0.10.2@ultimaker/testing",
+    requires = ["toml/0.10.2@ultimaker/testing",
                 "packaging/21.3@ultimaker/testing"]
     exports_sources = "cmake/**"
     no_copy_source = True
+    options = {
+        "python_version": "ANY"
+    }
+    default_options = {
+        "python_version": "3.6"
+    }
 
     @property
     def _site_packages(self):
@@ -37,7 +42,7 @@ class Pyqt6SipConan(ConanFile):
         else:
             raise ConanInvalidConfiguration("Invalid version for Operating System")
 
-        actual_python_version = Version(self.deps_cpp_info['cpython'].version)
+        actual_python_version = Version(self.options.python_version)
 
         python_version = Version("1.0")
         python_version_key = "1.0"

@@ -18,8 +18,13 @@ class TomlConan(ConanFile):
     url = "https://github.com/uiri/toml"
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
-    requires = "cpython/[>=2.6.0]@ultimaker/testing"
     no_copy_source = True
+    options = {
+        "python_version": "ANY"
+    }
+    default_options = {
+        "python_version": "3.0"
+    }
 
     @property
     def _site_packages(self):
@@ -34,7 +39,7 @@ class TomlConan(ConanFile):
         else:
             raise ConanInvalidConfiguration("Invalid version for Operating System")
 
-        actual_python_version = Version(self.deps_cpp_info['cpython'].version)
+        actual_python_version = Version(self.options.python_version)
 
         python_version = Version("1.0")
         python_version_key = "1.0"
