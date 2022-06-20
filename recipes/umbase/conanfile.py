@@ -16,13 +16,12 @@ class UMBaseConanfile(object):
         """
         Extract the version specific data out of a conandata.yml
         """
-
         all_versions = set()
         if recipe_version:
             for vers in self.conan_data.values():
                 for v in vers:
                     all_versions.add(v)
-            all_versions.remove("None")
+            all_versions = set(filter(lambda v: v[0].isdigit(), all_versions))
             version = max_satisfying(all_versions, recipe_version, loose = True, include_prerelease = False)
             if version is None:
                 version = "None"
@@ -31,7 +30,8 @@ class UMBaseConanfile(object):
 
         data = {}
         for k, ver in self.conan_data.items():
-            data[k] = ver[version]
+            if version in ver:
+                data[k] = ver[version]
         return data
 
 
