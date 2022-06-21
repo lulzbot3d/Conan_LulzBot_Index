@@ -3,7 +3,7 @@ from typing import Optional
 
 from conans import ConanFile
 
-from semver import max_satisfying
+from semver import max_satisfying, make_semver
 
 
 class UMBaseConanfile(object):
@@ -20,8 +20,12 @@ class UMBaseConanfile(object):
         if recipe_version:
             for vers in self.conan_data.values():
                 for v in vers:
-                    all_versions.add(v)
-            all_versions = set(filter(lambda v: v[0].isdigit(), all_versions))
+                    try:
+                        semver_v = make_semver(v, loose = True)
+                    except ValueError:
+                        continue
+                    all_versions.add(semver_v)
+
             version = max_satisfying(all_versions, recipe_version, loose = True, include_prerelease = False)
             if version is None:
                 version = "None"
