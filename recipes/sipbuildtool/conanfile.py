@@ -31,8 +31,8 @@ class SipBuildTool(object):
             return os.path.join(self._venv_base_path, "Scripts")
         return os.path.join(self._venv_base_path, "bin")
 
-    def configure(self, sip_version = "6.5.1"):
-        python_interpreter = Path(sys.executable)
+    def configure(self, sip_version = "6.5.1", python_interpreter = sys.executable):
+        python_interpreter = Path(python_interpreter)
 
         # When on Windows execute as Windows Path
         if self.conanfile.settings.os == "Windows":
@@ -116,6 +116,8 @@ class CMakeBuilder(SetuptoolsBuilder):
             # Run sip-build to generate the source code
             self.conanfile.run(f"""{self.sip_build_executable} {args}""", run_environment = True, env = "conanrun",
                                cwd = self.conanfile.build_folder)
+
+        files.rmdir(self.conanfile, self._venv_base_path)
 
 
 class Pkg(ConanFile):
