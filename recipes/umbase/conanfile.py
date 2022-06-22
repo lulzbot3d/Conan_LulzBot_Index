@@ -1,9 +1,7 @@
-
 from typing import Optional
 
-from conans import ConanFile
-
-from semver import max_satisfying, make_semver
+from conans import ConanFile, tools
+from conans.errors import ConanException
 
 
 class UMBaseConanfile(object):
@@ -16,31 +14,30 @@ class UMBaseConanfile(object):
         """
         Extract the version specific data out of a conandata.yml
         """
-        all_versions = set()
+
         if recipe_version:
-            for vers in self.conan_data.values():
-                for v in vers:
-                    try:
-                        semver_v = make_semver(v, loose = True)
-                    except ValueError:
-                        continue
-                    all_versions.add(semver_v)
+            if recipe_version in self.conan_data:
+                return self.conan_data[recipe_version]
 
-            version = max_satisfying(all_versions, recipe_version, loose = True, include_prerelease = False)
-            if version is None:
-                version = "None"
-        else:
-            version = "None"
+            recipe_version = tools.Version(recipe_version)
+            all_versions = []
+            for k in self.conan_data:
+                try:
+                    v = tools.Version(k)
+                except ConanException:
+                    continue
+                all_versions.append(v)
+            satifying_versions = sorted([str(v) for v in all_versions if v <= recipe_version])
+            if len(satifying_versions) == 0:
+                raise ConanException(f"Could not find a maximum satisfying version for {recipe_version} in {all_versions}")
+            version = satifying_versions[-1]
+            return self.conan_data[version]
 
-        data = {}
-        for k, ver in self.conan_data.items():
-            if version in ver:
-                data[k] = ver[version]
-        return data
+        return self.conan_data["None"]
 
 
 class Pkg(ConanFile):
     name = "umbase"
-    version = "0.1"
+    version = "0.1.1"
     default_user = "ultimaker"
     default_channel = "stable"
