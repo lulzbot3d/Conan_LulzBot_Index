@@ -27,10 +27,10 @@ class UMBaseConanfile(object):
                 except ConanException:
                     continue
                 all_versions.append(v)
-            satifying_versions = sorted([str(v) for v in all_versions if v <= recipe_version])
+            satifying_versions = sorted([v for v in all_versions if v <= recipe_version])
             if len(satifying_versions) == 0:
-                raise ConanException(f"Could not find a maximum satisfying version for {recipe_version} in {all_versions}")
-            version = satifying_versions[-1]
+                raise ConanException(f"Could not find a maximum satisfying version for {recipe_version} in {[str(v) for v in all_versions]}")
+            version = str(satifying_versions[-1])
             return self.conan_data[version]
 
         return self.conan_data["None"]
