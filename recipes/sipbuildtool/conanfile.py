@@ -20,6 +20,11 @@ class SipBuildTool(object):
     This generator expects the project to have a pyproject.toml.jinja file that
     determines which Sip files to compile. It configures that file to a TOML
     file that Sip can use.
+
+    Usage in a conanfile for a Sip project:
+    sip = self.python_requires["sipbuildtool"].module.SipBuildTool(self)
+    sip.configure()
+    sip.generate("projectName")
     """
     def __init__(self, conanfile: ConanFile):
         self.conanfile = conanfile
