@@ -13,6 +13,14 @@ from conans.errors import ConanException
 
 
 class SipBuildTool(object):
+    """
+    A generator that creates a CMake script to build python bindings for
+    projects using Sip.
+
+    This generator expects the project to have a pyproject.toml.jinja file that
+    determines which Sip files to compile. It configures that file to a TOML
+    file that Sip can use.
+    """
     def __init__(self, conanfile: ConanFile):
         self.conanfile = conanfile
         env = VirtualRunEnv(self.conanfile)
