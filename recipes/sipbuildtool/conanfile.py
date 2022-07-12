@@ -40,9 +40,8 @@ class SipBuildTool(object):
 
     @property
     def _venv_bin_path(self):
-        if self.conanfile.settings.os == "Windows":
-            return os.path.join(self._venv_base_path, "Scripts")
-        return os.path.join(self._venv_base_path, "bin")
+        is_windows = self.conanfile.settings.os == "Windows"
+        return os.path.join(self._venv_base_path, "Scripts" if is_windows else "bin")
 
     def configure(self, sip_version = "6.5.1", python_interpreter = sys.executable):
         python_interpreter = Path(python_interpreter)
