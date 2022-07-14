@@ -20,29 +20,32 @@ class UMBaseConanfile(object):
         Extract the version specific data out of a conandata.yml
         """
 
-        if recipe_version and channel:
-            specific_version = f"{recipe_version}/{channel}"
-            if specific_version in self.conan_data:
-                return self.conan_data[specific_version]
+        if channel:
 
-            recipe_version = tools.Version(recipe_version)
-            all_versions = []
-            for k in self.conan_data:
-                try:
-                    v = tools.Version(k.split("/")[0])
-                except ConanException:
-                    continue
-                all_versions.append(v)
-            satifying_versions = sorted([v for v in all_versions if v <= recipe_version])
-            if len(satifying_versions) == 0:
-                raise ConanException(f"Could not find a maximum satisfying version for {recipe_version} in {[str(v) for v in all_versions]}")
-            version = str(satifying_versions[-1])
-            specific_version = f"{version}/{channel}"
-            if specific_version in self.conan_data:
-                return self.conan_data[specific_version]
-            else:
-                raise ConanException(
-                    f"Could not find a maximum satisfying version for {specific_version} in {self.conan_data.keys()}")
+            if channel == "testing":
+                return self.conan_data["None"]
+
+            elif channel == "stable" or channel == "_":
+                if recipe_version:
+                    if recipe_version in self.conan_data:
+                        return self.conan_data[recipe_version]
+
+                    recipe_version = tools.Version(recipe_version)
+                    all_versions = []
+                    for k in self.conan_data:
+                        try:
+                            v = tools.Version(k)
+                        except ConanException:
+                            continue
+                        all_versions.append(v)
+                    satifying_versions = sorted([v for v in all_versions if v <= recipe_version])
+                    if len(satifying_versions) == 0:
+                        raise ConanException(f"Could not find a maximum satisfying version for {recipe_version} in {[str(v) for v in all_versions]}")
+                    version = str(satifying_versions[-1])
+                    return self.conan_data[version]
+
+            elif channel in self.conan_data:
+                    return self.conan_data[channel]
 
         return self.conan_data["None"]
 
@@ -137,6 +140,6 @@ class UMBaseConanfile(object):
 
 class Pkg(ConanFile):
     name = "umbase"
-    version = "0.1.3"
+    version = "0.1.4"
     default_user = "ultimaker"
     default_channel = "stable"
