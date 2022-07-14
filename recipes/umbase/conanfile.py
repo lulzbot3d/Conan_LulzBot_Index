@@ -15,20 +15,21 @@ class UMBaseConanfile(object):
     https://docs.conan.io/en/latest/extending/python_requires.html
     """
 
-    def _um_data(self, recipe_version: Optional[str]) -> dict:
+    def _um_data(self, recipe_version: Optional[str], channel: Optional[str]) -> dict:
         """
         Extract the version specific data out of a conandata.yml
         """
 
-        if recipe_version:
-            if recipe_version in self.conan_data:
-                return self.conan_data[recipe_version]
+        if recipe_version and channel:
+            specific_version = f"{recipe_version}/{channel}"
+            if specific_version in self.conan_data:
+                return self.conan_data[specific_version]
 
             recipe_version = tools.Version(recipe_version)
             all_versions = []
             for k in self.conan_data:
                 try:
-                    v = tools.Version(k)
+                    v = tools.Version(k.split("/")[0])
                 except ConanException:
                     continue
                 all_versions.append(v)
@@ -36,7 +37,12 @@ class UMBaseConanfile(object):
             if len(satifying_versions) == 0:
                 raise ConanException(f"Could not find a maximum satisfying version for {recipe_version} in {[str(v) for v in all_versions]}")
             version = str(satifying_versions[-1])
-            return self.conan_data[version]
+            specific_version = f"{version}/{channel}"
+            if specific_version in self.conan_data:
+                return self.conan_data[specific_version]
+            else:
+                raise ConanException(
+                    f"Could not find a maximum satisfying version for {specific_version} in {self.conan_data.keys()}")
 
         return self.conan_data["None"]
 
@@ -131,6 +137,6 @@ class UMBaseConanfile(object):
 
 class Pkg(ConanFile):
     name = "umbase"
-    version = "0.1.2"
+    version = "0.1.3"
     default_user = "ultimaker"
     default_channel = "stable"
