@@ -23,11 +23,13 @@ class UMBaseConanfile(object):
         if channel:
 
             if channel == "testing":
+                self.output.info(f"Using conandata.yml from channel: {channel}")
                 return self.conan_data["None"]
 
-            elif channel == "stable" or channel == "_":
+            elif channel == "stable" or channel == "_" or channel == "":
                 if recipe_version:
                     if recipe_version in self.conan_data:
+                        self.output.info(f"Using conandata.yml from channel: {channel} and recipe version: {recipe_version}")
                         return self.conan_data[recipe_version]
 
                     recipe_version = tools.Version(recipe_version)
@@ -45,13 +47,17 @@ class UMBaseConanfile(object):
                         # Then try to find a version which only takes into account major.minor.patch
                         satifying_versions = sorted([v for v in all_versions if tools.Version(f"{v.major}.{v.minor}.{v.patch}") <= tools.Version(f"{recipe_version.major}.{recipe_version.minor}.{recipe_version.patch}")])
                         if len(satifying_versions) == 0:
-                            raise ConanException(f"Could not find a maximum satisfying version for {recipe_version} in {[str(v) for v in all_versions]}")
+                            self.output.warn(f"Could not find a maximum satisfying version from channel: {channel} for {recipe_version} in {[str(v) for v in all_versions]}, defaulting to testing channel")
+                            return self.conan_data["None"]
                     version = str(satifying_versions[-1])
+                    self.output.info(f"Using conandata.yml from channel: {channel} and recipe version: {version}")
                     return self.conan_data[version]
 
             elif channel in self.conan_data:
-                    return self.conan_data[channel]
+                self.output.info(f"Using conandata.yml from channel: {channel}")
+                return self.conan_data[channel]
 
+        self.output.info(f"Using conandata.yml defaulting to testing channel")
         return self.conan_data["None"]
 
     @property
