@@ -15,10 +15,19 @@ class UMBaseConanfile(object):
     https://docs.conan.io/en/latest/extending/python_requires.html
     """
 
-    def _um_data(self, recipe_version: Optional[str], channel: Optional[str]) -> dict:
+    def _um_data(self) -> dict:
         """
         Extract the version specific data out of a conandata.yml
         """
+        try:
+            recipe_version = self.version
+        except ConanException:
+            recipe_version = "None"
+
+        try:
+            channel = self.channel
+        except ConanException:
+            channel = ""
 
         if channel:
 
@@ -151,6 +160,6 @@ class UMBaseConanfile(object):
 
 class Pkg(ConanFile):
     name = "umbase"
-    version = "0.1.4"
+    version = "0.1.5"
     default_user = "ultimaker"
     default_channel = "stable"
