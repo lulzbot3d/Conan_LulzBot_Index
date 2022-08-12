@@ -8,7 +8,7 @@ from jinja2 import Template
 
 from conan import ConanFile
 from conan.tools.env import VirtualRunEnv
-from conan.tools.files import files
+from conan.tools import files
 from conans.errors import ConanException
 
 
@@ -33,6 +33,8 @@ class SipBuildTool(object):
         self.envvars = None
         self.python_venv_interpreter = None
         self.sip_build_executable = None
+
+    exports = "pyproject.toml.jinja", "CMakeBuilder.py", "SIPMacros.cmake"
 
     @property
     def _venv_base_path(self):
@@ -98,26 +100,15 @@ class SipBuildTool(object):
             self.sip_build_executable = Path(*[f'"{p}"' if " " in p else p for p in self.sip_build_executable.parts])
 
     def generate(self, module_name, sip_dir = "python", sip_include_dirs = "python", args = "--pep484-pyi --no-protected-is-public"):
+        dirname = os.path.dirname(os.path.abspath(__file__))
+
         # Generate the CMakeBuilder
-        cmake_builder = r"""from sipbuild import SetuptoolsBuilder
-
-
-class CMakeBuilder(SetuptoolsBuilder):
-    def __init__(self, project, **kwargs):
-        print("Using the Conan SipBuildTool")
-        super().__init__(project, **kwargs)
-
-    def build(self):
-        "Only Generate the source files "
-        print("Generating the source files")
-        self._generate_bindings()
-        self._generate_scripts()
-        """
-
-        files.save(self.conanfile, os.path.join(self.conanfile.build_folder, "CMakeBuilder.py"), cmake_builder)
+        files.copy(self.conanfile, "CMakeBuilder.py", dirname, self.conanfile.build_folder)
+        files.copy(self.conanfile, "*.cmake", dirname, os.path.join(self.conanfile.build_folder, "cmake"))
 
         # Generate the pyproject.toml
-        pyproject_toml_template = Template(files.load(self.conanfile, os.path.join(self.conanfile.source_folder, "pyproject.toml.jinja")))
+        pyproject_toml_template = Template(files.load(self.conanfile, os.path.join(dirname, "pyproject.toml.jinja")))
+
         files.save(self.conanfile, os.path.join(self.conanfile.build_folder, "pyproject.toml"), pyproject_toml_template.render(
             module_name = module_name,
             sip_dir = os.path.join(self.conanfile.source_folder, sip_dir).replace("\\", "\\\\"),
@@ -134,6 +125,6 @@ class CMakeBuilder(SetuptoolsBuilder):
 
 class Pkg(ConanFile):
     name = "sipbuildtool"
-    version = "0.1"
+    version = "0.1.99"
     default_user = "ultimaker"
     default_channel = "testing"
