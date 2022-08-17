@@ -126,7 +126,7 @@ class ToolSipBindingsExtraSourcesBlock(Block):
         return {
             "headers": [],
             "include_dirs": [],
-            "includedirs": []
+            "sources": []
         }
 
 
