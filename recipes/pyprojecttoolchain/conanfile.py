@@ -116,21 +116,17 @@ class ToolSipProjectBlock(Block):
 
 class ToolSipBindingsExtraSourcesBlock(Block):
     template = textwrap.dedent("""
-    headers = [{% for linkarg in linkeargs %}}"{{ linkarg }}", {% endfor %}]
-    include-dirs = [{% for linkarg in linkeargs %}}"{{ linkarg }}", {% endfor %}]
-    sources = [{% for linkarg in linkeargs %}}"{{ linkarg }}", {% endfor %}]
+    headers = [{% for header in headers %}}"{{ header }}", {% endfor %}]
+    include-dirs = [{% for include_dir in include_dirs %}}"{{ include_dir }}", {% endfor %}]
+    sources = [{% for source in sources %}}"{{ source }}", {% endfor %}]
     """)
 
     def context(self):
-        libs = []
-        libdirs = []
-        includedirs = []
 
         return {
-            "name": self._conanfile.name,
-            "libs": libs,
-            "libdirs": libdirs,
-            "includedirs": includedirs
+            "headers": [],
+            "include_dirs": [],
+            "includedirs": []
         }
 
 
