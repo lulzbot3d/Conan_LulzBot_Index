@@ -10,3 +10,6 @@ venv/
 /recipes/sip/tmp/
 /recipes/uranium/tmp/
 build/
+
+*.bak
+*~
