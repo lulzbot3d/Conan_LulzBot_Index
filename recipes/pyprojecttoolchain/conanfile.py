@@ -9,7 +9,6 @@ from conan.tools.cmake.toolchain.toolchain import ToolchainBlocks
 from conan.tools.files import save
 from conan.errors import ConanInvalidConfiguration
 from conan.tools._check_build_profile import check_using_build_profile
-from conan.tools._compilers import architecture_flag, cppstd_flag
 from conans.tools import Version
 
 
@@ -158,24 +157,19 @@ class ToolSipBindingsBlock(Block):
         build_type = settings.get_safe("build_type", "Release")
         shared = settings.get_safe("shared", True)
 
-        compiler_args = [cppstd_flag(settings), architecture_flag(settings)]
-        if self._conanfile.options.get_safe("fPIC", False):
-            compiler_args.append("-fPIC")
-
         libs = deps_cpp_info.libs
         libdirs = [Path(d).as_posix() for d in deps_cpp_info.libdirs]
         includedirs = [Path(d).as_posix() for d in deps_cpp_info.includedirs]
         if self._conanfile.cpp.source.includedirs:
             includedirs.extend(self._conanfile.cpp.source.includedirs)
-        linkargs = self._conanfile.deps_cpp_info.sharedlinkflags
 
         return {
             "name": self._conanfile.name,
             "libs": libs,
             "libdirs": libdirs,
             "includedirs": includedirs,
-            "compileargs": compiler_args,
-            "linkargs": linkargs,
+            "compileargs": [],
+            "linkargs": [],
             "build_static": str(not shared),
             "build_debug": str(build_type == "Debug")
         }
@@ -221,6 +215,6 @@ class PyProjectToolchain:
 
 class PyProjectToolchainPkg(ConanFile):
     name = "pyprojecttoolchain"
-    version = "0.1.1"
+    version = "0.1.2"
     default_user = "ultimaker"
     default_channel = "testing"

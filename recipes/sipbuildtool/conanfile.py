@@ -1,5 +1,6 @@
 from conan import ConanFile
 from conans import tools
+from conans.client.subsystems import subsystem_path, deduce_subsystem
 
 
 class SipBuildTool(object):
@@ -14,23 +15,24 @@ class SipBuildTool(object):
     sip.generate("projectName")
     """
     def __init__(self, conanfile: ConanFile):
-        self.conanfile = conanfile
-        self._sip_install_executable = None
+        self._conanfile = conanfile
+        self._sip_install_executable = "sip-install"
 
     def configure(self, sip_install_executable = None):
-        if not sip_install_executable:
-            sip_install_executable = "sip-install"
-            if self.conanfile.settings.os == "Windows":
-                sip_install_executable += ".exe"
-
-        self._sip_install_executable = sip_install_executable
+        if sip_install_executable:
+            self._sip_install_executable = sip_install_executable
 
     def build(self):
-        with tools.chdir(self.conanfile.source_folder):
-            self.conanfile.run(f"{self._sip_install_executable}", env = "run")
+        with tools.chdir(self._conanfile.source_folder):
+            sip_cmd = self._sip_install_executable
+            subsystem = deduce_subsystem(self._conanfile, scope = "build")
+            sip_cmd = subsystem_path(subsystem, sip_cmd)
+            cmd = '"{}"'.format(sip_cmd)
+            self._conanfile.output.info(f"Calling:\n > {cmd}")
+            self._conanfile.run(cmd)
 
 class Pkg(ConanFile):
     name = "sipbuildtool"
-    version = "0.2.0"
+    version = "0.2.1"
     default_user = "ultimaker"
     default_channel = "testing"
