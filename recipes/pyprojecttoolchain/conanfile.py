@@ -160,7 +160,7 @@ class ToolSipBindingsBlock(Block):
 
         compiler_args = [cppstd_flag(settings), architecture_flag(settings)]
         if self._conanfile.options.get_safe("fPIC", False):
-            compiler_args.extend("-fPIC")
+            compiler_args.append("-fPIC")
 
         libs = deps_cpp_info.libs
         libdirs = [Path(d).as_posix() for d in deps_cpp_info.libdirs]
