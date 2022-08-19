@@ -1,16 +1,13 @@
 import textwrap
 from pathlib import Path
 
-from conan.tools.apple.apple import apple_min_version_flag
-
-from conan.tools.microsoft import msvc_runtime_flag
-
-from conan.tools._compilers import architecture_flag, cppstd_flag
 from jinja2 import Template
 
 from conan import ConanFile
+from conan.tools.microsoft import VCVars
 from conan.tools.cmake.toolchain.blocks import Block
 from conan.tools.cmake.toolchain.toolchain import ToolchainBlocks
+from conan.tools.gnu.autotoolstoolchain import AutotoolsToolchain
 from conan.tools.files import save
 from conan.errors import ConanInvalidConfiguration
 from conan.tools._check_build_profile import check_using_build_profile
@@ -140,8 +137,8 @@ class ToolSipProjectBlock(Block):
 
 class ToolSipBindingsExtraSourcesBlock(Block):
     template = textwrap.dedent("""
-    headers = [{% for header in headers %}"{{ header }}", {% endfor %}]
-    sources = [{% for source in sources %}"{{ source }}", {% endfor %}]
+    headers = {{ headers }}
+    sources = {{ sources }}
     """)
 
     def context(self):
@@ -151,74 +148,31 @@ class ToolSipBindingsExtraSourcesBlock(Block):
         }
 
 
+class ToolSipBindingBlockCompile(Block):
+    template = textwrap.dedent("""
+    extra-compile-args = {{ compileargs }}
+    extra-link-args = {{ linkargs }}
+    """)
+
+    def context(self):
+        return {
+            "compileargs": list(filter(lambda item: item is not None and item != '', self._toolchain.cxxflags)),
+            "linkargs":  list(filter(lambda item: item is not None and item != '', self._toolchain.ldflags)),
+        }
+
+
 class ToolSipBindingsBlock(Block):
     template = textwrap.dedent("""
     [tool.sip.bindings.{{ name }}]
     exceptions = true
     release-gil = true
-    libraries = [{% for lib in libs %}"{{ lib }}", {% endfor %}]
-    library-dirs = [{% for libdir in libdirs %}"{{ libdir }}", {% endfor %}]
-    include-dirs = [{% for includedir in includedirs %}"{{ includedir }}", {% endfor %}]
-    extra-compile-args = [{% for compilearg in compileargs %}"{{ compilearg }}", {% endfor %}]
-    extra-link-args = [{% for linkarg in linkargs %}"{{ linkarg }}", {% endfor %}]
+    libraries = {{ libs }}
+    library-dirs = {{ libdirs }}
+    include-dirs = {{ includedirs }}
     pep484-pyi = true
     static = {{ build_static | lower }}
     debug = {{ build_debug | lower }}
     """)
-
-    @staticmethod
-    def _filter_list_empty_fields(v):
-        return list(filter(bool, v))
-
-    def _get_sysroot_flag(self):
-        sysroot = self._conanfile.conf.get("tools.build:sysroot")
-        if sysroot:
-            sysroot = sysroot.replace("\\", "/")
-            return f"--sysroot {sysroot}"
-        return None
-
-    def _get_msvc_runtime_flag(self):
-        flag = msvc_runtime_flag(self._conanfile)
-        if flag:
-            flag = "-{}".format(flag)
-        return flag
-
-    def _get_libcxx_flag(self):
-        settings = self._conanfile.settings
-        libcxx = settings.get_safe("compiler.libcxx")
-        if not libcxx:
-            return
-
-        compiler = settings.get_safe("compiler.base") or settings.get_safe("compiler")
-
-        if compiler in ['clang', 'apple-clang']:
-            if libcxx in ['libstdc++', 'libstdc++11']:
-                return '-stdlib=libstdc++'
-            elif libcxx == 'libc++':
-                return '-stdlib=libc++'
-        elif compiler == 'sun-cc':
-            return ({"libCstd": "-library=Cstd",
-                     "libstdcxx": "-library=stdcxx4",
-                     "libstlport": "-library=stlport4",
-                     "libstdc++": "-library=stdcpp"}.get(libcxx))
-        elif compiler == "qcc":
-            return "-Y _%s" % str(libcxx)
-
-    def _get_extra_compiler_args(self):
-        compiler_args = [cppstd_flag(self._conanfile.settings), architecture_flag(self._conanfile.settings), self._get_libcxx_flag(),
-                         self._get_msvc_runtime_flag(), apple_min_version_flag(self._conanfile), self._get_sysroot_flag()]
-        compiler_args.extend(self._conanfile.conf.get("tools.build:cxxflags", default = [], check_type = list))
-
-        if self._conanfile.options.get_safe("fPIC", False):
-            compiler_args.append("-fPIC")
-
-        return self._filter_list_empty_fields(compiler_args)
-
-    def _get_linker_args(self):
-        linker_args = [architecture_flag(self._conanfile.settings), self._get_sysroot_flag(), apple_min_version_flag(self._conanfile)]
-        linker_args.extend(self._conanfile.conf.get("tools.build:sharedlinkflags", default = [], check_type = list))
-        linker_args.extend(self._conanfile.conf.get("tools.build:exelinkflags", default = [], check_type = list))
-        return self._filter_list_empty_fields(linker_args)
 
     def context(self):
         settings = self._conanfile.settings
@@ -237,14 +191,12 @@ class ToolSipBindingsBlock(Block):
             "libs": libs,
             "libdirs": libdirs,
             "includedirs": includedirs,
-            "compileargs": self._get_extra_compiler_args(),
-            "linkargs": self._get_linker_args(),
             "build_static": str(not shared),
             "build_debug": str(build_type == "Debug")
         }
 
 
-class PyProjectToolchain:
+class PyProjectToolchain(AutotoolsToolchain):
     _pyproject_filename = Path("pyproject.toml")
 
     _pyproject_template = textwrap.dedent("""
@@ -273,21 +225,22 @@ class PyProjectToolchain:
             super(CppBuilder, self)._build_extension_module(buildable)
     """)
 
-    def __init__(self, conanfile: ConanFile):
-        self._conanfile: ConanFile = conanfile
+    def __init__(self, conanfile: ConanFile, namespace = None):
+        super().__init__(conanfile, namespace)
+        check_using_build_profile(self._conanfile)
         self.blocks = ToolchainBlocks(self._conanfile, self, [
             ("build_system", BuildSystemBlock),
             ("tool_sip_metadata", ToolSipMetadataBlock),
             ("tool_sip_project", ToolSipProjectBlock),
             ("tool_sip_bindings", ToolSipBindingsBlock),
-            ("extra_sources", ToolSipBindingsExtraSourcesBlock)
+            ("extra_sources", ToolSipBindingsExtraSourcesBlock),
+            ("compiling", ToolSipBindingBlockCompile),
         ])
-
-        check_using_build_profile(self._conanfile)
 
     @property
     def _context(self):
         blocks = self.blocks.process_blocks()
+        print(blocks)
         return {"conan_blocks": blocks}
 
     @property
@@ -295,7 +248,12 @@ class PyProjectToolchain:
         content = Template(self._pyproject_template, trim_blocks = True, lstrip_blocks = True).render(**self._context)
         return content
 
-    def generate(self):
+    def generate(self, env = None, scope = "build"):
+        env = env or self.environment()
+        env = env.vars(self._conanfile, scope = scope)
+        env.save_script("conanpyprojecttoolchain")
+        VCVars(self._conanfile).generate(scope = scope)
+
         py_project_filename = Path(self._conanfile.source_folder, self._pyproject_filename)
         save(self._conanfile, py_project_filename, self.content)
 
@@ -305,6 +263,6 @@ class PyProjectToolchain:
 
 class PyProjectToolchainPkg(ConanFile):
     name = "pyprojecttoolchain"
-    version = "0.1.3"
+    version = "0.1.4"
     default_user = "ultimaker"
     default_channel = "testing"
