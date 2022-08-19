@@ -56,9 +56,18 @@ class ToolSipMetadataBlock(Block):
                 raise ConanInvalidConfiguration(
                     "No minimum required Python version specified, either add the options: 'py_version' of add cpython as a Conan dependency!")
 
+        mod_version = Version(self._conanfile.version)
+        pypi_version = f"{mod_version.major}.{mod_version.minor}.{mod_version.patch}"
+        if mod_version.prerelease != "":
+            split_prerelease = mod_version.prerelease.split(".")
+            if len(split_prerelease) > 1:
+                pypi_version += f"{split_prerelease[0][0]}{split_prerelease[1]}"
+            else:
+                pypi_version += split_prerelease[0][0]
+
         return {
             "name": self._conanfile.name,
-            "version": self._conanfile.version,
+            "version": pypi_version,
             "description": self._conanfile.description,
             "url": self._conanfile.url,
             "author": self._conanfile.author,
