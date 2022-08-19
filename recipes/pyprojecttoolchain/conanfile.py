@@ -1,6 +1,11 @@
 import textwrap
 from pathlib import Path
 
+from conan.tools.apple.apple import apple_min_version_flag
+
+from conan.tools.microsoft import msvc_runtime_flag
+
+from conan.tools._compilers import architecture_flag, cppstd_flag
 from jinja2 import Template
 
 from conan import ConanFile
@@ -65,6 +70,7 @@ class ToolSipMetadataBlock(Block):
 class ToolSipProjectBlock(Block):
     template = textwrap.dedent("""
     [tool.sip.project]
+    builder-factory = "{{ builder_factory }}"
     sip-files-dir = "{{ sip_files_dir }}"
     build-dir = "{{ build_folder }}"
     target-dir = "{{ package_folder }}"
@@ -93,7 +99,9 @@ class ToolSipProjectBlock(Block):
 
             if py_include_dir is None:
                 try:
-                    py_include_dir = Path(self._conanfile.deps_cpp_info['cpython'].rootpath, self._conanfile.deps_cpp_info['cpython'].includedirs[0], f"python{py_major_version}.{py_minor_version}").as_posix()
+                    py_include_dir = Path(self._conanfile.deps_cpp_info['cpython'].rootpath,
+                                          self._conanfile.deps_cpp_info['cpython'].includedirs[0],
+                                          f"python{py_major_version}.{py_minor_version}").as_posix()
                     py_include_dir = f"py-include-dir = \"{py_include_dir}\""
                 except:
                     self._conanfile.output.warn(
@@ -104,8 +112,6 @@ class ToolSipProjectBlock(Block):
             py_major_version = f"py-major-version = {py_version.major}"
             py_minor_version = f"py-minor-version = {py_version.minor}"
 
-        sip_files_dir = Path(self._conanfile.source_folder, self._conanfile.name).as_posix()
-
         if self._conanfile.package_folder:
             package_folder = Path(self._conanfile.package_folder, "site-packages").as_posix()
         else:
@@ -113,6 +119,7 @@ class ToolSipProjectBlock(Block):
         sip_files_dir = Path(self._conanfile.source_folder, self._conanfile.name).as_posix()
 
         return {
+            "builder_factory": Path(self._conanfile.generators_folder, "cpp_builder.py").as_posix(),
             "sip_files_dir": sip_files_dir,
             "build_folder": Path(self._conanfile.build_folder).as_posix(),
             "package_folder": package_folder,
@@ -129,7 +136,6 @@ class ToolSipBindingsExtraSourcesBlock(Block):
     """)
 
     def context(self):
-
         return {
             "headers": [],
             "sources": []
@@ -151,6 +157,60 @@ class ToolSipBindingsBlock(Block):
     debug = {{ build_debug | lower }}
     """)
 
+    @staticmethod
+    def _filter_list_empty_fields(v):
+        return list(filter(bool, v))
+
+    def _get_sysroot_flag(self):
+        sysroot = self._conanfile.conf.get("tools.build:sysroot")
+        if sysroot:
+            sysroot = sysroot.replace("\\", "/")
+            return f"--sysroot {sysroot}"
+        return None
+
+    def _get_msvc_runtime_flag(self):
+        flag = msvc_runtime_flag(self._conanfile)
+        if flag:
+            flag = "-{}".format(flag)
+        return flag
+
+    def _get_libcxx_flag(self):
+        settings = self._conanfile.settings
+        libcxx = settings.get_safe("compiler.libcxx")
+        if not libcxx:
+            return
+
+        compiler = settings.get_safe("compiler.base") or settings.get_safe("compiler")
+
+        if compiler in ['clang', 'apple-clang']:
+            if libcxx in ['libstdc++', 'libstdc++11']:
+                return '-stdlib=libstdc++'
+            elif libcxx == 'libc++':
+                return '-stdlib=libc++'
+        elif compiler == 'sun-cc':
+            return ({"libCstd": "-library=Cstd",
+                     "libstdcxx": "-library=stdcxx4",
+                     "libstlport": "-library=stlport4",
+                     "libstdc++": "-library=stdcpp"}.get(libcxx))
+        elif compiler == "qcc":
+            return "-Y _%s" % str(libcxx)
+
+    def _get_extra_compiler_args(self):
+        compiler_args = [cppstd_flag(self._conanfile.settings), architecture_flag(self._conanfile.settings), self._get_libcxx_flag(),
+                         self._get_msvc_runtime_flag(), apple_min_version_flag(self._conanfile), self._get_sysroot_flag()]
+        compiler_args.extend(self._conanfile.conf.get("tools.build:cxxflags", default = [], check_type = list))
+
+        if self._conanfile.options.get_safe("fPIC", False):
+            compiler_args.append("-fPIC")
+
+        return self._filter_list_empty_fields(compiler_args)
+
+    def _get_linker_args(self):
+        linker_args = [architecture_flag(self._conanfile.settings), self._get_sysroot_flag(), apple_min_version_flag(self._conanfile)]
+        linker_args.extend(self._conanfile.conf.get("tools.build:sharedlinkflags", default = [], check_type = list))
+        linker_args.extend(self._conanfile.conf.get("tools.build:exelinkflags", default = [], check_type = list))
+        return self._filter_list_empty_fields(linker_args)
+
     def context(self):
         settings = self._conanfile.settings
         deps_cpp_info = self._conanfile.deps_cpp_info
@@ -168,22 +228,40 @@ class ToolSipBindingsBlock(Block):
             "libs": libs,
             "libdirs": libdirs,
             "includedirs": includedirs,
-            "compileargs": [],
-            "linkargs": [],
+            "compileargs": self._get_extra_compiler_args(),
+            "linkargs": self._get_linker_args(),
             "build_static": str(not shared),
             "build_debug": str(build_type == "Debug")
         }
 
 
 class PyProjectToolchain:
-    filename = Path("pyproject.toml")
+    _pyproject_filename = Path("pyproject.toml")
 
-    _template = textwrap.dedent("""
+    _pyproject_template = textwrap.dedent("""
     # Conan automatically generated pyproject.toml file
     # DO NOT EDIT MANUALLY, it will be overwritten
 
     {% for conan_block in conan_blocks %}{{ conan_block }}
     {% endfor %}
+    """)
+
+    _sip_builder_filename = Path("cpp_builder.py")
+
+    _sip_builder_template = textwrap.dedent("""
+    # Conan automatically generated pyproject.toml file
+    # DO NOT EDIT MANUALLY, it will be overwritten
+    from sipbuild.setuptools_builder import SetuptoolsBuilder
+
+
+    class CppBuilder(SetuptoolsBuilder):
+        def __init__(self, project, **kwargs):
+            print("Using the CppBuilder")
+            super().__init__(project, **kwargs)
+    
+        def _build_extension_module(self, buildable):
+            buildable.sources = [b for b in buildable.sources if str(b).endswith(".cpp")]
+            super(CppBuilder, self)._build_extension_module(buildable)
     """)
 
     def __init__(self, conanfile: ConanFile):
@@ -205,16 +283,19 @@ class PyProjectToolchain:
 
     @property
     def content(self):
-        content = Template(self._template, trim_blocks = True, lstrip_blocks = True).render(**self._context)
+        content = Template(self._pyproject_template, trim_blocks = True, lstrip_blocks = True).render(**self._context)
         return content
 
     def generate(self):
-        filename = Path(self._conanfile.source_folder, self.filename)
-        save(self._conanfile, filename, self.content)
+        py_project_filename = Path(self._conanfile.source_folder, self._pyproject_filename)
+        save(self._conanfile, py_project_filename, self.content)
+
+        sip_builder_filename = Path(self._conanfile.generators_folder, self._sip_builder_filename)
+        save(self._conanfile, sip_builder_filename, self._sip_builder_template)
 
 
 class PyProjectToolchainPkg(ConanFile):
     name = "pyprojecttoolchain"
-    version = "0.1.2"
+    version = "0.1.3"
     default_user = "ultimaker"
     default_channel = "testing"
