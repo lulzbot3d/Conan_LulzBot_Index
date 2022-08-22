@@ -1,3 +1,5 @@
+import os
+
 from conan import ConanFile
 from conans import tools
 from conans.client.subsystems import subsystem_path, deduce_subsystem
@@ -16,7 +18,7 @@ class SipBuildTool(object):
     """
     def __init__(self, conanfile: ConanFile):
         self._conanfile = conanfile
-        self._sip_install_executable = "sip-install"
+        self._sip_install_executable = "sip-build"
 
     def configure(self, sip_install_executable = None):
         if sip_install_executable:
@@ -33,6 +35,14 @@ class SipBuildTool(object):
 
 class Pkg(ConanFile):
     name = "sipbuildtool"
-    version = "0.2.1"
+    version = "0.2.2"
     default_user = "ultimaker"
-    default_channel = "testing"
+    default_channel = "stable"
+    exports_sources = "SIPMacros.cmake"
+
+    def package(self):
+        self.copy("SIPMacros.cmake", "cmake")
+
+    def package_info(self):
+        self.cpp_info.set_property("name", "sip")
+        self.cpp_info.set_property("cmake_build_modules", [os.path.join("cmake", "SIPMacros.cmake")])

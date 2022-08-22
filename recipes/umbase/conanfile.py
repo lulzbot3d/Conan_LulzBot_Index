@@ -160,6 +160,14 @@ class UMBaseConanfile(object):
 
 class Pkg(ConanFile):
     name = "umbase"
-    version = "0.1.5"
+    version = "0.1.6"
     default_user = "ultimaker"
     default_channel = "stable"
+    exports_sources = "StandardProjectSettings.cmake"
+
+    def package(self):
+        self.copy("StandardProjectSettings.cmake", "cmake")
+
+    def package_info(self):
+        self.cpp_info.set_property("name", "umbase")
+        self.cpp_info.set_property("cmake_build_modules", [os.path.join("cmake", "StandardProjectSettings.cmake")])

@@ -76,7 +76,7 @@ class ToolSipMetadataBlock(Block):
 class ToolSipProjectBlock(Block):
     template = textwrap.dedent("""
     [tool.sip.project]
-    builder-factory = "{{ builder_factory }}"
+    compile = {{ compile | lower }}
     sip-files-dir = "{{ sip_files_dir }}"
     build-dir = "{{ build_folder }}"
     target-dir = "{{ package_folder }}"
@@ -125,8 +125,8 @@ class ToolSipProjectBlock(Block):
         sip_files_dir = Path(self._conanfile.source_folder, self._conanfile.name).as_posix()
 
         return {
-            "builder_factory": Path(self._conanfile.generators_folder, "cpp_builder.py").as_posix(),
             "sip_files_dir": sip_files_dir,
+            "compile": False,
             "build_folder": Path(self._conanfile.build_folder).as_posix(),
             "package_folder": package_folder,
             "py_include_dir": py_include_dir,
@@ -207,24 +207,6 @@ class PyProjectToolchain(AutotoolsToolchain):
     {% endfor %}
     """)
 
-    _sip_builder_filename = Path("cpp_builder.py")
-
-    _sip_builder_template = textwrap.dedent("""
-    # Conan automatically generated pyproject.toml file
-    # DO NOT EDIT MANUALLY, it will be overwritten
-    from sipbuild.setuptools_builder import SetuptoolsBuilder
-
-
-    class CppBuilder(SetuptoolsBuilder):
-        def __init__(self, project, **kwargs):
-            print("Using the CppBuilder")
-            super().__init__(project, **kwargs)
-    
-        def _build_extension_module(self, buildable):
-            buildable.sources = [b for b in buildable.sources if str(b).endswith(".cpp")]
-            super(CppBuilder, self)._build_extension_module(buildable)
-    """)
-
     def __init__(self, conanfile: ConanFile, namespace = None):
         super().__init__(conanfile, namespace)
         check_using_build_profile(self._conanfile)
@@ -257,12 +239,9 @@ class PyProjectToolchain(AutotoolsToolchain):
         py_project_filename = Path(self._conanfile.source_folder, self._pyproject_filename)
         save(self._conanfile, py_project_filename, self.content)
 
-        sip_builder_filename = Path(self._conanfile.generators_folder, self._sip_builder_filename)
-        save(self._conanfile, sip_builder_filename, self._sip_builder_template)
-
 
 class PyProjectToolchainPkg(ConanFile):
     name = "pyprojecttoolchain"
-    version = "0.1.4"
+    version = "0.1.5"
     default_user = "ultimaker"
-    default_channel = "testing"
+    default_channel = "stable"
