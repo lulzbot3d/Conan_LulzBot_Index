@@ -1,19 +1,21 @@
-import os
 from pathlib import Path
-
 from conan import ConanFile
-from conans import tools
-from conans.client.subsystems import subsystem_path, deduce_subsystem
 
-from extract_strings import extract_strings_from_project
+from extract_strings import TranslationExtractor
 
 
 class ExtractTranslations(object):
-    def __init__(self, conanfile: ConanFile):
+    def __init__(self, conanfile: ConanFile, translations_root_path: Path, translation_template_name: str):
         self._conanfile = conanfile
+        self.translations_root_path = translations_root_path
+        self.translation_template_name = translation_template_name
 
-    def extract(self, root_path: Path, translations_root_path: Path, translation_template_name: str):
-        extract_strings_from_project(root_path, translations_root_path, translation_template_name)
+    def generate(self):
+        gettext_path = self._conanfile.dependencies["gettext"].cpp_info.bindirs[0]
+        extractor = TranslationExtractor(self._conanfile.source_path, self.translations_root_path, self.translation_template_name, gettext_path)
+        extractor.extract_strings_to_pot_files()
+        extractor.update_po_files_all_languages()
+
 
 class Pkg(ConanFile):
     name = "translationextractor"
