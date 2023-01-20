@@ -26,6 +26,7 @@ this software.
 # the JSON file using the structure as used by Uranium settings files.
 
 import json
+import logging
 import time
 import collections
 from pathlib import Path
@@ -38,7 +39,7 @@ def write_setting_text(json_path: Path, destination_path: Path) -> bool:
         setting_dict = json.load(data_file, object_pairs_hook=collections.OrderedDict)
 
         if "settings" not in setting_dict:
-            print(f"Nothing to translate in file: {setting_dict}")
+            logging.debug(f"Nothing to translate in file: {setting_dict}")
         else:
             translation_entries = process_settings(json_path.name, setting_dict["settings"])
 

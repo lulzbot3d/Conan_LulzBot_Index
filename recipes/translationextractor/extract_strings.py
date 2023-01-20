@@ -3,10 +3,13 @@ import collections
 import json
 import os
 import subprocess
+import logging
 
 from pathlib import Path
 from settingspot import write_setting_text
 
+
+logger = logging.Logger("ExtractStrings")
 
 class TranslationExtractor:
     def __init__(self, root_path: Path, translations_root_path: Path, all_strings_pot_name: str, gettext_path: str = ""):
@@ -67,13 +70,16 @@ class TranslationExtractor:
                     pot_file  # source of new strings
                 ]
 
+                if logger.level != logging.DEBUG:
+                    merge_files_arguments.append("-q")
+
                 subprocess.run(merge_files_arguments)
 
 
     def extract_python(self) -> None:
         """ Extract i18n strings from all .py files in root_path"""
         for path in self.root_path.rglob("*.py"):
-            print(f"Extracting strings from python file: {path}")
+            logger.debug(f"Extracting strings from python file: {path}")
 
             extract_python_strings_arguments = [
                 self.gettext_path + "xgettext",
@@ -92,7 +98,7 @@ class TranslationExtractor:
     def extract_qml(self) -> None:
         """ Extract all i18n strings from qml files inside the root path """
         for path in self.root_path.rglob("*.qml"):
-            print(f"Extracting strings from qml file: {path}")
+            logger.debug(f"Extracting strings from qml file: {path}")
 
             extract_python_strings_arguments = [
                 self.gettext_path + "xgettext",
@@ -124,7 +130,7 @@ class TranslationExtractor:
                 plugin_dict = json.load(data_file, object_pairs_hook=collections.OrderedDict)
 
                 if "name" not in plugin_dict or ("api" not in plugin_dict and "supported_sdk_versions" not in plugin_dict) or "version" not in plugin_dict:
-                    print(f"The plugin.json is invalid, ignoring it: {path}")
+                    logger.debug(f"The plugin.json is invalid, ignoring it: {path}")
                 else:
                     if "description" in plugin_dict:
                         translation_entries += self.create_translation_entry(path.name, "description", plugin_dict["description"])
@@ -134,6 +140,7 @@ class TranslationExtractor:
             # Write plugin name & description to output pot file
             if translation_entries:
                 with open(self.all_strings_pot_path, "a", encoding="utf-8") as output_file:
+                    logger.debug(f"Writing plugin strings for file: {path}")
                     output_file.write(translation_entries)
 
     def create_translation_entry(self, filename: str, field: str, value: str) -> str:
@@ -147,6 +154,8 @@ if __name__ == "__main__":
     parser.add_argument("translations_root_path", type=str, help="The path containing folders labeled by lang code (resoures/i18n)")
     parser.add_argument("translation_template_name", type=str, help="The .pot file that all extracted strings will be inserted into")
     args = parser.parse_args()
+
+    logger.setLevel(logging.DEBUG)
 
     extractor = TranslationExtractor(Path(args.root_path), Path(args.translations_root_path), args.translation_template_name)
     extractor.extract_strings_to_pot_files()
