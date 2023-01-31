@@ -63,7 +63,6 @@ class TranslationExtractor:
                 merge_files_arguments = [
                     self.gettext_path + "msgmerge",
                     "--no-wrap",
-                    "--no-fuzzy-matching",
                     "--update",
                     "--sort-by-file",  # Sort by file location, this is better than pure sorting for translators
                     po_file,  # po file that will be updated
