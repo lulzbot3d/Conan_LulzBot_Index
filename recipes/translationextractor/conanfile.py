@@ -14,12 +14,13 @@ class ExtractTranslations(object):
         gettext_path = self._conanfile.dependencies["gettext"].cpp_info.bindirs[0]
         extractor = TranslationExtractor(self._conanfile.source_path, self.translations_root_path, self.translation_template_name, gettext_path)
         extractor.extract_strings_to_pot_files()
+        extractor.sanitize_pot_files()
         extractor.update_po_files_all_languages()
 
 
 class Pkg(ConanFile):
     name = "translationextractor"
-    version = "1.0.0"
+    version = "1.1.0"
     default_user = "ultimaker"
     default_channel = "stable"
     exports = "*"

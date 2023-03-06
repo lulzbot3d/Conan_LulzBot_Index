@@ -44,7 +44,7 @@ def write_setting_text(json_path: Path, destination_path: Path) -> bool:
             translation_entries = process_settings(json_path.name, setting_dict["settings"])
 
     if translation_entries:
-        output_pot_path = destination_path.joinpath(json_path.name + ".pot")  # Create a pot with a matching filename in the destination path
+        output_pot_path = Path(destination_path).joinpath(json_path.name + ".pot")  # Create a pot with a matching filename in the destination path
         with open(output_pot_path, "w", encoding ="utf-8") as output_file:
             output_file.write(create_pot_header())
             output_file.write(translation_entries)

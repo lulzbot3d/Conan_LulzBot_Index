@@ -4,6 +4,7 @@ import json
 import os
 import subprocess
 import logging
+import time
 
 from pathlib import Path
 from settingspot import write_setting_text
@@ -21,14 +22,14 @@ class TranslationExtractor:
         """
         self.root_path = root_path
         self.translations_root_path = translations_root_path
-        self.all_strings_pot_path = translations_root_path.joinpath(all_strings_pot_name)  # pot file containing all strings untranslated
+        self.all_strings_pot_path = Path(translations_root_path).joinpath(all_strings_pot_name)  # pot file containing all strings untranslated
         self.gettext_path = gettext_path
 
         if self.gettext_path:
             self.gettext_path = self.gettext_path + os.path.sep
 
         # Clear output file
-        open(self.all_strings_pot_path, "w",encoding ="utf-8").close()
+        open(self.all_strings_pot_path, "w", encoding ="utf-8").close()
 
     def extract_strings_to_pot_files(self) -> None:
         """
@@ -44,25 +45,13 @@ class TranslationExtractor:
 
     def update_po_files_all_languages(self) -> None:
         """ Updates all po files in translation_root_path with new strings mapped to blank translations."""
-        pot_files = []
-
-        for file in os.listdir(self.translations_root_path):
-            path = self.translations_root_path.joinpath(file)
-            if path.suffix == ".pot":
-                pot_files.append(path)
-
-        for directory, _, po_files in os.walk(self.translations_root_path):
-            for pot_file in pot_files:
-                # We want to find the po file that has a matching name with our pot file
-                po_filename = pot_file.name.rstrip("t")
-                if po_filename not in po_files:
-                    continue
-
-                po_file = Path(directory, po_filename).absolute()
-
+        for pot_file in Path(self.translations_root_path).rglob("*.pot"):
+            for po_file in Path(self.translations_root_path).rglob(str(pot_file.with_suffix(".po").name)):
+                print(f"Updating {po_file} with {pot_file}...")
                 merge_files_arguments = [
                     self.gettext_path + "msgmerge",
                     "--no-wrap",
+                    "--no-fuzzy-matching",
                     "--update",
                     "--sort-by-file",  # Sort by file location, this is better than pure sorting for translators
                     po_file,  # po file that will be updated
@@ -74,10 +63,11 @@ class TranslationExtractor:
 
                 subprocess.run(merge_files_arguments)
 
-
     def extract_python(self) -> None:
         """ Extract i18n strings from all .py files in root_path"""
         for path in self.root_path.rglob("*.py"):
+            if "venv" in path.parts:
+                continue
             logger.debug(f"Extracting strings from python file: {path}")
 
             extract_python_strings_arguments = [
@@ -86,6 +76,7 @@ class TranslationExtractor:
                 "--join-existing",
                 "--sort-by-file",
                 "--language=python",
+                "--no-wrap",
                 "-ki18n:1", "-ki18nc:1c,2", "-ki18np:1,2", "-ki18ncp:1c,2,3",
                 "-o", self.all_strings_pot_path,
                 path
@@ -105,6 +96,7 @@ class TranslationExtractor:
                 "--join-existing",
                 "--sort-by-file",
                 "--language=javascript",
+                "--no-wrap",
                 "-ki18n:1", "-ki18nc:1c,2", "-ki18np:1,2", "-ki18ncp:1c,2,3",
                 "-o", self.all_strings_pot_path,
                 path
@@ -113,7 +105,7 @@ class TranslationExtractor:
             subprocess.run(extract_python_strings_arguments)
 
     def extract_settings(self) -> None:
-        """ Extract stings from settings json files to pot file with a matching name """
+        """ Extract strings from settings json files to pot file with a matching name """
         setting_json_paths = [path for path in self.root_path.rglob("*.json") if "test" not in str(path)]
         for path in setting_json_paths:
             write_setting_text(path, self.translations_root_path)
@@ -145,6 +137,16 @@ class TranslationExtractor:
     def create_translation_entry(self, filename: str, field: str, value: str) -> str:
         return "#: {0}\nmsgctxt \"{1}\"\nmsgid \"{2}\"\nmsgstr \"\"\n\n".format(filename, field, value.replace("\n", "\\n").replace("\"", "\\\""))
 
+    def sanitize_pot_files(self) -> None:
+        """ Sanitize the pot file """
+        for pot_file in Path(self.translations_root_path).rglob("*.pot"):
+            content = ""
+            with open(pot_file, "r", encoding="utf-8") as input_file:
+                content = input_file.read()
+
+            content = content.replace(f"#: {self.root_path}/", "#: ").replace("charset=CHARSET", "charset=UTF-8")
+            with open(pot_file, "w", encoding="utf-8") as output_file:
+                output_file.write(content)
 
 
 if __name__ == "__main__":
@@ -158,4 +160,5 @@ if __name__ == "__main__":
 
     extractor = TranslationExtractor(Path(args.root_path), Path(args.translations_root_path), args.translation_template_name)
     extractor.extract_strings_to_pot_files()
+    extractor.sanitize_pot_files()
     extractor.update_po_files_all_languages()
