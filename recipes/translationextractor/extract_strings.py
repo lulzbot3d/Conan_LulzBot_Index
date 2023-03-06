@@ -52,7 +52,7 @@ class TranslationExtractor:
                     self.gettext_path + "msgmerge",
                     "--no-wrap",
                     "--no-fuzzy-matching",
-                    "--update",
+                    f"-o {po_file}",
                     "--sort-by-file",  # Sort by file location, this is better than pure sorting for translators
                     po_file,  # po file that will be updated
                     pot_file  # source of new strings

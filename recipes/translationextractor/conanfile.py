@@ -20,7 +20,7 @@ class ExtractTranslations(object):
 
 class Pkg(ConanFile):
     name = "translationextractor"
-    version = "1.1.0"
+    version = "1.1.1"
     default_user = "ultimaker"
     default_channel = "stable"
     exports = "*"
