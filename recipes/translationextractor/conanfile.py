@@ -15,8 +15,9 @@ from conan.tools.files import save, load, rm
 
 
 class ExtractTranslations(object):
-    def __init__(self, conanfile: ConanFile):
+    def __init__(self, conanfile: ConanFile, gettext_bindir):
         self._conanfile = conanfile
+        self._gettext_bindir = gettext_bindir
         self._translations_root_path = self._conanfile.source_path.joinpath("resources", "i18n")
         self._all_strings_pot_path = self._translations_root_path.joinpath(self._conanfile.name + ".pot")  # pot file containing all strings untranslated
         self._pot_content = {}
@@ -26,7 +27,7 @@ class ExtractTranslations(object):
         """ Updates all po files in translation_root_path with new strings mapped to blank translations."""
         for pot_file in Path(self._translations_root_path).rglob("*.pot"):
             for po_file in Path(self._translations_root_path).rglob(str(pot_file.with_suffix(".po").name)):
-                self._conanfile.run(f"msgmerge --no-wrap --no-fuzzy-matching --sort-by-file -o {po_file} {po_file} {pot_file}", env = "conanbuild", run_environment = True)
+                self._conanfile.run(f"{self._gettext_bindir}/msgmerge --no-wrap --no-fuzzy-matching --sort-by-file -o {po_file} {po_file} {pot_file}", env = "conanbuild", run_environment = True)
 
     def _remove_pot_header(self, content: str) -> str:
         return "".join(content.splitlines(keepends = True)[20:])
@@ -68,7 +69,7 @@ class ExtractTranslations(object):
             if "venv" in path.parts:
                 continue
             self._conanfile.run(
-                f"xgettext --from-code=UTF-8 --join-existing --sort-by-file --language=python --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
+                f"{self._gettext_bindir}/xgettext --from-code=UTF-8 --join-existing --sort-by-file --language=python --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
                 env = "conanbuild", run_environment = True)
 
     def _extract_qml(self) -> None:
@@ -77,7 +78,7 @@ class ExtractTranslations(object):
             if "venv" in path.parts:
                 continue
             self._conanfile.run(
-                f"xgettext --from-code=UTF-8 --join-existing --sort-by-file --language=javascript --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
+                f"{self._gettext_bindir}/xgettext --from-code=UTF-8 --join-existing --sort-by-file --language=javascript --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
                 env = "conanbuild", run_environment = True)
 
     def _extract_plugin(self) -> None:
@@ -188,7 +189,7 @@ class ExtractTranslations(object):
 
 class Pkg(ConanFile):
     name = "translationextractor"
-    version = "2.1.1"
+    version = "2.1.2"
     default_user = "ultimaker"
     default_channel = "stable"
 
