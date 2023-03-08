@@ -26,7 +26,7 @@ class ExtractTranslations(object):
         """ Updates all po files in translation_root_path with new strings mapped to blank translations."""
         for pot_file in Path(self._translations_root_path).rglob("*.pot"):
             for po_file in Path(self._translations_root_path).rglob(str(pot_file.with_suffix(".po").name)):
-                self._conanfile.run(f"msgmerge --no-wrap --no-fuzzy-matching --sort-by-file -o {po_file} {po_file} {pot_file}", env = "conanbuild")
+                self._conanfile.run(f"msgmerge --no-wrap --no-fuzzy-matching --sort-by-file -o {po_file} {po_file} {pot_file}", env = "conanbuild", run_environment = True)
 
     def _remove_pot_header(self, content: str) -> str:
         return "".join(content.splitlines(keepends = True)[20:])
@@ -69,7 +69,7 @@ class ExtractTranslations(object):
                 continue
             self._conanfile.run(
                 f"xgettext --from-code=UTF-8 --join-existing --sort-by-file --language=python --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
-                env = "conanbuild")
+                env = "conanbuild", run_environment = True)
 
     def _extract_qml(self) -> None:
         """ Extract all i18n strings from qml files inside the root path """
@@ -78,7 +78,7 @@ class ExtractTranslations(object):
                 continue
             self._conanfile.run(
                 f"xgettext --from-code=UTF-8 --join-existing --sort-by-file --language=javascript --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
-                env = "conanbuild")
+                env = "conanbuild", run_environment = True)
 
     def _extract_plugin(self) -> None:
         """ Extract the name and description from all plugins """
@@ -188,7 +188,7 @@ class ExtractTranslations(object):
 
 class Pkg(ConanFile):
     name = "translationextractor"
-    version = "2.1.0"
+    version = "2.1.1"
     default_user = "ultimaker"
     default_channel = "stable"
 
