@@ -32,6 +32,9 @@ class ExtractTranslations(object):
     def _remove_pot_header(self, content: str) -> str:
         return "".join(content.splitlines(keepends = True)[20:])
 
+    def _remove_comments(self, content: str) -> str:
+        return "".join([line for line in content.splitlines(keepends = True) if not line.startswith("#")])
+
     def _load_pot_content(self) -> None:
         for pot_file in Path(self._translations_root_path).rglob("*.pot"):
             # only store the content of the pot file, not the header
@@ -40,7 +43,7 @@ class ExtractTranslations(object):
     def _is_pot_content_changed(self, pot_file: str) -> bool:
         if pot_file not in self._pot_content:
             return False
-        return self._remove_pot_header(self._pot_content[pot_file]) != self._remove_pot_header(load(self._conanfile, pot_file))
+        return self._remove_comments(self._remove_pot_header(self._pot_content[pot_file])) != self._remove_comments(self._remove_pot_header(load(self._conanfile, pot_file)))
 
     def _only_update_pot_files_when_changed(self) -> None:
         """restore the previous content of the pot files if the content hasn't changed"""
@@ -189,7 +192,7 @@ class ExtractTranslations(object):
 
 class Pkg(ConanFile):
     name = "translationextractor"
-    version = "2.1.2"
+    version = "2.1.3"
     default_user = "ultimaker"
     default_channel = "stable"
 
