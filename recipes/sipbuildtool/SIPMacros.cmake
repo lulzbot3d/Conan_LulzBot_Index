@@ -18,15 +18,15 @@ function(add_sip_module MODULE_TARGET)
     list(LENGTH SIP_FILES _no_outputfiles)
     foreach(_concat_file_nr RANGE 0 ${_no_outputfiles})
         if(${_concat_file_nr} LESS 8)
-            list(APPEND _sip_output_files "${CMAKE_CURRENT_BINARY_DIR}/${MODULE_TARGET}/sip${MODULE_TARGET}part${_concat_file_nr}.cpp")
+            list(APPEND _sip_output_files "${CMAKE_CURRENT_BINARY_DIR}/sip/${MODULE_TARGET}/sip${MODULE_TARGET}part${_concat_file_nr}.cpp")
         endif()
     endforeach()
 
     # Find the generated source files
     message(STATUS "SIP: Collecting the generated source files")
-    file(GLOB sip_c "${CMAKE_CURRENT_BINARY_DIR}/${MODULE_TARGET}/*.c")
-    file(GLOB sip_cpp "${CMAKE_CURRENT_BINARY_DIR}/${MODULE_TARGET}/*.cpp")
-    file(GLOB sip_hdr "${CMAKE_CURRENT_BINARY_DIR}/${MODULE_TARGET}/*.h")
+    file(GLOB sip_c "${CMAKE_CURRENT_BINARY_DIR}/sip/${MODULE_TARGET}/*.c")
+    file(GLOB sip_cpp "${CMAKE_CURRENT_BINARY_DIR}/sip/${MODULE_TARGET}/*.cpp")
+    file(GLOB sip_hdr "${CMAKE_CURRENT_BINARY_DIR}/sip/${MODULE_TARGET}/*.h")
 
     # Add the user specified source files
     message(STATUS "SIP: Collecting the user specified source files")
@@ -53,7 +53,7 @@ function(add_sip_module MODULE_TARGET)
 
     set_target_properties("sip_${MODULE_TARGET}"
             PROPERTIES
-            RESOURCE "${CMAKE_CURRENT_BINARY_DIR}/${MODULE_TARGET}/${MODULE_TARGET}/${MODULE_TARGET}.pyi")
+            RESOURCE "${CMAKE_CURRENT_BINARY_DIR}/sip/${MODULE_TARGET}/${MODULE_TARGET}/${MODULE_TARGET}.pyi")
 endfunction()
 
 function(install_sip_module MODULE_TARGET)
