@@ -26,8 +26,13 @@ class ExtractTranslations(object):
     def _update_po_files_all_languages(self) -> None:
         """ Updates all po files in translation_root_path with new strings mapped to blank translations."""
         for pot_file in Path(self._translations_root_path).rglob("*.pot"):
-            for po_file in Path(self._translations_root_path).rglob(str(pot_file.with_suffix(".po").name)):
-                self._conanfile.run(f"{self._gettext_bindir}/msgmerge --no-wrap --no-fuzzy-matching --sort-by-file -o {po_file} {po_file} {pot_file}", env = "conanbuild", run_environment = True)
+            for lang_folder in [d for d in self._translations_root_path.iterdir() if d.is_dir()]:
+                po_file = lang_folder / pot_file.with_suffix('.po').name
+                self._conanfile.output.info(f"Updating {po_file}")
+                if lang_folder.is_dir() and not po_file.exists():
+                    po_file.touch()
+                    self._conanfile.run(f"{self._gettext_bindir}/msginit --no-translator -i {pot_file} -o {po_file} --locale=en")
+                self._conanfile.run(f"{self._gettext_bindir}/msgmerge --add-location=never --no-wrap --no-fuzzy-matching --sort-output -o {po_file} {po_file} {pot_file}", env = "conanbuild", run_environment = True)
 
     def _remove_pot_header(self, content: str) -> str:
         return "".join(content.splitlines(keepends = True)[20:])
@@ -50,7 +55,7 @@ class ExtractTranslations(object):
         for pot_file in Path(self._translations_root_path).rglob("*.pot"):
             if self._is_pot_content_changed(str(pot_file)):
                 self._pot_are_updated = True
-            else:
+            elif str(pot_file) in self._pot_content:
                 save(self._conanfile, str(pot_file), self._pot_content[str(pot_file)])
 
     def _extract_strings_to_pot_files(self) -> None:
@@ -72,7 +77,7 @@ class ExtractTranslations(object):
             if "venv" in path.parts:
                 continue
             self._conanfile.run(
-                f"{self._gettext_bindir}/xgettext --from-code=UTF-8 --join-existing --sort-by-file --language=python --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
+                f"{self._gettext_bindir}/xgettext --from-code=UTF-8 --join-existing --add-location=never --sort-output --language=python --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
                 env = "conanbuild", run_environment = True)
 
     def _extract_qml(self) -> None:
@@ -81,7 +86,7 @@ class ExtractTranslations(object):
             if "venv" in path.parts:
                 continue
             self._conanfile.run(
-                f"{self._gettext_bindir}/xgettext --from-code=UTF-8 --join-existing --sort-by-file --language=javascript --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
+                f"{self._gettext_bindir}/xgettext --from-code=UTF-8 --join-existing --add-location=never --sort-output --language=javascript --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
                 env = "conanbuild", run_environment = True)
 
     def _extract_plugin(self) -> None:
@@ -106,7 +111,7 @@ class ExtractTranslations(object):
 
     def _extract_settings(self) -> None:
         """ Extract strings from settings json files to pot file with a matching name """
-        setting_json_paths = [path for path in self._conanfile.source_path.rglob("*.json") if "test" not in str(path)]
+        setting_json_paths = [path for path in self._conanfile.source_path.rglob("*.def.json") if "test" not in str(path)]
         for path in setting_json_paths:
             self._write_setting_text(path, self._translations_root_path)
 
@@ -114,8 +119,12 @@ class ExtractTranslations(object):
         """ Writes settings text from json file to pot file. Returns true if a file was written. """
         setting_dict = json.loads(load(self._conanfile, json_path), object_pairs_hook = collections.OrderedDict)
 
-        if "settings" in setting_dict:
-            translation_entries = self._process_settings(json_path.name, setting_dict["settings"])
+        if "inherits" not in setting_dict:
+            if "settings" in setting_dict:
+                settings = setting_dict["settings"]
+            else:
+                settings = setting_dict
+            translation_entries = self._process_settings(json_path.name, settings)
             output_pot_path = Path(destination_path).joinpath(
                 json_path.name + ".pot")  # Create a pot with a matching filename in the destination path
             content = self._create_pot_header() + translation_entries
@@ -143,10 +152,10 @@ class ExtractTranslations(object):
         return translation_entries
 
     def _create_setting_translation_entry(self, filename: str, setting: str, field: str, value: str) -> str:
-        return "#: {0}\nmsgctxt \"{1} {2}\"\nmsgid \"{3}\"\nmsgstr \"\"\n\n".format(filename, setting, field, value.replace("\n", "\\n").replace("\"", "\\\""))
+        return "msgctxt \"{0} {1}\"\nmsgid \"{2}\"\nmsgstr \"\"\n\n".format(setting, field, value.replace("\n", "\\n").replace("\"", "\\\""))
 
     def _create_translation_entry(self, filename: str, field: str, value: str) -> str:
-        return "#: {0}\nmsgctxt \"{1}\"\nmsgid \"{2}\"\nmsgstr \"\"\n\n".format(filename, field, value.replace("\n", "\\n").replace("\"", "\\\""))
+        return "msgctxt \"{0}\"\nmsgid \"{1}\"\nmsgstr \"\"\n\n".format(field, value.replace("\n", "\\n").replace("\"", "\\\""))
 
     def _create_pot_header(self) -> str:
         """ Creates a pot file header """
@@ -192,7 +201,7 @@ class ExtractTranslations(object):
 
 class Pkg(ConanFile):
     name = "translationextractor"
-    version = "2.1.3"
+    version = "2.2.0"
     default_user = "ultimaker"
     default_channel = "stable"
 
