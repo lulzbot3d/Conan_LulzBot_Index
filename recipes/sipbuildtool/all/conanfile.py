@@ -35,9 +35,6 @@ class SipBuildTool(object):
 
 class Pkg(ConanFile):
     name = "sipbuildtool"
-    version = "0.2.4"
-    default_user = "ultimaker"
-    default_channel = "stable"
     exports_sources = "SIPMacros.cmake"
 
     def package(self):
