@@ -175,7 +175,7 @@ class CPythonConan(ConanFile):
     def requirements(self):
         self.requires("zlib/1.2.11")
         if self._supports_modules:
-            self.requires("openssl/3.2.0")
+            self.requires("openssl/1.1.1w")
             self.requires("expat/2.4.1")
             if self._with_libffi:
                 self.requires("libffi/3.2.1")
