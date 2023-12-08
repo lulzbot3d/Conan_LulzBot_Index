@@ -160,9 +160,6 @@ class UMBaseConanfile(object):
 
 class Pkg(ConanFile):
     name = "umbase"
-    version = "0.1.6"
-    default_user = "ultimaker"
-    default_channel = "stable"
     exports_sources = "StandardProjectSettings.cmake"
 
     def package(self):

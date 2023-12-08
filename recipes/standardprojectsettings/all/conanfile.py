@@ -6,9 +6,6 @@ from conan.tools.files import copy
 
 class Pkg(ConanFile):
     name = "standardprojectsettings"
-    version = "0.1.1"
-    default_user = "ultimaker"
-    default_channel = "stable"
     exports_sources = "StandardProjectSettings.cmake"
     package_type = "build-scripts"
 

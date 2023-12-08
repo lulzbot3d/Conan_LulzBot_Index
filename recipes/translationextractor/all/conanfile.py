@@ -201,9 +201,6 @@ class ExtractTranslations(object):
 
 class Pkg(ConanFile):
     name = "translationextractor"
-    version = "2.2.0"
-    default_user = "ultimaker"
-    default_channel = "stable"
 
     def package(self):
         self.copy("*", ".")
