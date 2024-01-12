@@ -60,7 +60,6 @@ class ClipperConan(ConanFile):
         cmake.build()
 
         if self.options.get_safe("enable_sentry", False):
-            # Upload debug symbols to sentry
             sentry_project = self.conf.get("user.curaengine:sentry_project", "", check_type=str)
             sentry_org = self.conf.get("user.curaengine:sentry_org", "", check_type=str)
             if sentry_project == "" or sentry_org == "":
