@@ -77,5 +77,5 @@ jobs:
       - name: Export changed recipes
         run: |
           mkdir runner_scripts
-          wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/CURA-10831/runner_scripts/upload_conan_recipes.py -O runner_scripts/upload_conan_recipes.py
+          wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/main/runner_scripts/upload_conan_recipes.py -O runner_scripts/upload_conan_recipes.py
           python runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura ${{ env.GIT_DIFF_FILTERED }}
