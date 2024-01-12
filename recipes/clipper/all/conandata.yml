@@ -8,5 +8,6 @@ sources:
 patches:
   "6.4.2":
     - patch_file: "patches/0001-include-install-directory-6.x.patch"
+    - patch_file: "patches/0002-build-debug-symbols-on-windows-6.x.patch"
   "4.10.0":
     - patch_file: "patches/0001-include-install-directory-4.x.patch"
