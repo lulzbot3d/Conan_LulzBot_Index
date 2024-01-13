@@ -3,7 +3,8 @@ from io import StringIO
 from conan import ConanFile
 from conan.tools.cmake import CMake, CMakeToolchain, cmake_layout
 from conan.tools.files import apply_conandata_patches, copy, export_conandata_patches, get, rmdir
-from conan.errors import ConanInvalidConfiguration, ConanInvalidSystemRequirements
+from conan.errors import ConanInvalidConfiguration
+from conans.tools import which
 import os
 
 required_conan_version = ">=1.54.0"
@@ -60,14 +61,22 @@ class ClipperConan(ConanFile):
         cmake.build()
 
         if self.options.get_safe("enable_sentry", False):
+            # Upload debug symbols to sentry
             sentry_project = self.conf.get("user.curaengine:sentry_project", "", check_type=str)
             sentry_org = self.conf.get("user.curaengine:sentry_org", "", check_type=str)
             if sentry_project == "" or sentry_org == "":
-                raise ConanInvalidConfiguration("sentry_project is not set")
-            output = StringIO()
-            self.run(f"sentry-cli -V", output=output)
-            if "sentry-cli" not in output.getvalue():
-                raise ConanInvalidSystemRequirements("sentry-cli is not installed")
+                raise ConanInvalidConfiguration("sentry_project or sentry_org is not set")
+            if which("sentry-cli") is None:
+                self.output.warn("sentry-cli is not installed, skipping uploading debug symbols")
+                return
+
+            if self.settings.os == "Linux":
+                self.output.info("Stripping debug symbols from binary")
+                ext = ".so" if self.options.shared else ".a"
+                self.run(f"objcopy --only-keep-debug --compress-debug-sections=zlib libpolyclipping{ext} libpolyclipping.debug")
+                self.run(f"objcopy --strip-debug --strip-unneeded libpolyclipping{ext}")
+                self.run(f"objcopy --add-gnu-debuglink=libpolyclipping.debug libpolyclipping{ext}")
+
             build_source_dir = self.build_path.parent.parent.as_posix()
             self.output.info("Uploading debug symbols to sentry")
             self.run(f"sentry-cli debug-files upload --include-sources -o {sentry_org} -p {sentry_project} {build_source_dir}")
