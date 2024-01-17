@@ -1,0 +1,12 @@
+diff --git a/cpp/CMakeLists.txt b/cpp/CMakeLists.txt
+--- a/cpp/CMakeLists.txt
++++ b/cpp/CMakeLists.txt
+@@ -19,3 +19,7 @@
+ INSTALL (FILES "${PCFILE}" DESTINATION "${CMAKE_INSTALL_PKGCONFIGDIR}")
+ 
+ SET_TARGET_PROPERTIES(polyclipping PROPERTIES VERSION 22.0.0 SOVERSION 22 )
++option(ENABLE_SENTRY "Send crash data via Sentry" OFF)
++if(WIN32 AND ENABLE_SENTRY)
++    set_target_properties(polyclipping PROPERTIES LINK_FLAGS "/DEBUG:FULL")
++endif()
+\ No newline at end of file
