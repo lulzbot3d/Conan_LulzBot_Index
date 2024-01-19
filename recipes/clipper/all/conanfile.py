@@ -79,7 +79,7 @@ class ClipperConan(ConanFile):
 
                 build_source_dir = self.build_path.parent.parent.as_posix()
                 self.output.info("Uploading debug symbols to sentry")
-                self.run(f"sentry-cli debug-files bundle-sources -o {sentry_org} -p {sentry_project} {os.path.join(build_source_dir, 'src', 'cpp')}")
+                self.run(f"sentry-cli debug-files bundle-sources {os.path.join(build_source_dir, 'src', 'cpp')}")
                 self.run(f"sentry-cli debug-files upload --include-sources -o {sentry_org} -p {sentry_project} {build_source_dir}")
 
     def package(self):
