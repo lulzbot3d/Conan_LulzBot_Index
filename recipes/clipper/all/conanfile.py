@@ -79,7 +79,7 @@ class ClipperConan(ConanFile):
 
                 build_source_dir = self.build_path.parent.parent.as_posix()
                 self.output.info("Uploading debug symbols to sentry")
-                self.run(f"sentry-cli debug-files upload --include-sources -o {sentry_org} -p {sentry_project} {build_source_dir}")
+                self.run(f"sentry-cli --auth-token {os.environ['SENTRY_TOKEN']} debug-files upload --include-sources -o {sentry_org} -p {sentry_project} {build_source_dir}")
 
     def package(self):
         copy(self, "License.txt", src=self.source_folder, dst=os.path.join(self.package_folder, "licenses"))
