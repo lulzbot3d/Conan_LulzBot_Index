@@ -1,86 +1,55 @@
 sources:
-  "3.10.4":
-    url: "https://www.python.org/ftp/python/3.10.4/Python-3.10.4.tgz"
-    sha256: "f3bcc65b1d5f1dc78675c746c98fcee823c038168fc629c5935b044d0911ad28"
-  "3.10.0":
-    url: "https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz"
-    sha256: "c4e0cbad57c90690cb813fb4663ef670b4d0f587d8171e2c42bd4c9245bd2758"
-  "3.9.7":
-    url: "https://www.python.org/ftp/python/3.9.7/Python-3.9.7.tgz"
-    sha256: "a838d3f9360d157040142b715db34f0218e535333696a5569dc6f854604eb9d1"
-  "3.8.12":
-    url: "https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tgz"
-    sha256: "316aa33f3b7707d041e73f246efedb297a70898c4b91f127f66dc8d80c596f1a"
-  "3.7.12":
-    url: "https://www.python.org/ftp/python/3.7.12/Python-3.7.12.tgz"
-    sha256: "33b4daaf831be19219659466d12645f87ecec6eb21d4d9f9711018a7b66cce46"
+  "3.12.1":
+    url: "https://www.python.org/ftp/python/3.12.1/Python-3.12.1.tgz"
+    sha256: "d01ec6a33bc10009b09c17da95cc2759af5a580a7316b3a446eb4190e13f97b2"
+  "3.11.7":
+    url: "https://www.python.org/ftp/python/3.11.7/Python-3.11.7.tgz"
+    sha256: "068c05f82262e57641bd93458dfa883128858f5f4997aad7a36fd25b13b29209"
+  "3.10.13":
+    url: "https://www.python.org/ftp/python/3.10.13/Python-3.10.13.tgz"
+    sha256: "698ec55234c1363bd813b460ed53b0f108877c7a133d48bde9a50a1eb57b7e65"
+  "3.9.18":
+    url: "https://www.python.org/ftp/python/3.9.18/Python-3.9.18.tgz"
+    sha256: "504ce8cfd59addc04c22f590377c6be454ae7406cb1ebf6f5a350149225a9354"
+  "3.8.18":
+    url: "https://www.python.org/ftp/python/3.8.18/Python-3.8.18.tgz"
+    sha256: "7c5df68bab1be81a52dea0cc2e2705ea00553b67107a301188383d7b57320b16"
+  "3.7.17":
+    url: "https://www.python.org/ftp/python/3.7.17/Python-3.7.17.tgz"
+    sha256: "fd50161bc2a04f4c22a0971ff0f3856d98b4bf294f89740a9f06b520aae63b49"
   "2.7.18":
     url: "https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz"
     sha256: "da3080e3b488f648a3d7a4560ddee895284c3380b11d6de75edb986526b9a814"
 patches:
-  "3.10.4":
-    - patch_file: "patches/3.10.0-0001-msvc.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.9.7-0002-_msi-vcxproj.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.10.0-0003-_ctypes-ffi.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.10.4-0005-disable-macos-tcltk.patch"
-      base_path: "source_subfolder"
+  "3.12.1":
+    - patch_file: "patches/3.9/3.9.7-0002-_msi-vcxproj.patch"
+    - patch_file: "patches/3.12/3.12.1-0001-_ctypes-ffi.patch"
     - patch_file: "patches/3.x-0001-relocatable-python-config.patch"
-      base_path: "source_subfolder"
-  "3.10.0":
-    - patch_file: "patches/3.10.0-0001-msvc.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.9.7-0002-_msi-vcxproj.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.10.0-0003-_ctypes-ffi.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.10.0-0004-setup.py-pass-CFLAGS-CPPFLAGS.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.10.0-0005-disable-macos-tcltk.patch"
-      base_path: "source_subfolder"
+    - patch_file: "patches/3.12/3.12.1-0002-remove-module-deps.patch"
+  "3.11.7":
+    - patch_file: "patches/3.9/3.9.7-0002-_msi-vcxproj.patch"
+    - patch_file: "patches/3.11/3.11.7-0001-_ctypes-ffi.patch"
     - patch_file: "patches/3.x-0001-relocatable-python-config.patch"
-      base_path: "source_subfolder"
-  "3.9.7":
-    - patch_file: "patches/3.9.7-0001-msvc.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.9.7-0002-_msi-vcxproj.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.9.7-0003-_ctypes-ffi.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.9.7-0004-setup.py-pass-CFLAGS-CPPFLAGS.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.9.7-0005-disable-macos-tcltk.patch"
-      base_path: "source_subfolder"
+    - patch_file: "patches/3.x-0002-remove-module-deps.patch"
+  "3.10.13":
+    - patch_file: "patches/3.9/3.9.7-0002-_msi-vcxproj.patch"
+    - patch_file: "patches/3.10/3.10.0-0003-_ctypes-ffi.patch"
     - patch_file: "patches/3.x-0001-relocatable-python-config.patch"
-      base_path: "source_subfolder"
-  "3.8.12":
-    - patch_file: "patches/3.8.12-0001-msvc.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.8.12-0002-_ctypes-ffi.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.8.12-0003-setup.py-pass-CFLAGS-CPPFLAGS.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.8.12-0004-disable-macos-tcltk.patch"
-      base_path: "source_subfolder"
+    - patch_file: "patches/3.x-0002-remove-module-deps.patch"
+  "3.9.18":
+    - patch_file: "patches/3.9/3.9.7-0002-_msi-vcxproj.patch"
+    - patch_file: "patches/3.9/3.9.7-0003-_ctypes-ffi.patch"
     - patch_file: "patches/3.x-0001-relocatable-python-config.patch"
-      base_path: "source_subfolder"
-  "3.7.12":
-    - patch_file: "patches/3.7.9-0001-msvc.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.7.9-0002-setup.py-pass-CFLAGS-CPPFLAGS.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/3.7.9-0003-disable-macos-tcltk.patch"
-      base_path: "source_subfolder"
+    - patch_file: "patches/3.x-0002-remove-module-deps.patch"
+  "3.8.18":
+    - patch_file: "patches/3.8/3.8.12-0002-_ctypes-ffi.patch"
     - patch_file: "patches/3.x-0001-relocatable-python-config.patch"
-      base_path: "source_subfolder"
+    - patch_file: "patches/3.x-0002-remove-module-deps.patch"
+  "3.7.17":
+    - patch_file: "patches/3.7/3.7.9-0001-msvc.patch"
+    - patch_file: "patches/3.x-0001-relocatable-python-config.patch"
+    - patch_file: "patches/3.x-0002-remove-module-deps.patch"
   "2.7.18":
-    - patch_file: "patches/2.7.18-0001-msvc.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/2.7.18-0002-add-support-msvc-14.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/2.7.18-0003-msvc-fix-static.patch"
-      base_path: "source_subfolder"
-    - patch_file: "patches/2.7.18-0004-disable-macos-tcltk.patch"
-      base_path: "source_subfolder"
+    - patch_file: "patches/2.7/2.7.18-0001-msvc.patch"
+    - patch_file: "patches/2.7/2.7.18-0002-add-support-msvc-14.patch"
+    - patch_file: "patches/2.7/2.7.18-0003-msvc-fix-static.patch"

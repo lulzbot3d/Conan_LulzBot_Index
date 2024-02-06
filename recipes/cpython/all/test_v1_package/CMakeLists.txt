@@ -1,18 +1,13 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.1)
 project(test_package C)
 
-find_package(cpython REQUIRED CONFIG)
+include("${CMAKE_BINARY_DIR}/conanbuildinfo.cmake")
+conan_basic_setup()
 
-# FIXME: We can't modify CMake's FindPython to link dependencies pulled by
-# Conan, so here we just include them globally. This is mainly necessary for
-# MacOS missing crypt.h, which is available at configure time (in the main recipe)
-# but otherwise not at build time (in consumer packages).
-link_libraries(cpython::python)
-
-set(PY_VERSION_MAJOR "" CACHE STRING "MAJOR version of python")
-set(PY_VERSION_MAJOR_MINOR "" CACHE STRING "MAJOR.MINOR version of python")
-set(PY_VERSION "" CACHE STRING "Required version of python")
-set(PY_VERSION_SUFFIX "" CACHE STRING "Suffix of python")
+set(CACHE PY_VERSION_MAJOR "" CACHE STRING "MAJOR version of python")
+set(CACHE PY_VERSION_MAJOR_MINOR "" CACHE STRING "MAJOR.MINOR version of python")
+set(CACHE PY_VERSION "" CACHE STRING "Required version of python")
+set(CACHE PY_VERSION_SUFFIX "" CACHE STRING "Suffix of python")
 
 set(Python_ADDITIONAL_VERSIONS ${PY_VERSION}${PY_VERSION_SUFFIX} ${PY_VERSION_MAJOR_MINOR}${PY_VERSION_SUFFIX} ${PY_VERSION_MAJOR}${PY_VERSION_SUFFIX} ${PY_VERSION} ${PY_VERSION_MAJOR_MINOR} ${PY_VERSION_MAJOR})
 message("Using Python_ADDITIONAL_VERSIONS: ${Python_ADDITIONAL_VERSIONS}")
@@ -69,14 +64,16 @@ if(BUILD_MODULE)
     )
     set_property(TARGET spam PROPERTY PREFIX "")
     if(MSVC)
-        set_target_properties(spam PROPERTIES 
-            DEBUG_POSTFIX "_d"
-            SUFFIX ".pyd"
-        )
+        if(CONAN_SETTINGS_BUILD_TYPE STREQUAL "Debug")
+            set(SUFFIX "_d.pyd")
+        else()
+            set(SUFFIX ".pyd")
+        endif()
+        set_property(TARGET spam PROPERTY SUFFIX "${SUFFIX}")
     endif()
 
     option(USE_FINDPYTHON_X "Use new-style FindPythonX module")
-    if(USE_FINDPYTHON_X AND NOT CMAKE_VERSION VERSION_LESS "3.16")
+    if(USE_FINDPYTHON_X AND NOT (CMAKE_VERSION VERSION_LESS "3.16"))
         # Require CMake 3.16 because this version introduces Python${PY_VERSION_MAJOR}_FIND_ABI
         find_package(Python${PY_VERSION_MAJOR} REQUIRED COMPONENTS Interpreter Development)
         message("Python${PY_VERSION_MAJOR}_EXECUTABLE: ${Python${PY_VERSION_MAJOR}_EXECUTABLE}")
@@ -100,4 +97,4 @@ if(BUILD_MODULE)
 endif()
 
 add_executable(${PROJECT_NAME} "py${PY_VERSION_MAJOR}/test_package.c")
-target_link_libraries(${PROJECT_NAME} PRIVATE cpython::embed)
+target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
