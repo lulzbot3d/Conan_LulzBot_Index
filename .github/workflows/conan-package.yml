@@ -7,6 +7,8 @@ on:
     branches:
       - main
       - 'CURA-*'
+      - 'PP-*'
+      - 'NP-*'
 
 permissions:
   contents: read
@@ -30,9 +32,10 @@ jobs:
         with:
           PATTERNS: |
             recipes/**/*.*
-            
+
+# FIXME: use main once merged
       - name: Sync pip requirements
-        run: wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/main/.github/workflows/requirements-runner.txt -O .github/workflows/requirements-runner.txt
+        run: wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/CURA-11622_conan_v2/.github/workflows/requirements-runner.txt -O .github/workflows/requirements-runner.txt
 
       - name: Setup Python and pip
         uses: actions/setup-python@v4
@@ -44,38 +47,19 @@ jobs:
       - name: Install Python requirements and Create default Conan profile
         run: pip install -r .github/workflows/requirements-runner.txt
 
-      - name: Setup pipeline caches
-        run: |
-          mkdir -p /home/runner/.conan/downloads
-          mkdir -p /home/runner/.conan/data
-
       - name: Create default Conan profile
-        run: conan profile new default --detect
+        run: conan profile detect -f
 
+# FIXME: use runner.os/runner.arch after merge: conan config install https://github.com/Ultimaker/conan-config.git -a "-b runner/runner.os/runner.arch"
       - name: Get Conan configuration
         run: |
-          conan config install https://github.com/Ultimaker/conan-config.git
-          conan config install https://github.com/Ultimaker/conan-config.git -a "-b runner/${{ runner.os }}/${{ runner.arch }}"
+          conan config install https://github.com/Ultimaker/conan-config.git -a "-b CURA-11622_conan_v2"
+          conan remote login -p ${{ secrets.CONAN_PASS }} cura-conan-v2 ${{ secrets.CONAN_USER }}
+          #conan remote disable cura-private
 
-      - name: Cache Conan packages
-        uses: actions/cache@v3
-        with:
-          path: /home/runner/.conan/data
-          key: ${{ runner.os }}-conan-data-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-conan-data-
-
-      - name: Cache Conan downloads
-        uses: actions/cache@v3
-        with:
-          path: /home/runner/.conan/downloads
-          key: ${{ runner.os }}-conan-downloads-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-conan-downloads-
-
-      # TODO: Change to main once merged
+# TODO: Change to main once merged
       - name: Export changed recipes
         run: |
           mkdir runner_scripts
-          wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/main/runner_scripts/upload_conan_recipes.py -O runner_scripts/upload_conan_recipes.py
-          python runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura ${{ env.GIT_DIFF_FILTERED }}
+          wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/CURA-11622_conan_v2/runner_scripts/upload_conan_recipes.py -O runner_scripts/upload_conan_recipes.py
+          python runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura-conan-v2 ${{ env.GIT_DIFF_FILTERED }}

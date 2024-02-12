@@ -10,8 +10,8 @@ from conan.tools.cmake.toolchain.toolchain import ToolchainBlocks
 from conan.tools.gnu.autotoolstoolchain import AutotoolsToolchain
 from conan.tools.files import save
 from conan.errors import ConanInvalidConfiguration
-from conan.tools._check_build_profile import check_using_build_profile
-from conans.tools import Version
+from conan.tools.scm import Version
+from conan.tools import CppInfo
 
 
 class BuildSystemBlock(Block):
@@ -55,8 +55,8 @@ class ToolSipMetadataBlock(Block):
 
         mod_version = Version(self._conanfile.version)
         pypi_version = f"{mod_version.major}.{mod_version.minor}.{mod_version.patch}"
-        if mod_version.prerelease != "":
-            split_prerelease = mod_version.prerelease.split(".")
+        if mod_version.pre != "":
+            split_prerelease = str(mod_version.pre).split(".")
             if len(split_prerelease) > 1:
                 pypi_version += f"{split_prerelease[0][0]}{split_prerelease[1]}"
             else:
@@ -89,10 +89,11 @@ class ToolSipProjectPyQtBuilder(Block):
 
         if py_lib_dir is None:
             try:
-                py_lib_dir = Path(self._conanfile.deps_cpp_info['cpython'].rootpath, self._conanfile.deps_cpp_info['cpython'].components["python"].bindirs[0], "libs").as_posix()
-                py_lib = self._conanfile.deps_cpp_info['cpython'].libs[0]
+                cpython_cpp = self._conanfile.dependencies["cpython"].cpp_info
+                py_lib_dir = Path(cpython_cpp.components["python"].libdirs[0]).as_posix()
+                py_lib = cpython_cpp.components["python"].libs[0]
             except:
-                self._conanfile.output.warn(
+                self._conanfile.output.warning(
                     "No include directory set for Python.h, either add the options: 'py_include' of add cpython as a Conan dependency!")
         else:
             py_lib_dir = Path(py_lib_dir).as_posix()
@@ -128,7 +129,7 @@ class ToolSipProjectBlock(Block):
             try:
                 python_version = self._conanfile.dependencies["cpython"].ref.version
             except:
-                self._conanfile.output.warn(
+                self._conanfile.output.warning(
                     "No minimum required Python version specified, either add the options: 'py_version' of add cpython as a Conan dependency!")
 
         if python_version is not None:
@@ -137,12 +138,11 @@ class ToolSipProjectBlock(Block):
             if py_include_dir is None:
                 try:
                     header_path = "" if self._conanfile.settings.os == "Windows" else f"python{py_version.major}.{py_version.minor}"
-                    py_include_dir = Path(self._conanfile.deps_cpp_info['cpython'].rootpath,
-                                          self._conanfile.deps_cpp_info['cpython'].components["python"].includedirs[0],
-                                          header_path).as_posix()
+                    cpython_cpp = self._conanfile.dependencies["cpython"].cpp_info
+                    py_include_dir = Path(cpython_cpp.components["python"].includedirs[0], header_path).as_posix()
                     py_include_dir = f"py-include-dir = \"{py_include_dir}\""
                 except:
-                    self._conanfile.output.warn(
+                    self._conanfile.output.warning(
                         "No include directory set for Python.h, either add the options: 'py_include' of add cpython as a Conan dependency!")
             else:
                 py_include_dir = f"py-include-dir = \"{Path(py_include_dir).as_posix()}\""
@@ -210,13 +210,19 @@ class ToolSipBindingsBlock(Block):
 
     def context(self):
         settings = self._conanfile.settings
-        deps_cpp_info = self._conanfile.deps_cpp_info
+        aggregated_cpp_info = CppInfo(self._conanfile)
+        deps = self._conanfile.dependencies.host.topological_sort
+        deps = [dep for dep in reversed(deps.values())]
+        for dep in deps:
+            dep_cppinfo = dep.cpp_info.aggregated_components()
+            aggregated_cpp_info.merge(dep_cppinfo)
+
         build_type = settings.get_safe("build_type", "Release")
         shared = settings.get_safe("shared", True)
 
-        libs = deps_cpp_info.libs
-        libdirs = [Path(d).as_posix() for d in deps_cpp_info.libdirs]
-        includedirs = [Path(d).as_posix() for d in deps_cpp_info.includedirs]
+        libs = aggregated_cpp_info.libs
+        libdirs = [Path(d).as_posix() for d in aggregated_cpp_info.libdirs]
+        includedirs = [Path(d).as_posix() for d in aggregated_cpp_info.includedirs]
         if self._conanfile.cpp.source.includedirs:
             includedirs.extend(self._conanfile.cpp.source.includedirs)
 
@@ -243,7 +249,6 @@ class PyProjectToolchain(AutotoolsToolchain):
 
     def __init__(self, conanfile: ConanFile, namespace = None):
         super().__init__(conanfile, namespace)
-        check_using_build_profile(self._conanfile)
 
         blocks = [
             ("build_system", BuildSystemBlock),
@@ -283,3 +288,4 @@ class PyProjectToolchain(AutotoolsToolchain):
 
 class PyProjectToolchainPkg(ConanFile):
     name = "pyprojecttoolchain"
+    package_type = "build-scripts"
