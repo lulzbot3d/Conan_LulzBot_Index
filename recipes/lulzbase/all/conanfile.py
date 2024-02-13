@@ -9,13 +9,13 @@ from conans import ConanFile, tools
 from conans.errors import ConanException
 
 
-class UMBaseConanfile(object):
+class LulzBaseConanfile(object):
     """
-    Ultimaker base conanfile, for reusing Python code in our repositories
+    LulzBot (formerly Ultimaker) base conanfile, for reusing Python code in our repositories
     https://docs.conan.io/en/latest/extending/python_requires.html
     """
 
-    def _um_data(self) -> dict:
+    def _lulz_data(self) -> dict:
         """
         Extract the version specific data out of a conandata.yml
         """
@@ -166,5 +166,5 @@ class Pkg(ConanFile):
         self.copy("StandardProjectSettings.cmake", "cmake")
 
     def package_info(self):
-        self.cpp_info.set_property("name", "umbase")
+        self.cpp_info.set_property("name", "lulzbase")
         self.cpp_info.set_property("cmake_build_modules", [os.path.join("cmake", "StandardProjectSettings.cmake")])
