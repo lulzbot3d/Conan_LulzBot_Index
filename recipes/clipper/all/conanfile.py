@@ -1,10 +1,9 @@
-from io import StringIO
+from shutil import which
 
 from conan import ConanFile
 from conan.tools.cmake import CMake, CMakeToolchain, cmake_layout
 from conan.tools.files import apply_conandata_patches, copy, export_conandata_patches, get, rmdir
 from conan.errors import ConanInvalidConfiguration
-from conans.tools import which
 import os
 
 required_conan_version = ">=1.54.0"
@@ -60,7 +59,7 @@ class ClipperConan(ConanFile):
         cmake.configure(build_script_folder=os.path.join(self.source_folder, "cpp"))
         cmake.build()
 
-        if self.options.get_safe("enable_sentry", False):
+        if self.options.enable_sentry:
             # Upload debug symbols to sentry
             sentry_project = self.conf.get("user.curaengine:sentry_project", "", check_type=str)
             sentry_org = self.conf.get("user.curaengine:sentry_org", "", check_type=str)
