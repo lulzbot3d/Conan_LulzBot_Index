@@ -59,13 +59,9 @@ class ClipperConan(ConanFile):
         cmake.configure(build_script_folder=os.path.join(self.source_folder, "cpp"))
         cmake.build()
 
-        if self.options.enable_sentry:
-            # Upload debug symbols to sentry
-            sentry_project = self.conf.get("user.curaengine:sentry_project", "", check_type=str)
-            sentry_org = self.conf.get("user.curaengine:sentry_org", "", check_type=str)
-            if sentry_project == "" or sentry_org == "":
-                raise ConanInvalidConfiguration("sentry_project or sentry_org is not set")
-            
+        sentry_project = self.conf.get("user.curaengine:sentry_project", "", check_type=str)
+        sentry_org = self.conf.get("user.curaengine:sentry_org", "", check_type=str)
+        if self.options.enable_sentry and os.environ.get('SENTRY_TOKEN', None) and sentry_project != "" and sentry_org != "":
             if which("sentry-cli") is None:
                 self.output.warn("sentry-cli is not installed, skipping uploading debug symbols")
             else:
