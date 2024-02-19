@@ -8,6 +8,7 @@ import os
 
 required_conan_version = ">=1.52.0"
 
+
 class MapboxWagyuConan(ConanFile):
     name = "mapbox-wagyu"
     description = "A general library for geometry operations of union, intersections, difference, and xor"
