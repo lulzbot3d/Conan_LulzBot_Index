@@ -1,10 +1,3 @@
-Subject: [PATCH] patch for wagyu
----
-Index: include/mapbox/geometry/wagyu/ring.hpp
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/include/mapbox/geometry/wagyu/ring.hpp b/include/mapbox/geometry/wagyu/ring.hpp
 --- a/include/mapbox/geometry/wagyu/ring.hpp	(revision bca18747a2a529db59de34b97aaf395d815c5798)
 +++ b/include/mapbox/geometry/wagyu/ring.hpp	(date 1708339817748)
@@ -18,10 +11,6 @@ diff --git a/include/mapbox/geometry/wagyu/ring.hpp b/include/mapbox/geometry/wa
  #include <iostream>
  #include <sstream>
 Index: include/mapbox/geometry/wagyu/ring_util.hpp
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/include/mapbox/geometry/wagyu/ring_util.hpp b/include/mapbox/geometry/wagyu/ring_util.hpp
 --- a/include/mapbox/geometry/wagyu/ring_util.hpp	(revision bca18747a2a529db59de34b97aaf395d815c5798)
 +++ b/include/mapbox/geometry/wagyu/ring_util.hpp	(date 1708339817743)

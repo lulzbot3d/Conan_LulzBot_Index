@@ -44,6 +44,7 @@ class MapboxWagyuConan(ConanFile):
 
     def export_sources(self):
         export_conandata_patches(self)
+
     def validate(self):
         if self.settings.compiler.get_safe("cppstd"):
             check_min_cppstd(self, self._min_cppstd)
@@ -55,7 +56,6 @@ class MapboxWagyuConan(ConanFile):
 
     def source(self):
         get(self, **self.conan_data["sources"][self.version], strip_root=True)
-
 
     def package(self):
         copy(self, "LICENSE", self.source_folder, os.path.join(self.package_folder, "licenses"))
