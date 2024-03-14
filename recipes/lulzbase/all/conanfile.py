@@ -159,7 +159,7 @@ class LulzBaseConanfile(object):
 
 
 class Pkg(ConanFile):
-    name = "umbase"
+    name = "lulzbase"
     exports_sources = "StandardProjectSettings.cmake"
 
     def package(self):
