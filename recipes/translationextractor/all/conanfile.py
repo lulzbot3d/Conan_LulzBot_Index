@@ -163,7 +163,7 @@ class ExtractTranslations(object):
         header += "msgid \"\"\n"
         header += "msgstr \"\"\n"
         header += "\"Project-Id-Version: Uranium json setting files\\n\"\n"
-        header += "\"Report-Msgid-Bugs-To: plugins@ultimaker.com\\n\"\n"
+        header += "\"Report-Msgid-Bugs-To: it@lulzbot.com\\n\"\n"
         header += "\"POT-Creation-Date: {}+0000\\n\"\n".format(time.strftime("%Y-%m-%d %H:%M"))
         header += "\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n"
         header += "\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n\"\n"

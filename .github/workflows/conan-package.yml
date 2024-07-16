@@ -32,7 +32,7 @@ jobs:
             recipes/**/*.*
             
       - name: Sync pip requirements
-        run: wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/main/.github/workflows/requirements-runner.txt -O .github/workflows/requirements-runner.txt
+        run: wget https://raw.githubusercontent.com/lulzbot3d/cura-le-workflows/main/.github/workflows/requirements-runner.txt -O .github/workflows/requirements-runner.txt
 
       - name: Setup Python and pip
         uses: actions/setup-python@v4
@@ -54,8 +54,8 @@ jobs:
 
       - name: Get Conan configuration
         run: |
-          conan config install https://github.com/Ultimaker/conan-config.git
-          conan config install https://github.com/Ultimaker/conan-config.git -a "-b runner/${{ runner.os }}/${{ runner.arch }}"
+          conan config install https://github.com/lulzbot3d/conan-le-config.git
+          conan config install https://github.com/lulzbot3d/conan-le-config.git -a "-b runner/${{ runner.os }}/${{ runner.arch }}"
 
       - name: Cache Conan packages
         uses: actions/cache@v3
@@ -77,5 +77,5 @@ jobs:
       - name: Export changed recipes
         run: |
           mkdir runner_scripts
-          wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/main/runner_scripts/upload_conan_recipes.py -O runner_scripts/upload_conan_recipes.py
-          python runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura ${{ env.GIT_DIFF_FILTERED }}
+          wget https://raw.githubusercontent.com/lulzbot3d/cura-le-workflows/main/runner_scripts/upload_conan_recipes.py -O runner_scripts/upload_conan_recipes.py
+          python runner_scripts/upload_conan_recipes.py --user lulzbot --branch ${{ github.ref_name }} --remote curale ${{ env.GIT_DIFF_FILTERED }}
