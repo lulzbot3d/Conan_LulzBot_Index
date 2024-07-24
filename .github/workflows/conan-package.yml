@@ -55,8 +55,8 @@ jobs:
 
       - name: Get Conan configuration
         run: |
-          conan config install https://github.com/lulzbot3d/conan-le-config.git
-          conan config install https://github.com/lulzbot3d/conan-le-config.git -a "-b runner/${{ runner.os }}/${{ runner.arch }}"
+          conan config install https://github.com/lulzbot3d/conan-config-le.git
+          conan config install https://github.com/lulzbot3d/conan-config-le.git -a "-b runner/${{ runner.os }}/${{ runner.arch }}"
 
       - name: Cache Conan packages
         uses: actions/cache@v3
