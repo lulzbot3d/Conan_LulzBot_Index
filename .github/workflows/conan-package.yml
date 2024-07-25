@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - 'recipes/**'
-      - '.github/workflows/conan-package.yml'
     branches:
       - main
       - 'CURA-*'
