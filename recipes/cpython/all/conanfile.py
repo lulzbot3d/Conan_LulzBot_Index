@@ -179,14 +179,12 @@ class CPythonConan(ConanFile):
             self.requires("expat/2.4.1")
             if self._with_libffi:
                 self.requires("libffi/3.2.1")
-            # Trying this from an old jellespijker commit
-            if self.settings.compiler != "Visual Studio":
-                if tools.Version(self._version_number_only) < "3.8":
-                    self.requires("mpdecimal/2.4.2")
-                elif tools.Version(self._version_number_only) < "3.10":
-                    self.requires("mpdecimal/2.5.0")
-                else:
-                    self.requires("mpdecimal/2.5.0")  # FIXME: no 2.5.1 to troubleshoot apple
+            if tools.Version(self._version_number_only) < "3.8":
+                self.requires("mpdecimal/2.4.2")
+            elif tools.Version(self._version_number_only) < "3.10":
+                self.requires("mpdecimal/2.5.0")
+            else:
+                self.requires("mpdecimal/2.5.0")  # FIXME: no 2.5.1 to troubleshoot apple
         if self.settings.os != "Windows":
             if not tools.is_apple_os(self.settings.os):
                 self.requires("util-linux-libuuid/2.39.2")
@@ -410,7 +408,7 @@ class CPythonConan(ConanFile):
 
     def build(self):
         # FIXME: these checks belong in validate, but the versions of dependencies are not available there yet
-        if self._supports_modules and self.settings.compiler != "Visual Studio":
+        if self._supports_modules:
             if tools.Version(self._version_number_only) < "3.8.0":
                 if tools.Version(self.deps_cpp_info["mpdecimal"].version) >= "2.5.0":
                     raise ConanInvalidConfiguration("cpython versions lesser then 3.8.0 require a mpdecimal lesser then 2.5.0")
