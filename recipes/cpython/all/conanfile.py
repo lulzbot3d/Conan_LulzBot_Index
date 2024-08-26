@@ -188,7 +188,7 @@ class CPythonConan(ConanFile):
         if self.settings.os != "Windows":
             if not tools.is_apple_os(self.settings.os):
                 self.requires("util-linux-libuuid/2.39.2")
-            self.requires("libxcrypt/4.4.25")
+            self.requires("libxcrypt/4.4.36")
         if self.options.get_safe("with_bz2"):
             self.requires("bzip2/1.0.8")
         if self.options.get_safe("with_gdbm", False):
