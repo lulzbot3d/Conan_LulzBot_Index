@@ -169,7 +169,7 @@ class ExtractTranslations(object):
                                                                                                                "\\\""))
 
     def _create_translation_entry(self, filename: str, field: str, value: str) -> str:
-        return "msgctxt \"{0}\"\nmsgid \"{1}\"\nmsgstr \"\"\n\n".format(field, value.replace("\n", "\\n").replace("\"",
+        return "\nmsgctxt \"{0}\"\nmsgid \"{1}\"\nmsgstr \"\"\n".format(field, value.replace("\n", "\\n").replace("\"",
                                                                                                                   "\\\""))
 
     def _create_pot_header(self) -> str:
