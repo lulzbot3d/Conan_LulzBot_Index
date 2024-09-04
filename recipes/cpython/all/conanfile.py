@@ -587,8 +587,10 @@ class CPythonConan(ConanFile):
 
         sln = os.path.join(self.source_folder, "PCbuild", "pcbuild.sln")
         # FIXME: Solution files do not pick up the toolset automatically.
-        cmd = msbuild.command(sln, targets=projects)
-        self.run(f"{cmd} /p:PlatformToolset={msvs_toolset(self)}")
+        for project in projects:
+            # To make this work in Powershell too (which uses ';' as command seperation), do each project separately.
+            cmd = msbuild.command(sln, targets=[project])
+            self.run(f"{cmd} /p:PlatformToolset={msvs_toolset(self)}")
 
     def build(self):
         self._patch_sources()
