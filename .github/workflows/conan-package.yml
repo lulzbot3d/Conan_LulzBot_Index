@@ -13,53 +13,24 @@ on:
 permissions:
   contents: read
 
-env:
-  CONAN_LOGIN_USERNAME: ${{ secrets.CONAN_USER }}
-  CONAN_PASSWORD: ${{ secrets.CONAN_PASS }}
-
 jobs:
   conan-package-export:
     name: Conan Package Export
 
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+# FIXME: use main once merged
+      - name: Setup the build environment
+        uses: ultimaker/cura-workflows/.github/actions/setup-build-environment@CURA-11622_conan_v2
         with:
-          fetch-depth: 1
+          conan_user: ${{ secrets.CONAN_USER }}
+          conan_password: ${{ secrets.CONAN_PASS }}
 
       - uses: technote-space/get-diff-action@v6
         with:
           PATTERNS: |
             recipes/**/*.*
 
-# FIXME: use main once merged
-      - name: Sync pip requirements
-        run: wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/CURA-11622_conan_v2/.github/workflows/requirements-runner.txt -O .github/workflows/requirements-runner.txt
-
-      - name: Setup Python and pip
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11.x
-          cache: pip
-          cache-dependency-path: .github/workflows/requirements-runner.txt
-
-      - name: Install Python requirements and Create default Conan profile
-        run: pip install -r .github/workflows/requirements-runner.txt
-
-      - name: Create default Conan profile
-        run: conan profile detect -f
-
-# FIXME: use runner.os/runner.arch after merge: conan config install https://github.com/Ultimaker/conan-config.git -a "-b runner/runner.os/runner.arch"
-      - name: Get Conan configuration
-        run: |
-          conan config install https://github.com/Ultimaker/conan-config.git -a "-b CURA-11622_conan_v2"
-          conan remote login -p ${{ secrets.CONAN_PASS }} cura-conan-v2 ${{ secrets.CONAN_USER }}
-          #conan remote disable cura-private
-
-# TODO: Change to main once merged
       - name: Export changed recipes
         run: |
-          mkdir runner_scripts
-          wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/CURA-11622_conan_v2/runner_scripts/upload_conan_recipes.py -O runner_scripts/upload_conan_recipes.py
-          python runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura-conan-v2 ${{ env.GIT_DIFF_FILTERED }}
+          python Cura-workflows/runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura-conan2-dev ${{ env.GIT_DIFF_FILTERED }}
