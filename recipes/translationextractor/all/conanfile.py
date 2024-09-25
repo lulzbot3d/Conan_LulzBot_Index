@@ -18,7 +18,7 @@ class ExtractTranslations(object):
     def __init__(self, conanfile: ConanFile, gettext_bindir):
         self._conanfile = conanfile
         self._gettext_bindir = gettext_bindir
-        self._translations_root_path = self._conanfile.source_path.joinpath("resources", "i18n")
+        self._translations_root_path = Path(self._conanfile.source_folder).joinpath("resources", "i18n")
         self._all_strings_pot_path = self._translations_root_path.joinpath(
             self._conanfile.name + ".pot")  # pot file containing all strings untranslated
         self._pot_content = {}
@@ -76,27 +76,33 @@ class ExtractTranslations(object):
         self._extract_plugin()
         self._extract_settings()
 
+    def _extract_source_files(self, prefix, extension_wildcard):
+        source_files = []
+
+        key = f"{prefix}_translation_source_folders"
+        if self._conanfile.conan_data is not None and key in self._conanfile.conan_data:
+            for translation_folder in self._conanfile.conan_data[key]:
+                source_files += Path(self._conanfile.source_folder, translation_folder).rglob(extension_wildcard)
+
+        return source_files
+
     def _extract_python(self) -> None:
-        """ Extract i18n strings from all .py files in root_path"""
-        for path in self._conanfile.source_path.rglob("*.py"):
-            if "venv" in path.parts:
-                continue
+        """ Extract i18n strings from all .py files"""
+        for path in self._extract_source_files("python", "*.py"):
             self._conanfile.run(
                 f"{self._gettext_bindir}/xgettext --from-code=UTF-8 --join-existing --add-location=never --sort-output --language=python --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
                 env="conanbuild")
 
     def _extract_qml(self) -> None:
-        """ Extract all i18n strings from qml files inside the root path """
-        for path in self._conanfile.source_path.rglob("*.qml"):
-            if "venv" in path.parts:
-                continue
+        """ Extract all i18n strings from qml files"""
+        for path in self._extract_source_files("qml", "*.qml"):
             self._conanfile.run(
                 f"{self._gettext_bindir}/xgettext --from-code=UTF-8 --join-existing --add-location=never --sort-output --language=javascript --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
                 env="conanbuild")
 
     def _extract_plugin(self) -> None:
         """ Extract the name and description from all plugins """
-        plugin_paths = [path for path in self._conanfile.source_path.rglob("plugin.json") if "test" not in str(path)]
+        plugin_paths = [path for path in Path(self._conanfile.source_folder).rglob("plugin.json") if "test" not in str(path)]
         for path in plugin_paths:
             translation_entries = ""
 
@@ -118,7 +124,7 @@ class ExtractTranslations(object):
 
     def _extract_settings(self) -> None:
         """ Extract strings from settings json files to pot file with a matching name """
-        setting_json_paths = [path for path in self._conanfile.source_path.rglob("*.def.json") if
+        setting_json_paths = [path for path in Path(self._conanfile.source_folder).rglob("*.def.json") if
                               "test" not in str(path)]
         for path in setting_json_paths:
             self._write_setting_text(path, self._translations_root_path)
@@ -203,8 +209,7 @@ class ExtractTranslations(object):
                 rm(self._conanfile, path.name, path.parent)
             else:
                 save(self._conanfile, path,
-                     content.replace(f"#: {self._conanfile.source_path}/", "#: ").replace("charset=CHARSET",
-                                                                                          "charset=UTF-8"))
+                     content.replace(f"#: {self._conanfile.source_folder}/", "#: ").replace("charset=CHARSET", "charset=UTF-8"))
 
     def generate(self):
         self._load_pot_content()
