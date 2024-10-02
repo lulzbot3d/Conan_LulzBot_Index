@@ -64,3 +64,6 @@ class NodejsConan(ConanFile):
         # TODO: Legacy, to be removed on Conan 2.0
         bin_dir = os.path.join(self.package_folder, "bin")
         self.env_info.PATH.append(bin_dir)
+        self.buildenv_info.append_path("PATH", bin_dir)
+        self.env_info.PATH.append(os.path.join(self.package_folder, "lib", "node_modules", ".bin"))
+        self.buildenv_info.append_path("PATH", os.path.join(self.package_folder, "lib", "node_modules", ".bin"))

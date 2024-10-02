@@ -28,8 +28,8 @@ class EmSDKConan(ConanFile):
     def layout(self):
         basic_layout(self, src_folder="src")
 
-    def requirements(self):
-        self.requires("nodejs/16.3.0")
+    def build_requirements(self):
+        self.test_requires("nodejs/20.16.0")
         # self.requires("python")  # FIXME: Not available as Conan package
         # self.requires("wasm")  # FIXME: Not available as Conan package
 
@@ -129,6 +129,7 @@ class EmSDKConan(ConanFile):
             # the line below forces emscripten to accept the cache as-is, even after re-location
             # https://github.com/emscripten-core/emscripten/issues/15053#issuecomment-920950710
             os.remove(os.path.join(self._em_cache, "sanity.txt"))
+            self.run("npm install -g typescript", env=["conanemsdk", "conanrun", "conanbuild"])
 
     def _define_tool_var(self, value):
         suffix = ".bat" if self.settings.os == "Windows" else ""
