@@ -130,7 +130,7 @@ class EmSDKConan(ConanFile):
             # the line below forces emscripten to accept the cache as-is, even after re-location
             # https://github.com/emscripten-core/emscripten/issues/15053#issuecomment-920950710
             os.remove(os.path.join(self._em_cache, "sanity.txt"))
-            self.run("npm install -g typescript", env=["conanemsdk", "conanrun", "conanbuild"])
+            self.run("npm install", cwd=emscripten, env=["conanemsdk", "conanrun", "conanbuild"])
 
     def _define_tool_var(self, value):
         suffix = ".bat" if self.settings.os == "Windows" else ""
