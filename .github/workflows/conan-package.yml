@@ -7,6 +7,7 @@ on:
     branches:
       - main
       - 'CURA-*'
+      - 'NP-*'
 
 permissions:
   contents: read
@@ -30,7 +31,7 @@ jobs:
         with:
           PATTERNS: |
             recipes/**/*.*
-            
+
       - name: Sync pip requirements
         run: wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/main/.github/workflows/requirements-runner.txt -O .github/workflows/requirements-runner.txt
 
