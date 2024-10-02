@@ -7,6 +7,7 @@ from conan.tools.scm import Version
 import json
 import os
 
+
 required_conan_version = ">=1.52.0"
 
 
