@@ -1,0 +1,13 @@
+diff --git a/include/lexy/input_location.hpp b/include/lexy/input_location.hpp
+index 55f6edb7..983d2aa0 100644
+--- a/include/lexy/input_location.hpp
++++ b/include/lexy/input_location.hpp
+@@ -162,7 +162,7 @@ class input_location
+     {
+         if (lhs._line_nr != rhs._line_nr)
+             return lhs._line_nr < rhs._line_nr;
+-        return lhs._column_nr < rhs._colum_nr;
++        return lhs._column_nr < rhs._column_nr;
+     }
+     friend constexpr bool operator<=(const input_location& lhs, const input_location& rhs)
+     {
