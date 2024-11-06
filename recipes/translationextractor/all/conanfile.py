@@ -129,8 +129,17 @@ class ExtractTranslations(object):
         for _, setting_dict in setting_json_data:
             if "metadata" in setting_dict:
                 setting_metadata = setting_dict["metadata"]
+
+                variants_name = None
                 if "variants_name" in setting_metadata:
-                    variants_names.add(setting_metadata["variants_name"])
+                    variants_name = setting_metadata["variants_name"]
+
+                variants_name_has_translation = None
+                if "variants_name_has_translation" in setting_metadata:
+                    variants_name_has_translation = setting_metadata["variants_name_has_translation"]
+
+                if variants_name is not None and variants_name_has_translation == True:
+                    variants_names.add(variants_name)
 
         return variants_names
 
