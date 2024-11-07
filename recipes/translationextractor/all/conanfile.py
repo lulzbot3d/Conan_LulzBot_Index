@@ -2,6 +2,7 @@ from pathlib import Path
 import json
 import time
 import collections
+from typing import List, Any, Set
 
 from conan import ConanFile
 from conan.tools.files import save, load, rm
@@ -101,9 +102,9 @@ class ExtractTranslations(object):
                 self._conanfile.output.warn(f"The plugin.json is invalid, ignoring it: {path}")
             else:
                 if "description" in plugin_dict:
-                    translation_entries += self._create_translation_entry(path, "description", plugin_dict["description"])
+                    translation_entries += self._create_translation_entry("description", plugin_dict["description"])
                 if "name" in plugin_dict:
-                    translation_entries += self._create_translation_entry(path, "name", plugin_dict["name"])
+                    translation_entries += self._create_translation_entry("name", plugin_dict["name"])
 
             # Write plugin name & description to output pot file
             if translation_entries:
@@ -112,19 +113,49 @@ class ExtractTranslations(object):
     def _extract_settings(self) -> None:
         """ Extract strings from settings json files to pot file with a matching name """
         setting_json_paths = [path for path in self._conanfile.source_path.rglob("*.def.json") if "test" not in str(path)]
-        for path in setting_json_paths:
-            self._write_setting_text(path, self._translations_root_path)
+        setting_json_data = []
+        for json_path in setting_json_paths:
+            setting_dict = json.loads(load(self._conanfile, json_path), object_pairs_hook = collections.OrderedDict)
+            setting_json_data.append((json_path, setting_dict))
 
-    def _write_setting_text(self, json_path: Path, destination_path: Path) -> bool:
+        variants_names = self._extract_variants_names(setting_json_data)
+        for json_path, setting_dict in setting_json_data:
+            self._write_setting_text(json_path, setting_dict, self._translations_root_path, variants_names)
+
+    def _extract_variants_names(self, setting_json_data: List[tuple[Path, dict[str, Any]]]) -> Set[str]:
+        """ Extract all existing variants from settings json files """
+        variants_names = set()
+
+        for _, setting_dict in setting_json_data:
+            if "metadata" in setting_dict:
+                setting_metadata = setting_dict["metadata"]
+
+                variants_name = None
+                if "variants_name" in setting_metadata:
+                    variants_name = setting_metadata["variants_name"]
+
+                variants_name_has_translation = None
+                if "variants_name_has_translation" in setting_metadata:
+                    variants_name_has_translation = setting_metadata["variants_name_has_translation"]
+
+                if variants_name is not None and variants_name_has_translation == True:
+                    variants_names.add(variants_name)
+
+        return variants_names
+
+    def _write_setting_text(self, json_path: Path, setting_dict: dict[str, Any], destination_path: Path, variants_names: Set[str]) -> bool:
         """ Writes settings text from json file to pot file. Returns true if a file was written. """
-        setting_dict = json.loads(load(self._conanfile, json_path), object_pairs_hook = collections.OrderedDict)
-
         if "inherits" not in setting_dict:
             if "settings" in setting_dict:
                 settings = setting_dict["settings"]
             else:
                 settings = setting_dict
-            translation_entries = self._process_settings(json_path.name, settings)
+
+            translation_entries = self._process_settings(settings)
+
+            if json_path.name == "fdmprinter.def.json":
+                translation_entries += self._process_variants_names(variants_names)
+
             output_pot_path = Path(destination_path).joinpath(
                 json_path.name + ".pot")  # Create a pot with a matching filename in the destination path
             content = self._create_pot_header() + translation_entries
@@ -132,29 +163,38 @@ class ExtractTranslations(object):
             return True
         return False
 
-    def _process_settings(self, file, settings) -> str:
+    def _process_variants_names(self, variants_names: Set[str]) -> str:
         translation_entries = ""
-        for name, value in settings.items():
-            if "label" in value:
-                translation_entries += self._create_setting_translation_entry(file, name, "label", value["label"])
-            if "description" in value:
-                translation_entries += self._create_setting_translation_entry(file, name, "description", value["description"])
-            if "warning_description" in value:
-                translation_entries += self._create_setting_translation_entry(file, name, "warning_description", value["warning_description"])
-            if "error_description" in value:
-                translation_entries += self._create_setting_translation_entry(file, name, "error_description", value["error_description"])
-            if "options" in value:
-                for item, description in value["options"].items():
-                    translation_entries += self._create_setting_translation_entry(file, name, "option {0}".format(item), description)
-            if "children" in value:
-                translation_entries += self._process_settings(file, value["children"])
+
+        for variant_name in variants_names:
+            translation_entries += self._create_translation_entry("variant_name", variant_name)
 
         return translation_entries
 
-    def _create_setting_translation_entry(self, filename: str, setting: str, field: str, value: str) -> str:
+    def _process_settings(self, settings) -> str:
+        translation_entries = ""
+
+        for name, value in settings.items():
+            if "label" in value:
+                translation_entries += self._create_setting_translation_entry(name, "label", value["label"])
+            if "description" in value:
+                translation_entries += self._create_setting_translation_entry(name, "description", value["description"])
+            if "warning_description" in value:
+                translation_entries += self._create_setting_translation_entry(name, "warning_description", value["warning_description"])
+            if "error_description" in value:
+                translation_entries += self._create_setting_translation_entry(name, "error_description", value["error_description"])
+            if "options" in value:
+                for item, description in value["options"].items():
+                    translation_entries += self._create_setting_translation_entry(name, "option {0}".format(item), description)
+            if "children" in value:
+                translation_entries += self._process_settings(value["children"])
+
+        return translation_entries
+
+    def _create_setting_translation_entry(self, setting: str, field: str, value: str) -> str:
         return "msgctxt \"{0} {1}\"\nmsgid \"{2}\"\nmsgstr \"\"\n\n".format(setting, field, value.replace("\n", "\\n").replace("\"", "\\\""))
 
-    def _create_translation_entry(self, filename: str, field: str, value: str) -> str:
+    def _create_translation_entry(self, field: str, value: str) -> str:
         return "\nmsgctxt \"{0}\"\nmsgid \"{1}\"\nmsgstr \"\"\n".format(field, value.replace("\n", "\\n").replace("\"", "\\\""))
 
     def _create_pot_header(self) -> str:
