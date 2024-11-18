@@ -7,6 +7,7 @@ on:
     branches:
       - main
       - 'CURA-*'
+      - 'NP-*'
 
 permissions:
   contents: read
@@ -30,7 +31,7 @@ jobs:
         with:
           PATTERNS: |
             recipes/**/*.*
-            
+
       - name: Sync pip requirements
         run: wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/main/.github/workflows/requirements-runner.txt -O .github/workflows/requirements-runner.txt
 
@@ -73,9 +74,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-conan-downloads-
 
-      # TODO: Change to main once merged
+      # TODO: Change NP-346 to main once merged
       - name: Export changed recipes
         run: |
           mkdir runner_scripts
-          wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/main/runner_scripts/upload_conan_recipes.py -O runner_scripts/upload_conan_recipes.py
+          wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/NP-346/runner_scripts/upload_conan_recipes.py -O runner_scripts/upload_conan_recipes.py
           python runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura ${{ env.GIT_DIFF_FILTERED }}
