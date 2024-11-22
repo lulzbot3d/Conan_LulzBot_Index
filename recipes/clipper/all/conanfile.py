@@ -18,6 +18,7 @@ class ClipperConan(ConanFile):
     url = "https://github.com/conan-io/conan-center-index"
     homepage = "http://www.angusj.com/delphi/clipper.php"
     settings = "os", "arch", "compiler", "build_type"
+    package_type = "library"
     python_requires = "sentrylibrary/1.0@ultimaker/cura_11622" # FIXME: use main after merge
     python_requires_extend = "sentrylibrary.SentryLibrary"
 
@@ -70,7 +71,7 @@ class ClipperConan(ConanFile):
         cmake.configure(build_script_folder=os.path.join(self.source_folder, "cpp"))
         cmake.build()
 
-        self.send_sentry_debug_files()
+        self.send_sentry_debug_files(binary_basename = "libpolyclipping")
 
     def package(self):
         copy(self, "License.txt", src=self.source_folder, dst=os.path.join(self.package_folder, "licenses"))

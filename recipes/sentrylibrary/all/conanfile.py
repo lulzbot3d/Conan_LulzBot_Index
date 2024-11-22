@@ -10,10 +10,12 @@ required_conan_version = ">=2.7.0"
 class SentryLibrary:
     options = {
         "enable_sentry": [True, False],
+        "sentry_create_release": [True, False],
         "sentry_project": ["ANY"],
     }
     default_options = {
         "enable_sentry": False,
+        "sentry_create_release": False,
         "sentry_project": "",
     }
 
@@ -43,7 +45,7 @@ class SentryLibrary:
         cmake_toolchain.variables["ENABLE_SENTRY"] = self.options.enable_sentry
         cmake_toolchain.variables["SENTRY_URL"] = self.conf.get("user.sentry:url", "", check_type=str)
 
-    def send_sentry_debug_files(self):
+    def send_sentry_debug_files(self, binary_basename):
         '''
         Method to be called by actual packages at build() time, after the actual build has been done, to send the binary files to sentry
         '''
@@ -55,28 +57,30 @@ class SentryLibrary:
             if which("sentry-cli") is None:
                 raise ConanException("sentry-cli is not installed, unable to upload debug symbols")
 
+            if self.package_type == "application":
+                binary_name = binary_basename
+            else:
+                binary_name = binary_basename + ('.so' if self.options.get_safe("shared", True) else '.a')
+
             if self.settings.os == "Linux":
                 self.output.info("Stripping debug symbols from binary")
-                self.run("objcopy --only-keep-debug --compress-debug-sections=zlib CuraEngine CuraEngine.debug")
-                self.run("objcopy --strip-debug --strip-unneeded CuraEngine")
-                self.run("objcopy --add-gnu-debuglink=CuraEngine.debug CuraEngine")
+                self.run(f"objcopy --only-keep-debug --compress-debug-sections=zlib {binary_name} {binary_name}.debug")
+                self.run(f"objcopy --strip-debug --strip-unneeded {binary_name}")
+                self.run(f"objcopy --add-gnu-debuglink={binary_name}.debug {binary_name}")
             elif self.settings.os == "Macos":
-                self.run("dsymutil CuraEngine")
+                self.run(f"dsymutil {binary_name}")
 
             self.output.info("Uploading debug symbols to sentry")
-            build_source_dir = self.build_path.parent.parent.as_posix()
+            build_source_dir = self.build_folder.parent.parent.as_posix()
             self.run(
                 f"sentry-cli --auth-token {sentry_token} debug-files upload --include-sources -o {sentry_organization} -p {sentry_project} {build_source_dir}")
 
-            # create a sentry release and link it to the commit this is based upon
-            self.output.info(
-                f"Creating a new release {self.version} in Sentry and linking it to the current commit {self.conan_data['commit']}")
-            self.run(
-                f"sentry-cli --auth-token {sentry_token} releases new -o {sentry_organization} -p {sentry_project} {self.version}")
-            self.run(
-                f"sentry-cli --auth-token {sentry_token} releases set-commits -o {sentry_organization} -p {sentry_project} --commit \"Ultimaker/CuraEngine@{self.conan_data['commit']}\" {self.version}")
-            self.run(
-                f"sentry-cli --auth-token {sentry_token} releases finalize -o {sentry_organization} -p {sentry_project} {self.version}")
+            if self.sentry_create_release:
+                # create a sentry release and link it to the commit this is based upon
+                self.output.info(f"Creating a new release {self.version} in Sentry and linking it to the current commit {self.conan_data['commit']}")
+                self.run(f"sentry-cli --auth-token {sentry_token} releases new -o {sentry_organization} -p {sentry_project} {self.version}")
+                self.run(f"sentry-cli --auth-token {sentry_token} releases set-commits -o {sentry_organization} -p {sentry_project} --commit \"Ultimaker/CuraEngine@{self.conan_data['commit']}\" {self.version}")
+                self.run(f"sentry-cli --auth-token {sentry_token} releases finalize -o {sentry_organization} -p {sentry_project} {self.version}")
 
 
 class PyReq(ConanFile):
