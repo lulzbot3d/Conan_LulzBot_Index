@@ -22,11 +22,13 @@ class ClipperConan(ConanFile):
         "shared": [True, False],
         "fPIC": [True, False],
         "enable_sentry": [True, False],
+        "sentry_project": ["ANY"],
     }
     default_options = {
         "shared": False,
         "fPIC": True,
         "enable_sentry": False,
+        "sentry_project": name,
     }
 
     def export_sources(self):
@@ -42,6 +44,12 @@ class ClipperConan(ConanFile):
 
     def layout(self):
         cmake_layout(self, src_folder="src")
+
+    def validate(self):
+        if self.options.enable_sentry:
+            for sentry_setting in ["organization", "token"]:
+                if self.conf.get(f"user.sentry:{sentry_setting}", "", check_type=str) == "":
+                    raise ConanInvalidConfiguration(f"Unable to enable Sentry because no {sentry_setting} was configured")
 
     def source(self):
         get(self, **self.conan_data["sources"][self.version])
@@ -60,22 +68,23 @@ class ClipperConan(ConanFile):
         cmake.configure(build_script_folder=os.path.join(self.source_folder, "cpp"))
         cmake.build()
 
-        sentry_project = self.conf.get("user.curaengine:sentry_project", "", check_type=str)
-        sentry_org = self.conf.get("user.curaengine:sentry_org", "", check_type=str)
-        if self.options.get_safe("enable_sentry", False) and os.environ.get('SENTRY_TOKEN', None) and sentry_project != "" and sentry_org != "":
+        sentry_project = self.options.sentry_project
+        sentry_organization = self.conf.get("user.sentry:organization", "", check_type=str)
+        sentry_token = self.conf.get("user.sentry:token", "", check_type=str)
+        if self.options.enable_sentry:
             if which("sentry-cli") is None:
-                self.output.warn("sentry-cli is not installed, skipping uploading debug symbols")
-            else:
-                if self.settings.os == "Linux":
-                    self.output.info("Stripping debug symbols from binary")
-                    ext = ".so" if self.options.shared else ".a"
-                    self.run(f"objcopy --only-keep-debug --compress-debug-sections=zlib libpolyclipping{ext} libpolyclipping.debug")
-                    self.run(f"objcopy --strip-debug --strip-unneeded libpolyclipping{ext}")
-                    self.run(f"objcopy --add-gnu-debuglink=libpolyclipping.debug libpolyclipping{ext}")
+                raise ConanException("sentry-cli is not installed, unable to upload debug symbols")
 
-                build_source_dir = self.build_path.parent.parent.as_posix()
-                self.output.info("Uploading debug symbols to sentry")
-                self.run(f"sentry-cli --auth-token {os.environ['SENTRY_TOKEN']} debug-files upload --include-sources -o {sentry_org} -p {sentry_project} {build_source_dir}")
+            if self.settings.os == "Linux":
+                self.output.info("Stripping debug symbols from binary")
+                ext = ".so" if self.options.shared else ".a"
+                self.run(f"objcopy --only-keep-debug --compress-debug-sections=zlib libpolyclipping{ext} libpolyclipping.debug")
+                self.run(f"objcopy --strip-debug --strip-unneeded libpolyclipping{ext}")
+                self.run(f"objcopy --add-gnu-debuglink=libpolyclipping.debug libpolyclipping{ext}")
+
+            build_source_dir = self.build_path.parent.parent.as_posix()
+            self.output.info("Uploading debug symbols to sentry")
+            self.run(f"sentry-cli --auth-token {sentry_token} debug-files upload --include-sources -o {sentry_organization} -p {sentry_project} {build_source_dir}")
 
     def package(self):
         copy(self, "License.txt", src=self.source_folder, dst=os.path.join(self.package_folder, "licenses"))
