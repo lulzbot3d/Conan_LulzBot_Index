@@ -35,7 +35,7 @@ jobs:
           conan_user: ${{ secrets.CONAN_USER }}
           conan_password: ${{ secrets.CONAN_PASS }}
 
-      - uses: technote-space/get-diff-action@v6
+      - uses: greguintow/get-diff-action@v7
         id: get-diff
         if: ${{ github.event_name == 'push' }}
         with:
