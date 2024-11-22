@@ -33,4 +33,4 @@ jobs:
 
       - name: Export changed recipes
         run: |
-          python Cura-workflows/runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura-conan2-dev ${{ env.GIT_DIFF_FILTERED }}
+          python Cura-workflows/runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura-conan2 ${{ env.GIT_DIFF_FILTERED }}
