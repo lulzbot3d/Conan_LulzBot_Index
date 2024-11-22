@@ -10,6 +10,14 @@ on:
       - 'PP-*'
       - 'NP-*'
 
+  workflow_call:
+    inputs:
+      recipes:
+        description: 'Path to the recipes to be exported, e.g. "recipes/clipper/all/conanfile.py recipes/sentrylibrary/all/conanfile.py". Leave empty to export all the recipes.'
+        default: ''
+        required: true
+        type: string
+
 permissions:
   contents: read
 
@@ -27,10 +35,26 @@ jobs:
           conan_password: ${{ secrets.CONAN_PASS }}
 
       - uses: technote-space/get-diff-action@v6
+        id: get-diff
+        if: ${{ github.event_name == 'push' }}
         with:
           PATTERNS: |
             recipes/**/*.*
 
+      - name: Get recipes list
+        id: get-recipes-list
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            recipes_list="${{ inputs.recipes }}"
+            if [ -z "$recipes_list" ]; then
+                recipes_list = $(find . -maxdepth 4 -iname "conanfile.py")
+            fi
+          else
+            echo recipes_list="${{ env.GIT_DIFF_FILTERED }}"
+          fi
+
+          echo "recipes_list=$recipes_list" >> $GITHUB_ENV
+
       - name: Export changed recipes
         run: |
-          python Cura-workflows/runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura-conan2 ${{ env.GIT_DIFF_FILTERED }}
+          python Cura-workflows/runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura-conan2 ${{ steps.get-recipes-list.recipes_list }}
