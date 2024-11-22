@@ -13,11 +13,13 @@ class SentryLibrary:
         "enable_sentry": [True, False],
         "sentry_create_release": [True, False],
         "sentry_project": ["ANY"],
+        "sentry_is_production": [True, False],
     }
     default_options = {
         "enable_sentry": False,
         "sentry_create_release": False,
         "sentry_project": "",
+        "sentry_is_production": False,
     }
 
     def config_options(self):
@@ -77,11 +79,21 @@ class SentryLibrary:
                 f"sentry-cli --auth-token {sentry_token} debug-files upload --include-sources -o {sentry_organization} -p {sentry_project} {build_source_dir}")
 
             if self.options.sentry_create_release:
+                sentry_version = self.version
+                if not self.options.sentry_is_production:
+                    sentry_version += f"+{self.conan_data['commit'][:6]}"
+
+                sentry_auth = f"--auth-token {sentry_token} -o {sentry_organization} -p {sentry_project}"
+
                 # create a sentry release and link it to the commit this is based upon
-                self.output.info(f"Creating a new release {self.version} in Sentry and linking it to the current commit {self.conan_data['commit']}")
-                self.run(f"sentry-cli --auth-token {sentry_token} releases new -o {sentry_organization} -p {sentry_project} {self.version}")
-                self.run(f"sentry-cli --auth-token {sentry_token} releases set-commits -o {sentry_organization} -p {sentry_project} --commit \"Ultimaker/CuraEngine@{self.conan_data['commit']}\" {self.version}")
-                self.run(f"sentry-cli --auth-token {sentry_token} releases finalize -o {sentry_organization} -p {sentry_project} {self.version}")
+                self.output.info(f"Creating a new release {sentry_version} in Sentry and linking it to the current commit {self.conan_data['commit']}")
+                self.run(f"sentry-cli {sentry_auth} releases new {sentry_version}")
+                self.run(f"sentry-cli {sentry_auth} releases set-commits {sentry_version} --commit \"Ultimaker/{binary_basename}@{self.conan_data['commit']}\"")
+                self.run(f"sentry-cli {sentry_auth} releases finalize {sentry_version}")
+
+                # Create a deploy to differentiate development/production releases
+                environment = "production" if self.options.sentry_is_production else "development"
+                self.run(f"sentry-cli {sentry_auth} deploys new --release {sentry_version} -e {environment}")
 
 
 class PyReq(ConanFile):
