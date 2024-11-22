@@ -1,5 +1,6 @@
 from conan import ConanFile
 
+from pathlib import Path
 from shutil import which
 
 from conan.errors import ConanInvalidConfiguration, ConanException
@@ -71,7 +72,7 @@ class SentryLibrary:
                 self.run(f"dsymutil {binary_name}")
 
             self.output.info("Uploading debug symbols to sentry")
-            build_source_dir = self.build_folder.parent.parent.as_posix()
+            build_source_dir = Path(self.build_folder).parent.parent.as_posix()
             self.run(
                 f"sentry-cli --auth-token {sentry_token} debug-files upload --include-sources -o {sentry_organization} -p {sentry_project} {build_source_dir}")
 
