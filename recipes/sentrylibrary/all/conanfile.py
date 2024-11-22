@@ -86,6 +86,5 @@ class SentryLibrary:
 
 class PyReq(ConanFile):
     name = "sentrylibrary"
-    version = "1.0"
     description = "This is a base conan file description for C++ libraries/applications that can embed sentry"
     package_type = "python-require"
