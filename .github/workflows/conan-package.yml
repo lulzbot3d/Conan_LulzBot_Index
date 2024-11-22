@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'recipes/**'
+      - '.github/workflows/conan-package.yml'
     branches:
       - main
       - 'CURA-*'
@@ -46,11 +47,12 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
             recipes_list="${{ inputs.recipes }}"
-            if [ -z "$recipes_list" ]; then
-                recipes_list = $(find . -maxdepth 4 -iname "conanfile.py")
-            fi
           else
             echo recipes_list="${{ env.GIT_DIFF_FILTERED }}"
+          fi
+
+          if [ -z "$recipes_list" ]; then
+            recipes_list = $(find . -maxdepth 4 -iname "conanfile.py")
           fi
 
           echo "recipes_list=$recipes_list" >> $GITHUB_ENV
