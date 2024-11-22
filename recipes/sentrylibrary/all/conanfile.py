@@ -76,7 +76,7 @@ class SentryLibrary:
             self.run(
                 f"sentry-cli --auth-token {sentry_token} debug-files upload --include-sources -o {sentry_organization} -p {sentry_project} {build_source_dir}")
 
-            if self.sentry_create_release:
+            if self.options.sentry_create_release:
                 # create a sentry release and link it to the commit this is based upon
                 self.output.info(f"Creating a new release {self.version} in Sentry and linking it to the current commit {self.conan_data['commit']}")
                 self.run(f"sentry-cli --auth-token {sentry_token} releases new -o {sentry_organization} -p {sentry_project} {self.version}")
