@@ -55,7 +55,7 @@ jobs:
             recipes_list=$(find . -maxdepth 4 -iname "conanfile.py")
           fi
 
-          echo "recipes_list=$recipes_list" >> $GITHUB_ENV
+          echo "recipes_list=$recipes_list" >> $GITHUB_OUTPUT
 
       - name: Export changed recipes
         run: |
