@@ -76,8 +76,7 @@ class SentryLibrary:
             self.output.info("Uploading debug symbols to sentry")
             build_source_dir = Path(self.build_folder).parent.parent.as_posix()
             sentry_auth = f"--auth-token {sentry_token} -o {sentry_organization} -p {sentry_project}"
-            self.run(
-                f"sentry-cli --auth-token debug-files upload --include-sources {build_source_dir} {sentry_auth}")
+            self.run(f"sentry-cli debug-files upload --include-sources {build_source_dir} {sentry_auth}")
 
             if self.options.sentry_create_release:
                 sentry_version = self.version
