@@ -48,7 +48,7 @@ jobs:
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
             recipes_list="${{ inputs.recipes }}"
           else
-            echo recipes_list="${{ env.GIT_DIFF_FILTERED }}"
+            recipes_list="${{ env.GIT_DIFF_FILTERED }}"
           fi
 
           if [ -z "$recipes_list" ]; then
