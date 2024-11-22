@@ -52,7 +52,7 @@ jobs:
           fi
 
           if [ -z "$recipes_list" ]; then
-            recipes_list = $(find . -maxdepth 4 -iname "conanfile.py")
+            recipes_list=$(find . -maxdepth 4 -iname "conanfile.py")
           fi
 
           echo "recipes_list=$recipes_list" >> $GITHUB_ENV
