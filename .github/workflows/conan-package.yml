@@ -52,7 +52,7 @@ jobs:
           fi
 
           if [ -z "$recipes_list" ]; then
-            recipes_list=$(find . -maxdepth 4 -iname "conanfile.py")
+            recipes_list=$(find . -mindepth 4 -maxdepth 4 -iname "conanfile.py" -print0 | xargs -0 echo)
           fi
 
           echo "recipes_list=$recipes_list" >> $GITHUB_OUTPUT
