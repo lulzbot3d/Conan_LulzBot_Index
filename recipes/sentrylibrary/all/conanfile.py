@@ -75,15 +75,15 @@ class SentryLibrary:
 
             self.output.info("Uploading debug symbols to sentry")
             build_source_dir = Path(self.build_folder).parent.parent.as_posix()
+            sentry_auth = f"--auth-token {sentry_token} -o {sentry_organization} -p {sentry_project}"
             self.run(
-                f"sentry-cli --auth-token {sentry_token} debug-files upload --include-sources -o {sentry_organization} -p {sentry_project} {build_source_dir}")
+                f"sentry-cli --auth-token debug-files upload --include-sources {build_source_dir} {sentry_auth}")
 
             if self.options.sentry_create_release:
                 sentry_version = self.version
                 if not self.options.sentry_is_production:
                     sentry_version += f"+{self.conan_data['commit'][:6]}"
 
-                sentry_auth = f"--auth-token {sentry_token} -o {sentry_organization} -p {sentry_project}"
 
                 # create a sentry release and link it to the commit this is based upon
                 self.output.info(f"Creating a new release {sentry_version} in Sentry and linking it to the current commit {self.conan_data['commit']}")
@@ -93,7 +93,7 @@ class SentryLibrary:
 
                 # Create a deploy to differentiate development/production releases
                 environment = "production" if self.options.sentry_is_production else "development"
-                self.run(f"sentry-cli {sentry_auth} deploys new --release {sentry_version} -e {environment}")
+                self.run(f"sentry-cli deploys new --release {sentry_version} -e {environment} {sentry_auth}")
 
 
 class PyReq(ConanFile):
