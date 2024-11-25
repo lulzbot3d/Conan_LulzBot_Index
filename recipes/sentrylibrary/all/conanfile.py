@@ -53,12 +53,13 @@ class SentryLibrary:
         '''
         cmake_toolchain.variables["ENABLE_SENTRY"] = self.options.enable_sentry
         cmake_toolchain.variables["SENTRY_URL"] = self.conf.get("user.sentry:url", "", check_type=str)
+        cmake_toolchain.variables["SENTRY_ENVIRONMENT"] = "production" if self.options.sentry_is_production else "development"
 
     def send_sentry_debug_files(self, binary_basename):
         '''
         Method to be called by actual packages at build() time, after the actual build has been done, to send the binary files to sentry
         '''
-        if self.options.enable_sentry:
+        if self.options.enable_sentry and self.options.sentry_send_binaries:
             sentry_project = self.options.sentry_project
             sentry_organization = self.conf.get("user.sentry:organization", "", check_type=str)
             sentry_token = self.conf.get("user.sentry:token", "", check_type=str)
@@ -89,16 +90,11 @@ class SentryLibrary:
                 if not self.options.sentry_is_production:
                     sentry_version += f"+{self.conan_data['commit'][:6]}"
 
-
                 # create a sentry release and link it to the commit this is based upon
                 self.output.info(f"Creating a new release {sentry_version} in Sentry and linking it to the current commit {self.conan_data['commit']}")
                 self.run(f"sentry-cli releases new {sentry_version} {sentry_auth} ")
                 self.run(f"sentry-cli releases set-commits {sentry_version} --commit \"Ultimaker/{binary_basename}@{self.conan_data['commit']}\" {sentry_auth} ")
                 self.run(f"sentry-cli releases finalize {sentry_version} {sentry_auth} ")
-
-                # Create a deploy to differentiate development/production releases
-                environment = "production" if self.options.sentry_is_production else "development"
-                self.run(f"sentry-cli deploys new --release {sentry_version} -e {environment} {sentry_auth}")
 
 
 class PyReq(ConanFile):
