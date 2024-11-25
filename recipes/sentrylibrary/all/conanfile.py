@@ -11,12 +11,14 @@ required_conan_version = ">=2.7.0"
 class SentryLibrary:
     options = {
         "enable_sentry": [True, False],
+        "sentry_send_binaries": [True, False],
         "sentry_create_release": [True, False],
         "sentry_project": ["ANY"],
         "sentry_is_production": [True, False],
     }
     default_options = {
         "enable_sentry": False,
+        "sentry_send_binaries": False,
         "sentry_create_release": False,
         "sentry_project": "",
         "sentry_is_production": False,
@@ -32,7 +34,11 @@ class SentryLibrary:
 
     def validate(self):
         if self.options.enable_sentry:
-            for sentry_conf in ["organization", "url", "token"]:
+            required_confs = ["url"]
+            if self.options.sentry_send_binaries:
+                required_confs += ["organization", "token"]
+
+            for sentry_conf in required_confs:
                 conf_name = f"user.sentry:{sentry_conf}"
                 if self.conf.get(conf_name, "", check_type=str) == "":
                     raise ConanInvalidConfiguration(f"Unable to enable Sentry because no {conf_name} was configured (use '-c {conf_name}={sentry_conf}')")
