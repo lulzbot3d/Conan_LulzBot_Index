@@ -7,6 +7,7 @@ on:
     branches:
       - main
       - 'CURA-*'
+      - 'NP-*'
 
 permissions:
   contents: read
@@ -73,7 +74,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-conan-downloads-
 
-      # TODO: Change to main once merged
       - name: Export changed recipes
         run: |
           mkdir runner_scripts
