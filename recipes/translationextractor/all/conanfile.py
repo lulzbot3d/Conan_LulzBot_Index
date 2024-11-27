@@ -15,9 +15,8 @@ from conan.tools.files import save, load, rm
 
 
 class ExtractTranslations(object):
-    def __init__(self, conanfile: ConanFile, gettext_bindir):
+    def __init__(self, conanfile: ConanFile):
         self._conanfile = conanfile
-        self._gettext_bindir = gettext_bindir
         self._translations_root_path = Path(self._conanfile.source_folder).joinpath("resources", "i18n")
         self._all_strings_pot_path = self._translations_root_path.joinpath(
             self._conanfile.name + ".pot")  # pot file containing all strings untranslated
@@ -33,9 +32,9 @@ class ExtractTranslations(object):
                 if lang_folder.is_dir() and not po_file.exists():
                     po_file.touch()
                     self._conanfile.run(
-                        f"{self._gettext_bindir}/msginit --no-translator -i {pot_file} -o {po_file} --locale=en")
+                        f"msginit --no-translator -i {pot_file} -o {po_file} --locale=en", env="conanbuild")
                 self._conanfile.run(
-                    f"{self._gettext_bindir}/msgmerge --add-location=never --no-wrap --no-fuzzy-matching --sort-output -o {po_file} {po_file} {pot_file}",
+                    f"msgmerge --add-location=never --no-wrap --no-fuzzy-matching --sort-output -o {po_file} {po_file} {pot_file}",
                     env="conanbuild")
 
     def _remove_pot_header(self, content: str) -> str:
@@ -90,14 +89,14 @@ class ExtractTranslations(object):
         """ Extract i18n strings from all .py files"""
         for path in self._extract_source_files("python", "*.py"):
             self._conanfile.run(
-                f"{self._gettext_bindir}/xgettext --from-code=UTF-8 --join-existing --add-location=never --sort-output --language=python --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
+                f"xgettext --from-code=UTF-8 --join-existing --add-location=never --sort-output --language=python --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
                 env="conanbuild")
 
     def _extract_qml(self) -> None:
         """ Extract all i18n strings from qml files"""
         for path in self._extract_source_files("qml", "*.qml"):
             self._conanfile.run(
-                f"{self._gettext_bindir}/xgettext --from-code=UTF-8 --join-existing --add-location=never --sort-output --language=javascript --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
+                f"xgettext --from-code=UTF-8 --join-existing --add-location=never --sort-output --language=javascript --no-wrap -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -o {self._all_strings_pot_path} {path}",
                 env="conanbuild")
 
     def _extract_plugin(self) -> None:
