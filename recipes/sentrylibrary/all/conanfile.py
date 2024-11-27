@@ -14,14 +14,12 @@ class SentryLibrary:
         "sentry_send_binaries": [True, False],
         "sentry_create_release": [True, False],
         "sentry_project": ["ANY"],
-        "sentry_is_production": [True, False],
     }
     default_options = {
         "enable_sentry": False,
         "sentry_send_binaries": False,
         "sentry_create_release": False,
         "sentry_project": "",
-        "sentry_is_production": False,
     }
 
     def config_options(self):
@@ -47,13 +45,16 @@ class SentryLibrary:
         if self.options.enable_sentry:
             self.requires("sentry-native/0.7.0")
 
+    def _sentry_environment(self):
+        return self.conf.get("user.sentry:environment", default = 'development', check_type = str)
+
     def setup_cmake_toolchain_sentry(self, cmake_toolchain):
         '''
         Method to be called by actual packages at generate() time to setup the cmake toolchain according to the sentry configuration
         '''
         cmake_toolchain.variables["ENABLE_SENTRY"] = self.options.enable_sentry
         cmake_toolchain.variables["SENTRY_URL"] = self.conf.get("user.sentry:url", "", check_type=str)
-        cmake_toolchain.variables["SENTRY_ENVIRONMENT"] = "production" if self.options.sentry_is_production else "development"
+        cmake_toolchain.variables["SENTRY_ENVIRONMENT"] = self._sentry_environment()
 
     def send_sentry_debug_files(self, binary_basename):
         '''
@@ -87,7 +88,7 @@ class SentryLibrary:
 
             if self.options.sentry_create_release:
                 sentry_version = self.version
-                if not self.options.sentry_is_production:
+                if self._sentry_environment() != "production":
                     sentry_version += f"+{self.conan_data['commit'][:6]}"
 
                 # create a sentry release and link it to the commit this is based upon
