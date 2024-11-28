@@ -55,7 +55,7 @@ class ToolSipMetadataBlock(Block):
 
         mod_version = Version(self._conanfile.version)
         pypi_version = f"{mod_version.major}.{mod_version.minor}.{mod_version.patch}"
-        if mod_version.pre != "":
+        if mod_version.pre is not None:
             split_prerelease = str(mod_version.pre).split(".")
             if len(split_prerelease) > 1:
                 pypi_version += f"{split_prerelease[0][0]}{split_prerelease[1]}"
