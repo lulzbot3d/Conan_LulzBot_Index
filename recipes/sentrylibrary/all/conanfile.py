@@ -43,7 +43,7 @@ class SentryLibrary:
 
     def requirements(self):
         if self.options.enable_sentry:
-            self.requires("sentry-native/0.7.0")
+            self.requires("sentry-native/0.7.15")
 
     def _sentry_environment(self):
         return self.conf.get("user.sentry:environment", default = 'development', check_type = str)
