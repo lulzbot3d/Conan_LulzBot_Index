@@ -71,7 +71,11 @@ class SentryLibrary:
             if self.package_type == "application":
                 binary_name = binary_basename
             else:
-                binary_name = binary_basename + ('.so' if self.options.get_safe("shared", True) else '.a')
+                if self.options.get_safe("shared", True):
+                    extension = "dylib" if self.settings.os == "Macos" else "so"
+                else:
+                    extension = "a"
+                binary_name = f"{binary_basename}.{extension}"
 
             if self.settings.os == "Linux":
                 self.output.info("Stripping debug symbols from binary")
