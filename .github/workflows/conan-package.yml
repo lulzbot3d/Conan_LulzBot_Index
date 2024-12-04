@@ -16,7 +16,6 @@ on:
       recipes:
         description: 'Path to the recipes to be exported, e.g. "recipes/clipper/all/conanfile.py recipes/sentrylibrary/all/conanfile.py". Leave empty to export all the recipes.'
         default: ''
-        required: true
         type: string
 
 permissions:
