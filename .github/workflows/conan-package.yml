@@ -4,17 +4,23 @@ on:
   push:
     paths:
       - 'recipes/**'
+      - '.github/workflows/conan-package.yml'
     branches:
       - main
       - 'CURA-*'
+      - 'PP-*'
       - 'NP-*'
+
+  workflow_call:
+    inputs:
+      recipes:
+        description: 'Path to the recipes to be exported, e.g. "recipes/clipper/all/conanfile.py recipes/sentrylibrary/all/conanfile.py". Leave empty to export all the recipes.'
+        default: ''
+        required: true
+        type: string
 
 permissions:
   contents: read
-
-env:
-  CONAN_LOGIN_USERNAME: ${{ secrets.CONAN_USER }}
-  CONAN_PASSWORD: ${{ secrets.CONAN_PASS }}
 
 jobs:
   conan-package-export:
@@ -22,61 +28,34 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Setup the build environment
+        uses: ultimaker/cura-workflows/.github/actions/setup-build-environment@main
         with:
-          fetch-depth: 1
+          conan_user: ${{ secrets.CONAN_USER }}
+          conan_password: ${{ secrets.CONAN_PASS }}
 
-      - uses: technote-space/get-diff-action@v6
+      - uses: greguintow/get-diff-action@v7
+        id: get-diff
+        if: ${{ github.event_name == 'push' }}
         with:
           PATTERNS: |
             recipes/**/*.*
 
-      - name: Sync pip requirements
-        run: wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/main/.github/workflows/requirements-runner.txt -O .github/workflows/requirements-runner.txt
-
-      - name: Setup Python and pip
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11.x
-          cache: pip
-          cache-dependency-path: .github/workflows/requirements-runner.txt
-
-      - name: Install Python requirements and Create default Conan profile
-        run: pip install -r .github/workflows/requirements-runner.txt
-
-      - name: Setup pipeline caches
+      - name: Get recipes list
+        id: get-recipes-list
         run: |
-          mkdir -p /home/runner/.conan/downloads
-          mkdir -p /home/runner/.conan/data
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            recipes_list="${{ inputs.recipes }}"
+          else
+            recipes_list="${{ env.GIT_DIFF_FILTERED }}"
+          fi
 
-      - name: Create default Conan profile
-        run: conan profile new default --detect
+          if [ -z "$recipes_list" ]; then
+            recipes_list=$(find . -mindepth 4 -maxdepth 4 -iname "conanfile.py" -print0 | xargs -0 echo)
+          fi
 
-      - name: Get Conan configuration
-        run: |
-          conan config install https://github.com/Ultimaker/conan-config.git
-          conan config install https://github.com/Ultimaker/conan-config.git -a "-b runner/${{ runner.os }}/${{ runner.arch }}"
+          echo "recipes_list=$recipes_list" >> $GITHUB_OUTPUT
 
-      - name: Cache Conan packages
-        uses: actions/cache@v3
-        with:
-          path: /home/runner/.conan/data
-          key: ${{ runner.os }}-conan-data-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-conan-data-
-
-      - name: Cache Conan downloads
-        uses: actions/cache@v3
-        with:
-          path: /home/runner/.conan/downloads
-          key: ${{ runner.os }}-conan-downloads-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-conan-downloads-
-
-      # TODO: Change NP-346 to main once merged
       - name: Export changed recipes
         run: |
-          mkdir runner_scripts
-          wget https://raw.githubusercontent.com/Ultimaker/cura-workflows/NP-346/runner_scripts/upload_conan_recipes.py -O runner_scripts/upload_conan_recipes.py
-          python runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura ${{ env.GIT_DIFF_FILTERED }}
+          python Cura-workflows/runner_scripts/upload_conan_recipes.py --user ultimaker --branch ${{ github.ref_name }} --remote cura-conan2 ${{ steps.get-recipes-list.outputs.recipes_list }}
