@@ -1,12 +1,13 @@
+import os
+
 from shutil import which
 
 from conan import ConanFile
 from conan.tools.cmake import CMake, CMakeToolchain, cmake_layout
 from conan.tools.files import apply_conandata_patches, copy, export_conandata_patches, get, rmdir
 from conan.errors import ConanInvalidConfiguration
-import os
 
-required_conan_version = ">=1.54.0"
+required_conan_version = ">=2.7.0"
 
 
 class ClipperConan(ConanFile):
@@ -17,25 +18,35 @@ class ClipperConan(ConanFile):
     url = "https://github.com/conan-io/conan-center-index"
     homepage = "http://www.angusj.com/delphi/clipper.php"
     settings = "os", "arch", "compiler", "build_type"
+    package_type = "library"
+    python_requires = "sentrylibrary/1.0.0@ultimaker/stable"
+    python_requires_extend = "sentrylibrary.SentryLibrary"
+
     options = {
         "shared": [True, False],
         "fPIC": [True, False],
-        "enable_sentry": [True, False],
     }
     default_options = {
         "shared": False,
         "fPIC": True,
-        "enable_sentry": False,
     }
+
+    def init(self):
+        base = self.python_requires["sentrylibrary"].module.SentryLibrary
+        self.options.update(base.options, base.default_options)
 
     def export_sources(self):
         export_conandata_patches(self)
 
     def config_options(self):
+        super().config_options()
+
         if self.settings.os == "Windows":
             del self.options.fPIC
 
     def configure(self):
+        super().configure()
+
         if self.options.shared:
             self.options.rm_safe("fPIC")
 
@@ -51,6 +62,7 @@ class ClipperConan(ConanFile):
         tc.variables["CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS"] = True
         # To install relocatable shared libs on Macos
         tc.cache_variables["CMAKE_POLICY_DEFAULT_CMP0042"] = "NEW"
+        self.setup_cmake_toolchain_sentry(tc)
         tc.generate()
 
     def build(self):
@@ -59,22 +71,7 @@ class ClipperConan(ConanFile):
         cmake.configure(build_script_folder=os.path.join(self.source_folder, "cpp"))
         cmake.build()
 
-        sentry_project = self.conf.get("user.curaenginele:sentry_project", "", check_type=str)
-        sentry_org = self.conf.get("user.curaenginele:sentry_org", "", check_type=str)
-        if self.options.get_safe("enable_sentry", False) and os.environ.get('SENTRY_TOKEN', None) and sentry_project != "" and sentry_org != "":
-            if which("sentry-cli") is None:
-                self.output.warn("sentry-cli is not installed, skipping uploading debug symbols")
-            else:
-                if self.settings.os == "Linux":
-                    self.output.info("Stripping debug symbols from binary")
-                    ext = ".so" if self.options.shared else ".a"
-                    self.run(f"objcopy --only-keep-debug --compress-debug-sections=zlib libpolyclipping{ext} libpolyclipping.debug")
-                    self.run(f"objcopy --strip-debug --strip-unneeded libpolyclipping{ext}")
-                    self.run(f"objcopy --add-gnu-debuglink=libpolyclipping.debug libpolyclipping{ext}")
-
-                build_source_dir = self.build_path.parent.parent.as_posix()
-                self.output.info("Uploading debug symbols to sentry")
-                self.run(f"sentry-cli --auth-token {os.environ['SENTRY_TOKEN']} debug-files upload --include-sources -o {sentry_org} -p {sentry_project} {build_source_dir}")
+        self.send_sentry_debug_files(binary_basename = "libpolyclipping")
 
     def package(self):
         copy(self, "License.txt", src=self.source_folder, dst=os.path.join(self.package_folder, "licenses"))
