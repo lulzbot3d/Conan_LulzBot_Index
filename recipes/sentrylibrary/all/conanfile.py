@@ -98,7 +98,7 @@ class SentryLibrary:
                 # create a sentry release and link it to the commit this is based upon
                 self.output.info(f"Creating a new release {sentry_version} in Sentry and linking it to the current commit {self.conan_data['commit']}")
                 self.run(f"sentry-cli releases new {sentry_version} {sentry_auth} ")
-                self.run(f"sentry-cli releases set-commits {sentry_version} --commit \"Ultimaker/{binary_basename}@{self.conan_data['commit']}\" {sentry_auth} ")
+                self.run(f"sentry-cli releases set-commits {sentry_version} --commit \"lulzbot3d/{binary_basename}@{self.conan_data['commit']}\" {sentry_auth} ")
                 self.run(f"sentry-cli releases finalize {sentry_version} {sentry_auth} ")
 
 
