@@ -1,24 +1,20 @@
 from conan import ConanFile
-from conan.tools.scm import Version
 
 from pathlib import Path
 
 required_conan_version = ">=2.7.0"
 
 
-def sanitize_version(version: Version):
-    if version.pre:
-        return str(version)
-    else:
+def sanitize_version(version):
         # npm will otherwise 'sanitize' the version number
-        return str(version).replace("+", "_")
+        return version.replace("+", "-")
 
 
 def conf_package_json(conanfile: ConanFile, **kwargs):
     entry_point = [p.name for p in Path(conanfile.package_folder, "bin").rglob("*.js")][0]
     package_json = {
         "name": f"@{conanfile.author.lower()}/{conanfile.name.lower()}js",
-        "version": f"{sanitize_version(Version(conanfile.version))}",
+        "version": f"{sanitize_version(conanfile.version)}",
         "description": f"JavaScript / TypeScript bindings for {conanfile.name}, a {conanfile.description}",
         "main": f"bin/{entry_point}",
         "repository": {
