@@ -13,7 +13,7 @@ def sanitize_version(version):
 def conf_package_json(conanfile: ConanFile, **kwargs):
     entry_point = [p.name for p in Path(conanfile.package_folder, "bin").rglob("*.js")][0]
     package_json = {
-        "name": f"@{conanfile.author.lower()}/{conanfile.name.lower()}js",
+        "name": f"@lulzbot3d/{conanfile.name.lower()}js",
         "version": f"{sanitize_version(conanfile.version)}",
         "description": f"JavaScript / TypeScript bindings for {conanfile.name}, a {conanfile.description}",
         "main": f"bin/{entry_point}",
@@ -21,7 +21,7 @@ def conf_package_json(conanfile: ConanFile, **kwargs):
             "type": "git",
             "url": conanfile.url
         },
-        "author": conanfile.author,
+        "author": "LulzBot",
         "license": conanfile.license,
         "keywords": conanfile.topics,
         "files": [
