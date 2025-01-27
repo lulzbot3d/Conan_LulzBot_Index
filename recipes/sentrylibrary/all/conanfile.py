@@ -77,6 +77,8 @@ class SentryLibrary:
                     extension = "a"
                 binary_name = f"{binary_basename}.{extension}"
 
+            cleanup_steps = []
+
             if self.settings.os == "Linux":
                 self.output.info("Stripping debug symbols from binary")
                 self.run(f"objcopy --only-keep-debug --compress-debug-sections=zlib {binary_name} {binary_name}.debug")
@@ -84,11 +86,15 @@ class SentryLibrary:
                 self.run(f"objcopy --add-gnu-debuglink={binary_name}.debug {binary_name}")
             elif self.settings.os == "Macos":
                 self.run(f"dsymutil {binary_name}")
+                cleanup_steps.append(f"rm -rf {binary_name}.dSYM") # Cleanup dsym directory after sending, other pyinstaller may pick it instead
 
             self.output.info("Uploading debug symbols to sentry")
             build_source_dir = Path(self.build_folder).parent.parent.as_posix()
             sentry_auth = f"--auth-token {sentry_token} -o {sentry_organization} -p {sentry_project}"
             self.run(f"sentry-cli debug-files upload --include-sources {build_source_dir} {sentry_auth}")
+
+            for cleanup_step in cleanup_steps:
+                self.run(cleanup_step)
 
             if self.options.sentry_create_release:
                 sentry_version = self.version
