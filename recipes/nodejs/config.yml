@@ -1,3 +1,6 @@
 versions:
   "20.16.0":
     folder: all
+
+user: lulzbot
+channel: stable

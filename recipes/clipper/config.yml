@@ -3,3 +3,6 @@ versions:
     folder: all
   "4.10.0":
     folder: all
+
+user: lulzbot
+channel: stable

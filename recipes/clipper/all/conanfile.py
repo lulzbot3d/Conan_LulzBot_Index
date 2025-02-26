@@ -19,7 +19,7 @@ class ClipperConan(ConanFile):
     homepage = "http://www.angusj.com/delphi/clipper.php"
     settings = "os", "arch", "compiler", "build_type"
     package_type = "library"
-    python_requires = "sentrylibrary/1.0.0@lulzbot/stable"
+    python_requires = "sentrylibrary/1.0.0"
     python_requires_extend = "sentrylibrary.SentryLibrary"
 
     options = {

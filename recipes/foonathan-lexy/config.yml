@@ -1,3 +1,6 @@
 versions:
   "2022.12.1":
     folder: all
+
+user: lulzbot
+channel: stable
