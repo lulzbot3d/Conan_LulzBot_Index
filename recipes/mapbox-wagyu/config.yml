@@ -1,3 +1,6 @@
 versions:
   "0.5.0":
     folder: all
+
+user: ultimaker
+channel: stable
