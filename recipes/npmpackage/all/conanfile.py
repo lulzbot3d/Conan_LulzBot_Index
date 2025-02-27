@@ -1,22 +1,22 @@
-from conan import ConanFile
-
+import os
 from pathlib import Path
+
+from conan import ConanFile
 
 required_conan_version = ">=2.7.0"
 
 
 def sanitize_version(version):
-        # npm will otherwise 'sanitize' the version number
-        return version.replace("+", "-")
+    # npm will otherwise 'sanitize' the version number
+    return version.replace("+", "-")
 
 
-def conf_package_json(conanfile: ConanFile, **kwargs):
-    entry_point = [p.name for p in Path(conanfile.package_folder, "bin").rglob("*.js")][0]
+def generate_package_json(conanfile: ConanFile, entry_point, **kwargs):
     package_json = {
         "name": f"@lulzbot3d/{conanfile.name.lower()}js",
         "version": f"{sanitize_version(conanfile.version)}",
         "description": f"JavaScript / TypeScript bindings for {conanfile.name}, a {conanfile.description}",
-        "main": f"bin/{entry_point}",
+        "main": entry_point,
         "repository": {
             "type": "git",
             "url": conanfile.url
@@ -25,13 +25,18 @@ def conf_package_json(conanfile: ConanFile, **kwargs):
         "license": conanfile.license,
         "keywords": conanfile.topics,
         "files": [
-            "bin",
+            str(Path(entry_point).parent),
             "package.json"
         ]
     }
     package_json |= kwargs
-    conanfile.output.info(f"Generated package.json: {package_json}")
+    return package_json
 
+
+def conf_package_json(conanfile: ConanFile, **kwargs):
+    package_json = generate_package_json(conanfile,
+                                         os.path.join(conanfile.cpp.package.bindirs[0], conanfile.cpp.package.bin[0]),
+                                         **kwargs)
     conanfile.conf_info.define(f"user.{conanfile.name.lower()}:package_json", package_json)
 
 
