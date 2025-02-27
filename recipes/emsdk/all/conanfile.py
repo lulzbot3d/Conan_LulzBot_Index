@@ -30,7 +30,7 @@ class EmSDKConan(ConanFile):
         basic_layout(self, src_folder="src")
 
     def build_requirements(self):
-        self.test_requires("nodejs/20.16.0@ultimaker/stable")
+        self.test_requires("nodejs/20.16.0@lulzbot/stable")
         # self.requires("python")  # FIXME: Not available as Conan package
         # self.requires("wasm")  # FIXME: Not available as Conan package
 
