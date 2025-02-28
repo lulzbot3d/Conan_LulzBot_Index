@@ -7,7 +7,6 @@ from conan.tools.scm import Version
 import json
 import os
 
-
 required_conan_version = ">=1.52.0"
 
 
@@ -109,6 +108,16 @@ class EmSDKConan(ConanFile):
                     self.run(f"{emsdk} install {value}")
                     self.run(f"{emsdk} activate {value}")
 
+        # Patch to fix the TypeScript generation of std::string (C++) -> string (TS)
+        # This is a deviation from upstream recipe
+        replace_in_file(self, os.path.join(self.build_folder, "..", "src", "upstream", "emscripten", "src", "embind",
+                                           "embind_gen.js"), "['std::string', [jsString, 'string']],",
+                        "['std::string', ['string']],")
+        replace_in_file(self, os.path.join(self.build_folder, "..", "src", "upstream", "emscripten", "src", "embind",
+                                           "embind_gen.js"),
+                        "['std::basic_string<unsigned char>', [jsString, 'string']],",
+                        "['std::basic_string<unsigned char>', ['string']],")
+
     def package(self):
         copy(self, "LICENSE", src=self.source_folder, dst=os.path.join(self.package_folder, "licenses"))
         copy(self, "*", src=self.source_folder, dst=os.path.join(self.package_folder, "bin"))
@@ -117,16 +126,16 @@ class EmSDKConan(ConanFile):
         # FIXME: conan should add the root of conan package requirements to CMAKE_PREFIX_PATH (LIBRARY/INCLUDE -> ONLY; PROGRAM -> NEVER)
         # allow to find conan libraries
         replace_in_file(self, toolchain,
-                              "set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)",
-                              "set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY BOTH)")
+                        "set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)",
+                        "set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY BOTH)")
         replace_in_file(self, toolchain,
-                              "set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)",
-                              "set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE BOTH)")
+                        "set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)",
+                        "set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE BOTH)")
         replace_in_file(self, toolchain,
-                              "set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)",
-                              "set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE BOTH)")
+                        "set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)",
+                        "set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE BOTH)")
         if not cross_building(self):
-            self.run("embuilder build MINIMAL", env=["conanemsdk", "conanrun"]) # force cache population
+            self.run("embuilder build MINIMAL", env=["conanemsdk", "conanrun"])  # force cache population
             # the line below forces emscripten to accept the cache as-is, even after re-location
             # https://github.com/emscripten-core/emscripten/issues/15053#issuecomment-920950710
             os.remove(os.path.join(self._em_cache, "sanity.txt"))
@@ -150,16 +159,18 @@ class EmSDKConan(ConanFile):
             return
 
         if self.settings_target.os != "Emscripten":
-            self.output.warning(f"You've added {self.name}/{self.version} as a build requirement, while os={self.settings_target.os} != Emscripten")
+            self.output.warning(
+                f"You've added {self.name}/{self.version} as a build requirement, while os={self.settings_target.os} != Emscripten")
             return
 
-        toolchain = os.path.join(self.package_folder, "bin", "upstream", "emscripten", "cmake", "Modules", "Platform", "Emscripten.cmake")
+        toolchain = os.path.join(self.package_folder, "bin", "upstream", "emscripten", "cmake", "Modules", "Platform",
+                                 "Emscripten.cmake")
         self.conf_info.prepend("tools.cmake.cmaketoolchain:user_toolchain", toolchain)
 
         self.buildenv_info.define_path("EMSDK", self._emsdk)
         self.buildenv_info.define_path("EMSCRIPTEN", self._emscripten)
         self.buildenv_info.define_path("EM_CONFIG", self._em_config)
-        self.buildenv_info.define_path("EM_CACHE",  self._em_cache)
+        self.buildenv_info.define_path("EM_CACHE", self._em_cache)
 
         compiler_executables = {
             "c": self._define_tool_var("emcc"),
