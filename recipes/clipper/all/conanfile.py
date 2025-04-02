@@ -1,13 +1,10 @@
 import os
 
-from shutil import which
-
 from conan import ConanFile
 from conan.tools.cmake import CMake, CMakeToolchain, cmake_layout
 from conan.tools.files import apply_conandata_patches, copy, export_conandata_patches, get, rmdir
-from conan.errors import ConanInvalidConfiguration
 
-required_conan_version = ">=2.7.0"
+required_conan_version = ">=2.1"
 
 
 class ClipperConan(ConanFile):
@@ -60,8 +57,9 @@ class ClipperConan(ConanFile):
         tc = CMakeToolchain(self)
         # Export symbols for msvc shared
         tc.variables["CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS"] = True
-        # To install relocatable shared libs on Macos
+        # Relocatable shared lib on Macos
         tc.cache_variables["CMAKE_POLICY_DEFAULT_CMP0042"] = "NEW"
+        tc.cache_variables["CMAKE_POLICY_VERSION_MINIMUM"] = "3.5" # CMake 4 support
         self.setup_cmake_toolchain_sentry(tc)
         tc.generate()
 
@@ -85,9 +83,3 @@ class ClipperConan(ConanFile):
 
         if self.settings.os in ["Linux", "FreeBSD"]:
             self.cpp_info.system_libs.append("m")
-
-        # TODO: to remove in conan v2 once cmake_find_package* & pkg_config generators removed.
-        #       Do not use these CMake names in CMakeDeps, it was a mistake,
-        #       clipper doesn't provide CMake config file
-        self.cpp_info.names["cmake_find_package"] = "polyclipping"
-        self.cpp_info.names["cmake_find_package_multi"] = "polyclipping"
