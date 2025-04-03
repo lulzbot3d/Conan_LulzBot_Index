@@ -17,8 +17,8 @@ class ClipperConan(ConanFile):
     topics = ("clipping", "polygon")
     url = "https://github.com/conan-io/conan-center-index"
     homepage = "http://www.angusj.com/delphi/clipper.php"
-    settings = "os", "arch", "compiler", "build_type"
     package_type = "library"
+    settings = "os", "arch", "compiler", "build_type"
     python_requires = "sentrylibrary/1.0.0"
     python_requires_extend = "sentrylibrary.SentryLibrary"
 
@@ -60,8 +60,9 @@ class ClipperConan(ConanFile):
         tc = CMakeToolchain(self)
         # Export symbols for msvc shared
         tc.variables["CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS"] = True
-        # To install relocatable shared libs on Macos
+        # Relocatable shared lib on Macos
         tc.cache_variables["CMAKE_POLICY_DEFAULT_CMP0042"] = "NEW"
+        tc.cache_variables["CMAKE_POLICY_VERSION_MINIMUM"] = "3.5" # CMake 4 support
         self.setup_cmake_toolchain_sentry(tc)
         tc.generate()
 
