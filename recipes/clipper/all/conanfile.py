@@ -14,8 +14,8 @@ class ClipperConan(ConanFile):
     topics = ("clipping", "polygon")
     url = "https://github.com/conan-io/conan-center-index"
     homepage = "http://www.angusj.com/delphi/clipper.php"
-    settings = "os", "arch", "compiler", "build_type"
     package_type = "library"
+    settings = "os", "arch", "compiler", "build_type"
     python_requires = "sentrylibrary/1.0.0"
     python_requires_extend = "sentrylibrary.SentryLibrary"
 
