@@ -27,7 +27,11 @@ def generate_package_json(conanfile: ConanFile, entry_point, **kwargs):
         "files": [
             str(Path(entry_point).parent),
             "package.json"
-        ]
+        ],
+        "devDependencies": {
+            "@types/node": "^20.11.0",
+            "typescript": "^5.9.2"
+        }
     }
     package_json |= kwargs
     return package_json
