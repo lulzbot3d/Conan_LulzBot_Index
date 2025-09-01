@@ -1,6 +1,4 @@
-
-
-name: conan-package-export
+name: conan-upload-package
 
 on:
   workflow_dispatch:
