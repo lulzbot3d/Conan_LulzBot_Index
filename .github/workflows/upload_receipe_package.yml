@@ -1,0 +1,57 @@
+
+
+name: conan-package-export
+
+on:
+  workflow_dispatch:
+    inputs:
+      recipes:
+        description: 'Select the recipe to export. Leave empty to export all.'
+        required: false
+        type: choice
+        options:
+          - recipes/clipper/all/conanfile.py
+          - recipes/emsdk/all/conanfile.py
+          - recipes/foonathan-lexy/all/conanfile.py
+          - recipes/mapbox-wagyu/all/conanfile.py
+          - recipes/nodejs/all/conanfile.py
+          - recipes/npmpackage/all/conanfile.py
+          - recipes/pyprojecttoolchain/all/conanfile.py
+          - recipes/sentrylibrary/all/conanfile.py
+          - recipes/sipbuildtool/all/conanfile.py
+          - recipes/standardprojectsettings/all/conanfile.py
+          - recipes/translationextractor/all/conanfile.py
+
+permissions:
+  contents: read
+
+jobs:
+  conan-package-export:
+    name: Conan Package Export
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup the build environment
+        uses: ultimaker/cura-workflows/.github/actions/setup-build-environment@main
+        with:
+          conan_user: ${{ secrets.CONAN_USER }}
+          conan_password: ${{ secrets.CONAN_PASS }}
+
+      - name: Get recipes list
+        id: get-recipes-list
+        run: |
+          recipes_list="${{ inputs.recipes }}"
+          if [ -z "$recipes_list" ]; then
+            recipes_list=$(find . -mindepth 4 -maxdepth 4 -iname "conanfile.py" -print0 | xargs -0 echo)
+          fi
+          echo "recipes_list=$recipes_list" >> $GITHUB_OUTPUT
+
+      - name: Export selected recipes
+        run: |
+          python Cura-workflows/runner_scripts/upload_conan_recipes.py --branch ${{ github.ref_name }} --remote cura-conan2 ${{ steps.get-recipes-list.outputs.recipes_list }}
+
+  conan-package:
+    uses: ultimaker/cura-workflows/.github/workflows/conan-package.yml@main
+    with:
+      private_data: true
+      platform_wasm: true
+    secrets: inherit
