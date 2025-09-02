@@ -30,7 +30,7 @@ class SipBuildTool(object):
     def build(self):
         with chdir(self, self._conanfile.source_folder):
             sip_cmd = self._sip_install_executable
-            subsystem = unix_path(self._conanfile, scope="build")
+            subsystem = unix_path(self._conanfile, ".")
             sip_cmd = str(Path(subsystem).joinpath(sip_cmd))
             cmd = '"{}"'.format(sip_cmd)
             self._conanfile.output.info(f"Calling:\n > {cmd}")
