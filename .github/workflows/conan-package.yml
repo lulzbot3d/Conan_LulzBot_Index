@@ -58,3 +58,10 @@ jobs:
       - name: Export changed recipes
         run: |
           python Cura-workflows/runner_scripts/upload_conan_recipes.py --branch ${{ github.ref_name }} --remote cura-conan2 ${{ steps.get-recipes-list.outputs.recipes_list }}
+
+  conan-package:
+    uses: ultimaker/cura-workflows/.github/workflows/conan-package.yml@main
+    with:
+      private_data: true
+      platform_wasm: true
+    secrets: inherit
