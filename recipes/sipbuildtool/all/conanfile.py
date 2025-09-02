@@ -4,7 +4,7 @@ from pathlib import Path
 from conan import ConanFile
 from conan.tools.files import chdir, copy
 
-from conan.tools.microsoft.subsystem import unix_path
+from conan.tools.microsoft.subsystems import unix_path
 
 
 class SipBuildTool(object):
