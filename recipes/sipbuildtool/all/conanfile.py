@@ -3,7 +3,7 @@ import os
 from conan import ConanFile
 from conan.tools.files import chdir, copy
 
-from conans.client.subsystems import subsystem_path, deduce_subsystem
+from conan.tools.microsoft import subsystem_path, deduce_subsystem
 
 
 class SipBuildTool(object):
