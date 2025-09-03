@@ -1,9 +1,10 @@
 import os
+from pathlib import Path
 
 from conan import ConanFile
 from conan.tools.files import chdir, copy
 
-from conans.client.subsystems import subsystem_path, deduce_subsystem
+from conan.tools.microsoft.subsystems import unix_path
 
 
 class SipBuildTool(object):
@@ -29,8 +30,8 @@ class SipBuildTool(object):
     def build(self):
         with chdir(self, self._conanfile.source_folder):
             sip_cmd = self._sip_install_executable
-            subsystem = deduce_subsystem(self._conanfile, scope="build")
-            sip_cmd = subsystem_path(subsystem, sip_cmd)
+            subsystem = unix_path(self._conanfile, ".")
+            sip_cmd = str(Path(subsystem).joinpath(sip_cmd))
             cmd = '"{}"'.format(sip_cmd)
             self._conanfile.output.info(f"Calling:\n > {cmd}")
             self._conanfile.run(cmd)
