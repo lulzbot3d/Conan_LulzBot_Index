@@ -44,6 +44,7 @@ class SentryLibrary:
     def requirements(self):
         if self.options.enable_sentry:
             self.requires("sentry-native/0.7.15")
+            self.requires("libcurl/8.16.0#25c3bfc08d7e6a9aa4564a0fd20e9a21", override=True) # More recent version requires conan>=2.21.0
 
     def _sentry_environment(self):
         return self.conf.get("user.sentry:environment", default = 'development', check_type = str)
