@@ -75,6 +75,7 @@ class ExtractTranslations(object):
         self._extract_qml()
         self._extract_plugin()
         self._extract_settings()
+        self._extract_intents()
 
     def _extract_source_files(self, prefix, extension_wildcard):
         source_files = []
@@ -110,7 +111,7 @@ class ExtractTranslations(object):
             plugin_dict = json.loads(load(self._conanfile, path), object_pairs_hook=collections.OrderedDict)
             if "name" not in plugin_dict or (
                     "api" not in plugin_dict and "supported_sdk_versions" not in plugin_dict) or "version" not in plugin_dict:
-                self._conanfile.output.warn(f"The plugin.json is invalid, ignoring it: {path}")
+                self._conanfile.output.warning(f"The plugin.json is invalid, ignoring it: {path}")
             else:
                 if "description" in plugin_dict:
                     translation_entries += self._create_translation_entry("description", plugin_dict["description"])
@@ -121,9 +122,30 @@ class ExtractTranslations(object):
             if translation_entries:
                 save(self._conanfile, self._all_strings_pot_path, translation_entries, append=True)
 
+    def _extract_intents(self) -> None:
+        """ Extract the name and description from intents definition """
+        intents_json_path = Path(self._conanfile.source_folder, "resources", "intent", "intents.json")
+        if not intents_json_path.exists():
+            self._conanfile.output.info("No intents file found, skipping")
+            return
+
+        intents_dict = json.loads(load(self._conanfile, intents_json_path), object_pairs_hook=collections.OrderedDict)
+        translation_entries = ""
+
+        for intent_id in intents_dict:
+            intent_data = intents_dict[intent_id]
+            if "label" in intent_data:
+                translation_entries += self._create_named_translation_entry(intent_id, "intent label", intent_data["label"])
+            if "description" in intent_data:
+                translation_entries += self._create_named_translation_entry(intent_id, "intent description", intent_data["description"])
+
+        # Write intent name & description to output pot file
+        if translation_entries:
+            save(self._conanfile, self._all_strings_pot_path, translation_entries, append=True)
+
     def _extract_settings(self) -> None:
         """ Extract strings from settings json files to pot file with a matching name """
-        setting_json_paths = [path for path in self._conanfile.source_path.rglob("*.def.json") if "test" not in str(path)]
+        setting_json_paths = [path for path in Path(self._conanfile.source_folder).rglob("*.def.json") if "test" not in str(path)]
         setting_json_data = []
         for json_path in setting_json_paths:
             setting_dict = json.loads(load(self._conanfile, json_path), object_pairs_hook = collections.OrderedDict)
@@ -187,23 +209,23 @@ class ExtractTranslations(object):
 
         for name, value in settings.items():
             if "label" in value:
-                translation_entries += self._create_setting_translation_entry(name, "label", value["label"])
+                translation_entries += self._create_named_translation_entry(name, "label", value["label"])
             if "description" in value:
-                translation_entries += self._create_setting_translation_entry(name, "description", value["description"])
+                translation_entries += self._create_named_translation_entry(name, "description", value["description"])
             if "warning_description" in value:
-                translation_entries += self._create_setting_translation_entry(name, "warning_description", value["warning_description"])
+                translation_entries += self._create_named_translation_entry(name, "warning_description", value["warning_description"])
             if "error_description" in value:
-                translation_entries += self._create_setting_translation_entry(name, "error_description", value["error_description"])
+                translation_entries += self._create_named_translation_entry(name, "error_description", value["error_description"])
             if "options" in value:
                 for item, description in value["options"].items():
-                    translation_entries += self._create_setting_translation_entry(name, "option {0}".format(item), description)
+                    translation_entries += self._create_named_translation_entry(name, "option {0}".format(item), description)
             if "children" in value:
                 translation_entries += self._process_settings(value["children"])
 
         return translation_entries
 
-    def _create_setting_translation_entry(self, setting: str, field: str, value: str) -> str:
-        return "msgctxt \"{0} {1}\"\nmsgid \"{2}\"\nmsgstr \"\"\n\n".format(setting, field, value.replace("\n", "\\n").replace("\"", "\\\""))
+    def _create_named_translation_entry(self, name: str, field: str, value: str) -> str:
+        return "msgctxt \"{0} {1}\"\nmsgid \"{2}\"\nmsgstr \"\"\n\n".format(name, field, value.replace("\n", "\\n").replace("\"", "\\\""))
 
     def _create_translation_entry(self, field: str, value: str) -> str:
         return "\nmsgctxt \"{0}\"\nmsgid \"{1}\"\nmsgstr \"\"\n".format(field, value.replace("\n", "\\n").replace("\"", "\\\""))
@@ -235,7 +257,7 @@ class ExtractTranslations(object):
         for path in self._translations_root_path.rglob("*.pot"):
             content = load(self._conanfile, path)
             if "msgctxt" not in content:
-                self._conanfile.output.warn(f"Removing empty pot file: {path}")
+                self._conanfile.output.warning(f"Removing empty pot file: {path}")
                 rm(self._conanfile, path.name, path.parent)
             else:
                 save(self._conanfile, path,

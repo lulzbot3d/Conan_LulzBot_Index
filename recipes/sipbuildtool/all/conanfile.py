@@ -23,9 +23,33 @@ class SipBuildTool(object):
         self._conanfile = conanfile
         self._sip_install_executable = "sip-build"
 
-    def configure(self, sip_install_executable=None):
+    def configure(self, sip_install_executable=None, cpython_dependency=None):
+        """
+        Configure the sip-build executable path.
+        
+        Args:
+            sip_install_executable: Explicit path to sip-build executable
+            cpython_dependency: The cpython dependency from which to derive sip-build path
+        """
         if sip_install_executable:
             self._sip_install_executable = sip_install_executable
+        elif cpython_dependency:
+            # Auto-detect sip-build location from cpython dependency
+            bindirs = cpython_dependency.cpp_info.bindirs
+            if bindirs and len(bindirs) > 0:
+                bin_path = Path(bindirs[0])
+                
+                # On Windows, sip-build is in Scripts subdirectory
+                if self._conanfile.settings.os == "Windows":
+                    sip_path = bin_path / "Scripts" / "sip-build.exe"
+                else:
+                    # On Linux/Mac, sip-build is in bin directory
+                    sip_path = bin_path / "sip-build"
+                
+                if sip_path.exists():
+                    self._sip_install_executable = str(sip_path)
+                else:
+                    self._conanfile.output.warning(f"sip-build not found at expected path: {sip_path}")
 
     def build(self):
         with chdir(self, self._conanfile.source_folder):
